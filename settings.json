@@ -17,7 +17,7 @@
     "main_window": {
         "title": "Manutenzione Apparecchiature/Impiani - Gambro Dasco",
         "icon": "Baxter.ico",
-        "default_size": [800, 600],
+        "default_size": [1000, 600],
         "minimum_size": [640, 480],
         "maximum_size": [0, 0],
         "disable_maximize_button": false,
@@ -56,12 +56,12 @@
         "command_line_switches": {},
         "enable_downloads": false,
         "context_menu": {
-            "enable_menu": false,
-            "navigation": false,
-            "print": false,
-            "view_source": false,
-            "open_in_external_browser": false,
-            "devtools": false
+            "enable_menu": true,
+            "navigation": true,
+            "print": true,
+            "view_source": true,
+            "open_in_external_browser": true,
+            "devtools": true
         }
     }
 }
