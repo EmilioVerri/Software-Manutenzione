@@ -37792,3 +37792,1297 @@ s process: "C:\VersioneSempliceSerializzazione\phpdesktop-chrome.exe" --type=gpu
 - 15:57:50.390 DEBUG: OnBrowserDestroyed()
 - 15:57:50.563 INFO: Ended application
 - 15:57:50.563 INFO: --------------------------------------------------------
+- 15:58:36.000 INFO: --------------------------------------------------------
+- 15:58:36.000 INFO: Started application
+- 15:58:36.000 INFO: Logging to: C:\Manutentori\debug.log
+- 15:58:36.000 INFO: Log level = DEBUG4
+- 15:58:36.000 INFO: Starting Mongoose 3.9c web server
+- 15:58:36.000 INFO: WWW directory: C:\Manutentori\www
+- 15:58:36.000 INFO: Index files: index.html,index.php
+- 15:58:36.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 15:58:36.000 INFO: CGI pattern: **.php$
+- 15:58:36.000 INFO: Hide files patterns: 
+- 15:58:36.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 15:58:36.000 INFO: Web server url: http://127.0.0.1:52121/
+- 15:58:36.000 INFO: remote_debugging_port = 64148
+- 15:58:36.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=64148
+- 15:58:36.031 DEBUG: App::OnContextInitialized()
+- 15:58:36.031 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 15:58:36.031 DEBUG: Window max width/height = 1846/978
+- 15:58:36.031 DEBUG: GetBrowserWindow(): not found, hwnd = 1705976
+- 15:58:36.031 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 15:58:36.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 15:58:36.047 DEBUG: StoreBrowserWindow(): hwnd = 1705976
+- 15:58:36.078 DEBUG: ClientHandler::OnAfterCreated()
+- 15:58:36.078 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 15:58:36.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 15:58:36.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=71CCE0E19A3E321FAA1330CB81064280 --mojo-platform-channel-handle=1776 /prefetch:2
+- 15:58:36.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=7A942144B16FA3EF6D2CF4FFB35996D2 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=7A942144B16FA3EF6D2CF4FFB35996D2 --renderer-client-id=3 --mojo-platform-channel-handle=2376 /prefetch:1
+- 15:58:36.015 DEBUG: OnBrowserCreated()
+[0502/155836.885:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 15:58:37.313 INFO: GET 200 /
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 15:58:37.313 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 15:58:37.344 INFO: GET 404 /images/light.jpg
+- 15:58:37.218 DEBUG: OnContextCreated()
+- 15:58:37.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52121/
+- 15:58:40.922 DEBUG: WM_DESTROY
+- 15:58:40.922 DEBUG: RemoveBrowserWindow(): hwnd = 1705976
+- 15:58:40.922 INFO: Stopping Mongoose web server
+- 15:58:40.922 DEBUG: Mongoose webserver stopped immediately
+- 15:58:40.922 DEBUG: OnBeforeClose() hwnd=1444008
+- 15:58:40.922 DEBUG: RemoveBrowserWindow(): hwnd = 1444008
+- 15:58:40.922 DEBUG: GetBrowserWindow(): not found, hwnd = 1444008
+- 15:58:40.922 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 15:58:40.922 DEBUG: Calling CefQuitMessageLoop()
+- 15:58:40.953 INFO: Ended application
+- 15:58:40.953 INFO: --------------------------------------------------------
+- 15:58:42.000 INFO: --------------------------------------------------------
+- 15:58:42.000 INFO: Started application
+- 15:58:42.000 INFO: Logging to: C:\Manutentori\debug.log
+- 15:58:42.000 INFO: Log level = DEBUG4
+- 15:58:42.000 INFO: Starting Mongoose 3.9c web server
+- 15:58:42.000 INFO: WWW directory: C:\Manutentori\www
+- 15:58:42.000 INFO: Index files: index.html,index.php
+- 15:58:42.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 15:58:42.000 INFO: CGI pattern: **.php$
+- 15:58:42.000 INFO: Hide files patterns: 
+- 15:58:42.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 15:58:42.016 INFO: Web server url: http://127.0.0.1:52135/
+- 15:58:42.016 INFO: remote_debugging_port = 56509
+- 15:58:42.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=56509
+- 15:58:42.047 DEBUG: App::OnContextInitialized()
+- 15:58:42.047 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 15:58:42.047 DEBUG: Window max width/height = 1846/978
+- 15:58:42.047 DEBUG: GetBrowserWindow(): not found, hwnd = 723466
+- 15:58:42.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 15:58:42.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 15:58:42.047 DEBUG: StoreBrowserWindow(): hwnd = 723466
+- 15:58:42.109 DEBUG: ClientHandler::OnAfterCreated()
+- 15:58:42.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 15:58:42.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=7BF322D895C741C695F0F2CE0AC10E47 --mojo-platform-channel-handle=1780 /prefetch:2
+- 15:58:42.109 DEBUG: OnLoadingStateChange: loading=1, url=
+- 15:58:42.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=FFF861711DEA1368329B2D2BAF7C275D --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=FFF861711DEA1368329B2D2BAF7C275D --renderer-client-id=3 --mojo-platform-channel-handle=2372 /prefetch:1
+- 15:58:42.032 DEBUG: OnBrowserCreated()
+[0502/155842.636:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 15:58:42.313 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 15:58:42.328 INFO: GET 200 /
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 15:58:42.328 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 15:58:42.359 INFO: GET 404 /images/light.jpg
+- 15:58:42.219 DEBUG: OnContextCreated()
+- 15:58:42.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:00:01.313 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:00:01.266 DEBUG: OnContextCreated()
+- 16:00:01.422 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:00:01.422 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:00:01.422 INFO: GET 200 /
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:00:01.438 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:00:01.453 INFO: GET 404 /images/light.jpg
+- 16:00:01.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:00:21.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:00:21.282 DEBUG: OnContextCreated()
+- 16:00:21.438 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:00:21.438 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:00:21.438 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:00:21.438 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:00:21.438 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:00:21.438 INFO: GET 200 /
+- 16:00:21.453 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:00:21.453 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:00:21.453 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:00:21.469 INFO: GET 404 /images/light.jpg
+- 16:00:21.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:00:58.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:00:58.703 DEBUG: OnContextCreated()
+- 16:00:58.859 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:00:58.859 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:00:58.875 INFO: GET 200 /
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:00:58.875 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:00:58.906 INFO: GET 404 /images/light.jpg
+- 16:00:58.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:01:13.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:01:13.907 DEBUG: OnContextCreated()
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:01:13.063 INFO: GET 200 /
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:01:13.063 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:01:13.078 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:01:13.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:01:21.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:01:21.094 DEBUG: OnContextCreated()
+- 16:01:21.266 INFO: GET 200 /
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:01:21.266 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:01:21.313 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:01:52.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:01:52.094 DEBUG: OnContextCreated()
+- 16:01:52.250 INFO: GET 200 /
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:01:52.266 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:01:52.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:02:02.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:02:02.016 DEBUG: OnContextCreated()
+- 16:02:02.172 INFO: GET 200 /
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:02:02.172 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:02:02.188 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:02:02.188 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:02:02.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:02:17.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:02:17.813 DEBUG: OnContextCreated()
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:02:17.969 INFO: GET 200 /
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:02:17.969 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:02:17.984 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:02:17.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:03:40.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:03:40.922 DEBUG: OnContextCreated()
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:03:40.094 INFO: GET 200 /
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:03:40.094 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:03:40.109 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:03:40.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:04:04.063 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52135/
+- 16:04:04.016 DEBUG: OnContextCreated()
+- 16:04:04.188 INFO: GET 200 /
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:04:04.188 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:04:04.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52135/
+- 16:04:08.250 DEBUG: WM_DESTROY
+- 16:04:08.250 DEBUG: RemoveBrowserWindow(): hwnd = 723466
+- 16:04:08.250 INFO: Stopping Mongoose web server
+- 16:04:08.250 DEBUG: Mongoose webserver stopped immediately
+- 16:04:08.297 DEBUG: OnBeforeClose() hwnd=395610
+- 16:04:08.297 DEBUG: RemoveBrowserWindow(): hwnd = 395610
+- 16:04:08.297 DEBUG: GetBrowserWindow(): not found, hwnd = 395610
+- 16:04:08.297 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 16:04:08.297 DEBUG: Calling CefQuitMessageLoop()
+- 16:04:08.359 INFO: Ended application
+- 16:04:08.359 INFO: --------------------------------------------------------
+- 16:05:13.000 INFO: --------------------------------------------------------
+- 16:05:13.000 INFO: Started application
+- 16:05:13.000 INFO: Logging to: C:\Manutentori\debug.log
+- 16:05:13.000 INFO: Log level = DEBUG4
+- 16:05:13.000 INFO: Starting Mongoose 3.9c web server
+- 16:05:13.000 INFO: WWW directory: C:\Manutentori\www
+- 16:05:13.000 INFO: Index files: index.html,index.php
+- 16:05:13.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 16:05:13.000 INFO: CGI pattern: **.php$
+- 16:05:13.000 INFO: Hide files patterns: 
+- 16:05:13.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 16:05:13.000 INFO: Web server url: http://127.0.0.1:52670/
+- 16:05:13.000 INFO: remote_debugging_port = 50705
+- 16:05:13.000 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50705
+- 16:05:13.032 DEBUG: App::OnContextInitialized()
+- 16:05:13.032 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 16:05:13.032 DEBUG: Window max width/height = 1846/978
+- 16:05:13.032 DEBUG: GetBrowserWindow(): not found, hwnd = 330094
+- 16:05:13.032 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 16:05:13.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 16:05:13.047 DEBUG: StoreBrowserWindow(): hwnd = 330094
+- 16:05:13.079 DEBUG: ClientHandler::OnAfterCreated()
+- 16:05:13.079 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 16:05:13.094 DEBUG: OnLoadingStateChange: loading=1, url=
+- 16:05:13.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=2177C3B3998E4F180FACB66790C52599 --mojo-platform-channel-handle=1772 /prefetch:2
+- 16:05:13.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=41309C4CD20505177924AB4512A3620A --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=41309C4CD20505177924AB4512A3620A --renderer-client-id=3 --mojo-platform-channel-handle=2388 /prefetch:1
+- 16:05:13.031 DEBUG: OnBrowserCreated()
+[0502/160513.878:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 16:05:14.329 INFO: GET 404 /css/uikit.min.css
+- 16:05:14.329 INFO: GET 404 /js/uikit.min.js
+- 16:05:14.329 INFO: GET 404 /js/uikit-icons.min.js
+- 16:05:14.188 DEBUG: OnContextCreated()
+- 16:05:14.329 INFO: GET 200 /
+- 16:05:14.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:06:01.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:06:01.828 DEBUG: OnContextCreated()
+- 16:06:01.985 INFO: GET 404 /css/uikit.min.css
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:06:01.985 INFO: GET 200 /
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:06:01.985 INFO: GET 404 /js/uikit.min.js
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:06:01.985 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:06:01.000 INFO: GET 404 /js/uikit-icons.min.js
+- 16:06:01.063 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:06:59.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:06:59.797 DEBUG: OnContextCreated()
+- 16:06:59.954 INFO: GET 404 /js/uikit.min.js
+- 16:06:59.954 INFO: GET 404 /css/uikit.min.css
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:06:59.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:06:59.954 INFO: GET 200 /
+- 16:06:59.969 INFO: GET 404 /js/uikit-icons.min.js
+- 16:06:59.969 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:06:59.969 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:06:59.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:07:10.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:07:11.234 DEBUG: OnContextCreated()
+- 16:07:11.391 INFO: GET 404 /css/uikit.min.css
+- 16:07:11.391 INFO: GET 404 /js/uikit.min.js
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:07:11.391 INFO: GET 200 /
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:07:11.391 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:07:11.407 INFO: GET 404 /js/uikit-icons.min.js
+- 16:07:11.407 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:07:11.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:07:23.532 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:07:23.516 DEBUG: OnContextCreated()
+- 16:07:23.672 INFO: GET 404 /css/uikit.min.css
+- 16:07:23.672 INFO: GET 200 /
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:07:23.672 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:07:23.688 INFO: GET 404 /js/uikit.min.js
+- 16:07:23.688 INFO: GET 404 /js/uikit-icons.min.js
+- 16:07:23.735 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:07:37.579 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:07:37.563 DEBUG: OnContextCreated()
+- 16:07:37.704 INFO: GET 404 /css/uikit.min.css
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:07:37.719 INFO: GET 200 /
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:07:37.719 INFO: GET 404 /js/uikit.min.js
+- 16:07:37.719 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:07:37.735 INFO: GET 404 /js/uikit-icons.min.js
+- 16:07:37.782 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:07:49.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:07:49.625 DEBUG: OnContextCreated()
+- 16:07:49.782 INFO: GET 200 /
+- 16:07:49.782 INFO: GET 404 /css/uikit.min.css
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:07:49.782 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:07:49.782 INFO: GET 404 /js/uikit-icons.min.js
+- 16:07:49.782 INFO: GET 404 /js/uikit.min.js
+- 16:07:49.797 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:07:49.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:07:55.547 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:07:55.516 DEBUG: OnContextCreated()
+- 16:07:55.657 INFO: GET 404 /css/uikit.min.css
+- 16:07:55.657 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:07:55.657 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:07:55.657 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:07:55.657 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:07:55.657 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:07:55.657 INFO: GET 200 /
+- 16:07:55.672 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:07:55.672 INFO: GET 404 /js/uikit.min.js
+- 16:07:55.672 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:07:55.672 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:07:55.672 INFO: GET 404 /js/uikit-icons.min.js
+- 16:07:55.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:08:16.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:08:16.063 DEBUG: OnContextCreated()
+- 16:08:16.204 INFO: GET 200 /
+- 16:08:16.204 INFO: GET 404 /css/uikit.min.css
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:08:16.204 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:08:16.219 INFO: GET 404 /js/uikit.min.js
+- 16:08:16.219 INFO: GET 404 /js/uikit-icons.min.js
+- 16:08:16.219 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:08:16.235 INFO: GET 404 /js/uikit-icons.min.js
+- 16:08:16.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:08:25.235 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:08:26.188 DEBUG: OnContextCreated()
+- 16:08:26.344 INFO: GET 404 /css/uikit.min.css
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:08:26.344 INFO: GET 200 /
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:08:26.344 INFO: GET 404 /js/uikit.min.js
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:08:26.344 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:08:26.360 INFO: GET 404 /js/uikit-icons.min.js
+- 16:08:26.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:08:40.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:08:40.844 DEBUG: OnContextCreated()
+- 16:08:40.000 INFO: GET 404 /css/uikit.min.css
+- 16:08:40.000 INFO: GET 404 /js/uikit.min.js
+- 16:08:40.000 INFO: GET 200 /
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:08:40.000 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:08:40.016 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:08:40.016 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:08:40.016 INFO: GET 404 /js/uikit-icons.min.js
+- 16:08:40.063 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:08:51.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:08:51.813 DEBUG: OnContextCreated()
+- 16:08:51.954 INFO: GET 404 /css/uikit.min.css
+- 16:08:51.954 INFO: GET 404 /js/uikit.min.js
+- 16:08:51.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:08:51.954 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:08:51.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:08:51.954 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:08:51.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:08:51.969 INFO: GET 200 /
+- 16:08:51.969 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:08:51.969 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:08:51.969 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:08:51.969 INFO: GET 404 /js/uikit-icons.min.js
+- 16:08:51.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:09:20.579 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:09:20.547 DEBUG: OnContextCreated()
+- 16:09:20.688 INFO: GET 404 /css/uikit.min.css
+- 16:09:20.688 INFO: GET 200 /
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:09:20.688 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:09:20.704 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:09:20.704 INFO: GET 404 /js/uikit.min.js
+- 16:09:20.704 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:20.735 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:20.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:09:26.969 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:09:26.922 DEBUG: OnContextCreated()
+- 16:09:26.063 INFO: GET 404 /css/uikit.min.css
+- 16:09:26.063 INFO: GET 404 /js/uikit.min.js
+- 16:09:26.063 INFO: GET 200 /
+- 16:09:26.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:09:26.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:09:26.063 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:09:26.063 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:09:26.063 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:09:26.079 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:09:26.079 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:09:26.079 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:09:26.079 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:26.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:09:32.860 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:09:32.828 DEBUG: OnContextCreated()
+- 16:09:32.969 INFO: GET 200 /
+- 16:09:32.969 INFO: GET 404 /css/uikit.min.css
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:09:32.969 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:09:32.985 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:32.985 INFO: GET 404 /js/uikit.min.js
+- 16:09:32.985 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:09:32.000 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:32.032 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:09:41.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:09:41.016 DEBUG: OnContextCreated()
+- 16:09:41.157 INFO: GET 404 /css/uikit.min.css
+- 16:09:41.157 INFO: GET 200 /
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:09:41.157 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:09:41.172 INFO: GET 404 /js/uikit.min.js
+- 16:09:41.172 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:41.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:09:53.954 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:09:53.906 DEBUG: OnContextCreated()
+- 16:09:53.063 INFO: GET 404 /css/uikit.min.css
+- 16:09:53.063 INFO: GET 404 /js/uikit.min.js
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:09:53.063 INFO: GET 200 /
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:09:53.063 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:09:53.079 INFO: GET 404 /js/uikit-icons.min.js
+- 16:09:53.079 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:09:53.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:10:06.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:10:06.547 DEBUG: OnContextCreated()
+- 16:10:06.704 INFO: GET 404 /css/uikit.min.css
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:10:06.704 INFO: GET 200 /
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:10:06.704 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:10:06.719 INFO: GET 404 /js/uikit.min.js
+- 16:10:06.719 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:10:06.719 INFO: GET 404 /js/uikit-icons.min.js
+- 16:10:06.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:10:14.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:10:14.797 DEBUG: OnContextCreated()
+- 16:10:14.954 INFO: GET 404 /css/uikit.min.css
+- 16:10:14.954 INFO: GET 404 /js/uikit.min.js
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:10:14.954 INFO: GET 200 /
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:10:14.954 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:10:14.969 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:10:14.969 INFO: GET 404 /js/uikit-icons.min.js
+- 16:10:14.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:10:19.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:10:19.797 DEBUG: OnContextCreated()
+- 16:10:19.954 INFO: GET 404 /css/uikit.min.css
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:10:19.954 INFO: GET 200 /
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:10:19.954 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:10:19.954 INFO: GET 404 /js/uikit.min.js
+- 16:10:19.954 INFO: GET 404 /js/uikit-icons.min.js
+- 16:10:19.969 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:10:19.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:10:52.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:10:52.641 DEBUG: OnContextCreated()
+- 16:10:52.797 INFO: GET 200 /
+- 16:10:52.829 INFO: GET 404 /css/uikit.min.css
+- 16:10:52.829 INFO: GET 404 /js/uikit.min.js
+- 16:10:52.829 INFO: GET 404 /js/uikit-icons.min.js
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:10:52.844 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:10:52.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:11:09.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:11:09.750 DEBUG: OnContextCreated()
+- 16:11:09.907 INFO: GET 404 /css/uikit.min.css
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:11:09.907 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:11:09.922 INFO: GET 404 /js/uikit-icons.min.js
+- 16:11:09.922 INFO: GET 404 /js/uikit.min.js
+- 16:11:09.938 INFO: GET 404 /js/uikit-icons.min.js
+- 16:11:12.907 INFO: GET 200 /
+- 16:11:12.907 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:11:36.485 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:11:36.531 DEBUG: OnContextCreated()
+- 16:11:36.672 INFO: GET 404 /css/uikit.min.css
+- 16:11:36.672 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:11:36.672 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:11:36.672 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:11:36.672 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:11:36.672 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:11:36.672 INFO: GET 200 /
+- 16:11:36.688 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:11:36.688 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:11:36.688 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:11:36.688 INFO: GET 404 /js/uikit.min.js
+- 16:11:36.688 INFO: GET 404 /js/uikit-icons.min.js
+- 16:11:36.735 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:11:46.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:11:46.609 DEBUG: OnContextCreated()
+- 16:11:46.766 INFO: GET 404 /css/uikit.min.css
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:11:46.766 INFO: GET 200 /
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:11:46.766 INFO: GET 404 /js/uikit.min.js
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:11:46.766 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:11:46.782 INFO: GET 404 /js/uikit-icons.min.js
+- 16:11:46.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:12:02.938 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:12:02.922 DEBUG: OnContextCreated()
+- 16:12:02.079 INFO: GET 404 /css/uikit.min.css
+- 16:12:02.079 INFO: GET 404 /js/uikit.min.js
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:12:02.079 INFO: GET 200 /
+- 16:12:02.079 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:12:02.094 INFO: GET 404 /js/uikit-icons.min.js
+- 16:12:02.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:12:08.782 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:12:08.734 DEBUG: OnContextCreated()
+- 16:12:08.875 INFO: GET 404 /css/uikit.min.css
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:12:08.891 INFO: GET 200 /
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:12:08.891 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:12:08.891 INFO: GET 404 /js/uikit.min.js
+- 16:12:08.891 INFO: GET 404 /js/uikit-icons.min.js
+- 16:12:08.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:12:18.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:12:18.891 DEBUG: OnContextCreated()
+- 16:12:18.047 INFO: GET 404 /css/uikit.min.css
+- 16:12:18.047 INFO: GET 200 /
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:12:18.047 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:12:18.063 INFO: GET 404 /js/uikit-icons.min.js
+- 16:12:18.063 INFO: GET 404 /js/uikit.min.js
+- 16:12:18.063 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:12:18.079 INFO: GET 404 /js/uikit-icons.min.js
+- 16:12:18.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:12:25.079 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:12:25.063 DEBUG: OnContextCreated()
+- 16:12:25.204 INFO: GET 200 /
+- 16:12:25.204 INFO: GET 404 /css/uikit.min.css
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:12:25.204 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:12:25.219 INFO: GET 404 /js/uikit.min.js
+- 16:12:25.219 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:12:25.219 INFO: GET 404 /js/uikit-icons.min.js
+- 16:12:25.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:14:52.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:14:52.969 DEBUG: OnContextCreated()
+- 16:14:52.125 INFO: GET 200 /
+- 16:14:52.125 INFO: GET 404 /css/uikit.min.css
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:14:52.125 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:14:52.141 INFO: GET 404 /js/uikit-icons.min.js
+- 16:14:52.141 INFO: GET 404 /js/uikit.min.js
+- 16:14:52.141 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:14:52.157 INFO: GET 404 /js/uikit-icons.min.js
+- 16:14:52.188 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:14:55.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:14:55.563 DEBUG: OnContextCreated()
+- 16:14:55.719 INFO: GET 200 /
+- 16:14:55.719 INFO: GET 404 /css/uikit.min.css
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:14:55.719 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:14:55.735 INFO: GET 404 /js/uikit-icons.min.js
+- 16:14:55.735 INFO: GET 404 /js/uikit.min.js
+- 16:14:55.735 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:14:55.782 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:15:05.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:15:05.344 DEBUG: OnContextCreated()
+- 16:15:05.485 INFO: GET 404 /css/uikit.min.css
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:15:05.500 INFO: GET 200 /
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:15:05.500 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:15:05.500 INFO: GET 404 /js/uikit.min.js
+- 16:15:05.516 INFO: GET 404 /js/uikit-icons.min.js
+- 16:15:05.563 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:15:17.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:15:17.781 DEBUG: OnContextCreated()
+- 16:15:17.922 INFO: GET 404 /css/uikit.min.css
+- 16:15:17.922 INFO: GET 404 /js/uikit.min.js
+- 16:15:17.938 INFO: GET 200 /
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:15:17.938 INFO: GET 404 /js/uikit-icons.min.js
+- 16:15:17.938 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:15:17.985 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:15:33.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:15:34.219 DEBUG: OnContextCreated()
+- 16:15:34.360 INFO: GET 404 /css/uikit.min.css
+- 16:15:34.360 INFO: GET 200 /
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:15:34.360 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:15:34.375 INFO: GET 404 /js/uikit.min.js
+- 16:15:34.375 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:15:34.375 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:15:34.375 INFO: GET 404 /js/uikit-icons.min.js
+- 16:15:34.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:15:45.188 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:15:45.141 DEBUG: OnContextCreated()
+- 16:15:45.282 INFO: GET 404 /css/uikit.min.css
+- 16:15:45.297 INFO: GET 200 /
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:15:45.297 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:15:45.297 INFO: GET 404 /js/uikit.min.js
+- 16:15:45.297 INFO: GET 404 /js/uikit-icons.min.js
+- 16:15:46.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:16:05.329 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:16:05.328 DEBUG: OnContextCreated()
+- 16:16:05.469 INFO: GET 404 /css/uikit.min.css
+- 16:16:05.469 INFO: GET 404 /js/uikit.min.js
+- 16:16:05.469 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:16:05.469 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:16:05.469 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:16:05.469 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:16:05.469 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:16:05.485 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:16:05.485 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:16:05.485 INFO: GET 200 /
+- 16:16:05.485 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:16:05.485 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:05.532 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:16:11.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:16:12.234 DEBUG: OnContextCreated()
+- 16:16:12.375 INFO: GET 404 /css/uikit.min.css
+- 16:16:12.375 INFO: GET 404 /js/uikit.min.js
+- 16:16:12.375 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:12.375 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:16:12.375 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:16:12.391 INFO: GET 200 /
+- 16:16:12.391 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:16:12.438 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:16:13.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:16:13.000 DEBUG: OnContextCreated()
+- 16:16:13.141 INFO: GET 404 /css/uikit.min.css
+- 16:16:13.141 INFO: GET 404 /js/uikit.min.js
+- 16:16:13.141 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:16:13.141 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:16:13.141 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:16:13.141 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:16:13.141 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:16:13.157 INFO: GET 200 /
+- 16:16:13.157 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:16:13.157 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:16:13.157 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:16:13.172 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:13.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:16:20.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:16:20.063 DEBUG: OnContextCreated()
+- 16:16:20.204 INFO: GET 200 /
+- 16:16:20.204 INFO: GET 404 /css/uikit.min.css
+- 16:16:20.204 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:16:20.204 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:16:20.219 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:16:20.219 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:20.219 INFO: GET 404 /js/uikit.min.js
+- 16:16:20.250 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:20.282 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:16:32.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:16:32.016 DEBUG: OnContextCreated()
+- 16:16:32.157 INFO: GET 404 /css/uikit.min.css
+- 16:16:32.157 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:16:32.157 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:16:32.157 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:16:32.157 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:16:32.157 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:16:32.172 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:16:32.172 INFO: GET 200 /
+- 16:16:32.172 INFO: GET 404 /js/uikit.min.js
+- 16:16:32.172 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:16:32.172 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:16:32.172 INFO: GET 404 /js/uikit-icons.min.js
+- 16:16:32.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:18:10.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:18:10.797 DEBUG: OnContextCreated()
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.js
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/css/uikit.css
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.min.css
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/css/uikit.min.css
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/css/uikit-rtl.css
+- 16:18:10.954 INFO: GET 200 /
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/js/uikit-icons.min.js
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/js/uikit.js
+- 16:18:10.954 INFO: GET 200 /uikit-3.15.9/js/uikit.min.js
+- 16:18:10.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:18:19.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:18:19.984 DEBUG: OnContextCreated()
+- 16:18:19.141 INFO: GET 200 /
+[0502/161820.082:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:18:20.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:18:26.188 DEBUG: ClientHandler::OnAfterCreated()
+- 16:18:26.188 DEBUG: GetBrowserWindow(): not found, hwnd = 1575450
+- 16:18:26.188 DEBUG: BrowserWindow::BrowserWindow() created for Popup
+- 16:18:26.188 DEBUG: StoreBrowserWindow(): hwnd = 1575450
+- 16:18:26.188 DEBUG: Centering popup window relative to its parent
+- 16:18:26.219 DEBUG: OnLoadingStateChange: loading=1, url=
+- 16:18:26.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=1DE14D19171E1E4AB818E472EC6BACFB --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=1DE14D19171E1E4AB818E472EC6BACFB --renderer-client-id=4 --mojo-platform-channel-handle=3388 /prefetch:1
+- 16:18:26.031 DEBUG: OnBrowserCreated()
+- 16:18:27.532 DEBUG: OnLoadError, errorCode=-3, failedUrl=chrome-devtools://devtools/inspector.html
+- 16:18:27.532 DEBUG: OnLoadingStateChange: loading=0, url=
+- 16:18:30.844 DEBUG: OnBeforeClose() hwnd=1575450
+- 16:18:30.844 DEBUG: RemoveBrowserWindow(): hwnd = 1575450
+- 16:18:43.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:18:44.203 DEBUG: OnContextCreated()
+- 16:18:44.360 INFO: GET 200 /
+[0502/161844.079:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:18:44.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:18:51.063 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:18:51.078 DEBUG: OnContextCreated()
+- 16:18:51.219 INFO: GET 200 /
+[0502/161851.929:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:18:51.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:18:58.938 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:18:58.922 DEBUG: OnContextCreated()
+- 16:18:58.079 INFO: GET 200 /
+[0502/161858.780:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:18:58.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:19:12.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:19:12.781 DEBUG: OnContextCreated()
+- 16:19:12.922 INFO: GET 200 /
+[0502/161912.637:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:19:12.954 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:19:34.438 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:19:34.406 DEBUG: OnContextCreated()
+- 16:19:34.547 INFO: GET 200 /
+[0502/161934.757:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:19:34.079 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:20:18.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:20:19.250 DEBUG: OnContextCreated()
+- 16:20:19.407 INFO: GET 200 /
+[0502/162019.919:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:20:19.235 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:21:16.532 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:21:16.484 DEBUG: OnContextCreated()
+- 16:21:16.641 INFO: GET 200 /
+[0502/162116.419:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:21:16.750 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:21:30.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:21:31.219 DEBUG: OnContextCreated()
+- 16:21:31.375 INFO: GET 200 /
+[0502/162131.136:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:21:31.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:21:40.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:21:40.703 DEBUG: OnContextCreated()
+- 16:21:40.860 INFO: GET 200 /
+[0502/162140.566:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:21:40.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:21:45.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:21:45.891 DEBUG: OnContextCreated()
+- 16:21:45.032 INFO: GET 200 /
+[0502/162145.754:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:21:45.079 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:21:48.329 INFO: GET 200 /
+- 16:21:48.625 INFO: GET 404 /favicon.ico
+- 16:22:01.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:01.594 DEBUG: OnContextCreated()
+- 16:22:01.735 INFO: GET 200 /
+[0502/162201.533:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:01.860 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:15.188 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:15.172 DEBUG: OnContextCreated()
+- 16:22:16.313 INFO: GET 200 /
+[0502/162216.021:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:16.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:23.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:23.484 DEBUG: OnContextCreated()
+- 16:22:23.625 INFO: GET 200 /
+[0502/162223.342:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:23.657 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:28.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:28.938 DEBUG: OnContextCreated()
+- 16:22:28.094 INFO: GET 200 /
+[0502/162228.797:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:28.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:33.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:33.938 DEBUG: OnContextCreated()
+- 16:22:33.094 INFO: GET 200 /
+[0502/162233.797:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:33.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:38.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:38.625 DEBUG: OnContextCreated()
+- 16:22:38.782 INFO: GET 200 /
+[0502/162238.485:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:38.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:42.110 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:42.078 DEBUG: OnContextCreated()
+- 16:22:42.219 INFO: GET 200 /
+[0502/162242.982:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:43.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:48.735 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:48.688 DEBUG: OnContextCreated()
+- 16:22:48.844 INFO: GET 200 /
+[0502/162248.548:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:48.860 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:22:53.657 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:22:53.609 DEBUG: OnContextCreated()
+- 16:22:53.750 INFO: GET 200 /
+[0502/162253.467:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:22:53.782 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:23:26.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:23:26.109 DEBUG: OnContextCreated()
+- 16:23:26.250 INFO: GET 200 /
+[0502/162327.012:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:23:27.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:23:38.079 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:23:38.047 DEBUG: OnContextCreated()
+- 16:23:38.188 INFO: GET 200 /
+[0502/162338.894:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:23:38.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:23:47.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:23:47.844 DEBUG: OnContextCreated()
+- 16:23:47.985 INFO: GET 200 /
+[0502/162347.699:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:23:47.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:24:36.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:24:36.938 DEBUG: OnContextCreated()
+- 16:24:36.079 INFO: GET 200 /
+[0502/162436.794:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:24:36.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:24:51.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:24:51.313 DEBUG: OnContextCreated()
+- 16:24:51.454 INFO: GET 200 /
+[0502/162451.220:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:24:51.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:24:57.579 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:24:57.563 DEBUG: OnContextCreated()
+- 16:24:57.704 INFO: GET 200 /
+[0502/162457.421:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:24:57.735 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:25:04.954 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:25:04.922 DEBUG: OnContextCreated()
+- 16:25:04.063 INFO: GET 200 /
+[0502/162504.827:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:25:04.157 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:31:15.485 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:31:15.453 DEBUG: OnContextCreated()
+- 16:31:15.610 INFO: GET 200 /
+[0502/163115.510:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:31:15.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:31:24.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:31:25.203 DEBUG: OnContextCreated()
+- 16:31:25.360 INFO: GET 200 /
+[0502/163125.071:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:31:25.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:31:28.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:31:28.766 DEBUG: OnContextCreated()
+- 16:31:28.907 INFO: GET 200 /
+[0502/163128.621:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:31:28.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:31:47.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:31:48.234 DEBUG: OnContextCreated()
+- 16:31:48.375 INFO: GET 200 /
+[0502/163148.091:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:31:48.407 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:32:18.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:32:18.875 DEBUG: OnContextCreated()
+- 16:32:18.016 INFO: GET 200 /
+[0502/163218.789:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:32:18.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:32:33.735 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:32:33.703 DEBUG: OnContextCreated()
+- 16:32:33.860 INFO: GET 200 /
+[0502/163233.615:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:32:33.938 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:32:39.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:32:40.266 DEBUG: OnContextCreated()
+- 16:32:40.407 INFO: GET 200 /
+[0502/163240.129:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:32:40.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:35:10.563 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:35:10.531 DEBUG: OnContextCreated()
+- 16:35:10.672 INFO: GET 200 /
+[0502/163510.612:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:35:10.954 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:36:55.610 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:36:55.656 DEBUG: OnContextCreated()
+- 16:36:55.797 INFO: GET 200 /
+[0502/163655.684:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:36:55.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:37:12.563 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:37:12.531 DEBUG: OnContextCreated()
+- 16:37:12.672 INFO: GET 200 /
+[0502/163712.383:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:37:12.704 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:37:23.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:37:23.609 DEBUG: OnContextCreated()
+- 16:37:23.766 INFO: GET 200 /
+[0502/163723.486:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:37:23.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:37:54.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:37:54.406 DEBUG: OnContextCreated()
+- 16:37:54.563 INFO: GET 200 /
+[0502/163754.339:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:37:54.657 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:38:17.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:38:17.094 DEBUG: OnContextCreated()
+- 16:38:17.235 INFO: GET 200 /
+[0502/163817.958:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:38:17.282 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:38:50.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:38:50.797 DEBUG: OnContextCreated()
+- 16:38:50.938 INFO: GET 200 /
+[0502/163850.645:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:38:50.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:41:09.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:41:09.781 DEBUG: OnContextCreated()
+- 16:41:09.938 INFO: GET 200 /
+[0502/164109.794:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:41:09.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:41:36.938 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:41:36.906 DEBUG: OnContextCreated()
+- 16:41:36.047 INFO: GET 200 /
+[0502/164136.795:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:41:36.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:41:38.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:41:38.094 DEBUG: OnContextCreated()
+- 16:41:38.235 INFO: GET 200 /
+[0502/164138.965:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:41:38.282 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:42:24.954 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:42:24.922 DEBUG: OnContextCreated()
+- 16:42:24.063 INFO: GET 200 /
+[0502/164224.823:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:42:24.157 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:42:45.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:42:45.781 DEBUG: OnContextCreated()
+- 16:42:45.922 INFO: GET 200 /
+[0502/164245.632:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:42:45.954 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:43:09.860 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:43:09.828 DEBUG: OnContextCreated()
+- 16:43:09.969 INFO: GET 200 /
+[0502/164309.679:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:43:09.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:43:21.204 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:43:21.172 DEBUG: OnContextCreated()
+- 16:43:21.313 INFO: GET 200 /
+[0502/164322.072:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:43:22.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:43:41.657 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:43:41.641 DEBUG: OnContextCreated()
+- 16:43:41.797 INFO: GET 200 /
+[0502/164341.520:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:43:41.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:50:43.579 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:50:43.734 DEBUG: OnContextCreated()
+- 16:50:43.891 INFO: GET 200 /
+[0502/165043.773:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:50:43.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:51:00.829 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:51:00.797 DEBUG: OnContextCreated()
+- 16:51:00.938 INFO: GET 200 /
+[0502/165100.653:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:51:00.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:51:34.954 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:51:34.938 DEBUG: OnContextCreated()
+- 16:51:34.079 INFO: GET 200 /
+[0502/165134.885:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:51:34.204 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:51:53.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:51:53.953 DEBUG: OnContextCreated()
+- 16:51:53.110 INFO: GET 200 /
+[0502/165153.816:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:51:53.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:52:15.172 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:52:16.172 DEBUG: OnContextCreated()
+- 16:52:16.329 INFO: GET 200 /
+[0502/165216.035:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:52:16.360 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:52:50.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:52:50.125 DEBUG: OnContextCreated()
+- 16:52:50.282 INFO: GET 200 /
+[0502/165251.040:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:52:51.360 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:02.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:03.203 DEBUG: OnContextCreated()
+- 16:53:03.344 INFO: GET 200 /
+[0502/165303.378:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:03.704 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:05.454 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:05.406 DEBUG: OnContextCreated()
+- 16:53:05.547 INFO: GET 200 /
+[0502/165305.257:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:05.579 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:10.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:10.984 DEBUG: OnContextCreated()
+- 16:53:10.141 INFO: GET 200 /
+[0502/165310.845:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:10.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:15.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:16.281 DEBUG: OnContextCreated()
+- 16:53:16.422 INFO: GET 200 /
+[0502/165316.139:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:16.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:17.204 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:17.156 DEBUG: OnContextCreated()
+- 16:53:17.297 INFO: GET 200 /
+[0502/165318.020:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:18.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:26.235 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:27.219 DEBUG: OnContextCreated()
+- 16:53:27.375 INFO: GET 200 /
+[0502/165327.079:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:27.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:53:41.282 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:53:42.250 DEBUG: OnContextCreated()
+- 16:53:42.391 INFO: GET 200 /
+[0502/165342.110:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:53:42.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:54:02.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:54:02.844 DEBUG: OnContextCreated()
+- 16:54:02.000 INFO: GET 200 /
+[0502/165402.700:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:54:02.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:54:06.360 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:54:06.313 DEBUG: OnContextCreated()
+- 16:54:06.454 INFO: GET 200 /
+[0502/165406.166:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:54:06.485 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:54:14.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:54:14.469 DEBUG: OnContextCreated()
+- 16:54:14.610 INFO: GET 200 /
+[0502/165414.321:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:54:14.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:54:22.657 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:54:22.625 DEBUG: OnContextCreated()
+- 16:54:22.766 INFO: GET 200 /
+[0502/165422.473:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:54:22.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:56:43.235 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:56:44.188 DEBUG: OnContextCreated()
+- 16:56:44.344 INFO: GET 200 /
+[0502/165644.318:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:56:44.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:57:06.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:57:06.969 DEBUG: OnContextCreated()
+- 16:57:06.110 INFO: GET 200 /
+[0502/165706.829:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:57:06.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:57:28.204 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:57:28.172 DEBUG: OnContextCreated()
+- 16:57:28.313 INFO: GET 200 /
+[0502/165729.022:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:57:29.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:57:40.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:57:40.672 DEBUG: OnContextCreated()
+- 16:57:40.813 INFO: GET 200 /
+[0502/165740.570:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:57:40.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:57:48.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:57:48.094 DEBUG: OnContextCreated()
+- 16:57:48.250 INFO: GET 200 /
+[0502/165748.956:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:57:48.282 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:58:02.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:58:03.203 DEBUG: OnContextCreated()
+- 16:58:03.360 INFO: GET 200 /
+[0502/165803.065:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:58:03.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:58:31.079 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:58:31.047 DEBUG: OnContextCreated()
+- 16:58:31.188 INFO: GET 200 /
+[0502/165831.903:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:58:31.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:58:47.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:58:47.875 DEBUG: OnContextCreated()
+- 16:58:47.016 INFO: GET 200 /
+[0502/165847.726:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:58:47.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:59:08.110 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:59:08.094 DEBUG: OnContextCreated()
+- 16:59:08.235 INFO: GET 200 /
+[0502/165909.058:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:59:09.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:59:17.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:59:18.250 DEBUG: OnContextCreated()
+- 16:59:18.391 INFO: GET 200 /
+[0502/165918.154:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:59:18.485 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 16:59:37.032 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 16:59:37.031 DEBUG: OnContextCreated()
+- 16:59:37.172 INFO: GET 200 /
+[0502/165937.879:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 16:59:37.204 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:04.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:04.625 DEBUG: OnContextCreated()
+- 17:00:04.782 INFO: GET 200 /
+[0502/170004.486:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:04.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:26.797 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:26.750 DEBUG: OnContextCreated()
+- 17:00:26.907 INFO: GET 200 /
+[0502/170026.609:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:26.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:32.500 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:32.469 DEBUG: OnContextCreated()
+- 17:00:32.610 INFO: GET 200 /
+[0502/170032.315:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:32.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:37.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:37.375 DEBUG: OnContextCreated()
+- 17:00:37.532 INFO: GET 200 /
+[0502/170037.264:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:37.594 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:40.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:40.078 DEBUG: OnContextCreated()
+- 17:00:40.235 INFO: GET 200 /
+[0502/170040.935:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:40.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:00:45.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:00:45.688 DEBUG: OnContextCreated()
+- 17:00:45.844 INFO: GET 200 /
+[0502/170045.543:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:00:45.860 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:01:03.985 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52670/
+- 17:01:03.953 DEBUG: OnContextCreated()
+- 17:01:03.110 INFO: GET 200 /
+[0502/170103.817:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 17:01:03.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52670/
+- 17:01:47.235 DEBUG: WM_DESTROY
+- 17:01:47.235 DEBUG: RemoveBrowserWindow(): hwnd = 330094
+- 17:01:47.235 INFO: Stopping Mongoose web server
+- 17:01:47.235 DEBUG: Mongoose webserver stopped immediately
+- 17:01:47.250 DEBUG: OnBeforeClose() hwnd=1771722
+- 17:01:47.250 DEBUG: RemoveBrowserWindow(): hwnd = 1771722
+- 17:01:47.250 DEBUG: GetBrowserWindow(): not found, hwnd = 1771722
+- 17:01:47.250 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 17:01:47.250 DEBUG: Calling CefQuitMessageLoop()
+- 17:01:47.125 DEBUG: OnBrowserDestroyed()
+- 17:01:47.313 INFO: Ended application
+- 17:01:47.313 INFO: --------------------------------------------------------

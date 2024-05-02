@@ -21,32 +21,33 @@ if (session_status() === PHP_SESSION_NONE) {
 */
 ?>
 
-
+<!DOCTYPE html>
 <html>
 <head>
-<title>Baxter Application</title>
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/css/uikit-rtl.css">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/css/uikit-rtl.min.css">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/css/uikit.css">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/css/uikit.min.css">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/js/uikit-icons.js">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/js/uikit-icons.min.js">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/js/uikit.js">
-<link rel="stylesheet" type="text/css" href="/uikit-3.15.9/js/uikit.min.js">
-
-
-
-
+  <title>Baxter Application</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/css/uikit.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
 </head>
+<body>
+  <div class="uk-grid uk-grid-match">
+    <div class="uk-width-4-5 uk-card uk-card-default uk-card-body uk-flex" style="height:700px;"> 
+    <p uk-margin>
+    <input type="text"class="uk-button uk-button-default">
+    <input type="text" class="uk-button uk-button-default">
+    <input type="text" class="uk-button uk-button-default">
+</p>
+    </div>
 
 
-<div class="uk-panel">
-    <img class="uk-align-center uk-align-right@m uk-margin-remove-adjacent" src="images/light.jpg" width="225" height="150" alt="Example image">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-
-
+    
+    <div class="uk-width-1-5 uk-card uk-card-default uk-card-body uk-flex" style="height:700px;">
+      Large
+    </div>
+  </div>
+</body>
 </html>
 
 
