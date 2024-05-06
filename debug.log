@@ -40202,3 +40202,1562 @@ s process: "C:\VersioneSempliceSerializzazione\phpdesktop-chrome.exe" --type=gpu
 - 16:15:04.203 DEBUG: OnBrowserDestroyed()
 - 16:15:04.484 INFO: Ended application
 - 16:15:04.484 INFO: --------------------------------------------------------
+- 11:24:26.016 INFO: --------------------------------------------------------
+- 11:24:26.016 INFO: Started application
+- 11:24:26.016 INFO: Logging to: C:\Manutentori\debug.log
+- 11:24:26.016 INFO: Log level = DEBUG4
+- 11:24:26.016 INFO: Starting Mongoose 3.9c web server
+- 11:24:26.016 INFO: WWW directory: C:\Manutentori\www
+- 11:24:26.016 INFO: Index files: index.html,index.php
+- 11:24:26.016 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 11:24:26.016 INFO: CGI pattern: **.php$
+- 11:24:26.016 INFO: Hide files patterns: 
+- 11:24:26.016 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 11:24:26.016 INFO: Web server url: http://127.0.0.1:57778/
+- 11:24:26.016 INFO: remote_debugging_port = 53738
+- 11:24:26.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=53738
+- 11:24:27.234 DEBUG: App::OnContextInitialized()
+- 11:24:27.234 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 11:24:27.234 DEBUG: Window max width/height = 1846/978
+- 11:24:27.234 DEBUG: GetBrowserWindow(): not found, hwnd = 3475700
+- 11:24:27.234 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 11:24:27.234 DEBUG: BrowserWindow::CreateBrowserControl()
+- 11:24:27.234 DEBUG: StoreBrowserWindow(): hwnd = 3475700
+- 11:24:27.297 DEBUG: ClientHandler::OnAfterCreated()
+- 11:24:27.297 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 11:24:27.015 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=CC2A935BA1CB766A90360BB6A60F3D10 --mojo-platform-channel-handle=1764 /prefetch:2
+- 11:24:27.312 DEBUG: OnLoadingStateChange: loading=1, url=
+- 11:24:27.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=008E2EA7542E4E623D46B55A9AB763E7 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=008E2EA7542E4E623D46B55A9AB763E7 --renderer-client-id=3 --mojo-platform-channel-handle=2404 /prefetch:1
+- 11:24:27.078 DEBUG: OnBrowserCreated()
+[0506/112427.311:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 11:24:28.953 INFO: GET 200 /
+- 11:24:28.594 DEBUG: OnContextCreated()
+[0506/112428.764:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:24:28.969 INFO: GET 200 /image/Aggiungi.png
+- 11:24:28.984 INFO: GET 200 /image/Clear.png
+- 11:24:28.984 INFO: GET 200 /image/Elimina.png
+- 11:24:28.984 INFO: GET 200 /image/Modifica.png
+- 11:24:29.203 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:27:27.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:27:27.969 DEBUG: OnContextCreated()
+- 11:27:27.344 INFO: GET 200 /
+[0506/112727.653:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:27:27.859 INFO: GET 200 /image/Aggiungi.png
+- 11:27:27.859 INFO: GET 200 /image/Modifica.png
+- 11:27:27.875 INFO: GET 200 /image/Elimina.png
+- 11:27:27.875 INFO: GET 200 /image/Clear.png
+- 11:27:27.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:29:02.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:29:02.297 DEBUG: OnContextCreated()
+- 11:29:02.656 INFO: GET 200 /
+[0506/112902.563:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:29:02.766 INFO: GET 200 /image/Aggiungi.png
+- 11:29:02.781 INFO: GET 200 /image/Modifica.png
+- 11:29:02.781 INFO: GET 200 /image/Elimina.png
+- 11:29:02.797 INFO: GET 200 /image/Clear.png
+- 11:29:02.812 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:29:09.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:29:09.203 DEBUG: OnContextCreated()
+- 11:29:09.562 INFO: GET 200 /
+- 11:29:09.641 INFO: GET 200 /image/Aggiungi.png
+- 11:29:09.641 INFO: GET 200 /image/Modifica.png
+- 11:29:09.641 INFO: GET 200 /image/Elimina.png
+- 11:29:09.656 INFO: GET 200 /image/Clear.png
+[0506/112909.532:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:29:09.750 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:29:38.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:29:38.250 DEBUG: OnContextCreated()
+- 11:29:38.625 INFO: GET 200 /
+- 11:29:38.687 INFO: GET 200 /image/Aggiungi.png
+- 11:29:38.703 INFO: GET 200 /image/Modifica.png
+- 11:29:38.703 INFO: GET 200 /image/Elimina.png
+[0506/112938.507:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:29:38.719 INFO: GET 200 /image/Clear.png
+- 11:29:38.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:29:59.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:29:59.750 DEBUG: OnContextCreated()
+- 11:29:59.125 INFO: GET 200 /
+- 11:29:59.141 INFO: GET 200 /image/Aggiungi.png
+- 11:29:59.141 INFO: GET 200 /image/Modifica.png
+- 11:29:59.141 INFO: GET 200 /image/Elimina.png
+- 11:29:59.141 INFO: GET 200 /image/Clear.png
+[0506/112959.945:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:29:59.156 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:30:09.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:30:10.907 DEBUG: OnContextCreated()
+- 11:30:10.281 INFO: GET 200 /
+- 11:30:10.344 INFO: GET 200 /image/Aggiungi.png
+- 11:30:10.344 INFO: GET 200 /image/Modifica.png
+- 11:30:10.359 INFO: GET 200 /image/Elimina.png
+- 11:30:10.359 INFO: GET 200 /image/Clear.png
+[0506/113010.161:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:30:10.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:30:24.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:30:24.047 DEBUG: OnContextCreated()
+- 11:30:24.406 INFO: GET 200 /
+- 11:30:24.437 INFO: GET 200 /image/Aggiungi.png
+- 11:30:24.453 INFO: GET 200 /image/Modifica.png
+[0506/113024.248:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:30:24.453 INFO: GET 200 /image/Elimina.png
+- 11:30:24.453 INFO: GET 200 /image/Clear.png
+- 11:30:24.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:30:52.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:30:52.110 DEBUG: OnContextCreated()
+- 11:30:52.484 INFO: GET 200 /
+- 11:30:52.547 INFO: GET 200 /image/Aggiungi.png
+- 11:30:52.547 INFO: GET 200 /image/Modifica.png
+- 11:30:52.547 INFO: GET 200 /image/Elimina.png
+- 11:30:52.547 INFO: GET 200 /image/Clear.png
+[0506/113052.356:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:30:52.578 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:32:59.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:32:59.438 DEBUG: OnContextCreated()
+- 11:32:59.812 INFO: GET 200 /
+- 11:32:59.984 INFO: GET 200 /image/Aggiungi.png
+- 11:32:59.000 INFO: GET 200 /image/Modifica.png
+- 11:32:59.000 INFO: GET 200 /image/Elimina.png
+[0506/113259.805:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:32:59.016 INFO: GET 200 /image/Clear.png
+- 11:32:59.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:33:18.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:33:19.969 DEBUG: OnContextCreated()
+- 11:33:19.344 INFO: GET 200 /
+- 11:33:19.406 INFO: GET 200 /image/Aggiungi.png
+- 11:33:19.406 INFO: GET 200 /image/Modifica.png
+- 11:33:19.406 INFO: GET 200 /image/Elimina.png
+- 11:33:19.406 INFO: GET 200 /image/Clear.png
+[0506/113319.244:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:33:19.453 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:33:26.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:33:26.547 DEBUG: OnContextCreated()
+- 11:33:26.922 INFO: GET 200 /
+- 11:33:26.953 INFO: GET 200 /image/Aggiungi.png
+- 11:33:26.953 INFO: GET 200 /image/Modifica.png
+- 11:33:26.969 INFO: GET 200 /image/Elimina.png
+- 11:33:26.969 INFO: GET 200 /image/Clear.png
+[0506/113326.999:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:33:27.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:37:10.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:37:10.641 DEBUG: OnContextCreated()
+- 11:37:10.000 INFO: GET 200 /
+- 11:37:11.219 INFO: GET 200 /image/Aggiungi.png
+- 11:37:11.219 INFO: GET 200 /image/Modifica.png
+- 11:37:11.219 INFO: GET 200 /image/Elimina.png
+- 11:37:11.234 INFO: GET 200 /image/Clear.png
+[0506/113711.042:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:37:11.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:37:45.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:37:46.985 DEBUG: OnContextCreated()
+- 11:37:46.359 INFO: GET 200 /
+- 11:37:46.406 INFO: GET 200 /image/Aggiungi.png
+- 11:37:46.406 INFO: GET 200 /image/Modifica.png
+- 11:37:46.406 INFO: GET 200 /image/Elimina.png
+- 11:37:46.406 INFO: GET 200 /image/Clear.png
+[0506/113746.221:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:37:46.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:37:54.906 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:37:54.672 DEBUG: OnContextCreated()
+- 11:37:54.031 INFO: GET 200 /
+- 11:37:54.094 INFO: GET 200 /image/Aggiungi.png
+- 11:37:54.094 INFO: GET 200 /image/Modifica.png
+- 11:37:54.094 INFO: GET 200 /image/Elimina.png
+- 11:37:54.109 INFO: GET 200 /image/Clear.png
+[0506/113754.908:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:37:54.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:38:07.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:38:08.875 DEBUG: OnContextCreated()
+- 11:38:08.250 INFO: GET 200 /
+[0506/113808.074:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:38:08.281 INFO: GET 200 /image/Aggiungi.png
+- 11:38:08.281 INFO: GET 200 /image/Modifica.png
+- 11:38:08.281 INFO: GET 200 /image/Clear.png
+- 11:38:08.281 INFO: GET 200 /image/Elimina.png
+- 11:38:08.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:38:30.562 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:38:30.328 DEBUG: OnContextCreated()
+- 11:38:30.687 INFO: GET 200 /
+- 11:38:30.703 INFO: GET 200 /image/Aggiungi.png
+- 11:38:30.719 INFO: GET 200 /image/Modifica.png
+- 11:38:30.719 INFO: GET 200 /image/Elimina.png
+- 11:38:30.719 INFO: GET 200 /image/Clear.png
+[0506/113830.515:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:38:30.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:46:02.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:46:02.141 DEBUG: OnContextCreated()
+- 11:46:02.516 INFO: GET 200 /
+- 11:46:02.719 INFO: GET 200 /image/Aggiungi.png
+- 11:46:02.734 INFO: GET 200 /image/Modifica.png
+- 11:46:02.734 INFO: GET 200 /image/Elimina.png
+- 11:46:02.734 INFO: GET 200 /image/Clear.png
+[0506/114602.542:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:46:02.750 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:46:42.562 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:46:42.313 DEBUG: OnContextCreated()
+- 11:46:42.672 INFO: GET 200 /
+- 11:46:42.703 INFO: GET 200 /image/Aggiungi.png
+- 11:46:42.703 INFO: GET 200 /image/Modifica.png
+- 11:46:42.703 INFO: GET 200 /image/Elimina.png
+- 11:46:42.719 INFO: GET 200 /image/Clear.png
+[0506/114642.514:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:46:42.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:47:08.031 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:47:08.782 DEBUG: OnContextCreated()
+- 11:47:08.141 INFO: GET 200 /
+- 11:47:08.203 INFO: GET 200 /image/Aggiungi.png
+- 11:47:08.203 INFO: GET 200 /image/Modifica.png
+- 11:47:09.203 INFO: GET 200 /image/Elimina.png
+- 11:47:09.203 INFO: GET 200 /image/Clear.png
+[0506/114709.015:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:47:09.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:47:36.781 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:47:36.578 DEBUG: OnContextCreated()
+- 11:47:36.937 INFO: GET 200 /
+- 11:47:36.984 INFO: GET 200 /image/Aggiungi.png
+- 11:47:36.000 INFO: GET 200 /image/Modifica.png
+- 11:47:36.000 INFO: GET 200 /image/Elimina.png
+- 11:47:36.000 INFO: GET 200 /image/Clear.png
+[0506/114736.813:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:47:36.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:48:18.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:48:18.469 DEBUG: OnContextCreated()
+- 11:48:18.828 INFO: GET 200 /
+- 11:48:18.875 INFO: GET 200 /image/Aggiungi.png
+- 11:48:18.875 INFO: GET 200 /image/Modifica.png
+- 11:48:18.891 INFO: GET 200 /image/Elimina.png
+- 11:48:18.891 INFO: GET 200 /image/Clear.png
+[0506/114818.761:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:48:18.984 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:48:41.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:48:42.938 DEBUG: OnContextCreated()
+- 11:48:42.312 INFO: GET 200 /
+- 11:48:42.359 INFO: GET 200 /image/Aggiungi.png
+- 11:48:42.359 INFO: GET 200 /image/Modifica.png
+- 11:48:42.359 INFO: GET 200 /image/Elimina.png
+- 11:48:42.359 INFO: GET 200 /image/Clear.png
+[0506/114842.202:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:48:42.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:48:50.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:48:50.047 DEBUG: OnContextCreated()
+- 11:48:50.406 INFO: GET 200 /
+- 11:48:50.422 INFO: GET 200 /image/Aggiungi.png
+[0506/114850.227:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:48:50.422 INFO: GET 200 /image/Modifica.png
+- 11:48:50.437 INFO: GET 200 /image/Elimina.png
+- 11:48:50.437 INFO: GET 200 /image/Clear.png
+- 11:48:50.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:48:57.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:48:57.391 DEBUG: OnContextCreated()
+- 11:48:57.750 INFO: GET 200 /
+[0506/114857.574:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:48:57.781 INFO: GET 200 /image/Aggiungi.png
+- 11:48:57.781 INFO: GET 200 /image/Elimina.png
+- 11:48:57.781 INFO: GET 200 /image/Clear.png
+- 11:48:57.781 INFO: GET 200 /image/Modifica.png
+- 11:48:57.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:49:40.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:49:41.875 DEBUG: OnContextCreated()
+- 11:49:41.250 INFO: GET 200 /
+- 11:49:41.297 INFO: GET 200 /image/Aggiungi.png
+- 11:49:41.312 INFO: GET 200 /image/Modifica.png
+- 11:49:41.312 INFO: GET 200 /image/Elimina.png
+- 11:49:41.312 INFO: GET 200 /image/Clear.png
+[0506/114941.128:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:49:41.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:49:48.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:49:48.703 DEBUG: OnContextCreated()
+- 11:49:48.062 INFO: GET 200 /
+- 11:49:48.094 INFO: GET 200 /image/Aggiungi.png
+[0506/114948.894:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:49:48.094 INFO: GET 200 /image/Elimina.png
+- 11:49:48.094 INFO: GET 200 /image/Clear.png
+- 11:49:48.094 INFO: GET 200 /image/Modifica.png
+- 11:49:48.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:50:23.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:50:23.578 DEBUG: OnContextCreated()
+- 11:50:23.953 INFO: GET 200 /
+- 11:50:23.969 INFO: GET 200 /image/Aggiungi.png
+- 11:50:23.984 INFO: GET 200 /image/Modifica.png
+[0506/115023.776:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:50:23.984 INFO: GET 200 /image/Elimina.png
+- 11:50:23.984 INFO: GET 200 /image/Clear.png
+- 11:50:23.984 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:50:47.656 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:50:47.407 DEBUG: OnContextCreated()
+- 11:50:47.766 INFO: GET 200 /
+- 11:50:47.812 INFO: GET 200 /image/Aggiungi.png
+- 11:50:47.812 INFO: GET 200 /image/Modifica.png
+- 11:50:47.812 INFO: GET 200 /image/Elimina.png
+- 11:50:47.828 INFO: GET 200 /image/Clear.png
+[0506/115047.641:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:50:47.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:51:01.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:51:01.453 DEBUG: OnContextCreated()
+- 11:51:01.828 INFO: GET 200 /
+- 11:51:01.844 INFO: GET 200 /image/Aggiungi.png
+- 11:51:01.844 INFO: GET 200 /image/Modifica.png
+- 11:51:01.859 INFO: GET 200 /image/Elimina.png
+[0506/115101.649:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:51:01.859 INFO: GET 200 /image/Clear.png
+- 11:51:01.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:51:31.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:51:31.453 DEBUG: OnContextCreated()
+- 11:51:31.828 INFO: GET 200 /
+- 11:51:31.844 INFO: GET 200 /image/Aggiungi.png
+- 11:51:31.844 INFO: GET 200 /image/Modifica.png
+[0506/115131.645:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:51:31.844 INFO: GET 200 /image/Elimina.png
+- 11:51:31.844 INFO: GET 200 /image/Clear.png
+- 11:51:31.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:53:06.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:53:06.235 DEBUG: OnContextCreated()
+- 11:53:06.609 INFO: GET 200 /
+[0506/115306.429:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:53:06.641 INFO: GET 200 /image/Elimina.png
+- 11:53:06.641 INFO: GET 200 /image/Aggiungi.png
+- 11:53:06.641 INFO: GET 200 /image/Clear.png
+- 11:53:06.641 INFO: GET 200 /image/Modifica.png
+- 11:53:06.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:53:21.172 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:53:22.938 DEBUG: OnContextCreated()
+- 11:53:22.297 INFO: GET 200 /
+- 11:53:22.328 INFO: GET 200 /image/Aggiungi.png
+[0506/115322.123:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:53:22.328 INFO: GET 200 /image/Elimina.png
+- 11:53:22.328 INFO: GET 200 /image/Clear.png
+- 11:53:22.328 INFO: GET 200 /image/Modifica.png
+- 11:53:22.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:53:39.234 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:53:39.985 DEBUG: OnContextCreated()
+- 11:53:39.359 INFO: GET 200 /
+- 11:53:39.375 INFO: GET 200 /image/Aggiungi.png
+- 11:53:39.375 INFO: GET 200 /image/Modifica.png
+[0506/115339.179:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:53:39.375 INFO: GET 200 /image/Elimina.png
+- 11:53:39.391 INFO: GET 200 /image/Clear.png
+- 11:53:39.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:53:58.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:53:58.157 DEBUG: OnContextCreated()
+- 11:53:58.531 INFO: GET 200 /
+- 11:53:58.578 INFO: GET 200 /image/Aggiungi.png
+- 11:53:58.578 INFO: GET 200 /image/Modifica.png
+- 11:53:58.578 INFO: GET 200 /image/Elimina.png
+- 11:53:58.578 INFO: GET 200 /image/Clear.png
+[0506/115358.405:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:53:58.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:54:01.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:54:01.485 DEBUG: OnContextCreated()
+- 11:54:01.844 INFO: GET 200 /
+- 11:54:01.875 INFO: GET 200 /image/Aggiungi.png
+[0506/115401.672:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:54:01.875 INFO: GET 200 /image/Elimina.png
+- 11:54:01.875 INFO: GET 200 /image/Clear.png
+- 11:54:01.875 INFO: GET 200 /image/Modifica.png
+- 11:54:01.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:54:05.562 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:54:05.313 DEBUG: OnContextCreated()
+- 11:54:05.687 INFO: GET 200 /
+- 11:54:05.703 INFO: GET 200 /image/Aggiungi.png
+- 11:54:05.703 INFO: GET 200 /image/Modifica.png
+[0506/115405.499:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:54:05.703 INFO: GET 200 /image/Elimina.png
+- 11:54:05.703 INFO: GET 200 /image/Clear.png
+- 11:54:05.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:54:40.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:54:40.235 DEBUG: OnContextCreated()
+- 11:54:40.594 INFO: GET 200 /
+- 11:54:40.625 INFO: GET 200 /image/Aggiungi.png
+- 11:54:40.625 INFO: GET 200 /image/Modifica.png
+- 11:54:40.625 INFO: GET 200 /image/Elimina.png
+- 11:54:40.625 INFO: GET 200 /image/Clear.png
+[0506/115440.429:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:54:40.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:54:48.937 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:54:48.703 DEBUG: OnContextCreated()
+- 11:54:48.062 INFO: GET 200 /
+- 11:54:48.094 INFO: GET 200 /image/Aggiungi.png
+- 11:54:48.094 INFO: GET 200 /image/Modifica.png
+- 11:54:48.094 INFO: GET 200 /image/Elimina.png
+- 11:54:48.109 INFO: GET 200 /image/Clear.png
+[0506/115449.017:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:54:49.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:55:17.781 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:55:17.532 DEBUG: OnContextCreated()
+- 11:55:17.906 INFO: GET 200 /
+- 11:55:17.031 INFO: GET 200 /image/Aggiungi.png
+- 11:55:17.031 INFO: GET 200 /image/Modifica.png
+- 11:55:17.031 INFO: GET 200 /image/Elimina.png
+- 11:55:17.031 INFO: GET 200 /image/Clear.png
+[0506/115517.929:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:55:17.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:55:32.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:55:33.891 DEBUG: OnContextCreated()
+- 11:55:33.250 INFO: GET 200 /
+- 11:55:33.344 INFO: GET 200 /image/Aggiungi.png
+- 11:55:33.359 INFO: GET 200 /image/Modifica.png
+- 11:55:33.359 INFO: GET 200 /image/Elimina.png
+- 11:55:33.359 INFO: GET 200 /image/Clear.png
+[0506/115533.224:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:55:33.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:55:53.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:55:53.766 DEBUG: OnContextCreated()
+- 11:55:53.141 INFO: GET 200 /
+- 11:55:53.187 INFO: GET 200 /image/Aggiungi.png
+- 11:55:53.187 INFO: GET 200 /image/Modifica.png
+- 11:55:53.187 INFO: GET 200 /image/Elimina.png
+- 11:55:53.187 INFO: GET 200 /image/Clear.png
+[0506/115554.006:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:55:54.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:56:00.281 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:56:00.032 DEBUG: OnContextCreated()
+- 11:56:00.391 INFO: GET 200 /
+[0506/115600.210:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:56:00.406 INFO: GET 200 /image/Aggiungi.png
+- 11:56:00.422 INFO: GET 200 /image/Modifica.png
+- 11:56:00.422 INFO: GET 200 /image/Elimina.png
+- 11:56:00.422 INFO: GET 200 /image/Clear.png
+- 11:56:00.422 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:56:15.031 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:56:15.813 DEBUG: OnContextCreated()
+- 11:56:15.187 INFO: GET 200 /
+- 11:56:16.234 INFO: GET 200 /image/Aggiungi.png
+- 11:56:16.234 INFO: GET 200 /image/Modifica.png
+- 11:56:16.234 INFO: GET 200 /image/Elimina.png
+- 11:56:16.234 INFO: GET 200 /image/Clear.png
+[0506/115616.057:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:56:16.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:56:46.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:56:47.891 DEBUG: OnContextCreated()
+- 11:56:47.250 INFO: GET 200 /
+- 11:56:47.297 INFO: GET 200 /image/Aggiungi.png
+- 11:56:47.312 INFO: GET 200 /image/Modifica.png
+- 11:56:47.312 INFO: GET 200 /image/Elimina.png
+- 11:56:47.312 INFO: GET 200 /image/Clear.png
+[0506/115647.169:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:56:47.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:57:02.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:57:02.688 DEBUG: OnContextCreated()
+- 11:57:02.047 INFO: GET 200 /
+- 11:57:02.062 INFO: GET 200 /image/Aggiungi.png
+- 11:57:02.078 INFO: GET 200 /image/Modifica.png
+[0506/115702.870:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:57:02.078 INFO: GET 200 /image/Elimina.png
+- 11:57:02.078 INFO: GET 200 /image/Clear.png
+- 11:57:02.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:57:07.703 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:57:07.453 DEBUG: OnContextCreated()
+- 11:57:07.812 INFO: GET 200 /
+- 11:57:07.828 INFO: GET 200 /image/Aggiungi.png
+- 11:57:07.828 INFO: GET 200 /image/Modifica.png
+[0506/115707.631:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:57:07.844 INFO: GET 200 /image/Clear.png
+- 11:57:07.844 INFO: GET 200 /image/Elimina.png
+- 11:57:07.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:57:55.187 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:57:56.969 DEBUG: OnContextCreated()
+- 11:57:56.328 INFO: GET 200 /
+- 11:57:56.359 INFO: GET 200 /image/Aggiungi.png
+[0506/115756.152:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:57:56.359 INFO: GET 200 /image/Modifica.png
+- 11:57:56.359 INFO: GET 200 /image/Elimina.png
+- 11:57:56.359 INFO: GET 200 /image/Clear.png
+- 11:57:56.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:58:10.281 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:58:10.032 DEBUG: OnContextCreated()
+- 11:58:10.391 INFO: GET 200 /
+- 11:58:10.484 INFO: GET 200 /image/Aggiungi.png
+- 11:58:10.484 INFO: GET 200 /image/Modifica.png
+- 11:58:10.500 INFO: GET 200 /image/Elimina.png
+- 11:58:10.500 INFO: GET 200 /image/Clear.png
+[0506/115810.340:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:58:10.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:58:24.250 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:58:24.000 DEBUG: OnContextCreated()
+- 11:58:24.375 INFO: GET 200 /
+[0506/115824.188:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:58:24.391 INFO: GET 200 /image/Aggiungi.png
+- 11:58:24.391 INFO: GET 200 /image/Elimina.png
+- 11:58:24.391 INFO: GET 200 /image/Clear.png
+- 11:58:24.391 INFO: GET 200 /image/Modifica.png
+- 11:58:24.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 11:58:39.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 11:58:39.172 DEBUG: OnContextCreated()
+- 11:58:39.531 INFO: GET 200 /
+[0506/115839.354:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 11:58:39.562 INFO: GET 200 /image/Aggiungi.png
+- 11:58:39.562 INFO: GET 200 /image/Elimina.png
+- 11:58:39.562 INFO: GET 200 /image/Clear.png
+- 11:58:39.562 INFO: GET 200 /image/Modifica.png
+- 11:58:39.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:00:10.031 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:00:10.782 DEBUG: OnContextCreated()
+- 12:00:10.141 INFO: GET 200 /
+- 12:00:10.187 INFO: GET 200 /image/Aggiungi.png
+- 12:00:10.187 INFO: GET 200 /image/Modifica.png
+- 12:00:10.203 INFO: GET 200 /image/Elimina.png
+- 12:00:10.203 INFO: GET 200 /image/Clear.png
+[0506/120011.018:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:00:11.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:00:33.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:00:33.813 DEBUG: OnContextCreated()
+- 12:00:33.172 INFO: GET 200 /
+[0506/120033.997:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:00:33.203 INFO: GET 200 /image/Aggiungi.png
+- 12:00:34.203 INFO: GET 200 /image/Clear.png
+- 12:00:34.203 INFO: GET 200 /image/Modifica.png
+- 12:00:34.203 INFO: GET 200 /image/Elimina.png
+- 12:00:34.203 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:00:40.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:00:40.016 DEBUG: OnContextCreated()
+- 12:00:40.375 INFO: GET 200 /
+- 12:00:40.406 INFO: GET 200 /image/Aggiungi.png
+- 12:00:40.406 INFO: GET 200 /image/Modifica.png
+[0506/120040.201:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:00:40.406 INFO: GET 200 /image/Elimina.png
+- 12:00:40.406 INFO: GET 200 /image/Clear.png
+- 12:00:40.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:01:29.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:01:29.766 DEBUG: OnContextCreated()
+- 12:01:29.141 INFO: GET 200 /
+- 12:01:29.156 INFO: GET 200 /image/Aggiungi.png
+[0506/120129.961:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:01:29.172 INFO: GET 200 /image/Clear.png
+- 12:01:29.172 INFO: GET 200 /image/Modifica.png
+- 12:01:29.172 INFO: GET 200 /image/Elimina.png
+- 12:01:29.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:01:53.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:01:53.516 DEBUG: OnContextCreated()
+- 12:01:53.875 INFO: GET 200 /
+- 12:01:53.906 INFO: GET 200 /image/Aggiungi.png
+[0506/120153.706:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:01:53.906 INFO: GET 200 /image/Modifica.png
+- 12:01:53.906 INFO: GET 200 /image/Elimina.png
+- 12:01:53.906 INFO: GET 200 /image/Clear.png
+- 12:01:53.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:02:22.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:02:22.219 DEBUG: OnContextCreated()
+- 12:02:22.594 INFO: GET 200 /
+- 12:02:22.641 INFO: GET 200 /image/Aggiungi.png
+- 12:02:22.641 INFO: GET 200 /image/Modifica.png
+- 12:02:22.641 INFO: GET 200 /image/Elimina.png
+- 12:02:22.641 INFO: GET 200 /image/Clear.png
+[0506/120222.459:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:02:22.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:02:33.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:02:33.282 DEBUG: OnContextCreated()
+- 12:02:33.641 INFO: GET 200 /
+- 12:02:33.687 INFO: GET 200 /image/Aggiungi.png
+- 12:02:33.703 INFO: GET 200 /image/Modifica.png
+[0506/120233.497:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:02:33.703 INFO: GET 200 /image/Elimina.png
+- 12:02:33.703 INFO: GET 200 /image/Clear.png
+- 12:02:33.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:16:03.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:16:03.032 DEBUG: OnContextCreated()
+- 12:16:03.406 INFO: GET 200 /
+- 12:16:03.016 INFO: GET 200 /image/Aggiungi.png
+- 12:16:03.031 INFO: GET 200 /image/Modifica.png
+- 12:16:03.031 INFO: GET 200 /image/Elimina.png
+- 12:16:03.031 INFO: GET 200 /image/Clear.png
+[0506/121603.870:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:16:03.078 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:17:54.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:17:54.641 DEBUG: OnContextCreated()
+- 12:17:54.016 INFO: GET 200 /
+- 12:17:55.312 INFO: GET 200 /image/Aggiungi.png
+- 12:17:55.312 INFO: GET 200 /image/Modifica.png
+- 12:17:55.312 INFO: GET 200 /image/Elimina.png
+- 12:17:55.312 INFO: GET 200 /image/Clear.png
+[0506/121755.133:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:17:55.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:19:24.703 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:19:24.453 DEBUG: OnContextCreated()
+- 12:19:24.828 INFO: GET 200 /css.css
+- 12:19:24.828 INFO: GET 200 /
+- 12:19:24.828 INFO: GET 200 /js.js
+[0506/121924.629:INFO:CONSOLE(3)] "Uncaught TypeError: Cannot read property 'addEventListener' of null", source: http://127.0.0.1:57778/js.js (3)
+- 12:19:24.984 INFO: GET 200 /image/Aggiungi.png
+- 12:19:24.984 INFO: GET 200 /image/Modifica.png
+- 12:19:24.984 INFO: GET 200 /image/Elimina.png
+- 12:19:24.984 INFO: GET 200 /image/Clear.png
+[0506/121924.826:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:19:24.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:21:43.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:21:44.907 DEBUG: OnContextCreated()
+- 12:21:44.281 INFO: GET 200 /css.css
+- 12:21:44.281 INFO: GET 200 /
+- 12:21:44.281 INFO: GET 200 /js.js
+[0506/122144.082:INFO:CONSOLE(3)] "Uncaught TypeError: Cannot read property 'addEventListener' of null", source: http://127.0.0.1:57778/js.js (3)
+- 12:21:44.469 INFO: GET 200 /image/Aggiungi.png
+- 12:21:44.469 INFO: GET 200 /image/Modifica.png
+- 12:21:44.469 INFO: GET 200 /image/Elimina.png
+- 12:21:44.484 INFO: GET 200 /image/Clear.png
+[0506/122144.278:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:21:44.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:21:45.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:21:46.907 DEBUG: OnContextCreated()
+- 12:21:46.266 INFO: GET 200 /js.js
+- 12:21:46.266 INFO: GET 200 /css.css
+[0506/122146.063:INFO:CONSOLE(3)] "Uncaught TypeError: Cannot read property 'addEventListener' of null", source: http://127.0.0.1:57778/js.js (3)
+- 12:21:46.266 INFO: GET 200 /
+[0506/122146.100:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:21:46.297 INFO: GET 200 /image/Aggiungi.png
+- 12:21:46.312 INFO: GET 200 /image/Modifica.png
+- 12:21:46.312 INFO: GET 200 /image/Elimina.png
+- 12:21:46.312 INFO: GET 200 /image/Clear.png
+- 12:21:46.312 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:22:49.531 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:22:49.282 DEBUG: OnContextCreated()
+- 12:22:49.656 INFO: GET 200 /css.css
+- 12:22:49.656 INFO: GET 200 /
+- 12:22:49.656 INFO: GET 200 /js.js
+[0506/122249.457:INFO:CONSOLE(3)] "Uncaught TypeError: Cannot read property 'addEventListener' of null", source: http://127.0.0.1:57778/js.js (3)
+- 12:22:49.703 INFO: GET 200 /image/Aggiungi.png
+- 12:22:49.703 INFO: GET 200 /image/Modifica.png
+- 12:22:49.703 INFO: GET 200 /image/Elimina.png
+- 12:22:49.703 INFO: GET 200 /image/Clear.png
+[0506/122249.530:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:22:49.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:23:16.062 INFO: GET 200 /
+- 12:23:16.062 INFO: GET 200 /css.css
+- 12:23:16.062 INFO: GET 200 /js.js
+- 12:23:16.078 INFO: GET 200 /image/Aggiungi.png
+- 12:23:16.078 INFO: GET 200 /image/Modifica.png
+- 12:23:16.094 INFO: GET 200 /image/Elimina.png
+- 12:23:16.094 INFO: GET 200 /image/Clear.png
+- 12:23:16.141 INFO: GET 404 /favicon.ico
+- 12:24:49.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:24:49.344 DEBUG: OnContextCreated()
+- 12:24:49.703 INFO: GET 200 /css.css
+- 12:24:49.719 INFO: GET 200 /
+- 12:24:49.875 INFO: GET 200 /js.js
+- 12:24:49.875 INFO: GET 200 /image/Aggiungi.png
+- 12:24:49.875 INFO: GET 200 /image/Modifica.png
+- 12:24:49.875 INFO: GET 200 /image/Elimina.png
+- 12:24:49.875 INFO: GET 200 /image/Clear.png
+[0506/122449.704:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:24:49.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 12:24:54.078 INFO: GET 200 /
+- 12:24:54.078 INFO: GET 304 /css.css
+- 12:24:54.109 INFO: GET 304 /js.js
+- 12:24:58.687 INFO: GET 304 /css.css
+- 12:25:17.562 INFO: GET 200 /
+- 12:25:17.562 INFO: GET 304 /js.js
+- 12:25:17.578 INFO: GET 200 /css.css
+- 12:25:31.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 12:25:31.500 DEBUG: OnContextCreated()
+- 12:25:31.875 INFO: GET 200 /css.css
+- 12:25:31.875 INFO: GET 200 /
+- 12:25:31.937 INFO: GET 200 /js.js
+- 12:25:31.937 INFO: GET 200 /image/Aggiungi.png
+- 12:25:31.937 INFO: GET 200 /image/Modifica.png
+- 12:25:31.937 INFO: GET 200 /image/Elimina.png
+- 12:25:31.953 INFO: GET 200 /image/Clear.png
+[0506/122531.757:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:25:31.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/132158.113:INFO:CONSOLE(6)] "Selected cell:", source: http://127.0.0.1:57778/js.js (6)
+- 13:23:27.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:23:28.969 DEBUG: OnContextCreated()
+- 13:23:28.344 INFO: GET 200 /
+- 13:23:28.344 INFO: GET 200 /css.css
+- 13:23:28.562 INFO: GET 200 /js.js
+- 13:23:28.578 INFO: GET 200 /image/Aggiungi.png
+- 13:23:28.578 INFO: GET 200 /image/Modifica.png
+- 13:23:28.578 INFO: GET 200 /image/Elimina.png
+- 13:23:28.578 INFO: GET 200 /image/Clear.png
+[0506/132328.552:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:23:28.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:23:39.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:23:39.985 DEBUG: OnContextCreated()
+- 13:23:39.359 INFO: GET 200 /
+- 13:23:39.359 INFO: GET 200 /css.css
+- 13:23:39.375 INFO: GET 200 /js.js
+- 13:23:39.375 INFO: GET 200 /image/Aggiungi.png
+- 13:23:39.375 INFO: GET 200 /image/Modifica.png
+- 13:23:39.375 INFO: GET 200 /image/Elimina.png
+[0506/132339.180:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:23:39.391 INFO: GET 200 /image/Clear.png
+- 13:23:39.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:24:34.281 INFO: GET 200 /
+- 13:24:34.297 INFO: GET 200 /css.css
+- 13:24:34.312 INFO: GET 304 /js.js
+- 13:27:56.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:27:57.969 DEBUG: OnContextCreated()
+- 13:27:57.328 INFO: GET 200 /css.css
+- 13:27:57.328 INFO: GET 200 /
+- 13:27:57.500 INFO: GET 200 /js.js
+- 13:27:57.500 INFO: GET 200 /image/Aggiungi.png
+- 13:27:57.500 INFO: GET 200 /image/Modifica.png
+- 13:27:57.500 INFO: GET 200 /image/Elimina.png
+- 13:27:57.500 INFO: GET 200 /image/Clear.png
+[0506/132757.316:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/132757.326:INFO:CONSOLE(20)] "Uncaught TypeError: Cannot read property 'style' of undefined", source: http://127.0.0.1:57778/js.js (20)
+- 13:27:57.531 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:28:02.562 INFO: GET 200 /
+- 13:28:02.562 INFO: GET 304 /css.css
+- 13:28:02.594 INFO: GET 200 /js.js
+- 13:28:04.922 INFO: GET 304 /css.css
+- 13:29:16.969 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:29:16.750 DEBUG: OnContextCreated()
+- 13:29:16.109 INFO: GET 200 /css.css
+- 13:29:16.125 INFO: GET 200 /
+- 13:29:16.187 INFO: GET 200 /js.js
+- 13:29:16.187 INFO: GET 200 /image/Aggiungi.png
+- 13:29:16.187 INFO: GET 200 /image/Modifica.png
+- 13:29:16.187 INFO: GET 200 /image/Elimina.png
+- 13:29:16.187 INFO: GET 200 /image/Clear.png
+[0506/132917.022:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:29:17.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:29:22.500 INFO: GET 200 /
+- 13:29:22.500 INFO: GET 304 /css.css
+- 13:29:22.531 INFO: GET 304 /js.js
+- 13:29:24.797 INFO: GET 304 /css.css
+- 13:31:09.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:31:09.422 DEBUG: OnContextCreated()
+- 13:31:09.781 INFO: GET 200 /css.css
+- 13:31:09.781 INFO: GET 200 /
+[0506/133109.807:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:31:09.031 INFO: GET 200 /image/Aggiungi.png
+- 13:31:09.031 INFO: GET 200 /image/Elimina.png
+- 13:31:09.031 INFO: GET 200 /image/Clear.png
+- 13:31:09.031 INFO: GET 200 /image/Modifica.png
+- 13:31:09.031 INFO: GET 200 /js.js
+- 13:31:09.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:31:16.281 INFO: GET 200 /
+- 13:31:16.297 INFO: GET 304 /css.css
+- 13:31:16.328 INFO: GET 200 /js.js
+- 13:31:18.531 INFO: GET 304 /css.css
+- 13:32:57.359 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:32:57.110 DEBUG: OnContextCreated()
+- 13:32:57.484 INFO: GET 200 /
+- 13:32:57.484 INFO: GET 200 /css.css
+- 13:32:57.547 INFO: GET 200 /js.js
+- 13:32:57.547 INFO: GET 200 /image/Aggiungi.png
+- 13:32:57.547 INFO: GET 200 /image/Modifica.png
+- 13:32:57.547 INFO: GET 200 /image/Elimina.png
+- 13:32:57.562 INFO: GET 200 /image/Clear.png
+[0506/133257.417:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:32:57.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:33:02.250 INFO: GET 200 /
+- 13:33:02.250 INFO: GET 200 /css.css
+- 13:33:02.281 INFO: GET 200 /js.js
+- 13:33:05.375 INFO: GET 304 /css.css
+- 13:36:12.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:36:12.766 DEBUG: OnContextCreated()
+- 13:36:12.141 INFO: GET 200 /
+- 13:36:12.141 INFO: GET 200 /css.css
+[0506/133613.295:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:36:13.500 INFO: GET 200 /js.js
+- 13:36:13.516 INFO: GET 200 /image/Aggiungi.png
+- 13:36:13.516 INFO: GET 200 /image/Modifica.png
+- 13:36:13.516 INFO: GET 200 /image/Elimina.png
+- 13:36:13.516 INFO: GET 200 /image/Clear.png
+- 13:36:13.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:36:14.187 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:36:15.953 DEBUG: OnContextCreated()
+- 13:36:15.312 INFO: GET 200 /css.css
+- 13:36:15.312 INFO: GET 200 /
+- 13:36:15.594 INFO: GET 200 /js.js
+- 13:36:15.609 INFO: GET 200 /image/Aggiungi.png
+- 13:36:15.609 INFO: GET 200 /image/Modifica.png
+[0506/133615.407:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:36:15.609 INFO: GET 200 /image/Elimina.png
+- 13:36:15.609 INFO: GET 200 /image/Clear.png
+- 13:36:15.625 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 1", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 2", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 3", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 4", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 5", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 6", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.104:INFO:CONSOLE(20)] "Valore riga 2 colonna 7", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 1", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 2", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 3", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 4", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 5", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 6", source: http://127.0.0.1:57778/js.js (20)
+[0506/133617.927:INFO:CONSOLE(20)] "Valore riga 2 colonna 7", source: http://127.0.0.1:57778/js.js (20)
+- 13:38:00.547 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:38:00.297 DEBUG: OnContextCreated()
+- 13:38:00.672 INFO: GET 200 /css.css
+- 13:38:00.672 INFO: GET 200 /
+- 13:38:00.703 INFO: GET 200 /js.js
+- 13:38:00.703 INFO: GET 200 /image/Aggiungi.png
+[0506/133800.505:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:38:00.703 INFO: GET 200 /image/Modifica.png
+- 13:38:00.703 INFO: GET 200 /image/Clear.png
+- 13:38:00.703 INFO: GET 200 /image/Elimina.png
+- 13:38:00.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:38:27.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:38:28.047 DEBUG: OnContextCreated()
+- 13:38:28.406 INFO: GET 200 /css.css
+- 13:38:28.406 INFO: GET 200 /
+- 13:38:28.453 INFO: GET 200 /js.js
+- 13:38:28.453 INFO: GET 200 /image/Aggiungi.png
+- 13:38:28.453 INFO: GET 200 /image/Modifica.png
+- 13:38:28.453 INFO: GET 200 /image/Elimina.png
+- 13:38:28.453 INFO: GET 200 /image/Clear.png
+[0506/133828.272:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:38:28.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/133829.474:INFO:CONSOLE(20)] "Valore riga 1 colonna 1", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.474:INFO:CONSOLE(20)] "Valore riga 1 colonna 2", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.474:INFO:CONSOLE(20)] "Valore riga 1 colonna 3", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.474:INFO:CONSOLE(20)] "Valore riga 1 colonna 4", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.475:INFO:CONSOLE(20)] "Valore riga 1 colonna 5", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.475:INFO:CONSOLE(20)] "Valore riga 1 colonna 6", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.475:INFO:CONSOLE(20)] "Valore riga 1 colonna 7", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.961:INFO:CONSOLE(20)] "Valore riga 2 colonna 1", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.961:INFO:CONSOLE(20)] "Valore riga 2 colonna 2", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.961:INFO:CONSOLE(20)] "Valore riga 2 colonna 3", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.961:INFO:CONSOLE(20)] "Valore riga 2 colonna 4", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.961:INFO:CONSOLE(20)] "Valore riga 2 colonna 5", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.962:INFO:CONSOLE(20)] "Valore riga 2 colonna 6", source: http://127.0.0.1:57778/js.js (20)
+[0506/133829.962:INFO:CONSOLE(20)] "Valore riga 2 colonna 7", source: http://127.0.0.1:57778/js.js (20)
+- 13:38:34.016 INFO: GET 200 /
+- 13:38:34.031 INFO: GET 200 /css.css
+- 13:38:34.047 INFO: GET 200 /js.js
+- 13:39:14.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:39:14.594 DEBUG: OnContextCreated()
+- 13:39:14.953 INFO: GET 200 /css.css
+- 13:39:14.953 INFO: GET 200 /
+[0506/133914.781:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:39:14.984 INFO: GET 200 /image/Modifica.png
+- 13:39:14.984 INFO: GET 200 /image/Clear.png
+- 13:39:14.984 INFO: GET 200 /image/Elimina.png
+- 13:39:14.984 INFO: GET 200 /image/Aggiungi.png
+- 13:39:14.984 INFO: GET 200 /js.js
+- 13:39:14.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/133916.163:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133916.808:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133917.393:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133917.767:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133918.063:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133918.360:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133918.655:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133918.927:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133919.279:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133919.687:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133920.193:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133920.530:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/133920.825:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 13:39:34.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:39:34.766 DEBUG: OnContextCreated()
+- 13:39:34.125 INFO: GET 200 /css.css
+- 13:39:34.141 INFO: GET 200 /
+- 13:39:34.156 INFO: GET 200 /js.js
+- 13:39:34.156 INFO: GET 200 /image/Aggiungi.png
+[0506/133934.962:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:39:34.172 INFO: GET 200 /image/Modifica.png
+- 13:39:34.172 INFO: GET 200 /image/Clear.png
+- 13:39:34.172 INFO: GET 200 /image/Elimina.png
+- 13:39:34.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:39:39.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:39:39.485 DEBUG: OnContextCreated()
+- 13:39:39.844 INFO: GET 200 /css.css
+- 13:39:39.844 INFO: GET 200 /
+- 13:39:39.859 INFO: GET 200 /js.js
+- 13:39:39.859 INFO: GET 200 /image/Aggiungi.png
+- 13:39:39.875 INFO: GET 200 /image/Modifica.png
+- 13:39:39.875 INFO: GET 200 /image/Elimina.png
+- 13:39:39.875 INFO: GET 200 /image/Clear.png
+[0506/133939.680:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:39:39.891 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:39:51.969 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:39:51.735 DEBUG: OnContextCreated()
+- 13:39:51.094 INFO: GET 200 /css.css
+- 13:39:51.094 INFO: GET 200 /
+- 13:39:51.109 INFO: GET 200 /js.js
+- 13:39:51.125 INFO: GET 200 /image/Aggiungi.png
+[0506/133951.920:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:39:51.125 INFO: GET 200 /image/Modifica.png
+- 13:39:51.125 INFO: GET 200 /image/Elimina.png
+- 13:39:51.125 INFO: GET 200 /image/Clear.png
+- 13:39:51.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:42:13.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:42:13.688 DEBUG: OnContextCreated()
+- 13:42:13.062 INFO: GET 200 /
+- 13:42:13.062 INFO: GET 200 /css.css
+- 13:42:14.266 INFO: GET 200 /js.js
+- 13:42:14.266 INFO: GET 200 /image/Aggiungi.png
+- 13:42:14.266 INFO: GET 200 /image/Modifica.png
+- 13:42:14.266 INFO: GET 200 /image/Elimina.png
+- 13:42:14.266 INFO: GET 200 /image/Clear.png
+[0506/134214.283:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:42:14.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:42:25.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:42:25.266 DEBUG: OnContextCreated()
+- 13:42:25.625 INFO: GET 200 /css.css
+- 13:42:25.625 INFO: GET 200 /
+- 13:42:25.656 INFO: GET 200 /js.js
+- 13:42:25.656 INFO: GET 200 /image/Aggiungi.png
+- 13:42:25.672 INFO: GET 200 /image/Modifica.png
+- 13:42:25.672 INFO: GET 200 /image/Elimina.png
+- 13:42:25.672 INFO: GET 200 /image/Clear.png
+[0506/134225.471:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:42:25.687 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:44:28.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:44:28.032 DEBUG: OnContextCreated()
+- 13:44:28.391 INFO: GET 200 /css.css
+- 13:44:28.391 INFO: GET 200 /
+- 13:44:28.578 INFO: GET 200 /js.js
+- 13:44:28.594 INFO: GET 200 /image/Aggiungi.png
+- 13:44:28.594 INFO: GET 200 /image/Modifica.png
+- 13:44:28.594 INFO: GET 200 /image/Elimina.png
+- 13:44:28.594 INFO: GET 200 /image/Clear.png
+[0506/134428.414:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134428.419:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:44:28.625 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:44:37.078 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:44:38.875 DEBUG: OnContextCreated()
+- 13:44:38.234 INFO: GET 200 /css.css
+- 13:44:38.234 INFO: GET 200 /
+- 13:44:38.250 INFO: GET 200 /js.js
+- 13:44:38.266 INFO: GET 200 /image/Aggiungi.png
+- 13:44:38.266 INFO: GET 200 /image/Modifica.png
+- 13:44:38.266 INFO: GET 200 /image/Elimina.png
+- 13:44:38.266 INFO: GET 200 /image/Clear.png
+[0506/134438.066:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134438.075:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:44:38.281 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:44:43.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:44:43.438 DEBUG: OnContextCreated()
+- 13:44:43.797 INFO: GET 200 /css.css
+- 13:44:43.812 INFO: GET 200 /
+- 13:44:43.828 INFO: GET 200 /js.js
+- 13:44:43.828 INFO: GET 200 /image/Aggiungi.png
+- 13:44:43.828 INFO: GET 200 /image/Modifica.png
+- 13:44:43.828 INFO: GET 200 /image/Elimina.png
+[0506/134443.632:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:44:43.828 INFO: GET 200 /image/Clear.png
+[0506/134443.641:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:44:43.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:45:41.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:45:41.375 DEBUG: OnContextCreated()
+- 13:45:41.734 INFO: GET 200 /css.css
+- 13:45:41.750 INFO: GET 200 /
+- 13:45:41.797 INFO: GET 200 /js.js
+- 13:45:41.797 INFO: GET 200 /image/Aggiungi.png
+- 13:45:41.797 INFO: GET 200 /image/Modifica.png
+- 13:45:41.797 INFO: GET 200 /image/Elimina.png
+- 13:45:41.797 INFO: GET 200 /image/Clear.png
+[0506/134541.613:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134541.624:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:45:41.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:45:51.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:45:51.969 DEBUG: OnContextCreated()
+- 13:45:51.328 INFO: GET 200 /css.css
+- 13:45:51.344 INFO: GET 200 /
+- 13:45:51.359 INFO: GET 200 /js.js
+- 13:45:51.359 INFO: GET 200 /image/Aggiungi.png
+[0506/134551.161:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:45:51.359 INFO: GET 200 /image/Modifica.png
+- 13:45:51.359 INFO: GET 200 /image/Elimina.png
+- 13:45:51.359 INFO: GET 200 /image/Clear.png
+[0506/134551.170:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:45:51.375 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:45:56.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:45:56.375 DEBUG: OnContextCreated()
+- 13:45:56.734 INFO: GET 200 /
+- 13:45:56.750 INFO: GET 200 /css.css
+- 13:45:56.797 INFO: GET 200 /js.js
+- 13:45:56.797 INFO: GET 200 /image/Aggiungi.png
+- 13:45:56.797 INFO: GET 200 /image/Modifica.png
+- 13:45:56.797 INFO: GET 200 /image/Elimina.png
+- 13:45:56.797 INFO: GET 200 /image/Clear.png
+[0506/134556.615:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134556.626:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:45:56.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:47:00.937 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:47:00.782 DEBUG: OnContextCreated()
+- 13:47:00.141 INFO: GET 200 /css.css
+- 13:47:00.141 INFO: GET 200 /
+- 13:47:00.172 INFO: GET 200 /js.js
+- 13:47:00.172 INFO: GET 200 /image/Aggiungi.png
+- 13:47:00.172 INFO: GET 200 /image/Modifica.png
+- 13:47:00.172 INFO: GET 200 /image/Elimina.png
+[0506/134700.978:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:47:00.187 INFO: GET 200 /image/Clear.png
+[0506/134700.998:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:47:01.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:47:19.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:47:19.953 DEBUG: OnContextCreated()
+- 13:47:19.328 INFO: GET 200 /css.css
+- 13:47:19.328 INFO: GET 200 /
+- 13:47:19.375 INFO: GET 200 /js.js
+- 13:47:19.375 INFO: GET 200 /image/Aggiungi.png
+- 13:47:19.375 INFO: GET 200 /image/Modifica.png
+- 13:47:19.375 INFO: GET 200 /image/Elimina.png
+- 13:47:19.375 INFO: GET 200 /image/Clear.png
+[0506/134719.291:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134719.301:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:47:19.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:47:23.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:47:23.094 DEBUG: OnContextCreated()
+- 13:47:23.453 INFO: GET 200 /
+- 13:47:23.453 INFO: GET 200 /css.css
+- 13:47:23.469 INFO: GET 200 /js.js
+- 13:47:23.484 INFO: GET 200 /image/Aggiungi.png
+[0506/134723.279:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/134723.280:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 13:47:23.484 INFO: GET 200 /image/Modifica.png
+- 13:47:23.484 INFO: GET 200 /image/Elimina.png
+- 13:47:23.484 INFO: GET 200 /image/Clear.png
+- 13:47:23.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 13:47:48.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:47:48.735 DEBUG: OnContextCreated()
+- 13:47:48.094 INFO: GET 200 /css.css
+- 13:47:48.094 INFO: GET 200 /
+- 13:47:48.156 INFO: GET 200 /js.js
+- 13:47:48.156 INFO: GET 200 /image/Aggiungi.png
+- 13:47:48.156 INFO: GET 200 /image/Modifica.png
+- 13:47:48.156 INFO: GET 200 /image/Elimina.png
+- 13:47:48.172 INFO: GET 200 /image/Clear.png
+[0506/134748.970:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:47:48.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/134750.041:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134750.602:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134751.449:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134752.482:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134752.803:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134753.386:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134753.883:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134754.304:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134754.921:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134755.281:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134755.594:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134755.995:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 13:48:00.078 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:48:01.860 DEBUG: OnContextCreated()
+- 13:48:01.219 INFO: GET 200 /
+- 13:48:01.219 INFO: GET 200 /css.css
+- 13:48:01.266 INFO: GET 200 /js.js
+- 13:48:01.266 INFO: GET 200 /image/Aggiungi.png
+- 13:48:01.281 INFO: GET 200 /image/Modifica.png
+- 13:48:01.281 INFO: GET 200 /image/Elimina.png
+- 13:48:01.281 INFO: GET 200 /image/Clear.png
+[0506/134801.098:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:48:01.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/134801.859:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134802.338:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134802.649:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 13:48:14.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 13:48:14.438 DEBUG: OnContextCreated()
+- 13:48:14.797 INFO: GET 200 /css.css
+- 13:48:14.797 INFO: GET 200 /
+- 13:48:14.844 INFO: GET 200 /js.js
+- 13:48:14.844 INFO: GET 200 /image/Aggiungi.png
+- 13:48:14.844 INFO: GET 200 /image/Modifica.png
+- 13:48:14.859 INFO: GET 200 /image/Elimina.png
+[0506/134814.652:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:48:14.859 INFO: GET 200 /image/Clear.png
+- 13:48:14.875 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/134815.394:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134815.800:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134816.112:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134816.409:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134816.682:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/134816.849:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:13:52.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:13:52.703 DEBUG: OnContextCreated()
+- 14:13:52.078 INFO: GET 200 /
+- 14:13:52.078 INFO: GET 200 /css.css
+- 14:13:53.359 INFO: GET 200 /js.js
+- 14:13:53.375 INFO: GET 200 /image/Aggiungi.png
+- 14:13:53.375 INFO: GET 200 /image/Modifica.png
+- 14:13:53.375 INFO: GET 200 /image/Elimina.png
+- 14:13:53.375 INFO: GET 200 /image/Clear.png
+[0506/141354.526:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:13:54.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:13:56.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:13:56.500 DEBUG: OnContextCreated()
+- 14:13:56.875 INFO: GET 200 /css.css
+- 14:13:56.875 INFO: GET 200 /
+- 14:13:56.906 INFO: GET 200 /js.js
+- 14:13:56.922 INFO: GET 200 /image/Aggiungi.png
+- 14:13:56.922 INFO: GET 200 /image/Modifica.png
+- 14:13:56.922 INFO: GET 200 /image/Elimina.png
+- 14:13:56.922 INFO: GET 200 /image/Clear.png
+[0506/141356.731:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:13:56.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:14:19.734 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:14:19.500 DEBUG: OnContextCreated()
+- 14:14:19.875 INFO: GET 200 /css.css
+- 14:14:19.875 INFO: GET 200 /
+- 14:14:19.891 INFO: GET 200 /js.js
+- 14:14:19.891 INFO: GET 200 /image/Aggiungi.png
+[0506/141419.695:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:14:19.891 INFO: GET 200 /image/Modifica.png
+- 14:14:19.906 INFO: GET 200 /image/Elimina.png
+- 14:14:19.906 INFO: GET 200 /image/Clear.png
+- 14:14:19.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/141422.340:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141422.819:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141423.211:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141423.562:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141423.876:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141424.225:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141424.707:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141426.483:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141426.900:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/141427.620:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:19:26.437 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:19:26.219 DEBUG: OnContextCreated()
+- 14:19:26.594 INFO: GET 200 /
+- 14:19:26.594 INFO: GET 200 /css.css
+- 14:19:26.781 INFO: GET 200 /js.js
+- 14:19:26.781 INFO: GET 200 /image/Aggiungi.png
+- 14:19:26.781 INFO: GET 200 /image/Modifica.png
+- 14:19:26.797 INFO: GET 200 /image/Elimina.png
+[0506/141926.596:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:19:26.797 INFO: GET 200 /image/Clear.png
+- 14:19:26.828 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:20:00.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:20:00.172 DEBUG: OnContextCreated()
+- 14:20:00.531 INFO: GET 200 /css.css
+- 14:20:00.547 INFO: GET 200 /
+- 14:20:00.594 INFO: GET 200 /js.js
+- 14:20:00.594 INFO: GET 200 /image/Aggiungi.png
+- 14:20:00.594 INFO: GET 200 /image/Modifica.png
+- 14:20:00.594 INFO: GET 200 /image/Elimina.png
+- 14:20:00.594 INFO: GET 200 /image/Clear.png
+[0506/142000.490:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:20:00.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:21:51.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:21:51.782 DEBUG: OnContextCreated()
+- 14:21:51.141 INFO: GET 200 /css.css
+- 14:21:51.141 INFO: GET 200 /
+- 14:21:52.391 INFO: GET 200 /js.js
+- 14:21:52.391 INFO: GET 200 /image/Aggiungi.png
+- 14:21:52.406 INFO: GET 200 /image/Modifica.png
+- 14:21:52.406 INFO: GET 200 /image/Elimina.png
+- 14:21:52.406 INFO: GET 200 /image/Clear.png
+[0506/142152.263:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/142152.265:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 14:21:52.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:23:14.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:23:14.141 DEBUG: OnContextCreated()
+- 14:23:14.500 INFO: GET 200 /css.css
+- 14:23:14.500 INFO: GET 200 /
+- 14:23:14.625 INFO: GET 200 /js.js
+- 14:23:14.625 INFO: GET 200 /image/Aggiungi.png
+- 14:23:14.641 INFO: GET 200 /image/Modifica.png
+- 14:23:14.641 INFO: GET 200 /image/Elimina.png
+- 14:23:14.641 INFO: GET 200 /image/Clear.png
+[0506/142314.470:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:23:14.687 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/142315.990:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142317.108:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142317.548:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142317.900:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142318.339:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142318.739:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142320.107:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:23:29.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:23:29.797 DEBUG: OnContextCreated()
+- 14:23:29.172 INFO: GET 200 /css.css
+- 14:23:29.172 INFO: GET 200 /
+- 14:23:30.250 INFO: GET 200 /js.js
+- 14:23:30.250 INFO: GET 200 /image/Aggiungi.png
+- 14:23:30.250 INFO: GET 200 /image/Modifica.png
+- 14:23:30.250 INFO: GET 200 /image/Elimina.png
+- 14:23:30.266 INFO: GET 200 /image/Clear.png
+[0506/142330.064:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+[0506/142330.077:INFO:CONSOLE(31)] "Table element with ID "scorribile" not found!", source: http://127.0.0.1:57778/js.js (31)
+- 14:23:30.281 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:25:10.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:25:10.000 DEBUG: OnContextCreated()
+- 14:25:10.359 INFO: GET 200 /css.css
+- 14:25:10.359 INFO: GET 200 /
+- 14:25:10.453 INFO: GET 200 /js.js
+- 14:25:10.453 INFO: GET 200 /image/Aggiungi.png
+- 14:25:10.453 INFO: GET 200 /image/Modifica.png
+- 14:25:10.453 INFO: GET 200 /image/Elimina.png
+- 14:25:10.453 INFO: GET 200 /image/Clear.png
+[0506/142510.265:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:25:10.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/142511.181:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142511.811:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142513.236:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142513.628:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142513.971:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142514.308:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142515.203:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142515.524:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142515.940:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142516.252:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142516.562:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/142516.956:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:25:26.203 INFO: GET 200 /
+- 14:25:26.219 INFO: GET 200 /css.css
+- 14:25:26.250 INFO: GET 200 /js.js
+- 14:26:40.297 INFO: GET 200 /
+- 14:26:40.297 INFO: GET 200 /css.css
+- 14:27:44.625 INFO: GET 200 /
+- 14:27:44.641 INFO: GET 200 /css.css
+- 14:27:52.703 INFO: GET 200 /
+- 14:27:52.719 INFO: GET 200 /css.css
+- 14:28:04.625 INFO: GET 200 /
+- 14:28:04.625 INFO: GET 200 /css.css
+- 14:28:24.953 INFO: GET 200 /
+- 14:28:24.953 INFO: GET 200 /css.css
+- 14:29:30.453 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:29:30.219 DEBUG: OnContextCreated()
+- 14:29:30.578 INFO: GET 200 /css.css
+- 14:29:30.578 INFO: GET 200 /
+- 14:29:30.750 INFO: GET 200 /js.js
+- 14:29:30.750 INFO: GET 200 /image/Aggiungi.png
+- 14:29:30.750 INFO: GET 200 /image/Modifica.png
+- 14:29:30.750 INFO: GET 200 /image/Elimina.png
+- 14:29:30.750 INFO: GET 200 /image/Clear.png
+[0506/142930.588:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:29:30.812 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:29:42.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:29:42.172 DEBUG: OnContextCreated()
+- 14:29:42.531 INFO: GET 200 /css.css
+- 14:29:42.547 INFO: GET 200 /
+- 14:29:42.562 INFO: GET 200 /js.js
+- 14:29:42.562 INFO: GET 200 /image/Aggiungi.png
+- 14:29:42.562 INFO: GET 200 /image/Modifica.png
+- 14:29:42.562 INFO: GET 200 /image/Elimina.png
+[0506/142942.365:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:29:42.562 INFO: GET 200 /image/Clear.png
+- 14:29:42.578 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:30:03.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:30:03.500 DEBUG: OnContextCreated()
+- 14:30:03.875 INFO: GET 200 /css.css
+- 14:30:03.875 INFO: GET 200 /
+- 14:30:03.891 INFO: GET 200 /js.js
+[0506/143003.691:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:30:03.891 INFO: GET 200 /image/Aggiungi.png
+- 14:30:03.891 INFO: GET 200 /image/Modifica.png
+- 14:30:03.891 INFO: GET 200 /image/Clear.png
+- 14:30:03.891 INFO: GET 200 /image/Elimina.png
+- 14:30:03.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:30:17.594 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:30:17.344 DEBUG: OnContextCreated()
+- 14:30:17.703 INFO: GET 200 /css.css
+- 14:30:17.703 INFO: GET 200 /
+- 14:30:17.781 INFO: GET 200 /js.js
+- 14:30:17.781 INFO: GET 200 /image/Aggiungi.png
+- 14:30:17.781 INFO: GET 200 /image/Modifica.png
+- 14:30:17.781 INFO: GET 200 /image/Elimina.png
+- 14:30:17.797 INFO: GET 200 /image/Clear.png
+[0506/143017.625:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:30:17.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:30:42.359 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:30:42.110 DEBUG: OnContextCreated()
+- 14:30:42.469 INFO: GET 200 /css.css
+- 14:30:42.469 INFO: GET 200 /
+- 14:30:42.484 INFO: GET 200 /js.js
+- 14:30:42.500 INFO: GET 200 /image/Aggiungi.png
+- 14:30:42.500 INFO: GET 200 /image/Modifica.png
+- 14:30:42.500 INFO: GET 200 /image/Elimina.png
+[0506/143042.295:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:30:42.500 INFO: GET 200 /image/Clear.png
+- 14:30:42.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:31:13.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:31:13.078 DEBUG: OnContextCreated()
+- 14:31:13.453 INFO: GET 200 /css.css
+- 14:31:13.453 INFO: GET 200 /
+- 14:31:13.500 INFO: GET 200 /js.js
+- 14:31:13.500 INFO: GET 200 /image/Aggiungi.png
+- 14:31:13.500 INFO: GET 200 /image/Modifica.png
+- 14:31:13.516 INFO: GET 200 /image/Elimina.png
+- 14:31:13.516 INFO: GET 200 /image/Clear.png
+[0506/143113.321:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:13.531 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/143121.827:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143122.437:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143124.756:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143125.501:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:31:47.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:31:47.438 DEBUG: OnContextCreated()
+- 14:31:47.797 INFO: GET 200 /css.css
+- 14:31:47.797 INFO: GET 200 /
+- 14:31:47.844 INFO: GET 200 /js.js
+- 14:31:47.844 INFO: GET 200 /image/Aggiungi.png
+- 14:31:47.844 INFO: GET 200 /image/Modifica.png
+- 14:31:47.844 INFO: GET 200 /image/Elimina.png
+- 14:31:47.844 INFO: GET 200 /image/Clear.png
+[0506/143147.808:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:47.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:32:14.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:32:14.828 DEBUG: OnContextCreated()
+- 14:32:14.203 INFO: GET 200 /css.css
+- 14:32:14.203 INFO: GET 200 /
+- 14:32:15.219 INFO: GET 200 /js.js
+[0506/143215.020:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:32:15.219 INFO: GET 200 /image/Aggiungi.png
+- 14:32:15.219 INFO: GET 200 /image/Clear.png
+- 14:32:15.219 INFO: GET 200 /image/Elimina.png
+- 14:32:15.219 INFO: GET 200 /image/Modifica.png
+- 14:32:15.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:32:39.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:32:39.328 DEBUG: OnContextCreated()
+- 14:32:39.687 INFO: GET 200 /
+- 14:32:39.703 INFO: GET 200 /css.css
+- 14:32:39.734 INFO: GET 200 /js.js
+- 14:32:39.750 INFO: GET 200 /image/Aggiungi.png
+- 14:32:39.750 INFO: GET 200 /image/Modifica.png
+- 14:32:39.750 INFO: GET 200 /image/Elimina.png
+- 14:32:39.766 INFO: GET 200 /image/Clear.png
+[0506/143239.581:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:32:39.812 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:32:46.453 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:32:46.203 DEBUG: OnContextCreated()
+- 14:32:46.562 INFO: GET 200 /
+- 14:32:46.562 INFO: GET 200 /css.css
+[0506/143246.517:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:32:46.719 INFO: GET 200 /js.js
+- 14:32:46.719 INFO: GET 200 /image/Aggiungi.png
+- 14:32:46.734 INFO: GET 200 /image/Modifica.png
+- 14:32:46.734 INFO: GET 200 /image/Elimina.png
+- 14:32:46.734 INFO: GET 200 /image/Clear.png
+- 14:32:46.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:33:04.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:33:04.625 DEBUG: OnContextCreated()
+- 14:33:04.984 INFO: GET 200 /
+- 14:33:04.984 INFO: GET 200 /css.css
+- 14:33:04.016 INFO: GET 200 /js.js
+- 14:33:04.016 INFO: GET 200 /image/Aggiungi.png
+- 14:33:04.016 INFO: GET 200 /image/Modifica.png
+- 14:33:04.016 INFO: GET 200 /image/Elimina.png
+- 14:33:04.031 INFO: GET 200 /image/Clear.png
+[0506/143304.825:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:33:04.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:33:10.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:33:10.641 DEBUG: OnContextCreated()
+- 14:33:10.000 INFO: GET 200 /css.css
+- 14:33:10.000 INFO: GET 200 /
+- 14:33:10.016 INFO: GET 200 /js.js
+- 14:33:10.031 INFO: GET 200 /image/Aggiungi.png
+- 14:33:10.031 INFO: GET 200 /image/Modifica.png
+- 14:33:10.031 INFO: GET 200 /image/Elimina.png
+- 14:33:10.031 INFO: GET 200 /image/Clear.png
+[0506/143310.835:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:33:10.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:33:23.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:33:23.032 DEBUG: OnContextCreated()
+- 14:33:23.406 INFO: GET 200 /
+- 14:33:23.406 INFO: GET 200 /css.css
+- 14:33:23.437 INFO: GET 200 /js.js
+- 14:33:23.437 INFO: GET 200 /image/Aggiungi.png
+[0506/143323.235:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:33:23.437 INFO: GET 200 /image/Elimina.png
+- 14:33:23.437 INFO: GET 200 /image/Clear.png
+- 14:33:23.437 INFO: GET 200 /image/Modifica.png
+- 14:33:23.453 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:33:58.312 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:33:58.078 DEBUG: OnContextCreated()
+- 14:33:58.437 INFO: GET 200 /css.css
+- 14:33:58.437 INFO: GET 200 /
+- 14:33:58.500 INFO: GET 200 /js.js
+- 14:33:58.500 INFO: GET 200 /image/Aggiungi.png
+- 14:33:58.500 INFO: GET 200 /image/Modifica.png
+- 14:33:58.516 INFO: GET 200 /image/Elimina.png
+- 14:33:58.516 INFO: GET 200 /image/Clear.png
+[0506/143358.314:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:33:58.531 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:34:14.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:34:14.578 DEBUG: OnContextCreated()
+- 14:34:14.953 INFO: GET 200 /css.css
+- 14:34:14.953 INFO: GET 200 /
+- 14:34:14.984 INFO: GET 200 /js.js
+[0506/143414.787:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:34:14.984 INFO: GET 200 /image/Modifica.png
+- 14:34:14.984 INFO: GET 200 /image/Elimina.png
+- 14:34:14.984 INFO: GET 200 /image/Aggiungi.png
+- 14:34:14.984 INFO: GET 200 /image/Clear.png
+- 14:34:14.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:34:26.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:34:26.469 DEBUG: OnContextCreated()
+- 14:34:26.828 INFO: GET 200 /css.css
+- 14:34:26.828 INFO: GET 200 /
+- 14:34:26.859 INFO: GET 200 /js.js
+[0506/143426.665:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:34:26.875 INFO: GET 200 /image/Aggiungi.png
+- 14:34:26.875 INFO: GET 200 /image/Modifica.png
+- 14:34:26.875 INFO: GET 200 /image/Clear.png
+- 14:34:26.875 INFO: GET 200 /image/Elimina.png
+- 14:34:26.875 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:34:58.297 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:34:58.047 DEBUG: OnContextCreated()
+- 14:34:58.406 INFO: GET 200 /css.css
+- 14:34:58.422 INFO: GET 200 /
+- 14:34:58.437 INFO: GET 200 /js.js
+[0506/143458.235:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:34:58.437 INFO: GET 200 /image/Aggiungi.png
+- 14:34:58.437 INFO: GET 200 /image/Modifica.png
+- 14:34:58.437 INFO: GET 200 /image/Clear.png
+- 14:34:58.437 INFO: GET 200 /image/Elimina.png
+- 14:34:58.453 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:35:47.422 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:35:47.219 DEBUG: OnContextCreated()
+- 14:35:47.578 INFO: GET 200 /css.css
+- 14:35:47.578 INFO: GET 200 /
+- 14:35:47.641 INFO: GET 200 /js.js
+- 14:35:47.641 INFO: GET 200 /image/Aggiungi.png
+- 14:35:47.641 INFO: GET 200 /image/Modifica.png
+- 14:35:47.641 INFO: GET 200 /image/Elimina.png
+- 14:35:47.656 INFO: GET 200 /image/Clear.png
+[0506/143547.461:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:35:47.672 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:35:52.156 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:35:53.922 DEBUG: OnContextCreated()
+- 14:35:53.281 INFO: GET 200 /css.css
+- 14:35:53.281 INFO: GET 200 /
+- 14:35:53.312 INFO: GET 200 /js.js
+[0506/143553.107:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:35:53.312 INFO: GET 200 /image/Elimina.png
+- 14:35:53.312 INFO: GET 200 /image/Aggiungi.png
+- 14:35:53.312 INFO: GET 200 /image/Modifica.png
+- 14:35:53.312 INFO: GET 200 /image/Clear.png
+- 14:35:53.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:36:09.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:36:09.719 DEBUG: OnContextCreated()
+- 14:36:09.078 INFO: GET 200 /css.css
+- 14:36:09.078 INFO: GET 200 /
+- 14:36:09.109 INFO: GET 200 /js.js
+[0506/143609.909:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:36:09.109 INFO: GET 200 /image/Aggiungi.png
+- 14:36:09.109 INFO: GET 200 /image/Modifica.png
+- 14:36:09.109 INFO: GET 200 /image/Elimina.png
+- 14:36:09.109 INFO: GET 200 /image/Clear.png
+- 14:36:09.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:36:21.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:36:21.078 DEBUG: OnContextCreated()
+- 14:36:21.453 INFO: GET 200 /css.css
+- 14:36:21.453 INFO: GET 200 /
+- 14:36:21.484 INFO: GET 200 /js.js
+- 14:36:21.484 INFO: GET 200 /image/Aggiungi.png
+- 14:36:21.500 INFO: GET 200 /image/Modifica.png
+- 14:36:21.500 INFO: GET 200 /image/Elimina.png
+[0506/143621.295:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:36:21.500 INFO: GET 200 /image/Clear.png
+- 14:36:21.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:36:27.734 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:36:27.485 DEBUG: OnContextCreated()
+- 14:36:27.844 INFO: GET 200 /css.css
+- 14:36:27.859 INFO: GET 200 /
+- 14:36:27.891 INFO: GET 200 /js.js
+- 14:36:27.891 INFO: GET 200 /image/Aggiungi.png
+[0506/143627.692:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:36:27.891 INFO: GET 200 /image/Modifica.png
+- 14:36:27.891 INFO: GET 200 /image/Elimina.png
+- 14:36:27.891 INFO: GET 200 /image/Clear.png
+- 14:36:27.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:36:31.547 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:36:31.328 DEBUG: OnContextCreated()
+- 14:36:31.703 INFO: GET 200 /css.css
+- 14:36:31.703 INFO: GET 200 /
+- 14:36:31.734 INFO: GET 200 /js.js
+- 14:36:31.734 INFO: GET 200 /image/Aggiungi.png
+[0506/143631.543:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:36:31.750 INFO: GET 200 /image/Modifica.png
+- 14:36:31.750 INFO: GET 200 /image/Clear.png
+- 14:36:31.750 INFO: GET 200 /image/Elimina.png
+- 14:36:31.750 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:37:00.609 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:37:00.360 DEBUG: OnContextCreated()
+- 14:37:00.734 INFO: GET 200 /css.css
+- 14:37:00.734 INFO: GET 200 /
+- 14:37:00.750 INFO: GET 200 /js.js
+[0506/143700.551:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:37:00.750 INFO: GET 200 /image/Aggiungi.png
+- 14:37:00.750 INFO: GET 200 /image/Clear.png
+- 14:37:00.750 INFO: GET 200 /image/Modifica.png
+- 14:37:00.750 INFO: GET 200 /image/Elimina.png
+- 14:37:00.766 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:37:06.547 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:37:06.297 DEBUG: OnContextCreated()
+- 14:37:06.672 INFO: GET 200 /css.css
+- 14:37:06.672 INFO: GET 200 /
+- 14:37:06.687 INFO: GET 200 /js.js
+- 14:37:06.687 INFO: GET 200 /image/Aggiungi.png
+- 14:37:06.703 INFO: GET 200 /image/Modifica.png
+[0506/143706.497:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:37:06.703 INFO: GET 200 /image/Elimina.png
+- 14:37:06.703 INFO: GET 200 /image/Clear.png
+- 14:37:06.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:37:37.328 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:37:37.063 DEBUG: OnContextCreated()
+- 14:37:37.422 INFO: GET 200 /
+- 14:37:37.437 INFO: GET 200 /css.css
+- 14:37:37.453 INFO: GET 200 /js.js
+[0506/143737.252:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:37:37.453 INFO: GET 200 /image/Aggiungi.png
+- 14:37:37.453 INFO: GET 200 /image/Modifica.png
+- 14:37:37.453 INFO: GET 200 /image/Elimina.png
+- 14:37:37.453 INFO: GET 200 /image/Clear.png
+- 14:37:37.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:37:48.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:37:48.375 DEBUG: OnContextCreated()
+- 14:37:48.734 INFO: GET 200 /
+- 14:37:48.734 INFO: GET 200 /css.css
+- 14:37:48.766 INFO: GET 200 /js.js
+- 14:37:48.781 INFO: GET 200 /image/Aggiungi.png
+- 14:37:48.781 INFO: GET 200 /image/Modifica.png
+- 14:37:48.781 INFO: GET 200 /image/Elimina.png
+- 14:37:48.781 INFO: GET 200 /image/Clear.png
+[0506/143748.595:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:37:48.812 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:38:11.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:38:11.032 DEBUG: OnContextCreated()
+- 14:38:11.391 INFO: GET 200 /
+- 14:38:11.406 INFO: GET 200 /css.css
+- 14:38:11.484 INFO: GET 200 /js.js
+- 14:38:11.484 INFO: GET 200 /image/Aggiungi.png
+- 14:38:11.484 INFO: GET 200 /image/Modifica.png
+- 14:38:11.484 INFO: GET 200 /image/Elimina.png
+- 14:38:11.484 INFO: GET 200 /image/Clear.png
+[0506/143811.301:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:38:11.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+[0506/143813.757:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143814.550:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143815.085:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+[0506/143815.444:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:57778/js.js (27)
+- 14:38:34.844 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:38:34.782 DEBUG: OnContextCreated()
+- 14:38:34.141 INFO: GET 200 /css.css
+- 14:38:34.156 INFO: GET 200 /
+- 14:38:34.172 INFO: GET 200 /js.js
+[0506/143834.968:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:38:34.172 INFO: GET 200 /image/Aggiungi.png
+- 14:38:34.172 INFO: GET 200 /image/Elimina.png
+- 14:38:34.172 INFO: GET 200 /image/Clear.png
+- 14:38:34.172 INFO: GET 200 /image/Modifica.png
+- 14:38:34.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:38:42.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:38:42.172 DEBUG: OnContextCreated()
+- 14:38:42.531 INFO: GET 200 /css.css
+- 14:38:42.531 INFO: GET 200 /
+- 14:38:42.547 INFO: GET 200 /js.js
+[0506/143842.349:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:38:42.562 INFO: GET 200 /image/Elimina.png
+- 14:38:42.562 INFO: GET 200 /image/Aggiungi.png
+- 14:38:42.562 INFO: GET 200 /image/Modifica.png
+- 14:38:42.562 INFO: GET 200 /image/Clear.png
+- 14:38:42.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:38:50.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:57778/
+- 14:38:50.641 DEBUG: OnContextCreated()
+- 14:38:50.000 INFO: GET 200 /css.css
+- 14:38:50.000 INFO: GET 200 /
+[0506/143850.827:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:38:50.031 INFO: GET 200 /js.js
+- 14:38:50.031 INFO: GET 200 /image/Aggiungi.png
+- 14:38:50.031 INFO: GET 200 /image/Clear.png
+- 14:38:50.031 INFO: GET 200 /image/Modifica.png
+- 14:38:50.031 INFO: GET 200 /image/Elimina.png
+- 14:38:50.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:57778/
+- 14:43:56.312 DEBUG: WM_DESTROY
+- 14:43:56.312 DEBUG: RemoveBrowserWindow(): hwnd = 3475700
+- 14:43:56.312 INFO: Stopping Mongoose web server
+- 14:43:56.312 DEBUG: Mongoose webserver stopped immediately
+- 14:43:56.328 DEBUG: OnBeforeClose() hwnd=790862
+- 14:43:56.328 DEBUG: RemoveBrowserWindow(): hwnd = 790862
+- 14:43:56.328 DEBUG: GetBrowserWindow(): not found, hwnd = 790862
+- 14:43:56.328 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:43:56.328 DEBUG: Calling CefQuitMessageLoop()
+- 14:43:56.000 DEBUG: OnBrowserDestroyed()
+- 14:43:56.406 INFO: Ended application
+- 14:43:56.406 INFO: --------------------------------------------------------

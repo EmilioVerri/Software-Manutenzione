@@ -28,6 +28,12 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <head>
     <title>Baxter Application</title>
+
+    <link rel="stylesheet" href="css.css">
+
+
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/css/uikit.min.css" />
@@ -37,9 +43,9 @@ if (session_status() === PHP_SESSION_NONE) {
 
 <body>
     <div class="uk-grid uk-grid-match">
-        <div class="uk-width-4-5 uk-card uk-card-default" style="height:700px;">
-            <table class="uk-table uk-table-responsive"
-                style="background-color: rgb(255, 224,192); box-shadow: inset 0 4px 8px;">
+        <div class="uk-width-4-5 uk-card uk-card-default"
+            style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
+            <table>
                 <thead>
                     <tr>
                         <th>Codice</th>
@@ -49,13 +55,16 @@ if (session_status() === PHP_SESSION_NONE) {
                 </thead>
                 <tbody>
                     <tr>
-                        <td><input type="text" id="input1" name="codice"
+                        <td align="center"><input type="text" id="input1" name="codice"
                                 style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
-                        <td><input type="text" id="input1" name="descrizioneAttrezzatura"
+                        <td align="center"><input type="text" id="input1" name="descrizioneAttrezzatura"
                                 style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
-                        <td><input type="text" id="input1" name="reparto"
+                        <td align="center"><input type="text" id="input1" name="reparto"
                                 style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
                     </tr>
+                    <tr>
+                    <td><br></td>
+    </tr>
                     <tr>
 
                         <td colspan=2>
@@ -172,14 +181,13 @@ if (session_status() === PHP_SESSION_NONE) {
                         </td>
                         <td>
                             <div class="table-header">Categoria</div>
-                            <select name="colori">
-                                <option value="1">bianco</option>
-                                <option value="2">nero</option>
-                                <option value="3">grigio</option>
-                                <option value="4">rosso</option>
-                                <option value="5">blu</option>
+                            <select name="tipi">
+                                <option value="1">L.B. Produzione</option>
+                                <option value="2">L.B. Manutenzione</option>
+                                <option value="3">Solo Piano Manutenzione</option>
                             </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input type="checkbox" value="scadenzaManutenzioni"><font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
+                            <input type="checkbox" value="scadenzaManutenzioni">
+                            <font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
                         </td>
                         <td></td>
                         <td></td>
@@ -189,9 +197,141 @@ if (session_status() === PHP_SESSION_NONE) {
                         <td></td>
                     </tr>
                     <tr>
-                    
-                    <td>Data riga 1 colonna 1</td>
-                    <td>Data riga 1 colonna 2</td>
+                    <table class="table-ext">
+<tbody>
+    <tr>	
+	<td colspan="3">	
+		<div class="divinterno">		
+			<table class="table-int" id="scorribile">	
+            <thead>
+        <tr>
+            <th id="stile">Sigla</th>
+            <th id="stile">Nome</th > 
+            <th id="stile">Cat.</th>
+            <th id="stile">Reparto</th>
+            <th id="stile">Manutenzione</th>
+            <th id="stile">Ultima Man.</th>
+            <th id="stile">Prox Man.</th>
+	  </tr>		
+  </thead>	
+				<tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+                <tr>
+				    <td id="stile">Cognome1</td>
+				    <td id="stile">Nome 1</td>
+				    <td id="stile">Professione 1</td>        
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td>      
+                    <td id="stile">Professione 1</td> 
+				</tr>	  
+			 </table><!--Table-int-->
+		</div>
+	</td><!--/colspan tabella ext-->	
+   </tr>	  
+</tbody>
+</table><!--/table-ext-->
+                    </tr>
+
+                    <tr>
+
                     </tr>
                 </tbody>
             </table>
@@ -203,6 +343,8 @@ if (session_status() === PHP_SESSION_NONE) {
             Large
         </div>
     </div>
+
+    <script src="js.js"></script>
 </body>
 
 </html>
