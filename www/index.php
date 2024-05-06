@@ -1,28 +1,3 @@
-<?php
-
-//formattare il file Shit+Alt+F
-/*
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-    
-
-    if (!isset($_SESSION['FirstVisit'])) {
-
-    //show site for the first time part
-    $_SESSION['FirstVisit'] = 1;
- 
-
-    // Don't forget to add http colon slash slash www dot before!
-
-    } else { 
-        $_SESSION['FirstVisit']++;
-     }
-*/
-?>
-
 <!DOCTYPE html>
 <html>
 
