@@ -41761,3 +41761,548 @@ s process: "C:\VersioneSempliceSerializzazione\phpdesktop-chrome.exe" --type=gpu
 - 14:43:56.000 DEBUG: OnBrowserDestroyed()
 - 14:43:56.406 INFO: Ended application
 - 14:43:56.406 INFO: --------------------------------------------------------
+- 14:47:39.000 INFO: --------------------------------------------------------
+- 14:47:39.000 INFO: Started application
+- 14:47:39.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:47:39.000 INFO: Log level = DEBUG4
+- 14:47:39.000 INFO: Starting Mongoose 3.9c web server
+- 14:47:39.000 INFO: WWW directory: C:\Manutentori\www
+- 14:47:39.000 INFO: Index files: index.html,index.php
+- 14:47:39.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:47:39.000 INFO: CGI pattern: **.php$
+- 14:47:39.000 INFO: Hide files patterns: 
+- 14:47:39.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:47:39.000 INFO: Web server url: http://127.0.0.1:52448/
+- 14:47:39.016 INFO: remote_debugging_port = 61994
+- 14:47:39.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=61994
+- 14:47:39.125 DEBUG: App::OnContextInitialized()
+- 14:47:39.125 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:47:39.125 DEBUG: Window max width/height = 1846/978
+- 14:47:39.125 DEBUG: GetBrowserWindow(): not found, hwnd = 1378358
+- 14:47:39.125 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:47:39.125 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:47:39.125 DEBUG: StoreBrowserWindow(): hwnd = 1378358
+- 14:47:39.187 DEBUG: ClientHandler::OnAfterCreated()
+- 14:47:39.187 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:47:39.187 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:47:39.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=1DF27FBEBEDD5F441539C90A1B8A48AA --mojo-platform-channel-handle=1860 /prefetch:2
+- 14:47:39.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=BE1481DC7FBE8417755D5D31CFDB92EE --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=BE1481DC7FBE8417755D5D31CFDB92EE --renderer-client-id=3 --mojo-platform-channel-handle=2400 /prefetch:1
+- 14:47:39.031 DEBUG: OnBrowserCreated()
+[0506/144739.561:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:47:39.469 INFO: GET 200 /css.css
+- 14:47:39.203 DEBUG: OnContextCreated()
+- 14:47:39.484 INFO: GET 200 /image/Aggiungi.png
+- 14:47:39.484 INFO: GET 200 /image/Modifica.png
+- 14:47:39.484 INFO: GET 200 /
+- 14:47:39.484 INFO: GET 200 /image/Elimina.png
+[0506/144739.661:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:47:39.484 INFO: GET 200 /image/Clear.png
+- 14:47:39.484 INFO: GET 200 /js.js
+- 14:47:39.641 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 14:54:07.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 14:54:07.109 DEBUG: OnContextCreated()
+- 14:54:07.375 INFO: GET 200 /css.css
+- 14:54:07.391 INFO: GET 200 /
+[0506/145407.854:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:54:07.687 INFO: GET 200 /js.js
+- 14:54:07.687 INFO: GET 200 /image/Aggiungi.png
+- 14:54:07.687 INFO: GET 200 /image/Modifica.png
+- 14:54:07.687 INFO: GET 200 /image/Elimina.png
+- 14:54:07.687 INFO: GET 200 /image/Clear.png
+- 14:54:07.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:15:00.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:15:00.437 DEBUG: OnContextCreated()
+- 15:15:00.703 INFO: GET 200 /
+- 15:15:00.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:17:05.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:17:05.031 DEBUG: OnContextCreated()
+- 15:17:05.312 INFO: GET 200 /
+- 15:17:05.312 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:17:23.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:17:23.953 DEBUG: OnContextCreated()
+- 15:17:23.219 INFO: GET 200 /
+- 15:17:23.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:17:57.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:17:57.390 DEBUG: OnContextCreated()
+- 15:17:57.656 INFO: GET 200 /css.css
+- 15:17:57.656 INFO: GET 200 /
+- 15:17:58.891 INFO: GET 200 /js.js
+- 15:17:58.906 INFO: GET 200 /image/Aggiungi.png
+- 15:17:58.906 INFO: GET 200 /image/Modifica.png
+- 15:17:58.906 INFO: GET 200 /image/Elimina.png
+- 15:17:58.906 INFO: GET 200 /image/Clear.png
+[0506/151758.120:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:17:58.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:18:13.234 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:18:13.078 DEBUG: OnContextCreated()
+- 15:18:13.359 INFO: GET 200 /
+- 15:18:13.359 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:18:18.922 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:18:18.796 DEBUG: OnContextCreated()
+- 15:18:18.078 INFO: GET 200 /css.css
+- 15:18:18.078 INFO: GET 200 /
+- 15:18:18.109 INFO: GET 200 /js.js
+- 15:18:18.109 INFO: GET 200 /image/Elimina.png
+- 15:18:18.109 INFO: GET 200 /image/Modifica.png
+- 15:18:18.109 INFO: GET 200 /image/Clear.png
+- 15:18:18.109 INFO: GET 200 /image/Aggiungi.png
+[0506/151818.291:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:18:18.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:18:43.187 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:18:43.015 DEBUG: OnContextCreated()
+- 15:18:43.297 INFO: GET 200 /
+- 15:18:43.297 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:18:46.359 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:18:46.265 DEBUG: OnContextCreated()
+- 15:18:46.547 INFO: GET 200 /css.css
+- 15:18:46.547 INFO: GET 200 /
+- 15:18:46.578 INFO: GET 200 /js.js
+- 15:18:46.578 INFO: GET 200 /image/Elimina.png
+- 15:18:46.578 INFO: GET 200 /image/Modifica.png
+- 15:18:46.578 INFO: GET 200 /image/Clear.png
+- 15:18:46.578 INFO: GET 200 /image/Aggiungi.png
+[0506/151846.909:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:18:46.750 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:18:52.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:18:52.093 DEBUG: OnContextCreated()
+- 15:18:52.359 INFO: GET 200 /css.css
+- 15:18:52.359 INFO: GET 200 /
+- 15:18:52.391 INFO: GET 200 /js.js
+- 15:18:52.391 INFO: GET 200 /image/Modifica.png
+- 15:18:52.391 INFO: GET 200 /image/Aggiungi.png
+- 15:18:52.391 INFO: GET 200 /image/Elimina.png
+- 15:18:52.391 INFO: GET 200 /image/Clear.png
+[0506/151852.571:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:18:52.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:19:02.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:19:02.859 DEBUG: OnContextCreated()
+- 15:19:02.125 INFO: GET 200 /css.css
+- 15:19:02.125 INFO: GET 200 /
+- 15:19:02.141 INFO: GET 200 /image/Aggiungi.png
+- 15:19:02.141 INFO: GET 200 /js.js
+- 15:19:02.141 INFO: GET 200 /image/Elimina.png
+- 15:19:02.141 INFO: GET 200 /image/Modifica.png
+- 15:19:02.141 INFO: GET 200 /image/Clear.png
+[0506/151902.392:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:19:02.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:19:03.687 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:19:03.531 DEBUG: OnContextCreated()
+- 15:19:03.812 INFO: GET 200 /css.css
+- 15:19:03.812 INFO: GET 200 /
+- 15:19:04.844 INFO: GET 200 /js.js
+- 15:19:04.844 INFO: GET 200 /image/Modifica.png
+- 15:19:04.844 INFO: GET 200 /image/Aggiungi.png
+- 15:19:04.844 INFO: GET 200 /image/Elimina.png
+- 15:19:04.844 INFO: GET 200 /image/Clear.png
+[0506/151904.024:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:19:04.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:19:08.359 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:19:08.203 DEBUG: OnContextCreated()
+- 15:19:08.469 INFO: GET 200 /css.css
+- 15:19:08.484 INFO: GET 200 /
+- 15:19:08.500 INFO: GET 200 /js.js
+- 15:19:08.500 INFO: GET 200 /image/Aggiungi.png
+- 15:19:08.500 INFO: GET 200 /image/Elimina.png
+- 15:19:08.500 INFO: GET 200 /image/Modifica.png
+- 15:19:08.500 INFO: GET 200 /image/Clear.png
+[0506/151908.686:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:19:08.516 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:20:50.187 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:20:50.078 DEBUG: OnContextCreated()
+- 15:20:50.359 INFO: GET 200 /
+- 15:20:50.359 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:22:06.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:22:06.046 DEBUG: OnContextCreated()
+- 15:22:06.328 INFO: GET 200 /
+- 15:22:06.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:22:35.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:22:36.625 DEBUG: OnContextCreated()
+- 15:22:36.891 INFO: GET 200 /
+- 15:22:36.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:23:09.656 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:23:09.500 DEBUG: OnContextCreated()
+- 15:23:09.766 INFO: GET 200 /
+- 15:23:09.781 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:23:17.078 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:23:17.937 DEBUG: OnContextCreated()
+- 15:23:17.219 INFO: GET 200 /
+- 15:23:17.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:23:58.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:23:58.109 DEBUG: OnContextCreated()
+- 15:23:58.391 INFO: GET 200 /
+- 15:23:58.391 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:24:12.469 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:24:12.343 DEBUG: OnContextCreated()
+- 15:24:12.609 INFO: GET 200 /
+- 15:24:12.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:24:17.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:24:17.906 DEBUG: OnContextCreated()
+- 15:24:17.187 INFO: GET 200 /
+- 15:24:17.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:25:06.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:25:06.890 DEBUG: OnContextCreated()
+- 15:25:06.172 INFO: GET 200 /
+- 15:25:06.172 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:25:35.437 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:25:35.328 DEBUG: OnContextCreated()
+- 15:25:35.594 INFO: GET 200 /
+- 15:25:35.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:26:00.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:26:00.687 DEBUG: OnContextCreated()
+- 15:26:00.969 INFO: GET 200 /
+- 15:26:00.969 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:29:15.781 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:29:16.859 DEBUG: OnContextCreated()
+- 15:29:16.125 INFO: GET 200 /
+- 15:29:16.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:30:02.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:30:02.671 DEBUG: OnContextCreated()
+- 15:30:02.953 INFO: GET 200 /
+- 15:30:02.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:30:03.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:30:03.250 DEBUG: OnContextCreated()
+- 15:30:03.531 INFO: GET 200 /
+- 15:30:03.531 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:32:12.859 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:32:12.703 DEBUG: OnContextCreated()
+- 15:32:12.984 INFO: GET 200 /
+- 15:32:12.984 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:34:34.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:34:34.281 DEBUG: OnContextCreated()
+- 15:34:34.547 INFO: GET 200 /
+- 15:34:34.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:35:36.937 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:35:36.812 DEBUG: OnContextCreated()
+- 15:35:36.078 INFO: GET 200 /
+- 15:35:36.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:35:45.797 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:35:46.640 DEBUG: OnContextCreated()
+- 15:35:46.906 INFO: GET 200 /
+- 15:35:46.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:36:46.969 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:36:46.812 DEBUG: OnContextCreated()
+- 15:36:46.094 INFO: GET 200 /
+- 15:36:46.094 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:36:48.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:36:48.234 DEBUG: OnContextCreated()
+- 15:36:48.500 INFO: GET 200 /
+- 15:36:48.500 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:37:01.906 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52448/
+- 15:37:01.750 DEBUG: OnContextCreated()
+- 15:37:01.031 INFO: GET 200 /
+- 15:37:01.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52448/
+- 15:37:12.000 INFO: --------------------------------------------------------
+- 15:37:12.000 INFO: Started application
+- 15:37:12.000 INFO: Logging to: C:\Manutentori\debug.log
+- 15:37:12.000 INFO: Log level = DEBUG4
+- 15:37:12.000 INFO: Starting Mongoose 3.9c web server
+- 15:37:12.000 INFO: WWW directory: C:\Manutentori\www
+- 15:37:12.000 INFO: Index files: index.html,index.php
+- 15:37:12.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 15:37:12.000 INFO: CGI pattern: **.php$
+- 15:37:12.000 INFO: Hide files patterns: 
+- 15:37:12.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 15:37:12.016 INFO: Web server url: http://127.0.0.1:53893/
+- 15:37:12.016 INFO: remote_debugging_port = 50218
+- 15:37:12.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50218
+- 15:37:12.047 DEBUG: App::OnContextInitialized()
+- 15:37:12.047 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 15:37:12.047 DEBUG: Window max width/height = 1846/978
+- 15:37:12.047 DEBUG: GetBrowserWindow(): not found, hwnd = 1904790
+- 15:37:12.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 15:37:12.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 15:37:12.047 DEBUG: StoreBrowserWindow(): hwnd = 1904790
+- 15:37:12.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=CC3668075F391AE7F24D20784C0F3CF1 --mojo-platform-channel-handle=1780 /prefetch:2
+- 15:37:12.109 DEBUG: ClientHandler::OnAfterCreated()
+- 15:37:12.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 15:37:12.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 15:37:12.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=3312BD333B8E6A235C465D278DAD4933 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=3312BD333B8E6A235C465D278DAD4933 --renderer-client-id=3 --mojo-platform-channel-handle=2380 /prefetch:1
+[0506/153712.243:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 15:37:12.016 DEBUG: OnBrowserCreated()
+[0506/153712.263:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0506/153712.263:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Manutentori\webcache\GPUCache to C:\Manutentori\webcache\old_GPUCache_000
+[0506/153712.263:ERROR:disk_cache.cc(132)] Unable to create cache
+[0506/153712.263:ERROR:shader_disk_cache.cc(593)] Shader Cache Creation failed: -2
+[0506/153712.268:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0506/153712.268:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Manutentori\webcache\Cache to C:\Manutentori\webcache\old_Cache_000
+[0506/153712.268:ERROR:disk_cache.cc(132)] Unable to create cache
+- 15:37:12.359 INFO: GET 200 /
+- 15:37:12.359 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:37:15.625 DEBUG: WM_DESTROY
+- 15:37:15.625 DEBUG: RemoveBrowserWindow(): hwnd = 1378358
+- 15:37:15.625 INFO: Stopping Mongoose web server
+- 15:37:15.625 DEBUG: Mongoose webserver stopped immediately
+- 15:37:15.641 DEBUG: OnBeforeClose() hwnd=526644
+- 15:37:15.641 DEBUG: RemoveBrowserWindow(): hwnd = 526644
+- 15:37:15.641 DEBUG: GetBrowserWindow(): not found, hwnd = 526644
+- 15:37:15.641 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 15:37:15.641 DEBUG: Calling CefQuitMessageLoop()
+- 15:37:15.375 DEBUG: OnBrowserDestroyed()
+- 15:37:15.656 INFO: Ended application
+- 15:37:15.656 INFO: --------------------------------------------------------
+- 15:37:18.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:37:18.734 INFO: GET 200 /
+- 15:37:18.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:38:50.562 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:38:50.687 INFO: GET 200 /
+- 15:38:50.687 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:39:27.641 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:39:27.781 INFO: GET 200 /
+- 15:39:27.797 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:39:29.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:39:30.953 INFO: GET 200 /
+- 15:39:30.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:39:34.797 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:39:34.937 INFO: GET 200 /
+- 15:39:34.937 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:39:36.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:39:36.250 INFO: GET 200 /
+- 15:39:36.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:40:36.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:40:36.375 INFO: GET 200 /css.css
+- 15:40:36.188 DEBUG: OnContextCreated()
+- 15:40:36.375 INFO: GET 200 /
+- 15:40:36.656 INFO: GET 200 /js.js
+- 15:40:36.656 INFO: GET 200 /image/Aggiungi.png
+- 15:40:36.656 INFO: GET 200 /image/Modifica.png
+- 15:40:36.656 INFO: GET 200 /image/Elimina.png
+- 15:40:36.656 INFO: GET 200 /image/Clear.png
+[0506/154037.094:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:40:37.062 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:42:43.344 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:42:43.250 DEBUG: OnContextCreated()
+- 15:42:43.453 INFO: GET 200 /css.css
+- 15:42:43.453 INFO: GET 200 /
+- 15:42:43.609 INFO: GET 200 /js.js
+- 15:42:43.609 INFO: GET 200 /image/Modifica.png
+- 15:42:43.609 INFO: GET 200 /image/Aggiungi.png
+- 15:42:43.609 INFO: GET 200 /image/Elimina.png
+- 15:42:43.609 INFO: GET 200 /image/Clear.png
+[0506/154243.745:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:42:43.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:45:25.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:45:25.469 DEBUG: OnContextCreated()
+- 15:45:25.656 INFO: GET 200 /
+- 15:45:25.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:45:31.062 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:45:31.985 DEBUG: OnContextCreated()
+- 15:45:31.172 INFO: GET 200 /css.css
+- 15:45:31.172 INFO: GET 200 /
+- 15:45:31.375 INFO: GET 200 /js.js
+- 15:45:31.375 INFO: GET 200 /image/Aggiungi.png
+- 15:45:31.375 INFO: GET 200 /image/Modifica.png
+- 15:45:31.375 INFO: GET 200 /image/Elimina.png
+- 15:45:31.375 INFO: GET 200 /image/Clear.png
+[0506/154531.444:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:45:31.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:45:44.109 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:45:44.047 DEBUG: OnContextCreated()
+- 15:45:44.234 INFO: GET 200 /
+- 15:45:44.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:45:48.828 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:45:48.766 DEBUG: OnContextCreated()
+- 15:45:49.953 INFO: GET 200 /
+- 15:45:49.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:46:00.391 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:46:00.329 DEBUG: OnContextCreated()
+- 15:46:00.516 INFO: GET 200 /css.css
+- 15:46:00.531 INFO: GET 200 /
+- 15:46:00.562 INFO: GET 200 /image/Clear.png
+- 15:46:00.562 INFO: GET 200 /image/Aggiungi.png
+- 15:46:00.562 INFO: GET 200 /js.js
+- 15:46:00.562 INFO: GET 200 /image/Modifica.png
+- 15:46:00.562 INFO: GET 200 /image/Elimina.png
+[0506/154600.613:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:46:00.578 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:46:25.750 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:46:25.672 DEBUG: OnContextCreated()
+- 15:46:25.875 INFO: GET 200 /
+- 15:46:25.875 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:46:45.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:46:46.844 DEBUG: OnContextCreated()
+- 15:46:46.031 INFO: GET 200 /css.css
+- 15:46:46.031 INFO: GET 200 /
+- 15:46:46.062 INFO: GET 200 /js.js
+- 15:46:46.062 INFO: GET 200 /image/Aggiungi.png
+- 15:46:46.062 INFO: GET 200 /image/Elimina.png
+- 15:46:46.062 INFO: GET 200 /image/Modifica.png
+- 15:46:46.062 INFO: GET 200 /image/Clear.png
+[0506/154646.169:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:46:46.141 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:46:50.766 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:46:50.688 DEBUG: OnContextCreated()
+- 15:46:50.875 INFO: GET 200 /css.css
+- 15:46:50.875 INFO: GET 200 /
+- 15:46:50.906 INFO: GET 200 /js.js
+- 15:46:50.906 INFO: GET 200 /image/Aggiungi.png
+- 15:46:50.906 INFO: GET 200 /image/Modifica.png
+- 15:46:50.906 INFO: GET 200 /image/Elimina.png
+- 15:46:50.906 INFO: GET 200 /image/Clear.png
+[0506/154650.958:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:46:50.922 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:46:57.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:46:57.922 DEBUG: OnContextCreated()
+- 15:46:57.109 INFO: GET 200 /css.css
+- 15:46:57.109 INFO: GET 200 /
+- 15:46:57.172 INFO: GET 200 /js.js
+- 15:46:57.172 INFO: GET 200 /image/Aggiungi.png
+- 15:46:57.172 INFO: GET 200 /image/Modifica.png
+- 15:46:57.172 INFO: GET 200 /image/Elimina.png
+- 15:46:57.172 INFO: GET 200 /image/Clear.png
+[0506/154657.356:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:46:57.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:47:43.672 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:47:43.641 DEBUG: OnContextCreated()
+- 15:47:43.828 INFO: GET 200 /css.css
+- 15:47:43.828 INFO: GET 200 /
+- 15:47:43.844 INFO: GET 200 /js.js
+- 15:47:43.844 INFO: GET 200 /image/Modifica.png
+- 15:47:43.844 INFO: GET 200 /image/Clear.png
+- 15:47:43.844 INFO: GET 200 /image/Elimina.png
+- 15:47:43.844 INFO: GET 200 /image/Aggiungi.png
+[0506/154743.902:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:47:43.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:49:03.984 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:49:03.922 DEBUG: OnContextCreated()
+- 15:49:03.109 INFO: GET 200 /css.css
+- 15:49:03.125 INFO: GET 200 /
+- 15:49:03.156 INFO: GET 200 /js.js
+- 15:49:03.156 INFO: GET 200 /image/Aggiungi.png
+- 15:49:03.172 INFO: GET 200 /image/Modifica.png
+- 15:49:03.172 INFO: GET 200 /image/Elimina.png
+- 15:49:03.172 INFO: GET 200 /image/Clear.png
+[0506/154903.379:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:49:03.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:50:22.187 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:50:22.141 DEBUG: OnContextCreated()
+- 15:50:22.328 INFO: GET 200 /css.css
+- 15:50:22.344 INFO: GET 200 /
+- 15:50:22.406 INFO: GET 200 /image/Elimina.png
+- 15:50:22.406 INFO: GET 200 /image/Aggiungi.png
+- 15:50:22.406 INFO: GET 200 /js.js
+- 15:50:22.406 INFO: GET 200 /image/Modifica.png
+- 15:50:22.406 INFO: GET 200 /image/Clear.png
+[0506/155022.513:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:50:22.469 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:50:37.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:50:37.157 DEBUG: OnContextCreated()
+- 15:50:37.359 INFO: GET 200 /css.css
+- 15:50:37.359 INFO: GET 200 /
+- 15:50:37.391 INFO: GET 200 /js.js
+- 15:50:37.391 INFO: GET 200 /image/Aggiungi.png
+- 15:50:37.391 INFO: GET 200 /image/Modifica.png
+- 15:50:37.391 INFO: GET 200 /image/Elimina.png
+- 15:50:37.391 INFO: GET 200 /image/Clear.png
+[0506/155037.443:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:50:37.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:51:15.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:51:16.844 DEBUG: OnContextCreated()
+- 15:51:16.031 INFO: GET 200 /css.css
+- 15:51:16.047 INFO: GET 200 /
+- 15:51:16.047 INFO: GET 200 /js.js
+- 15:51:16.047 INFO: GET 200 /image/Aggiungi.png
+- 15:51:16.047 INFO: GET 200 /image/Modifica.png
+- 15:51:16.047 INFO: GET 200 /image/Clear.png
+- 15:51:16.047 INFO: GET 200 /image/Elimina.png
+[0506/155116.155:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:51:16.125 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:52:04.859 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:52:05.782 DEBUG: OnContextCreated()
+- 15:52:05.969 INFO: GET 200 /css.css
+- 15:52:05.969 INFO: GET 200 /
+- 15:52:05.984 INFO: GET 200 /js.js
+- 15:52:05.984 INFO: GET 200 /image/Aggiungi.png
+- 15:52:05.984 INFO: GET 200 /image/Modifica.png
+- 15:52:05.984 INFO: GET 200 /image/Elimina.png
+- 15:52:05.984 INFO: GET 200 /image/Clear.png
+[0506/155205.092:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:52:05.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:52:15.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:52:15.204 DEBUG: OnContextCreated()
+- 15:52:15.391 INFO: GET 200 /css.css
+- 15:52:15.406 INFO: GET 200 /
+- 15:52:15.422 INFO: GET 200 /image/Modifica.png
+- 15:52:15.422 INFO: GET 200 /image/Elimina.png
+- 15:52:15.422 INFO: GET 200 /image/Clear.png
+- 15:52:15.422 INFO: GET 200 /js.js
+- 15:52:15.422 INFO: GET 200 /image/Aggiungi.png
+[0506/155215.470:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:52:15.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:52:19.578 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:52:19.485 DEBUG: OnContextCreated()
+- 15:52:19.687 INFO: GET 200 /css.css
+- 15:52:19.687 INFO: GET 200 /
+- 15:52:19.703 INFO: GET 200 /js.js
+- 15:52:19.719 INFO: GET 200 /image/Modifica.png
+- 15:52:19.719 INFO: GET 200 /image/Elimina.png
+- 15:52:19.719 INFO: GET 200 /image/Aggiungi.png
+- 15:52:19.719 INFO: GET 200 /image/Clear.png
+[0506/155219.767:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:52:19.734 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:53:37.203 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:53:37.125 DEBUG: OnContextCreated()
+- 15:53:37.312 INFO: GET 200 /css.css
+- 15:53:37.328 INFO: GET 200 /
+- 15:53:37.641 INFO: GET 200 /js.js
+- 15:53:37.656 INFO: GET 200 /image/Aggiungi.png
+- 15:53:37.656 INFO: GET 200 /image/Modifica.png
+- 15:53:37.656 INFO: GET 200 /image/Elimina.png
+- 15:53:37.656 INFO: GET 200 /image/Clear.png
+[0506/155337.737:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:53:37.703 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:54:07.625 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:54:07.547 DEBUG: OnContextCreated()
+- 15:54:07.734 INFO: GET 200 /css.css
+- 15:54:07.750 INFO: GET 200 /
+- 15:54:08.016 INFO: GET 200 /image/Clear.png
+- 15:54:08.016 INFO: GET 200 /image/Elimina.png
+- 15:54:08.016 INFO: GET 200 /image/Modifica.png
+- 15:54:08.016 INFO: GET 200 /image/Aggiungi.png
+- 15:54:08.031 INFO: GET 200 /js.js
+[0506/155408.086:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:54:08.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:54:35.703 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:54:35.657 DEBUG: OnContextCreated()
+- 15:54:35.859 INFO: GET 200 /css.css
+- 15:54:35.859 INFO: GET 200 /
+- 15:54:35.875 INFO: GET 200 /js.js
+- 15:54:35.875 INFO: GET 200 /image/Aggiungi.png
+- 15:54:35.875 INFO: GET 200 /image/Elimina.png
+- 15:54:35.875 INFO: GET 200 /image/Modifica.png
+- 15:54:35.875 INFO: GET 200 /image/Clear.png
+[0506/155436.029:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:54:36.000 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:54:52.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:54:52.407 DEBUG: OnContextCreated()
+- 15:54:52.594 INFO: GET 200 /css.css
+- 15:54:52.609 INFO: GET 200 /
+- 15:54:52.625 INFO: GET 200 /js.js
+- 15:54:52.625 INFO: GET 200 /image/Aggiungi.png
+- 15:54:52.625 INFO: GET 200 /image/Modifica.png
+- 15:54:52.625 INFO: GET 200 /image/Elimina.png
+- 15:54:52.625 INFO: GET 200 /image/Clear.png
+[0506/155452.739:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:54:52.703 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:55:51.031 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53893/
+- 15:55:51.954 DEBUG: OnContextCreated()
+- 15:55:51.141 INFO: GET 200 /css.css
+- 15:55:51.156 INFO: GET 200 /
+- 15:55:51.187 INFO: GET 200 /js.js
+- 15:55:51.203 INFO: GET 200 /image/Aggiungi.png
+- 15:55:51.203 INFO: GET 200 /image/Modifica.png
+- 15:55:51.203 INFO: GET 200 /image/Elimina.png
+- 15:55:51.203 INFO: GET 200 /image/Clear.png
+[0506/155551.276:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 15:55:51.234 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53893/
+- 15:59:29.906 DEBUG: WM_DESTROY
+- 15:59:29.906 DEBUG: RemoveBrowserWindow(): hwnd = 1904790
+- 15:59:29.906 INFO: Stopping Mongoose web server
+- 15:59:29.906 DEBUG: Mongoose webserver stopped immediately
+- 15:59:29.906 DEBUG: OnBeforeClose() hwnd=5509344
+- 15:59:29.906 DEBUG: RemoveBrowserWindow(): hwnd = 5509344
+- 15:59:29.906 DEBUG: GetBrowserWindow(): not found, hwnd = 5509344
+- 15:59:29.906 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 15:59:29.906 DEBUG: Calling CefQuitMessageLoop()
+- 15:59:29.750 DEBUG: OnBrowserDestroyed()
+- 15:59:30.953 INFO: Ended application
+- 15:59:30.953 INFO: --------------------------------------------------------
