@@ -1,7 +1,8 @@
 <?php
 
 
-include('./classi/ConnessioneDB.php');
+
+include('./classi/ClasseManutenzioni.php')
 
 
 
@@ -39,6 +40,7 @@ include('./classi/ConnessioneDB.php');
                         <th>Reparto</th>
                     </tr>
                 </thead>
+                <form method="post">
                 <tbody>
                     <tr>
                         <td align="center"><input type="text" id="input1" name="codice"
@@ -94,13 +96,13 @@ include('./classi/ConnessioneDB.php');
                                     <td><input type="radio" name="checkbox-group" value="Annuale">
                                         <font size="2">Annuale</font>
                                     </td>
-                                    <td><input type="radio" name="checkbox-group">
+                                    <td><input type="radio" name="checkbox-group" value="Quinquennale">
                                         <font size="2">Quinquennale</font>
                                     </td>
-                                    <td><input type="radio" name="checkbox-group">
+                                    <td><input type="radio" name="checkbox-group" value="Settennale">
                                         <font size="2">Settennale</font>
                                     </td>
-                                    <td><input type="radio" name="checkbox-group">
+                                    <td><input type="radio" name="checkbox-group" value="Decennale">
                                         <font size="2">Decennale</font>
                                     </td>
                                 </tr>
@@ -135,28 +137,28 @@ include('./classi/ConnessioneDB.php');
 
                     </tr>
                     <tr>
-                        <td colspan=2><button value="Aggiungi" style="background-color: rgb(223,223,223)">
+                        <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi" style="background-color: rgb(223,223,223)">
                                 <span
                                     style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                     <img src=".\image\Aggiungi.png" alt="Aggiungi">
                                     Aggiungi
                                 </span>
                             </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button value="Modifica" style="background-color: rgb(223,223,223)">
+                            <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit" name="Modifica">
                                 <span
                                     style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                     <img src=".\image\Modifica.png" alt="Modifica">
                                     Modifica
                                 </span>
                             </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button value="Elimina" style="background-color: rgb(223,223,223)">
+                            <button value="Elimina" style="background-color: rgb(223,223,223)" type="submit" name="Elimina">
                                 <span
                                     style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                     <img src=".\image\Elimina.png" alt="Elimina">
                                     Elimina
                                 </span>
                             </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <button value="Clear" style="background-color: rgb(223,223,223)">
+                            <button value="Clear" style="background-color: rgb(223,223,223)" type="submit" name="Clear">
                                 <span
                                     style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                     <img src=".\image\Clear.png" alt="Clear">
@@ -167,10 +169,10 @@ include('./classi/ConnessioneDB.php');
                         </td>
                         <td>
                             <div class="table-header">Categoria</div>
-                            <select name="tipi">
-                                <option value="1">L.B. Produzione</option>
-                                <option value="2">L.B. Manutenzione</option>
-                                <option value="3">Solo Piano Manutenzione</option>
+                            <select name="categoria">
+                                <option value="L.B. Produzione">L.B. Produzione</option>
+                                <option value="L.B. Manutenzione">L.B. Manutenzione</option>
+                                <option value="Solo Piano Manutenzione">Solo Piano Manutenzione</option>
                             </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="checkbox" value="scadenzaManutenzioni">
                             <font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
@@ -320,6 +322,7 @@ include('./classi/ConnessioneDB.php');
 
                     </tr>
                 </tbody>
+                </form>
             </table>
         </div>
 
@@ -334,3 +337,17 @@ include('./classi/ConnessioneDB.php');
 </body>
 
 </html>
+
+
+
+
+
+<?php
+
+if(isset($_POST['Aggiungi'])){
+    $manutenzione=new Manutenzione($_POST['codice'],$_POST['descrizioneAttrezzatura'],$_POST['categoria'],$_POST['reparto'],$_POST['checkbox-group']);
+    $prova=$manutenzione->aggiungiManutenzione();
+}
+
+
+?>

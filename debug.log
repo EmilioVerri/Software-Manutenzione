@@ -42306,3 +42306,869 @@ s process: "C:\VersioneSempliceSerializzazione\phpdesktop-chrome.exe" --type=gpu
 - 15:59:29.750 DEBUG: OnBrowserDestroyed()
 - 15:59:30.953 INFO: Ended application
 - 15:59:30.953 INFO: --------------------------------------------------------
+- 08:53:45.000 INFO: --------------------------------------------------------
+- 08:53:45.000 INFO: Started application
+- 08:53:45.000 INFO: Logging to: C:\Manutentori\debug.log
+- 08:53:45.000 INFO: Log level = DEBUG4
+- 08:53:45.000 INFO: Starting Mongoose 3.9c web server
+- 08:53:45.000 INFO: WWW directory: C:\Manutentori\www
+- 08:53:45.000 INFO: Index files: index.html,index.php
+- 08:53:45.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 08:53:45.000 INFO: CGI pattern: **.php$
+- 08:53:45.000 INFO: Hide files patterns: 
+- 08:53:45.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 08:53:45.000 INFO: Web server url: http://127.0.0.1:58725/
+- 08:53:45.000 INFO: remote_debugging_port = 54903
+- 08:53:45.000 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=54903
+- 08:53:45.094 DEBUG: App::OnContextInitialized()
+- 08:53:45.094 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 08:53:45.094 DEBUG: Window max width/height = 1846/978
+- 08:53:45.109 DEBUG: GetBrowserWindow(): not found, hwnd = 20449352
+- 08:53:45.109 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 08:53:45.109 DEBUG: BrowserWindow::CreateBrowserControl()
+- 08:53:45.109 DEBUG: StoreBrowserWindow(): hwnd = 20449352
+- 08:53:45.172 DEBUG: ClientHandler::OnAfterCreated()
+- 08:53:45.172 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 08:53:45.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=9251C51D9CC4BC2FAC8005580FDEAD48 --mojo-platform-channel-handle=1860 /prefetch:2
+- 08:53:45.188 DEBUG: OnLoadingStateChange: loading=1, url=
+- 08:53:45.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=F6230997B3FECC3331B371AADA2EBEB8 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=F6230997B3FECC3331B371AADA2EBEB8 --renderer-client-id=3 --mojo-platform-channel-handle=2376 /prefetch:1
+- 08:53:45.063 DEBUG: OnBrowserCreated()
+[0507/085345.407:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 08:53:46.766 DEBUG: OnContextCreated()
+- 08:53:46.016 INFO: GET 200 /css.css
+- 08:53:46.016 INFO: GET 200 /
+- 08:53:46.031 INFO: GET 200 /image/Aggiungi.png
+- 08:53:46.031 INFO: GET 200 /image/Modifica.png
+[0507/085346.066:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 08:53:46.047 INFO: GET 200 /image/Clear.png
+- 08:53:46.047 INFO: GET 200 /image/Elimina.png
+- 08:53:46.047 INFO: GET 200 /js.js
+- 08:53:46.109 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:58725/
+[0507/085358.008:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085358.926:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085359.501:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085400.059:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085401.230:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085402.052:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085402.613:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085403.549:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085404.572:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085725.325:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085725.791:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/085727.390:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091112.301:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091112.950:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091113.365:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091113.693:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091114.102:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091114.509:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091115.032:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091115.453:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091116.029:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091116.437:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+[0507/091119.926:INFO:CONSOLE(27)] "Valori riga selezionata: ", source: http://127.0.0.1:58725/js.js (27)
+- 09:11:31.938 DEBUG: WM_DESTROY
+- 09:11:31.938 DEBUG: RemoveBrowserWindow(): hwnd = 20449352
+- 09:11:31.938 INFO: Stopping Mongoose web server
+- 09:11:31.938 DEBUG: Mongoose webserver stopped immediately
+- 09:11:31.953 DEBUG: OnBeforeClose() hwnd=7669542
+- 09:11:31.953 DEBUG: RemoveBrowserWindow(): hwnd = 7669542
+- 09:11:31.953 DEBUG: GetBrowserWindow(): not found, hwnd = 7669542
+- 09:11:31.953 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 09:11:31.953 DEBUG: Calling CefQuitMessageLoop()
+- 09:11:32.047 INFO: Ended application
+- 09:11:32.047 INFO: --------------------------------------------------------
+- 09:11:36.000 INFO: --------------------------------------------------------
+- 09:11:36.000 INFO: Started application
+- 09:11:36.000 INFO: Logging to: C:\Manutentori\debug.log
+- 09:11:36.000 INFO: Log level = DEBUG4
+- 09:11:36.000 INFO: Starting Mongoose 3.9c web server
+- 09:11:36.000 INFO: WWW directory: C:\Manutentori\www
+- 09:11:36.000 INFO: Index files: index.html,index.php
+- 09:11:36.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 09:11:36.000 INFO: CGI pattern: **.php$
+- 09:11:36.000 INFO: Hide files patterns: 
+- 09:11:36.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 09:11:36.016 INFO: Web server url: http://127.0.0.1:60493/
+- 09:11:36.016 INFO: remote_debugging_port = 58083
+- 09:11:36.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=58083
+- 09:11:36.047 DEBUG: App::OnContextInitialized()
+- 09:11:36.047 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 09:11:36.047 DEBUG: Window max width/height = 1846/978
+- 09:11:36.047 DEBUG: GetBrowserWindow(): not found, hwnd = 5574038
+- 09:11:36.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 09:11:36.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 09:11:36.047 DEBUG: StoreBrowserWindow(): hwnd = 5574038
+- 09:11:36.094 DEBUG: ClientHandler::OnAfterCreated()
+- 09:11:36.094 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 09:11:36.110 DEBUG: OnLoadingStateChange: loading=1, url=
+- 09:11:36.016 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=276D2EB158FF677ED612FB8BF00CCCE9 --mojo-platform-channel-handle=1772 /prefetch:2
+- 09:11:36.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=0EC920CF1BDE375E5D511F402F86E79A --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=0EC920CF1BDE375E5D511F402F86E79A --renderer-client-id=3 --mojo-platform-channel-handle=2072 /prefetch:1
+- 09:11:36.015 DEBUG: OnBrowserCreated()
+[0507/091136.439:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 09:11:36.360 INFO: GET 200 /css.css
+- 09:11:36.187 DEBUG: OnContextCreated()
+- 09:11:36.375 INFO: GET 200 /image/Aggiungi.png
+- 09:11:36.375 INFO: GET 200 /
+- 09:11:36.375 INFO: GET 200 /image/Modifica.png
+- 09:11:36.375 INFO: GET 200 /image/Elimina.png
+- 09:11:36.375 INFO: GET 200 /image/Clear.png
+[0507/091136.619:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 09:11:36.453 INFO: GET 200 /js.js
+- 09:11:36.453 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 09:12:04.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 09:12:04.218 DEBUG: OnContextCreated()
+- 09:12:04.406 INFO: GET 200 /
+- 09:12:04.422 INFO: GET 200 /css.css
+- 09:12:04.672 INFO: GET 200 /js.js
+- 09:12:04.672 INFO: GET 200 /image/Aggiungi.png
+- 09:12:04.672 INFO: GET 200 /image/Modifica.png
+- 09:12:04.688 INFO: GET 200 /image/Elimina.png
+- 09:12:04.688 INFO: GET 200 /image/Clear.png
+[0507/091204.936:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 09:12:04.719 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 09:59:50.000 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 09:59:50.343 DEBUG: OnContextCreated()
+- 09:59:50.547 INFO: GET 200 /
+- 09:59:50.547 INFO: GET 200 /css.css
+- 09:59:51.922 INFO: GET 200 /js.js
+- 09:59:51.922 INFO: GET 200 /image/Aggiungi.png
+- 09:59:51.938 INFO: GET 200 /image/Modifica.png
+- 09:59:51.938 INFO: GET 200 /image/Elimina.png
+[0507/095951.164:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 09:59:51.938 INFO: GET 200 /image/Clear.png
+- 09:59:51.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 09:59:51.125 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 09:59:51.047 DEBUG: OnContextCreated()
+- 09:59:51.235 INFO: POST 200 /
+[0507/095951.473:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 09:59:51.266 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 09:59:53.813 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 09:59:53.734 DEBUG: OnContextCreated()
+- 09:59:53.922 INFO: POST 200 /
+[0507/095953.161:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 09:59:53.953 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:07:20.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 10:07:20.875 DEBUG: OnContextCreated()
+- 10:07:20.078 INFO: POST 200 /
+[0507/100720.313:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:07:20.110 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:07:58.172 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 10:07:58.125 DEBUG: OnContextCreated()
+- 10:07:58.328 INFO: POST 200 /
+[0507/100758.557:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:07:58.344 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:08:41.313 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 10:08:41.265 DEBUG: OnContextCreated()
+- 10:08:41.469 INFO: POST 200 /
+[0507/100841.696:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:08:41.485 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:09:20.141 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 10:09:20.093 DEBUG: OnContextCreated()
+- 10:09:20.281 INFO: POST 200 /
+[0507/100920.517:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:09:20.313 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:09:35.516 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:60493/
+- 10:09:35.437 DEBUG: OnContextCreated()
+- 10:09:35.625 INFO: POST 200 /
+[0507/100935.864:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:09:35.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:60493/
+- 10:19:56.750 DEBUG: WM_DESTROY
+- 10:19:56.750 DEBUG: RemoveBrowserWindow(): hwnd = 5574038
+- 10:19:56.750 INFO: Stopping Mongoose web server
+- 10:19:56.750 DEBUG: Mongoose webserver stopped immediately
+- 10:19:56.766 DEBUG: OnBeforeClose() hwnd=6949576
+- 10:19:56.766 DEBUG: RemoveBrowserWindow(): hwnd = 6949576
+- 10:19:56.766 DEBUG: GetBrowserWindow(): not found, hwnd = 6949576
+- 10:19:56.766 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 10:19:56.766 DEBUG: Calling CefQuitMessageLoop()
+- 10:19:57.609 DEBUG: OnBrowserDestroyed()
+- 10:19:57.844 INFO: Ended application
+- 10:19:57.844 INFO: --------------------------------------------------------
+- 10:20:14.000 INFO: --------------------------------------------------------
+- 10:20:14.000 INFO: Started application
+- 10:20:14.000 INFO: Logging to: C:\Manutentori\debug.log
+- 10:20:14.000 INFO: Log level = DEBUG4
+- 10:20:14.000 INFO: Starting Mongoose 3.9c web server
+- 10:20:14.000 INFO: WWW directory: C:\Manutentori\www
+- 10:20:14.000 INFO: Index files: index.html,index.php
+- 10:20:14.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 10:20:14.000 INFO: CGI pattern: **.php$
+- 10:20:14.000 INFO: Hide files patterns: 
+- 10:20:14.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 10:20:14.015 INFO: Web server url: http://127.0.0.1:52794/
+- 10:20:14.015 INFO: remote_debugging_port = 50884
+- 10:20:14.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50884
+- 10:20:14.062 DEBUG: App::OnContextInitialized()
+- 10:20:14.062 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 10:20:14.062 DEBUG: Window max width/height = 1846/978
+- 10:20:14.062 DEBUG: GetBrowserWindow(): not found, hwnd = 16778368
+- 10:20:14.062 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 10:20:14.062 DEBUG: BrowserWindow::CreateBrowserControl()
+- 10:20:14.062 DEBUG: StoreBrowserWindow(): hwnd = 16778368
+- 10:20:14.109 DEBUG: ClientHandler::OnAfterCreated()
+- 10:20:14.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 10:20:14.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 10:20:14.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=5333952BCB04AF1CC66F995E0D74B5F7 --mojo-platform-channel-handle=1772 /prefetch:2
+- 10:20:14.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=E88A5491D5293EC442B14C62DA29B3E6 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=E88A5491D5293EC442B14C62DA29B3E6 --renderer-client-id=3 --mojo-platform-channel-handle=2084 /prefetch:1
+- 10:20:14.016 DEBUG: OnBrowserCreated()
+[0507/102014.718:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 10:20:14.390 INFO: GET 200 /
+- 10:20:14.406 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:20:56.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:20:56.844 INFO: GET 200 /
+- 10:20:56.844 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:21:09.765 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:21:09.906 INFO: GET 200 /
+- 10:21:09.906 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:21:23.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:21:23.984 INFO: GET 200 /css.css
+- 10:21:23.781 DEBUG: OnContextCreated()
+- 10:21:23.000 INFO: GET 200 /
+- 10:21:23.422 INFO: GET 200 /js.js
+- 10:21:23.422 INFO: GET 200 /image/Aggiungi.png
+- 10:21:23.422 INFO: GET 200 /image/Modifica.png
+- 10:21:23.422 INFO: GET 200 /image/Elimina.png
+- 10:21:23.437 INFO: GET 200 /image/Clear.png
+[0507/102123.971:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:21:24.515 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:21:35.484 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:21:36.391 DEBUG: OnContextCreated()
+- 10:21:36.609 INFO: GET 200 /
+- 10:21:36.609 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:21:48.719 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:21:48.625 DEBUG: OnContextCreated()
+- 10:21:48.844 INFO: GET 200 /css.css
+- 10:21:48.844 INFO: GET 200 /
+- 10:21:48.859 INFO: GET 200 /js.js
+- 10:21:48.859 INFO: GET 200 /image/Aggiungi.png
+- 10:21:48.859 INFO: GET 200 /image/Modifica.png
+- 10:21:48.859 INFO: GET 200 /image/Elimina.png
+- 10:21:48.859 INFO: GET 200 /image/Clear.png
+[0507/102148.378:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:21:48.890 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:21:57.390 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:21:58.312 DEBUG: OnContextCreated()
+- 10:21:58.515 INFO: GET 200 /
+- 10:21:58.515 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:22:14.406 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:22:15.359 DEBUG: OnContextCreated()
+- 10:22:15.562 INFO: GET 200 /css.css
+- 10:22:15.562 INFO: GET 200 /
+- 10:22:15.578 INFO: GET 200 /js.js
+- 10:22:15.578 INFO: GET 200 /image/Aggiungi.png
+[0507/102215.081:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:22:15.594 INFO: GET 200 /image/Modifica.png
+- 10:22:15.594 INFO: GET 200 /image/Elimina.png
+- 10:22:15.594 INFO: GET 200 /image/Clear.png
+- 10:22:15.594 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:22:41.656 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:22:41.609 DEBUG: OnContextCreated()
+- 10:22:41.812 INFO: GET 200 /css.css
+- 10:22:41.828 INFO: GET 200 /
+- 10:22:41.844 INFO: GET 200 /js.js
+- 10:22:41.844 INFO: GET 200 /image/Aggiungi.png
+[0507/102241.342:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:22:41.844 INFO: GET 200 /image/Modifica.png
+- 10:22:41.844 INFO: GET 200 /image/Elimina.png
+- 10:22:41.844 INFO: GET 200 /image/Clear.png
+- 10:22:41.859 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:22:51.062 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52794/
+- 10:22:51.953 DEBUG: OnContextCreated()
+[0507/102251.663:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:22:51.172 INFO: POST 200 /
+- 10:22:51.187 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52794/
+- 10:24:56.640 DEBUG: WM_DESTROY
+- 10:24:56.640 DEBUG: RemoveBrowserWindow(): hwnd = 16778368
+- 10:24:56.640 INFO: Stopping Mongoose web server
+- 10:24:56.640 DEBUG: Mongoose webserver stopped immediately
+- 10:24:56.672 DEBUG: OnBeforeClose() hwnd=39588224
+- 10:24:56.672 DEBUG: RemoveBrowserWindow(): hwnd = 39588224
+- 10:24:56.672 DEBUG: GetBrowserWindow(): not found, hwnd = 39588224
+- 10:24:56.672 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 10:24:56.672 DEBUG: Calling CefQuitMessageLoop()
+- 10:24:56.719 INFO: Ended application
+- 10:24:56.719 INFO: --------------------------------------------------------
+- 10:24:57.016 INFO: --------------------------------------------------------
+- 10:24:57.016 INFO: Started application
+- 10:24:57.016 INFO: Logging to: C:\Manutentori\debug.log
+- 10:24:57.016 INFO: Log level = DEBUG4
+- 10:24:57.016 INFO: Starting Mongoose 3.9c web server
+- 10:24:57.016 INFO: WWW directory: C:\Manutentori\www
+- 10:24:57.016 INFO: Index files: index.html,index.php
+- 10:24:57.016 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 10:24:57.016 INFO: CGI pattern: **.php$
+- 10:24:57.016 INFO: Hide files patterns: 
+- 10:24:57.016 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 10:24:57.016 INFO: Web server url: http://127.0.0.1:53225/
+- 10:24:57.016 INFO: remote_debugging_port = 58582
+- 10:24:57.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=58582
+- 10:24:57.063 DEBUG: App::OnContextInitialized()
+- 10:24:57.063 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 10:24:57.063 DEBUG: Window max width/height = 1846/978
+- 10:24:57.063 DEBUG: GetBrowserWindow(): not found, hwnd = 8129436
+- 10:24:57.063 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 10:24:57.063 DEBUG: BrowserWindow::CreateBrowserControl()
+- 10:24:57.063 DEBUG: StoreBrowserWindow(): hwnd = 8129436
+- 10:24:57.125 DEBUG: ClientHandler::OnAfterCreated()
+- 10:24:57.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 10:24:57.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=C660EE82A821C6CB8849502D8396D7A5 --mojo-platform-channel-handle=1800 /prefetch:2
+- 10:24:57.141 DEBUG: OnLoadingStateChange: loading=1, url=
+- 10:24:57.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=4A5EDB7331C71729EB56D5F295EE32D8 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=4A5EDB7331C71729EB56D5F295EE32D8 --renderer-client-id=3 --mojo-platform-channel-handle=2284 /prefetch:1
+[0507/102457.467:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 10:24:57.031 DEBUG: OnBrowserCreated()
+- 10:24:57.203 DEBUG: OnContextCreated()
+- 10:24:57.391 INFO: GET 200 /css.css
+- 10:24:57.391 INFO: GET 200 /
+- 10:24:57.391 INFO: GET 200 /image/Aggiungi.png
+- 10:24:57.391 INFO: GET 200 /image/Modifica.png
+- 10:24:57.407 INFO: GET 200 /image/Elimina.png
+[0507/102457.661:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:24:57.407 INFO: GET 200 /image/Clear.png
+- 10:24:57.407 INFO: GET 200 /js.js
+- 10:24:57.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 10:25:08.657 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 10:25:09.609 DEBUG: OnContextCreated()
+- 10:25:09.797 INFO: POST 200 /
+[0507/102509.065:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:25:09.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 10:25:54.485 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 10:25:54.437 DEBUG: OnContextCreated()
+- 10:25:54.625 INFO: POST 200 /
+[0507/102554.894:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:25:54.657 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 10:27:27.860 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 10:27:27.828 DEBUG: OnContextCreated()
+[0507/102727.288:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 10:27:27.047 INFO: POST 200 /
+- 10:27:27.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 12:27:32.891 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 12:27:33.766 INFO: POST 200 /
+- 12:27:33.594 DEBUG: OnContextCreated()
+- 12:27:33.797 INFO: GET 304 /css.css
+[0507/122733.078:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:27:33.829 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 12:27:34.266 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 12:27:34.219 DEBUG: OnContextCreated()
+- 12:27:34.407 INFO: GET 304 /css.css
+- 12:27:34.422 INFO: POST 200 /
+[0507/122734.687:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:27:34.454 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 12:27:39.875 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53225/
+- 12:27:39.781 DEBUG: OnContextCreated()
+- 12:27:39.985 INFO: GET 304 /css.css
+[0507/122739.250:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 12:27:39.985 INFO: POST 200 /
+- 12:27:39.016 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53225/
+- 12:27:41.297 DEBUG: WM_DESTROY
+- 12:27:41.297 DEBUG: RemoveBrowserWindow(): hwnd = 8129436
+- 12:27:41.297 INFO: Stopping Mongoose web server
+- 12:27:41.297 DEBUG: Mongoose webserver stopped immediately
+- 12:27:41.344 DEBUG: OnBeforeClose() hwnd=20777032
+- 12:27:41.344 DEBUG: RemoveBrowserWindow(): hwnd = 20777032
+- 12:27:41.344 DEBUG: GetBrowserWindow(): not found, hwnd = 20777032
+- 12:27:41.344 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 12:27:41.344 DEBUG: Calling CefQuitMessageLoop()
+- 12:27:41.219 DEBUG: OnBrowserDestroyed()
+- 12:27:41.454 INFO: Ended application
+- 12:27:41.454 INFO: --------------------------------------------------------
+- 13:43:47.000 INFO: --------------------------------------------------------
+- 13:43:47.000 INFO: Started application
+- 13:43:47.000 INFO: Logging to: C:\Manutentori\debug.log
+- 13:43:47.000 INFO: Log level = DEBUG4
+- 13:43:47.000 INFO: Starting Mongoose 3.9c web server
+- 13:43:47.000 INFO: WWW directory: C:\Manutentori\www
+- 13:43:47.000 INFO: Index files: index.html,index.php
+- 13:43:47.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 13:43:47.000 INFO: CGI pattern: **.php$
+- 13:43:47.000 INFO: Hide files patterns: 
+- 13:43:47.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 13:43:47.016 INFO: Web server url: http://127.0.0.1:52452/
+- 13:43:47.016 INFO: remote_debugging_port = 53008
+- 13:43:47.016 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=53008
+- 13:43:47.141 DEBUG: App::OnContextInitialized()
+- 13:43:47.141 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 13:43:47.141 DEBUG: Window max width/height = 1846/978
+- 13:43:47.141 DEBUG: GetBrowserWindow(): not found, hwnd = 1706718
+- 13:43:47.141 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 13:43:47.156 DEBUG: BrowserWindow::CreateBrowserControl()
+- 13:43:47.156 DEBUG: StoreBrowserWindow(): hwnd = 1706718
+- 13:43:47.234 DEBUG: ClientHandler::OnAfterCreated()
+- 13:43:47.234 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 13:43:47.250 DEBUG: OnLoadingStateChange: loading=1, url=
+- 13:43:47.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=A269339A9ECA05BEE3522DDFDE3582C4 --mojo-platform-channel-handle=1772 /prefetch:2
+- 13:43:47.016 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=69D4B017F2AF3DF713D1EC7BA78FD3B2 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=69D4B017F2AF3DF713D1EC7BA78FD3B2 --renderer-client-id=3 --mojo-platform-channel-handle=2396 /prefetch:1
+- 13:43:47.031 DEBUG: OnBrowserCreated()
+[0507/134347.543:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 13:43:47.484 DEBUG: OnContextCreated()
+- 13:43:47.812 INFO: GET 200 /css.css
+- 13:43:47.812 INFO: GET 200 /image/Aggiungi.png
+- 13:43:47.828 INFO: GET 200 /image/Modifica.png
+- 13:43:47.828 INFO: GET 200 /image/Elimina.png
+- 13:43:47.828 INFO: GET 200 /
+- 13:43:47.828 INFO: GET 200 /image/Clear.png
+[0507/134347.905:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:43:48.000 INFO: GET 200 /js.js
+- 13:43:48.031 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52452/
+- 13:46:21.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52452/
+- 13:46:21.016 DEBUG: OnContextCreated()
+- 13:46:21.344 INFO: GET 200 /
+- 13:46:21.359 INFO: GET 200 /css.css
+[0507/134621.838:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:46:21.766 INFO: GET 200 /js.js
+- 13:46:21.766 INFO: GET 200 /image/Aggiungi.png
+- 13:46:21.766 INFO: GET 200 /image/Modifica.png
+- 13:46:21.766 INFO: GET 200 /image/Elimina.png
+- 13:46:21.781 INFO: GET 200 /image/Clear.png
+- 13:46:22.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52452/
+- 13:46:30.016 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52452/
+- 13:46:30.797 DEBUG: OnContextCreated()
+- 13:46:30.125 INFO: POST 200 /
+[0507/134630.213:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:46:30.156 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52452/
+- 13:46:46.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:52452/
+- 13:46:46.938 DEBUG: OnContextCreated()
+- 13:46:46.266 INFO: POST 200 /
+[0507/134646.359:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 13:46:46.328 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:52452/
+- 14:20:11.094 DEBUG: WM_DESTROY
+- 14:20:11.094 DEBUG: RemoveBrowserWindow(): hwnd = 1706718
+- 14:20:11.094 INFO: Stopping Mongoose web server
+- 14:20:11.094 DEBUG: Mongoose webserver stopped immediately
+- 14:20:11.156 DEBUG: OnBeforeClose() hwnd=2362034
+- 14:20:11.156 DEBUG: RemoveBrowserWindow(): hwnd = 2362034
+- 14:20:11.156 DEBUG: GetBrowserWindow(): not found, hwnd = 2362034
+- 14:20:11.156 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:20:11.156 DEBUG: Calling CefQuitMessageLoop()
+- 14:20:11.906 DEBUG: OnBrowserDestroyed()
+- 14:20:11.312 INFO: Ended application
+- 14:20:11.312 INFO: --------------------------------------------------------
+- 14:20:18.015 INFO: --------------------------------------------------------
+- 14:20:18.015 INFO: Started application
+- 14:20:18.015 INFO: Logging to: C:\Manutentori\debug.log
+- 14:20:18.015 INFO: Log level = DEBUG4
+- 14:20:18.015 INFO: Starting Mongoose 3.9c web server
+- 14:20:18.015 INFO: WWW directory: C:\Manutentori\www
+- 14:20:18.015 INFO: Index files: index.html,index.php
+- 14:20:18.015 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:20:18.015 INFO: CGI pattern: **.php$
+- 14:20:18.015 INFO: Hide files patterns: 
+- 14:20:18.015 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:20:18.015 INFO: Web server url: http://127.0.0.1:53546/
+- 14:20:18.015 INFO: remote_debugging_port = 50262
+- 14:20:18.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50262
+- 14:20:18.156 DEBUG: App::OnContextInitialized()
+- 14:20:18.156 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:20:18.156 DEBUG: Window max width/height = 1846/978
+- 14:20:18.156 DEBUG: GetBrowserWindow(): not found, hwnd = 3476730
+- 14:20:18.156 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:20:18.171 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:20:18.171 DEBUG: StoreBrowserWindow(): hwnd = 3476730
+- 14:20:18.265 DEBUG: ClientHandler::OnAfterCreated()
+- 14:20:18.265 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:20:18.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=577973ED31EFA983F6154F135723CCCD --mojo-platform-channel-handle=1772 /prefetch:2
+- 14:20:18.296 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:20:18.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=53A4AB8A7D58D87E67372ADB9864E4A7 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=53A4AB8A7D58D87E67372ADB9864E4A7 --renderer-client-id=3 --mojo-platform-channel-handle=2276 /prefetch:1
+- 14:20:18.031 DEBUG: OnBrowserCreated()
+[0507/142018.609:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:20:19.610 DEBUG: OnContextCreated()
+- 14:20:19.000 INFO: GET 200 /css.css
+- 14:20:19.015 INFO: GET 200 /
+- 14:20:19.015 INFO: GET 200 /image/Aggiungi.png
+- 14:20:19.015 INFO: GET 200 /image/Elimina.png
+- 14:20:19.015 INFO: GET 200 /image/Clear.png
+[0507/142019.112:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:20:19.015 INFO: GET 200 /image/Modifica.png
+- 14:20:19.031 INFO: GET 200 /js.js
+- 14:20:19.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53546/
+- 14:20:35.671 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53546/
+- 14:20:35.406 DEBUG: OnContextCreated()
+- 14:20:35.796 INFO: GET 200 /css.css
+- 14:20:35.812 INFO: GET 200 /
+[0507/142036.239:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:20:36.156 INFO: GET 200 /js.js
+- 14:20:36.156 INFO: GET 200 /image/Aggiungi.png
+- 14:20:36.171 INFO: GET 200 /image/Modifica.png
+- 14:20:36.171 INFO: GET 200 /image/Elimina.png
+- 14:20:36.187 INFO: GET 200 /image/Clear.png
+- 14:20:36.250 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53546/
+- 14:20:49.421 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53546/
+- 14:20:49.141 DEBUG: OnContextCreated()
+[0507/142049.632:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:20:49.546 INFO: POST 200 /
+- 14:20:49.562 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53546/
+- 14:21:41.875 DEBUG: WM_DESTROY
+- 14:21:41.875 DEBUG: RemoveBrowserWindow(): hwnd = 3476730
+- 14:21:41.875 INFO: Stopping Mongoose web server
+- 14:21:41.875 DEBUG: Mongoose webserver stopped immediately
+- 14:21:41.875 DEBUG: OnBeforeClose() hwnd=8719766
+- 14:21:41.890 DEBUG: RemoveBrowserWindow(): hwnd = 8719766
+- 14:21:41.890 DEBUG: GetBrowserWindow(): not found, hwnd = 8719766
+- 14:21:41.890 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:21:41.890 DEBUG: Calling CefQuitMessageLoop()
+- 14:21:42.953 INFO: Ended application
+- 14:21:42.953 INFO: --------------------------------------------------------
+- 14:21:45.000 INFO: --------------------------------------------------------
+- 14:21:45.000 INFO: Started application
+- 14:21:45.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:21:45.000 INFO: Log level = DEBUG4
+- 14:21:45.000 INFO: Starting Mongoose 3.9c web server
+- 14:21:45.000 INFO: WWW directory: C:\Manutentori\www
+- 14:21:45.000 INFO: Index files: index.html,index.php
+- 14:21:45.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:21:45.000 INFO: CGI pattern: **.php$
+- 14:21:45.000 INFO: Hide files patterns: 
+- 14:21:45.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:21:45.015 INFO: Web server url: http://127.0.0.1:53605/
+- 14:21:45.015 INFO: remote_debugging_port = 50850
+- 14:21:45.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50850
+- 14:21:45.062 DEBUG: App::OnContextInitialized()
+- 14:21:45.062 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:21:45.062 DEBUG: Window max width/height = 1846/978
+- 14:21:45.062 DEBUG: GetBrowserWindow(): not found, hwnd = 2228408
+- 14:21:45.062 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:21:45.062 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:21:45.062 DEBUG: StoreBrowserWindow(): hwnd = 2228408
+- 14:21:45.125 DEBUG: ClientHandler::OnAfterCreated()
+- 14:21:45.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:21:45.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=E9CD37FDBE7AA1E1BF4905568336C24A --mojo-platform-channel-handle=1776 /prefetch:2
+- 14:21:45.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:21:45.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=11D9C200DD28D89F4E51CE12F54E804C --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=11D9C200DD28D89F4E51CE12F54E804C --renderer-client-id=3 --mojo-platform-channel-handle=2380 /prefetch:1
+[0507/142145.431:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:21:45.031 DEBUG: OnBrowserCreated()
+- 14:21:45.375 INFO: GET 200 /css.css
+- 14:21:45.203 DEBUG: OnContextCreated()
+- 14:21:45.390 INFO: GET 200 /
+- 14:21:45.390 INFO: GET 200 /image/Aggiungi.png
+- 14:21:45.390 INFO: GET 200 /image/Modifica.png
+- 14:21:45.406 INFO: GET 200 /image/Elimina.png
+- 14:21:45.406 INFO: GET 200 /image/Clear.png
+[0507/142145.621:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:21:45.453 INFO: GET 200 /js.js
+- 14:21:45.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53605/
+- 14:21:56.953 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53605/
+- 14:21:56.922 DEBUG: OnContextCreated()
+[0507/142156.339:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:21:56.125 INFO: POST 200 /
+- 14:21:56.140 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53605/
+- 14:23:11.734 DEBUG: WM_DESTROY
+- 14:23:11.734 DEBUG: RemoveBrowserWindow(): hwnd = 2228408
+- 14:23:11.734 INFO: Stopping Mongoose web server
+- 14:23:11.734 DEBUG: Mongoose webserver stopped immediately
+- 14:23:11.734 DEBUG: OnBeforeClose() hwnd=1511314
+- 14:23:11.734 DEBUG: RemoveBrowserWindow(): hwnd = 1511314
+- 14:23:11.734 DEBUG: GetBrowserWindow(): not found, hwnd = 1511314
+- 14:23:11.734 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:23:11.734 DEBUG: Calling CefQuitMessageLoop()
+- 14:23:11.781 INFO: Ended application
+- 14:23:11.781 INFO: --------------------------------------------------------
+- 14:23:12.000 INFO: --------------------------------------------------------
+- 14:23:12.000 INFO: Started application
+- 14:23:12.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:23:12.000 INFO: Log level = DEBUG4
+- 14:23:12.000 INFO: Starting Mongoose 3.9c web server
+- 14:23:12.000 INFO: WWW directory: C:\Manutentori\www
+- 14:23:12.000 INFO: Index files: index.html,index.php
+- 14:23:12.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:23:12.000 INFO: CGI pattern: **.php$
+- 14:23:12.000 INFO: Hide files patterns: 
+- 14:23:13.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:23:13.015 INFO: Web server url: http://127.0.0.1:53644/
+- 14:23:13.015 INFO: remote_debugging_port = 60162
+- 14:23:13.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=60162
+- 14:23:13.078 DEBUG: App::OnContextInitialized()
+- 14:23:13.078 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:23:13.078 DEBUG: Window max width/height = 1846/978
+- 14:23:13.078 DEBUG: GetBrowserWindow(): not found, hwnd = 3934856
+- 14:23:13.078 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:23:13.078 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:23:13.078 DEBUG: StoreBrowserWindow(): hwnd = 3934856
+- 14:23:13.172 DEBUG: ClientHandler::OnAfterCreated()
+- 14:23:13.172 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:23:13.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=ED414065F75A43B9DCE33B87CDB9842D --mojo-platform-channel-handle=1720 /prefetch:2
+- 14:23:13.187 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:23:13.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=A5F25895AD869A6335958E3B5FAF967F --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=A5F25895AD869A6335958E3B5FAF967F --renderer-client-id=3 --mojo-platform-channel-handle=2300 /prefetch:1
+[0507/142313.258:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:23:13.031 DEBUG: OnBrowserCreated()
+- 14:23:13.437 INFO: GET 200 /css.css
+- 14:23:13.203 DEBUG: OnContextCreated()
+- 14:23:13.437 INFO: GET 200 /
+- 14:23:13.437 INFO: GET 200 /image/Aggiungi.png
+- 14:23:13.453 INFO: GET 200 /image/Modifica.png
+- 14:23:13.453 INFO: GET 200 /image/Elimina.png
+- 14:23:13.453 INFO: GET 200 /image/Clear.png
+[0507/142313.452:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:23:13.500 INFO: GET 200 /js.js
+- 14:23:13.515 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53644/
+- 14:23:19.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53644/
+- 14:23:19.172 DEBUG: OnContextCreated()
+[0507/142319.411:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:23:19.422 INFO: POST 200 /
+- 14:23:19.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53644/
+- 14:24:26.375 DEBUG: WM_DESTROY
+- 14:24:26.375 DEBUG: RemoveBrowserWindow(): hwnd = 3934856
+- 14:24:26.375 INFO: Stopping Mongoose web server
+- 14:24:26.375 DEBUG: Mongoose webserver stopped immediately
+- 14:24:26.406 DEBUG: OnBeforeClose() hwnd=7869158
+- 14:24:26.406 DEBUG: RemoveBrowserWindow(): hwnd = 7869158
+- 14:24:26.406 DEBUG: GetBrowserWindow(): not found, hwnd = 7869158
+- 14:24:26.406 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:24:26.406 DEBUG: Calling CefQuitMessageLoop()
+- 14:24:26.453 INFO: Ended application
+- 14:24:26.453 INFO: --------------------------------------------------------
+- 14:24:29.000 INFO: --------------------------------------------------------
+- 14:24:29.000 INFO: Started application
+- 14:24:29.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:24:29.000 INFO: Log level = DEBUG4
+- 14:24:29.000 INFO: Starting Mongoose 3.9c web server
+- 14:24:29.000 INFO: WWW directory: C:\Manutentori\www
+- 14:24:29.000 INFO: Index files: index.html,index.php
+- 14:24:29.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:24:29.015 INFO: CGI pattern: **.php$
+- 14:24:29.015 INFO: Hide files patterns: 
+- 14:24:29.015 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:24:29.015 INFO: Web server url: http://127.0.0.1:53720/
+- 14:24:29.015 INFO: remote_debugging_port = 50114
+- 14:24:29.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=50114
+- 14:24:29.109 DEBUG: App::OnContextInitialized()
+- 14:24:29.109 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:24:29.109 DEBUG: Window max width/height = 1846/978
+- 14:24:29.109 DEBUG: GetBrowserWindow(): not found, hwnd = 4000392
+- 14:24:29.109 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:24:29.109 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:24:29.109 DEBUG: StoreBrowserWindow(): hwnd = 4000392
+- 14:24:29.172 DEBUG: ClientHandler::OnAfterCreated()
+- 14:24:29.172 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:24:29.187 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:24:29.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=BCB5290AB546EFEFBC2D0CBDA5D8E1D8 --mojo-platform-channel-handle=1776 /prefetch:2
+- 14:24:29.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=D38F434746661968910E35659DC813D6 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=D38F434746661968910E35659DC813D6 --renderer-client-id=3 --mojo-platform-channel-handle=2360 /prefetch:1
+- 14:24:29.031 DEBUG: OnBrowserCreated()
+[0507/142429.458:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:24:29.453 INFO: GET 200 /css.css
+- 14:24:29.203 DEBUG: OnContextCreated()
+- 14:24:29.453 INFO: GET 200 /image/Aggiungi.png
+- 14:24:29.453 INFO: GET 200 /
+- 14:24:29.453 INFO: GET 200 /image/Modifica.png
+- 14:24:29.453 INFO: GET 200 /image/Elimina.png
+- 14:24:29.468 INFO: GET 200 /image/Clear.png
+[0507/142429.634:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:24:29.468 INFO: GET 200 /js.js
+- 14:24:29.515 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53720/
+- 14:24:34.453 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53720/
+- 14:24:34.375 DEBUG: OnContextCreated()
+- 14:24:34.640 INFO: POST 200 /
+[0507/142434.808:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:24:34.656 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53720/
+- 14:24:47.422 DEBUG: WM_DESTROY
+- 14:24:47.422 DEBUG: RemoveBrowserWindow(): hwnd = 4000392
+- 14:24:47.422 INFO: Stopping Mongoose web server
+- 14:24:47.422 DEBUG: Mongoose webserver stopped immediately
+- 14:24:47.453 DEBUG: OnBeforeClose() hwnd=3344192
+- 14:24:47.453 DEBUG: RemoveBrowserWindow(): hwnd = 3344192
+- 14:24:47.453 DEBUG: GetBrowserWindow(): not found, hwnd = 3344192
+- 14:24:47.453 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:24:47.453 DEBUG: Calling CefQuitMessageLoop()
+- 14:24:47.500 INFO: Ended application
+- 14:24:47.500 INFO: --------------------------------------------------------
+- 14:24:54.000 INFO: --------------------------------------------------------
+- 14:24:54.000 INFO: Started application
+- 14:24:54.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:24:54.000 INFO: Log level = DEBUG4
+- 14:24:54.000 INFO: Starting Mongoose 3.9c web server
+- 14:24:54.000 INFO: WWW directory: C:\Manutentori\www
+- 14:24:54.000 INFO: Index files: index.html,index.php
+- 14:24:54.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:24:54.000 INFO: CGI pattern: **.php$
+- 14:24:54.000 INFO: Hide files patterns: 
+- 14:24:54.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:24:54.000 INFO: Web server url: http://127.0.0.1:53737/
+- 14:24:54.000 INFO: remote_debugging_port = 53515
+- 14:24:54.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=53515
+- 14:24:54.062 DEBUG: App::OnContextInitialized()
+- 14:24:54.062 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:24:54.062 DEBUG: Window max width/height = 1846/978
+- 14:24:54.062 DEBUG: GetBrowserWindow(): not found, hwnd = 1707922
+- 14:24:54.062 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:24:54.062 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:24:54.062 DEBUG: StoreBrowserWindow(): hwnd = 1707922
+- 14:24:54.125 DEBUG: ClientHandler::OnAfterCreated()
+- 14:24:54.125 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:24:54.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=04907945503126EBE7DE72B4A4A3120F --mojo-platform-channel-handle=1780 /prefetch:2
+- 14:24:54.140 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:24:54.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=227F6A018D0227255E26D66083C47971 --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=227F6A018D0227255E26D66083C47971 --renderer-client-id=3 --mojo-platform-channel-handle=2376 /prefetch:1
+[0507/142454.519:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:24:54.015 DEBUG: OnBrowserCreated()
+- 14:24:54.406 INFO: GET 200 /css.css
+- 14:24:54.203 DEBUG: OnContextCreated()
+- 14:24:54.422 INFO: GET 200 /
+- 14:24:54.422 INFO: GET 200 /image/Aggiungi.png
+- 14:24:54.422 INFO: GET 200 /image/Modifica.png
+- 14:24:54.422 INFO: GET 200 /image/Elimina.png
+- 14:24:54.422 INFO: GET 200 /image/Clear.png
+[0507/142454.719:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:24:54.468 INFO: GET 200 /js.js
+- 14:24:54.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:24:59.640 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:25:00.703 DEBUG: OnContextCreated()
+[0507/142500.208:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:25:00.922 INFO: POST 200 /
+- 14:25:00.937 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:25:39.812 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:25:39.797 DEBUG: OnContextCreated()
+[0507/142539.314:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:25:39.031 INFO: POST 200 /
+- 14:25:39.047 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:26:13.343 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:26:13.312 DEBUG: OnContextCreated()
+[0507/142613.820:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:26:13.547 INFO: POST 200 /
+- 14:26:13.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:29:08.515 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:29:09.515 DEBUG: OnContextCreated()
+[0507/142909.029:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:29:09.750 INFO: POST 200 /
+- 14:29:09.765 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:29:27.359 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:29:27.265 DEBUG: OnContextCreated()
+- 14:29:27.468 INFO: POST 200 /
+[0507/142927.772:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:29:27.484 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:29:53.390 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:53737/
+- 14:29:53.297 DEBUG: OnContextCreated()
+[0507/142953.808:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:29:53.531 INFO: POST 200 /
+- 14:29:53.547 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:53737/
+- 14:31:06.000 INFO: --------------------------------------------------------
+- 14:31:06.000 INFO: Started application
+- 14:31:06.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:31:06.000 INFO: Log level = DEBUG4
+- 14:31:06.000 INFO: Starting Mongoose 3.9c web server
+- 14:31:06.000 INFO: WWW directory: C:\Manutentori\www
+- 14:31:06.000 INFO: Index files: index.html,index.php
+- 14:31:06.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:31:06.000 INFO: CGI pattern: **.php$
+- 14:31:06.000 INFO: Hide files patterns: 
+- 14:31:06.000 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:31:06.000 INFO: Web server url: http://127.0.0.1:54003/
+- 14:31:06.000 INFO: remote_debugging_port = 58980
+- 14:31:06.000 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=58980
+- 14:31:06.047 DEBUG: App::OnContextInitialized()
+- 14:31:06.047 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:31:06.047 DEBUG: Window max width/height = 1846/978
+- 14:31:06.047 DEBUG: GetBrowserWindow(): not found, hwnd = 51973550
+- 14:31:06.047 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:31:06.047 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:31:06.047 DEBUG: StoreBrowserWindow(): hwnd = 51973550
+- 14:31:06.110 DEBUG: ClientHandler::OnAfterCreated()
+- 14:31:06.110 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:31:06.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:31:06.015 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=9FD68916022D557B1ED5BE5AA71E6926 --mojo-platform-channel-handle=1780 /prefetch:2
+- 14:31:06.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=2BA1285DF025E84244FA505453BAB90F --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=2BA1285DF025E84244FA505453BAB90F --renderer-client-id=3 --mojo-platform-channel-handle=2416 /prefetch:1
+- 14:31:06.016 DEBUG: OnBrowserCreated()
+[0507/143106.333:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+[0507/143106.334:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0507/143106.334:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Manutentori\webcache\GPUCache to C:\Manutentori\webcache\old_GPUCache_000
+[0507/143106.334:ERROR:disk_cache.cc(132)] Unable to create cache
+[0507/143106.334:ERROR:shader_disk_cache.cc(593)] Shader Cache Creation failed: -2
+[0507/143106.337:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0507/143106.337:ERROR:cache_util.cc(134)] Unable to move cache folder C:\Manutentori\webcache\Cache to C:\Manutentori\webcache\old_Cache_000
+[0507/143106.337:ERROR:disk_cache.cc(132)] Unable to create cache
+- 14:31:06.766 INFO: GET 200 /css.css
+- 14:31:06.563 DEBUG: OnContextCreated()
+- 14:31:06.766 INFO: GET 200 /
+- 14:31:07.016 INFO: GET 200 /js.js
+- 14:31:07.016 INFO: GET 200 /image/Aggiungi.png
+- 14:31:07.016 INFO: GET 200 /image/Modifica.png
+- 14:31:07.016 INFO: GET 200 /image/Elimina.png
+- 14:31:07.016 INFO: GET 200 /image/Clear.png
+[0507/143107.233:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:07.188 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:54003/
+- 14:31:14.047 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:54003/
+- 14:31:14.953 DEBUG: OnContextCreated()
+- 14:31:14.156 INFO: GET 200 /css.css
+- 14:31:14.172 INFO: POST 200 /
+[0507/143114.314:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:14.219 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:54003/
+- 14:31:46.985 DEBUG: WM_DESTROY
+- 14:31:46.985 DEBUG: RemoveBrowserWindow(): hwnd = 51973550
+- 14:31:46.985 INFO: Stopping Mongoose web server
+- 14:31:46.985 DEBUG: Mongoose webserver stopped immediately
+- 14:31:46.000 DEBUG: OnBeforeClose() hwnd=5508066
+- 14:31:46.000 DEBUG: RemoveBrowserWindow(): hwnd = 5508066
+- 14:31:46.000 DEBUG: GetBrowserWindow(): not found, hwnd = 5508066
+- 14:31:46.000 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:31:46.016 DEBUG: Calling CefQuitMessageLoop()
+- 14:31:46.828 DEBUG: OnBrowserDestroyed()
+- 14:31:46.078 INFO: Ended application
+- 14:31:46.078 INFO: --------------------------------------------------------
+- 14:31:46.515 DEBUG: WM_DESTROY
+- 14:31:46.515 DEBUG: RemoveBrowserWindow(): hwnd = 1707922
+- 14:31:46.515 INFO: Stopping Mongoose web server
+- 14:31:46.515 DEBUG: Mongoose webserver stopped immediately
+- 14:31:46.562 DEBUG: OnBeforeClose() hwnd=1380190
+- 14:31:46.562 DEBUG: RemoveBrowserWindow(): hwnd = 1380190
+- 14:31:46.562 DEBUG: GetBrowserWindow(): not found, hwnd = 1380190
+- 14:31:46.562 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:31:46.562 DEBUG: Calling CefQuitMessageLoop()
+- 14:31:46.406 DEBUG: OnBrowserDestroyed()
+- 14:31:47.718 INFO: Ended application
+- 14:31:47.718 INFO: --------------------------------------------------------
+- 14:31:49.000 INFO: --------------------------------------------------------
+- 14:31:49.000 INFO: Started application
+- 14:31:49.000 INFO: Logging to: C:\Manutentori\debug.log
+- 14:31:49.000 INFO: Log level = DEBUG4
+- 14:31:49.000 INFO: Starting Mongoose 3.9c web server
+- 14:31:49.000 INFO: WWW directory: C:\Manutentori\www
+- 14:31:49.000 INFO: Index files: index.html,index.php
+- 14:31:49.000 INFO: CGI interpreter: C:\Manutentori\php\php-cgi.exe
+- 14:31:49.000 INFO: CGI pattern: **.php$
+- 14:31:49.000 INFO: Hide files patterns: 
+- 14:31:49.015 INFO: CGI environment variables set: TMP=C:\Users\verrie\AppData\Local\Temp\,TEMP=C:\Users\verrie\AppData\Local\Temp\,TMPDIR=C:\Users\verrie\AppData\Local\Temp\,SERVER_NAME=127.0.0.1,PHPDESKTOP_VERSION=57.0
+- 14:31:49.015 INFO: Web server url: http://127.0.0.1:54084/
+- 14:31:49.015 INFO: remote_debugging_port = 49383
+- 14:31:49.015 DEBUG: Command line string for the browser process: "C:\Manutentori\phpdesktop-chrome.exe" --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --remote-debugging-port=49383
+- 14:31:49.062 DEBUG: App::OnContextInitialized()
+- 14:31:49.062 INFO: DPI, window enlarged by 50% new width/height = 1500/900
+- 14:31:49.062 DEBUG: Window max width/height = 1846/978
+- 14:31:49.062 DEBUG: GetBrowserWindow(): not found, hwnd = 4393338
+- 14:31:49.062 DEBUG: WindowProc(): event WM_GETMINMAXINFO: could not fetch BrowserWindow
+- 14:31:49.062 DEBUG: BrowserWindow::CreateBrowserControl()
+- 14:31:49.062 DEBUG: StoreBrowserWindow(): hwnd = 4393338
+- 14:31:49.109 DEBUG: ClientHandler::OnAfterCreated()
+- 14:31:49.109 DEBUG: SetCefBrowser() called in ClientHandler::OnAfterCreated()
+- 14:31:49.125 DEBUG: OnLoadingStateChange: loading=1, url=
+- 14:31:50.000 DEBUG: Command line string for the gpu-process process: "C:\Manutentori\phpdesktop-chrome.exe" --type=gpu-process --no-sandbox --lang=en-US --log-file="C:\Manutentori\debug.log" --disable-direct-composition --supports-dual-gpus=false --gpu-driver-bug-workarounds=7,10,18,19,20,23,41,61,74 --disable-gl-extensions="GL_KHR_blend_equation_advanced GL_KHR_blend_equation_advanced_coherent" --gpu-vendor-id=0x8086 --gpu-device-id=0xa7a1 --gpu-driver-vendor="Intel Corporation" --gpu-driver-version=31.0.101.4953 --gpu-driver-date=11-7-2023 --lang=en-US --log-file="C:\Manutentori\debug.log" --service-request-channel-token=A32982210EFF1D85FBE284EC65513E1A --mojo-platform-channel-handle=1784 /prefetch:2
+- 14:31:50.000 DEBUG: Command line string for the renderer process: "C:\Manutentori\phpdesktop-chrome.exe" --type=renderer --no-sandbox --primordial-pipe-token=8BBEE54732FCAF0B8E2D3081133084CA --lang=en-US --lang=en-US --log-file="C:\Manutentori\debug.log" --enable-pinch --device-scale-factor=1.5 --num-raster-threads=4 --enable-main-frame-before-activation --content-image-texture-target=0,0,3553;0,1,3553;0,2,3553;0,3,3553;0,4,3553;0,5,3553;0,6,3553;0,7,3553;0,8,3553;0,9,3553;0,10,3553;0,11,3553;0,12,3553;0,13,3553;0,14,3553;0,15,3553;1,0,3553;1,1,3553;1,2,3553;1,3,3553;1,4,3553;1,5,3553;1,6,3553;1,7,3553;1,8,3553;1,9,3553;1,10,3553;1,11,3553;1,12,3553;1,13,3553;1,14,3553;1,15,3553;2,0,3553;2,1,3553;2,2,3553;2,3,3553;2,4,3553;2,5,3553;2,6,3553;2,7,3553;2,8,3553;2,9,3553;2,10,3553;2,11,3553;2,12,3553;2,13,3553;2,14,3553;2,15,3553;3,0,3553;3,1,3553;3,2,3553;3,3,3553;3,4,3553;3,5,3553;3,6,3553;3,7,3553;3,8,3553;3,9,3553;3,10,3553;3,11,3553;3,12,3553;3,13,3553;3,14,3553;3,15,3553 --service-request-channel-token=8BBEE54732FCAF0B8E2D3081133084CA --renderer-client-id=3 --mojo-platform-channel-handle=2316 /prefetch:1
+- 14:31:50.016 DEBUG: OnBrowserCreated()
+[0507/143150.095:ERROR:child_thread_impl.cc(762)] Request for unknown Channel-associated interface: ui::mojom::GpuMain
+- 14:31:50.359 INFO: GET 200 /css.css
+- 14:31:50.172 DEBUG: OnContextCreated()
+- 14:31:50.375 INFO: GET 200 /image/Aggiungi.png
+- 14:31:50.375 INFO: GET 200 /
+- 14:31:50.375 INFO: GET 200 /image/Modifica.png
+- 14:31:50.375 INFO: GET 200 /image/Elimina.png
+- 14:31:50.375 INFO: GET 200 /image/Clear.png
+[0507/143150.253:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:50.422 INFO: GET 200 /js.js
+- 14:31:50.437 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:54084/
+- 14:31:58.219 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:54084/
+- 14:31:58.172 DEBUG: OnContextCreated()
+[0507/143158.240:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:31:58.390 INFO: POST 200 /
+- 14:31:58.390 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:54084/
+- 14:32:08.094 DEBUG: OnLoadingStateChange: loading=1, url=http://127.0.0.1:54084/
+- 14:32:09.141 DEBUG: OnContextCreated()
+[0507/143209.210:INFO:CONSOLE(1)] "Uncaught SyntaxError: Unexpected token ...", source: https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js (1)
+- 14:32:09.359 INFO: POST 200 /
+- 14:32:09.359 DEBUG: OnLoadingStateChange: loading=0, url=http://127.0.0.1:54084/
+- 14:34:50.297 DEBUG: WM_DESTROY
+- 14:34:50.297 DEBUG: RemoveBrowserWindow(): hwnd = 4393338
+- 14:34:50.297 INFO: Stopping Mongoose web server
+- 14:34:50.297 DEBUG: Mongoose webserver stopped immediately
+- 14:34:50.312 DEBUG: OnBeforeClose() hwnd=3935942
+- 14:34:50.312 DEBUG: RemoveBrowserWindow(): hwnd = 3935942
+- 14:34:50.312 DEBUG: GetBrowserWindow(): not found, hwnd = 3935942
+- 14:34:50.312 WARNING: RemoveBrowserWindow() failed: GetBrowserWindow() failed
+- 14:34:50.312 DEBUG: Calling CefQuitMessageLoop()
+- 14:34:50.359 INFO: Ended application
+- 14:34:50.359 INFO: --------------------------------------------------------

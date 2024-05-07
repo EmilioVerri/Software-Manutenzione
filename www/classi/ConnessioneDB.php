@@ -1,10 +1,6 @@
 
 
 <?php
-$my_conn = new PDO('sqlite:manutentori.db');
-
-
-
 
 //ESEMPIO DI UNA QUERY
 /*
