@@ -2,12 +2,12 @@
 
 
 
-include ('./classi/ClasseManutenzioni.php')
+include ('./classi/ClasseManutenzioni.php');
+include ('./classi/funzioneEstrazione.php');
 
 
 
-
-    ?>
+?>
 
 
 <!DOCTYPE html>
@@ -59,50 +59,52 @@ include ('./classi/ClasseManutenzioni.php')
                                 <!-- Tabella dei Giorni-->
                                 <table class="uk-table uk-table-responsive">
                                     <tr>
-                                        <td><input type="radio" name="checkbox-group" value="Giornaliero">
+                                        <td><input type="radio" name="checkbox-group" value="Giornaliero" id="checkbox">
                                             <font size="2">Giornaliero</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Settimanale">
+                                        <td><input type="radio" name="checkbox-group" value="Settimanale" id="checkbox">
                                             <font size="2">Settimanale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Quindicinale">
+                                        <td><input type="radio" name="checkbox-group" value="Quindicinale"
+                                                id="checkbox">
                                             <font size="2">Quindicinale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Mensile">
+                                        <td><input type="radio" name="checkbox-group" value="Mensile" id="checkbox">
                                             <font size="2">Mensile</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="4settimane">
+                                        <td><input type="radio" name="checkbox-group" value="4settimane" id="checkbox">
                                             <font size="2">4 settimane</font>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" name="checkbox-group" value="Bimestrale">
+                                        <td><input type="radio" name="checkbox-group" value="Bimestrale" id="checkbox">
                                             <font size="2">Bimestrale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Trimestrale">
+                                        <td><input type="radio" name="checkbox-group" value="Trimestrale" id="checkbox">
                                             <font size="2">Trimestrale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Semestrale">
+                                        <td><input type="radio" name="checkbox-group" value="Semestrale" id="checkbox">
                                             <font size="2">Semestrale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="9mesi">
+                                        <td><input type="radio" name="checkbox-group" value="9mesi" id="checkbox">
                                             <font size="2">9 mesi</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="4mesi">
+                                        <td><input type="radio" name="checkbox-group" value="4mesi" id="checkbox">
                                             <font size="2">4 mesi</font>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td><input type="radio" name="checkbox-group" value="Annuale">
+                                        <td><input type="radio" name="checkbox-group" value="Annuale" id="checkbox">
                                             <font size="2">Annuale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Quinquennale">
+                                        <td><input type="radio" name="checkbox-group" value="Quinquennale"
+                                                id="checkbox">
                                             <font size="2">Quinquennale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Settennale">
+                                        <td><input type="radio" name="checkbox-group" value="Settennale" id="checkbox">
                                             <font size="2">Settennale</font>
                                         </td>
-                                        <td><input type="radio" name="checkbox-group" value="Decennale">
+                                        <td><input type="radio" name="checkbox-group" value="Decennale" id="checkbox">
                                             <font size="2">Decennale</font>
                                         </td>
                                     </tr>
@@ -195,125 +197,25 @@ include ('./classi/ClasseManutenzioni.php')
                                         <td colspan="3">
                                             <div class="divinterno">
                                                 <table class="table-int" id="scorribile">
-                                                    <thead>
+                                                    <thead >
                                                         <tr>
-                                                            <th id="stile">Sigla</th>
-                                                            <th id="stile">Nome</th>
-                                                            <th id="stile">Cat.</th>
-                                                            <th id="stile">Reparto</th>
-                                                            <th id="stile">Manutenzione</th>
-                                                            <th id="stile">Ultima Man.</th>
-                                                            <th id="stile">Prox Man.</th>
+                                                            <th id="change">Sigla</th>
+                                                            <th id="change">Nome</th>
+                                                            <th id="change">Cat.</th>
+                                                            <th id="change">Reparto</th>
+                                                            <th id="change">Manutenzione</th>
+                                                            <th id="change">Ultima Man.</th>
+                                                            <th id="change">Prox Man.</th>
                                                         </tr>
                                                     </thead>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td id="stile">Cognome1</td>
-                                                        <td id="stile">Nome 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                        <td id="stile">Professione 1</td>
-                                                    </tr>
+                                                    <?php
+                                                    if(isset($_POST['Aggiungi'])){
+                                                        estraiManutenzione();
+                                                    }else{
+                                                        estraiManutenzione();
+                                                    }
+                                                    
+                                                        ?>
                                                 </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
@@ -349,8 +251,16 @@ include ('./classi/ClasseManutenzioni.php')
 <?php
 
 if (isset($_POST['Aggiungi'])) {
-    $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group']);
-    $prova = $manutenzione->aggiungiManutenzione();
+    if (isset($_POST['checkbox-group'])) {
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group']);
+        $prova = $manutenzione->aggiungiManutenzione();
+    } else {
+        ?>
+        <script>
+            alert('Periodo non inserito');
+        </script>
+        <?php
+    }
 }
 
 

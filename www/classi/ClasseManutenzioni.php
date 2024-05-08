@@ -37,13 +37,16 @@ class Manutenzione
     public function aggiungiManutenzione()
     {
         if (isset($_POST['Aggiungi'])) {
-            $today = strtotime('today');
-            $UltimaMan = date('d/m/Y', $today);
-            $prossimaMan = estraigiorni($this->manutenzione);
-            $my_conn = new PDO('sqlite:manutentori.db');
-            $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan') 
-       VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}')");
-            $query->execute();
+           
+                $today = strtotime('today');
+                $UltimaMan = date('d/m/Y', $today);
+                $prossimaMan = estraigiorni($this->manutenzione);
+                $my_conn = new PDO('sqlite:manutentori.db');
+                $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan') 
+           VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}')");
+                $query->execute();
+            
+            
         }
     }
 

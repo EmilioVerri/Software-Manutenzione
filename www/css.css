@@ -1,13 +1,12 @@
 #stile {
-  border: 1px solid black;
-  /* Add table borders */
-  padding: 5px;
-  /* Add cell padding */
+
+ /*stile della tabella con i dati delle manutenzioni*/
+
 }
 
 /* Add styling for selected rows (when a td is clicked) */
 tr.selected {
-  background-color: #FFC;
+  background-color: black;
   /* Or any desired color */
 }
 
@@ -17,6 +16,16 @@ tr.selected {
   /* Show scrollbar after 5th row */
 }
 
+
+#change {
+  border: 1px solid black;
+  /* Add table borders */
+  padding: 5px;
+  /* Add cell padding */
+
+  background-color: rgb(223, 223, 223); 
+  color:black
+}
 
 
 
@@ -58,3 +67,5 @@ tr.selected {
 }
 
 /*fine tabella scorribile*/
+
+

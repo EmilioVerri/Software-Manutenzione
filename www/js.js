@@ -31,3 +31,5 @@ document.addEventListener('DOMContentLoaded', function () {
     console.error('Table element with ID "scorribile" not found!');
   }
 });
+
+
