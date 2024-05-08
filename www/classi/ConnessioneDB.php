@@ -1,5 +1,3 @@
-
-
 <?php
 
 //ESEMPIO DI UNA QUERY

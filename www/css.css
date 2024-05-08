@@ -1,56 +1,60 @@
-
-  
 #stile {
-    border: 1px solid black; /* Add table borders */
-    padding: 5px; /* Add cell padding */
-  }
-  
-  /* Add styling for selected rows (when a td is clicked) */
-  tr.selected {
-    background-color: #FFC; /* Or any desired color */
-  }
-  
-  /* Show scrollbar after 5 tr elements in table with id="scorribile" */
-  #scorribile tbody tr:nth-child(6) {
-    display: table-row; /* Show scrollbar after 5th row */
-  }
+  border: 1px solid black;
+  /* Add table borders */
+  padding: 5px;
+  /* Add cell padding */
+}
 
- 
+/* Add styling for selected rows (when a td is clicked) */
+tr.selected {
+  background-color: #FFC;
+  /* Or any desired color */
+}
+
+/* Show scrollbar after 5 tr elements in table with id="scorribile" */
+#scorribile tbody tr:nth-child(6) {
+  display: table-row;
+  /* Show scrollbar after 5th row */
+}
+
+
 
 
 
 /*tabella scorribile*/
 
-  .table-ext {width:90%;}
+.table-ext {
+  width: 90%;
+}
 
 .table-ext thead th {
-height:15px;
-line-height:15px;
-border-bottom:1px solid #ddd;
-text-align: left;
-border:1px solid #ddd;
-padding: 0 0 0 5px;
-background: #f04;
-color:#fff;
+  height: 15px;
+  line-height: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 0 0 0 5px;
+  background: #f04;
+  color: #fff;
 }
 
 .table-ext tbody td {
-border-bottom:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
-.divinterno{
-height:270px; 
-overflow:auto;
-width:100%;
+.divinterno {
+  height: 270px;
+  overflow: auto;
+  width: 100%;
 }
 
 .table-int {
-width:100%; 
+  width: 100%;
 }
 
 .table-int td {
-height:10px;
-line-height:10px;
+  height: 10px;
+  line-height: 10px;
 }
 
 /*fine tabella scorribile*/

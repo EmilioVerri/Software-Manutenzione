@@ -30,77 +30,77 @@ function estraigiorni($giornoInLettere)
         $formatted = date('d/m/Y', $fourweeks);
         return $formatted;
         //Fine Manutenzione 4 Settimane, 28 giorni
-    } elseif ($giornoInLettere == "Mensile") { 
+    } elseif ($giornoInLettere == "Mensile") {
         //Manutenzione 1mese
         $today = strtotime('today');
         $nextMonthTimestamp = strtotime('+1 month', $today);
         $formatted = date('d/m/Y', $nextMonthTimestamp);
         return $formatted;
         //Fine Manutenzione 1mese
-    } elseif ($giornoInLettere == "Bimestrale") { 
+    } elseif ($giornoInLettere == "Bimestrale") {
         //Manutenzione 2mese
         $today = strtotime('today');
         $next2MonthTimestamp = strtotime('+2 month', $today);
         $formatted = date('d/m/Y', $next2MonthTimestamp);
         return $formatted;
         //Fine Manutenzione 2mese
-    } elseif ($giornoInLettere == "Trimestrale") { 
+    } elseif ($giornoInLettere == "Trimestrale") {
         //Manutenzione 3mese
         $today = strtotime('today');
         $next = strtotime('+3 month', $today);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 3mese
-    } elseif ($giornoInLettere == "Semestrale") { 
+    } elseif ($giornoInLettere == "Semestrale") {
         //Manutenzione 6mese
         $today = strtotime('today');
         $next = strtotime('+6 month', $today);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 6mese
-    } elseif ($giornoInLettere == "9mesi") { 
+    } elseif ($giornoInLettere == "9mesi") {
         //Manutenzione 9mese
         $today = strtotime('today');
         $next = strtotime('+9 month', $today);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 9mese
-    } elseif ($giornoInLettere == "4mesi") { 
+    } elseif ($giornoInLettere == "4mesi") {
         //Manutenzione 4mese
         $today = strtotime('today');
         $next = strtotime('+4 month', $today);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 4mese
-    } elseif ($giornoInLettere == "Annuale") { 
+    } elseif ($giornoInLettere == "Annuale") {
         //Manutenzione 1anno
         $today = strtotime('today');
         $next = $today + (365 * 24 * 60 * 60);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 1anno
-    } elseif ($giornoInLettere == "Quinquennale") { 
+    } elseif ($giornoInLettere == "Quinquennale") {
         //Manutenzione 5anni
         $today = strtotime('today');
-        $next = $today + (5*365 * 24 * 60 * 60);
+        $next = $today + (5 * 365 * 24 * 60 * 60);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 5anni
-    } elseif ($giornoInLettere == "Settennale") { 
+    } elseif ($giornoInLettere == "Settennale") {
         //Manutenzione 7anni
         $today = strtotime('today');
-        $next = $today + (7*365 * 24 * 60 * 60);
+        $next = $today + (7 * 365 * 24 * 60 * 60);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 7anni
-    } elseif ($giornoInLettere == "Decennale") { 
+    } elseif ($giornoInLettere == "Decennale") {
         //Manutenzione 10anni
         $today = strtotime('today');
         $next = $today + (10 * 365 * 24 * 60 * 60);
         $formatted = date('d/m/Y', $next);
         return $formatted;
         //Fine Manutenzione 10anni
-    }else{
+    } else {
         echo "errore";
     }
 }
