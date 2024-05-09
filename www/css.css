@@ -1,12 +1,20 @@
+#table {
+  width: 100%; /* La tabella occupa il 100% della larghezza disponibile */
+  box-sizing: border-box; /* Include il padding e il bordo nella larghezza */
+}
+
+
+
 #stile {
-
- /*stile della tabella con i dati delle manutenzioni*/
-
+  border: 1px solid black;
+  /* Add table borders */
+  padding: 5px;
+  /* Add cell padding */
 }
 
 /* Add styling for selected rows (when a td is clicked) */
 tr.selected {
-  background-color: black;
+  background-color: #FFC;
   /* Or any desired color */
 }
 
@@ -67,5 +75,3 @@ tr.selected {
 }
 
 /*fine tabella scorribile*/
-
-

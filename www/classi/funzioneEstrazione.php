@@ -16,9 +16,7 @@ function estraiManutenzione()
                 <td id='stile'>{$estrazioni['ProxMan']}</td>
             </tr>";
     }
-
 }
-
 
 
 ?>

@@ -25,6 +25,62 @@ document.addEventListener('DOMContentLoaded', function () {
         // Log values of all td within the selected row
         const selectedRowTds = row.querySelectorAll('td');
         console.log('Valori riga selezionata: ', Array.from(selectedRowTds).map(td => td.textContent));
+        const arrayValori = Array.from(selectedRowTds).map(td => td.textContent);
+
+        //ultimaManutenzione
+        const inputField = document.getElementById('ultimaManutenzione');
+        const valoreInserire = arrayValori[5];
+        inputField.value = valoreInserire;
+
+        //Prossima Manutenzione
+        const pM = document.getElementById('proxManutenzione');
+        const vipm = arrayValori[6];
+        pM.value = vipm;
+
+
+        //Codice
+        const codice = document.getElementById('codice');
+        const vicodice = arrayValori[0];
+        codice.value = vicodice;
+
+
+        //Descrizione Attrezzatura
+        const descattrz = document.getElementById('descattrz');
+        const videscattrz = arrayValori[1];
+        descattrz.value = videscattrz;
+
+        //Reparto
+        const reparto = document.getElementById('reparto');
+        const vireparto = arrayValori[1];
+        reparto.value = vireparto;
+
+
+
+        //stessa cosa per il periodo
+        const radioButtons = document.getElementsByName('checkbox-group');
+        const valoreRadio = arrayValori[4];
+        for (const radioButton of radioButtons) {
+          if (radioButton.value === valoreRadio) {
+            radioButton.checked = true;
+          }
+        }
+
+        //stessa cosa per la select
+
+
+
+        //stessa cosa però per la select
+        const selectMenu = document.getElementById('idMenuSelect');
+        const valoreSelezione = arrayValori[2];
+        for (const option of selectMenu.options) {
+          if (arrayValori.includes(option.value)) {
+            option.selected = true;
+          }
+        }
+
+
+
+
       }
     });
   } else {

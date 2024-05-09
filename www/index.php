@@ -1,14 +1,27 @@
 <?php
-
-
-
 include ('./classi/ClasseManutenzioni.php');
 include ('./classi/funzioneEstrazione.php');
 
 
 
-?>
 
+
+
+if (isset($_POST['Aggiungi'])) {
+    if (isset($_POST['checkbox-group'])) {
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group']);
+        $prova = $manutenzione->aggiungiManutenzione();
+    } else {
+        ?>
+        <script>
+            alert('Periodo non inserito');
+        </script>
+        <?php
+    }
+}
+
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -28,11 +41,11 @@ include ('./classi/funzioneEstrazione.php');
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body>
+<body><form method="post">
     <div class="uk-grid uk-grid-match">
         <div class="uk-width-4-5 uk-card uk-card-default"
             style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
-            <table>
+            <table id="table">
                 <thead>
                     <tr>
                         <th>Codice</th>
@@ -40,14 +53,13 @@ include ('./classi/funzioneEstrazione.php');
                         <th>Reparto</th>
                     </tr>
                 </thead>
-                <form method="post">
                     <tbody>
                         <tr>
-                            <td align="center"><input type="text" id="input1" name="codice"
+                            <td align="center"><input type="text" id="codice" name="codice"
                                     style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
-                            <td align="center"><input type="text" id="input1" name="descrizioneAttrezzatura"
+                            <td align="center"><input type="text" id="descattrz" name="descrizioneAttrezzatura"
                                     style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
-                            <td align="center"><input type="text" id="input1" name="reparto"
+                            <td align="center"><input type="text" id="reparto" name="reparto"
                                     style="border: 2px solid white; box-shadow: 2px 2px 0px rgb(254, 191, 128);"></td>
                         </tr>
                         <tr>
@@ -122,13 +134,13 @@ include ('./classi/funzioneEstrazione.php');
                                         <td>
                                             <font size="2">Ultima <br>Manutenzione</font>
                                         </td>
-                                        <td><input type="text" name="ultimamanutenzione"></td>
+                                        <td><input type="text" id="ultimaManutenzione" name="ultimamanutenzione"></td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <font size="2">Prossima <br>manutenzione</font>
                                         </td>
-                                        <td><input type="text" name="ultimamanutenzione"></td>
+                                        <td><input type="text" id="proxManutenzione" name="ultimamanutenzione"></td>
                                     </tr>
                                 </table>
                                 <!--FINE tabella che identifica Ultima manutenzione e prossima manutenzione-->
@@ -175,11 +187,12 @@ include ('./classi/funzioneEstrazione.php');
                             </td>
                             <td>
                                 <div class="table-header">Categoria</div>
-                                <select name="categoria">
-                                    <option value="L.B. Produzione">L.B. Produzione</option>
-                                    <option value="L.B. Manutenzione">L.B. Manutenzione</option>
-                                    <option value="Solo Piano Manutenzione">Solo Piano Manutenzione</option>
-                                </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select name="categoria" id="idMenuSelect">
+                                    <option value="L.B.Produzione">L.B.Produzione</option>
+                                    <option value="L.B.Manutenzione">L.B.Manutenzione</option>
+                                    <option value="SoloPianoManutenzione">SoloPianoManutenzione</option>
+                                </select>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="checkbox" value="scadenzaManutenzioni">
                                 <font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
                             </td>
@@ -209,12 +222,9 @@ include ('./classi/funzioneEstrazione.php');
                                                         </tr>
                                                     </thead>
                                                     <?php
-                                                    if(isset($_POST['Aggiungi'])){
+                                      
                                                         estraiManutenzione();
-                                                    }else{
-                                                        estraiManutenzione();
-                                                    }
-                                                    
+                                                   
                                                         ?>
                                                 </table><!--Table-int-->
                                             </div>
@@ -228,7 +238,7 @@ include ('./classi/funzioneEstrazione.php');
 
                         </tr>
                     </tbody>
-                </form>
+                
             </table>
         </div>
 
@@ -240,7 +250,9 @@ include ('./classi/funzioneEstrazione.php');
     </div>
 
     <script src="js.js"></script>
+    </form>
 </body>
+
 
 </html>
 
@@ -248,20 +260,3 @@ include ('./classi/funzioneEstrazione.php');
 
 
 
-<?php
-
-if (isset($_POST['Aggiungi'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group']);
-        $prova = $manutenzione->aggiungiManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-?>
