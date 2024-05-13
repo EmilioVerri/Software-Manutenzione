@@ -9,8 +9,31 @@ include ('./classi/funzioneEstrazione.php');
 
 if (isset($_POST['Aggiungi'])) {
     if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group']);
-        $prova = $manutenzione->aggiungiManutenzione();
+        $valore=estraiIdentificativo();
+        if($valore==0){
+        }elseif($valore!==0){
+        $info=$valore+1;
+        }else{
+        }
+
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'],$info);
+        $manutenzione->aggiungiManutenzione();
+        
+    } else {
+        ?>
+        <script>
+            alert('Periodo non inserito');
+        </script>
+        <?php
+    }
+}
+
+
+
+if (isset($_POST['Modifica'])) {
+    if (isset($_POST['checkbox-group'])) {
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'],$_POST['identificativo2']);
+        $manutenzione->modificaManutenzione();
     } else {
         ?>
         <script>
@@ -151,16 +174,35 @@ if (isset($_POST['Aggiungi'])) {
 
                         </tr>
                         <tr>
-                            <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi"
-                                    style="background-color: rgb(223,223,223)">
+
+                            <input type="hidden" name="identificativo" id="identificativo" value="
+                            <?php 
+                            if (isset($_POST['Aggiungi'])){
+                                $valore=estraiIdentificativo();
+                                if($valore==0){
+                                }elseif($valore!==0){
+                                    echo $info=$valore+1;
+                                   
+                                }else{
+                                }
+                            }
+                            
+                            ?>
+                            ">
+
+                           
+
+                            <input type="hidden" name="identificativo2" id="identificativo2" value="">
+
+
+                            <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi" style="background-color: rgb(223,223,223)">
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Aggiungi.png" alt="Aggiungi">
                                         Aggiungi
                                     </span>
                                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit"
-                                    name="Modifica">
+                                <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit" name="Modifica">
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Modifica.png" alt="Modifica">

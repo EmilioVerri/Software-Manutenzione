@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         //Reparto
         const reparto = document.getElementById('reparto');
-        const vireparto = arrayValori[1];
+        const vireparto = arrayValori[3];
         reparto.value = vireparto;
 
 
@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
 
-
+        const identificativo = document.getElementById('identificativo2');
+        const viidentificativo = arrayValori[7];
+        identificativo.value = viidentificativo;
 
 
       }

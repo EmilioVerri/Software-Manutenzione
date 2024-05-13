@@ -14,9 +14,27 @@ function estraiManutenzione()
                 <td id='stile'>{$estrazioni['Manutenzione']}</td>
                 <td id='stile'>{$estrazioni['UltimaMan']}</td>
                 <td id='stile'>{$estrazioni['ProxMan']}</td>
+                <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>
             </tr>";
     }
 }
 
+
+
+function estraiIdentificativo(){
+    $my_conn = new PDO('sqlite:manutentori.db');
+    $query = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
+    $query->execute();
+    $results = $query->fetchAll(PDO::FETCH_ASSOC);
+    $maxValue = 0;
+    foreach ($results as $estrazioni) {
+        if ($estrazioni['identificativo'] > $maxValue) {
+            $maxValue = $estrazioni['identificativo'];
+          }
+       
+
+    }
+return $maxValue;
+}
 
 ?>

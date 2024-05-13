@@ -17,15 +17,18 @@ class Manutenzione
 
     public $manutenzione;
 
+    public $identificativo;
 
 
-    public function __construct($sigla, $nome, $cat, $reparto, $manutenzione)
+
+    public function __construct($sigla, $nome, $cat, $reparto, $manutenzione,$identificativo)
     {
         $this->sigla = $sigla;
         $this->nome = $nome;
         $this->cat = $cat;
         $this->reparto = $reparto;
         $this->manutenzione = $manutenzione;
+        $this->identificativo = $identificativo;
     }
 
 
@@ -33,24 +36,45 @@ class Manutenzione
 
 
 
-
+//da implementare controllo sulla sigla, quella deve essere univoca
     public function aggiungiManutenzione()
     {
         if (isset($_POST['Aggiungi'])) {
-           
-                $today = strtotime('today');
-                $UltimaMan = date('d/m/Y', $today);
-                $prossimaMan = estraigiorni($this->manutenzione);
-                $my_conn = new PDO('sqlite:manutentori.db');
-                $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan') 
-           VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}')");
-                $query->execute();
-            
-            
+            $today = strtotime('today');
+            $UltimaMan = date('d/m/Y', $today);
+            $prossimaMan = estraigiorni($this->manutenzione);
+            $indentificativoIntero=(int)$this->identificativo;
+            $my_conn = new PDO('sqlite:manutentori.db');
+            $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo') 
+           VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}')");
+            $query->execute();
         }
     }
 
-
+    public function modificaManutenzione()
+    {
+        if (isset($_POST["Modifica"])) {
+            $today = strtotime('today');
+            $UltimaMan = date('d/m/Y', $today);
+            $prossimaMan = estraigiorni($this->manutenzione);
+            $indentificativoIntero=(int)$this->identificativo;
+            $my_conn = new PDO('sqlite:manutentori.db');
+            $query = $my_conn->prepare("UPDATE manutenzioni SET Sigla='{$this->sigla}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET Nome='{$this->nome}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET Cat='{$this->cat}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET Reparto='{$this->reparto}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET Manutenzione='{$this->manutenzione}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$UltimaMan}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+            $query = $my_conn->prepare("UPDATE manutenzioni SET ProxMan='{$prossimaMan}' WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+        }
+    }
 
 
 }
