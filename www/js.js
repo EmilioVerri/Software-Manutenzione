@@ -91,3 +91,82 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+//////////////////////////////////////////////////////////////////
+//chiamata post sul checked del "visualizza solo manutenzioni in scadenza o scadute"
+const checkbox = document.getElementById('myCheckbox');
+const isCheckedField = document.getElementById('isChecked');
+checkbox.addEventListener('change', handleCheckboxChange);
+function handleCheckboxChange() {
+  const isChecked = checkbox.checked;
+  isCheckedField.value = isChecked ? 1 : 0;
+
+  if (isChecked) {
+    makePostRequestOnChecked();
+  } else {
+    makePostRequestOnUnchecked();
+  }
+}
+
+
+
+
+
+
+
+
+
+//se checcato
+function makePostRequestOnChecked() {
+  // Inside makePostRequestOnChecked and makePostRequestOnUnchecked functions
+  const db = new SQL.Database(); // Create SQLite database instance
+  db.open('manutentori.db'); // Open the database file
+
+  // Execute the query and handle the response
+  db.exec('SELECT * FROM manutenzioni', function (results) {
+    console.log('Query results:', results); // Process or display query results
+  });
+
+  db.close(); // Close the database connection
+
+}
+
+
+//se NON checcato
+function makePostRequestOnUnchecked() {
+  // Inside makePostRequestOnChecked and makePostRequestOnUnchecked functions
+  const db = new SQL.Database(); // Create SQLite database instance
+  db.open('manutentori.db'); // Open the database file
+
+  // Execute the query and handle the response
+  db.exec('SELECT * FROM manutenzioni', function (results) {
+    console.log('Query results:', results); // Process or display query results
+  });
+
+  db.close(); // Close the database connection
+
+}
+//fine controllo checked 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

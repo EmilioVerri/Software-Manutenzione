@@ -21,7 +21,7 @@ class Manutenzione
 
 
 
-    public function __construct($sigla, $nome, $cat, $reparto, $manutenzione,$identificativo)
+    public function __construct($sigla, $nome, $cat, $reparto, $manutenzione, $identificativo)
     {
         $this->sigla = $sigla;
         $this->nome = $nome;
@@ -36,14 +36,14 @@ class Manutenzione
 
 
 
-//da implementare controllo sulla sigla, quella deve essere univoca
+    //da implementare controllo sulla sigla, quella deve essere univoca
     public function aggiungiManutenzione()
     {
         if (isset($_POST['Aggiungi'])) {
             $today = strtotime('today');
             $UltimaMan = date('d/m/Y', $today);
             $prossimaMan = estraigiorni($this->manutenzione);
-            $indentificativoIntero=(int)$this->identificativo;
+            $indentificativoIntero = (int) $this->identificativo;
             $my_conn = new PDO('sqlite:manutentori.db');
             $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo') 
            VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}')");
@@ -51,13 +51,18 @@ class Manutenzione
         }
     }
 
+
+
+
+
+    //da modificare le date della manutenzione
     public function modificaManutenzione()
     {
         if (isset($_POST["Modifica"])) {
             $today = strtotime('today');
             $UltimaMan = date('d/m/Y', $today);
             $prossimaMan = estraigiorni($this->manutenzione);
-            $indentificativoIntero=(int)$this->identificativo;
+            $indentificativoIntero = (int) $this->identificativo;
             $my_conn = new PDO('sqlite:manutentori.db');
             $query = $my_conn->prepare("UPDATE manutenzioni SET Sigla='{$this->sigla}' WHERE identificativo='{$this->identificativo}'");
             $query->execute();

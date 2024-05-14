@@ -21,7 +21,8 @@ function estraiManutenzione()
 
 
 
-function estraiIdentificativo(){
+function estraiIdentificativo()
+{
     $my_conn = new PDO('sqlite:manutentori.db');
     $query = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
     $query->execute();
@@ -30,11 +31,11 @@ function estraiIdentificativo(){
     foreach ($results as $estrazioni) {
         if ($estrazioni['identificativo'] > $maxValue) {
             $maxValue = $estrazioni['identificativo'];
-          }
-       
+        }
+
 
     }
-return $maxValue;
+    return $maxValue;
 }
 
 ?>

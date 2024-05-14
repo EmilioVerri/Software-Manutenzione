@@ -6,19 +6,18 @@ include ('./classi/funzioneEstrazione.php');
 
 
 
-
 if (isset($_POST['Aggiungi'])) {
     if (isset($_POST['checkbox-group'])) {
-        $valore=estraiIdentificativo();
-        if($valore==0){
-        }elseif($valore!==0){
-        $info=$valore+1;
-        }else{
+        $valore = estraiIdentificativo();
+        if ($valore == 0) {
+        } elseif ($valore !== 0) {
+            $info = $valore + 1;
+        } else {
         }
 
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'],$info);
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $info);
         $manutenzione->aggiungiManutenzione();
-        
+
     } else {
         ?>
         <script>
@@ -32,7 +31,7 @@ if (isset($_POST['Aggiungi'])) {
 
 if (isset($_POST['Modifica'])) {
     if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'],$_POST['identificativo2']);
+        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
         $manutenzione->modificaManutenzione();
     } else {
         ?>
@@ -49,7 +48,10 @@ if (isset($_POST['Modifica'])) {
 <!DOCTYPE html>
 <html>
 
+
 <head>
+    <!--Da finire l'implementazione-->
+    <script src="https://cdn.jsdelivr.net/npm/sql.js@1.6.5/dist/sql.js"></script>
     <title>Baxter Application</title>
 
     <link rel="stylesheet" href="css.css">
@@ -64,18 +66,19 @@ if (isset($_POST['Modifica'])) {
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body><form method="post">
-    <div class="uk-grid uk-grid-match">
-        <div class="uk-width-4-5 uk-card uk-card-default"
-            style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th>Codice</th>
-                        <th>Descrizione Attrezzatura</th>
-                        <th>Reparto</th>
-                    </tr>
-                </thead>
+<body>
+    <form method="post">
+        <div class="uk-grid uk-grid-match">
+            <div class="uk-width-4-5 uk-card uk-card-default"
+                style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Codice</th>
+                            <th>Descrizione Attrezzatura</th>
+                            <th>Reparto</th>
+                        </tr>
+                    </thead>
                     <tbody>
                         <tr>
                             <td align="center"><input type="text" id="codice" name="codice"
@@ -176,33 +179,35 @@ if (isset($_POST['Modifica'])) {
                         <tr>
 
                             <input type="hidden" name="identificativo" id="identificativo" value="
-                            <?php 
-                            if (isset($_POST['Aggiungi'])){
-                                $valore=estraiIdentificativo();
-                                if($valore==0){
-                                }elseif($valore!==0){
-                                    echo $info=$valore+1;
-                                   
-                                }else{
+                            <?php
+                            if (isset($_POST['Aggiungi'])) {
+                                $valore = estraiIdentificativo();
+                                if ($valore == 0) {
+                                } elseif ($valore !== 0) {
+                                    echo $info = $valore + 1;
+
+                                } else {
                                 }
                             }
-                            
+
                             ?>
                             ">
 
-                           
+
 
                             <input type="hidden" name="identificativo2" id="identificativo2" value="">
 
 
-                            <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi" style="background-color: rgb(223,223,223)">
+                            <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi"
+                                    style="background-color: rgb(223,223,223)">
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Aggiungi.png" alt="Aggiungi">
                                         Aggiungi
                                     </span>
                                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit" name="Modifica">
+                                <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit"
+                                    name="Modifica">
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Modifica.png" alt="Modifica">
@@ -235,7 +240,8 @@ if (isset($_POST['Modifica'])) {
                                     <option value="SoloPianoManutenzione">SoloPianoManutenzione</option>
                                 </select>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="checkbox" value="scadenzaManutenzioni">
+                                <input type="checkbox" id="myCheckbox"> <!--scadenza manutenzione-->
+                                <input type="hidden" id="isChecked" value="0">
                                 <font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
                             </td>
                             <td></td>
@@ -252,7 +258,7 @@ if (isset($_POST['Modifica'])) {
                                         <td colspan="3">
                                             <div class="divinterno">
                                                 <table class="table-int" id="scorribile">
-                                                    <thead >
+                                                    <thead>
                                                         <tr>
                                                             <th id="change">Sigla</th>
                                                             <th id="change">Nome</th>
@@ -264,10 +270,10 @@ if (isset($_POST['Modifica'])) {
                                                         </tr>
                                                     </thead>
                                                     <?php
-                                      
-                                                        estraiManutenzione();
-                                                   
-                                                        ?>
+
+                                                    estraiManutenzione();
+
+                                                    ?>
                                                 </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
@@ -280,25 +286,20 @@ if (isset($_POST['Modifica'])) {
 
                         </tr>
                     </tbody>
-                
-            </table>
+
+                </table>
+            </div>
+
+
+
+            <div class="uk-width-1-5 uk-card uk-card-default" style="height:700px;">
+                Large
+            </div>
         </div>
 
-
-
-        <div class="uk-width-1-5 uk-card uk-card-default" style="height:700px;">
-            Large
-        </div>
-    </div>
-
-    <script src="js.js"></script>
+        <script src="js.js"></script>
     </form>
 </body>
 
 
 </html>
-
-
-
-
-
