@@ -51,7 +51,7 @@ if (isset($_POST['Modifica'])) {
 
 <head>
     <!--Da finire l'implementazione-->
-    <script src="https://cdn.jsdelivr.net/npm/sql.js@1.6.5/dist/sql.js"></script>
+    <script src=''></script>
     <title>Baxter Application</title>
 
     <link rel="stylesheet" href="css.css">
@@ -67,7 +67,7 @@ if (isset($_POST['Modifica'])) {
 </head>
 
 <body>
-    <form method="post">
+    <form method="post" id="myForm" name="ricerca">
         <div class="uk-grid uk-grid-match">
             <div class="uk-width-4-5 uk-card uk-card-default"
                 style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
@@ -240,8 +240,39 @@ if (isset($_POST['Modifica'])) {
                                     <option value="SoloPianoManutenzione">SoloPianoManutenzione</option>
                                 </select>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <input type="checkbox" id="myCheckbox"> <!--scadenza manutenzione-->
-                                <input type="hidden" id="isChecked" value="0">
+
+
+
+                                <?php
+                                 if(isset($_POST['submitButton'])){
+                                    estraiScadenzaNonScadenzaPrecedente();
+                                }
+
+
+
+
+
+                                //checkbox se ci sono scadenze o meno
+                                $verifica = estraiScadenzaManutenzioniCheckbox();
+                                if ($verifica == "ok") {
+                                    ?>
+                                    <input type="checkbox" id="myCheckbox" name="myCheckbox" > <!--scadenza manutenzione-->
+                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
+                                    <?php
+                                } else {
+                                    ?>
+                                    <input type="checkbox" id="cambiami" name="cambiami" checked>
+                                    <!--scadenza manutenzione-->
+                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami" name="subitCambiami">
+                                    <?php
+                                }
+                                //fine checkbox se ci sono scadenze o meno
+                                ?>
+
+
+
+
+
                                 <font size="2">Visualizza solo manutenzioni in scadenza o scadute</font>
                             </td>
                             <td></td>
@@ -270,8 +301,14 @@ if (isset($_POST['Modifica'])) {
                                                         </tr>
                                                     </thead>
                                                     <?php
-
-                                                    estraiManutenzione();
+                                                    if(isset($_POST['submitButton'])){
+                                                        estraiScadenzaNonScadenza();
+                                                    }elseif(isset($_POST['subitCambiami'])){
+                                                        estraiManutenzione();
+                                                    }else{
+                                                        estraiManutenzione();
+                                                    }
+                                                    
 
                                                     ?>
                                                 </table><!--Table-int-->

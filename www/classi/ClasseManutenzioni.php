@@ -44,9 +44,10 @@ class Manutenzione
             $UltimaMan = date('d/m/Y', $today);
             $prossimaMan = estraigiorni($this->manutenzione);
             $indentificativoIntero = (int) $this->identificativo;
+            $InScadenz=0;
             $my_conn = new PDO('sqlite:manutentori.db');
-            $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo') 
-           VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}')");
+            $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo','InScadenza') 
+           VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}','{$InScadenz}')");
             $query->execute();
         }
     }
