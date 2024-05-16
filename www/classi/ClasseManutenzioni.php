@@ -61,7 +61,8 @@ class Manutenzione
     {
         if (isset($_POST["Modifica"])) {
             $today = strtotime('today');
-            $UltimaMan = date('d/m/Y', $today);
+            $modificato=$_POST['proxManutenzione'];
+            $UltimaMan = $_POST['ultimamanutenzione'];
             $prossimaMan = estraigiorni($this->manutenzione);
             $indentificativoIntero = (int) $this->identificativo;
             $my_conn = new PDO('sqlite:manutentori.db');
@@ -83,6 +84,24 @@ class Manutenzione
     }
 
 
+    
+public function eliminaManutenzione()
+{
+    if (isset($_POST["Elimina"])) {
+        $my_conn = new PDO('sqlite:manutentori.db');
+        $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo='{$this->identificativo}'");
+        $query->execute();
+    }
 }
+
+
+}
+
+
+
+
+
+
+
 
 ?>
