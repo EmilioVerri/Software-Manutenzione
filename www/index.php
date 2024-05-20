@@ -364,15 +364,24 @@ if (isset($_POST['Elimina'])) {
                         <td><br></td>
                     </tr>
 
-                    <tr>  
-                    <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
-                    <br>
+                    <tr>
+                        <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
+                            <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                                <button type="submit"
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
+                                        style="margin: 0;">
+                                </button>
+
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                                <button type="submit"
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image"
+                                        style="margin: 0;">
+                                </button>
                             </span>
                             <br>
                         </td>
@@ -380,19 +389,25 @@ if (isset($_POST['Elimina'])) {
                     <tr>
                         <td><br></td>
                     </tr>
-                    <tr>  
-                    <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
-                    <br>
+                    <tr>
+                        <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
+                            <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                                <button type="submit"
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image"
+                                        style="margin: 0;">
+                                </button>
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                            <button type="hidden" style="background-color:none;">
-                                <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
-                            </button>
+                                <button type="submit"
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image"
+                                        style="margin: 0;">
+                                </button>
                                 <br>
-                            <input type="text" name="daConfigurare" style="width:80%; height:120%">
+                                <input type="text" name="daConfigurare" style="width:80%; height:120%">
                             </span>
                             <br>
                         </td>
@@ -401,7 +416,7 @@ if (isset($_POST['Elimina'])) {
             </div>
 
 
-            
+
         </div>
 
         <script src="js.js"></script>
