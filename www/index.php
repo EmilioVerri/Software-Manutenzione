@@ -228,14 +228,16 @@ if (isset($_POST['Elimina'])) {
                                         Modifica
                                     </span>
                                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Elimina" style="background-color: rgb(223,223,223)" type="submit" name="Elimina">
+                                <button value="Elimina" style="background-color: rgb(223,223,223)" type="submit"
+                                    name="Elimina">
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Elimina.png" alt="Elimina">
                                         Elimina
                                     </span>
                                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Clear" style="background-color: rgb(223,223,223)" type="submit" name="Clear"> <!-- chiedere a cosa servirà -->
+                                <button value="Clear" style="background-color: rgb(223,223,223)" type="submit"
+                                    name="Clear"> <!-- chiedere a cosa servirà -->
                                     <span
                                         style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
                                         <img src=".\image\Clear.png" alt="Clear">
@@ -256,7 +258,7 @@ if (isset($_POST['Elimina'])) {
 
 
                                 <?php
-                               if(isset($_POST['submitButton'])){
+                                if (isset($_POST['submitButton'])) {
                                     estraiScadenzaNonScadenzaPrecedente();
                                 }
 
@@ -268,14 +270,16 @@ if (isset($_POST['Elimina'])) {
                                 $verifica = estraiScadenzaManutenzioniCheckbox();
                                 if ($verifica == "ok") {
                                     ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox" > <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
+                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
+                                    <input type="submit" value="Submit" id="submitButton" style="display:none;"
+                                        name="submitButton">
                                     <?php
                                 } else {
                                     ?>
                                     <input type="checkbox" id="cambiami" name="cambiami" checked>
                                     <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami" name="subitCambiami">
+                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
+                                        name="subitCambiami">
                                     <?php
                                 }
                                 //fine checkbox se ci sono scadenze o meno
@@ -313,14 +317,14 @@ if (isset($_POST['Elimina'])) {
                                                         </tr>
                                                     </thead>
                                                     <?php
-                                                    if(isset($_POST['submitButton'])){
+                                                    if (isset($_POST['submitButton'])) {
                                                         estraiScadenzaNonScadenza();
-                                                    }elseif(isset($_POST['subitCambiami'])){
+                                                    } elseif (isset($_POST['subitCambiami'])) {
                                                         estraiManutenzione();
-                                                    }else{
+                                                    } else {
                                                         estraiManutenzione();
                                                     }
-                                                    
+
 
                                                     ?>
                                                 </table><!--Table-int-->
@@ -341,9 +345,63 @@ if (isset($_POST['Elimina'])) {
 
 
 
-            <div class="uk-width-1-5 uk-card uk-card-default" style="height:700px;">
-                Large
+            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(223,223,223)">
+                <table>
+                    <tr>
+                        <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
+                            <label>
+                                <font size="3px">Password</font>
+                            </label>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <input type="text" placeholder="Inserisci password">
+                                <img src=".\image\faccina.png" alt="Immagine" class="image"
+                                    style="width:25%;margin: 0 auto;">
+                            </span>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+
+                    <tr>  
+                    <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
+                    <br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                            </span>
+                            <br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                            </span>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                    </tr>
+                    <tr>  
+                    <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
+                    <br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                            </span>
+                            <br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                            <button type="hidden" style="background-color:none;">
+                                <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image" style="width:60%;margin: 0 auto;">
+                            </button>
+                                <br>
+                            <input type="text" name="daConfigurare" style="width:80%; height:120%">
+                            </span>
+                            <br>
+                        </td>
+                    </tr>
+                </table>
             </div>
+
+
+            
         </div>
 
         <script src="js.js"></script>
