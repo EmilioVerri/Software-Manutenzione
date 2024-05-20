@@ -83,6 +83,7 @@ if (isset($_POST['Elimina'])) {
 <body>
     <form method="post" id="myForm" name="ricerca">
         <div class="uk-grid uk-grid-match">
+            <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
                 style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
                 <table id="table">
@@ -342,10 +343,11 @@ if (isset($_POST['Elimina'])) {
 
                 </table>
             </div>
+            <!--FINE zona grigia centrale-->
 
 
-
-            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(223,223,223)">
+            <!--INIZIO zona rossa laterale-->
+            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; height: 700px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
@@ -354,14 +356,12 @@ if (isset($_POST['Elimina'])) {
                             </label>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <input type="text" placeholder="Inserisci password">
-                                <img src=".\image\faccina.png" alt="Immagine" class="image"
-                                    style="width:25%;margin: 0 auto;">
+                                <img src=".\image\faccina.png" alt="Immagine" class="image" style="width:25%;margin: 0 auto;">
                             </span>
-                            <br>
                         </td>
                     </tr>
                     <tr>
-                        <td><br></td>
+                        
                     </tr>
 
                     <tr>
@@ -370,8 +370,7 @@ if (isset($_POST['Elimina'])) {
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
-                                    <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
-                                        style="margin: 0;">
+                                    <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image" style="margin: 0; width:80%">
                                 </button>
 
                             </span>
@@ -380,14 +379,14 @@ if (isset($_POST['Elimina'])) {
                                 <button type="submit"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image"
-                                        style="margin: 0;">
+                                        style="margin: 0;width:80%">
                                 </button>
                             </span>
                             <br>
                         </td>
                     </tr>
                     <tr>
-                        <td><br></td>
+                        
                     </tr>
                     <tr>
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
@@ -396,7 +395,7 @@ if (isset($_POST['Elimina'])) {
                                 <button type="submit"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image"
-                                        style="margin: 0;">
+                                        style="margin: 0; width:80%">
                                 </button>
                             </span>
                             <br>
@@ -404,7 +403,7 @@ if (isset($_POST['Elimina'])) {
                                 <button type="submit"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image"
-                                        style="margin: 0;">
+                                        style="margin: 0; width:80%">
                                 </button>
                                 <br>
                                 <input type="text" name="daConfigurare" style="width:80%; height:120%">
@@ -414,6 +413,30 @@ if (isset($_POST['Elimina'])) {
                     </tr>
                 </table>
             </div>
+            <!--FINE Zona rossa laterale-->
+
+
+
+
+            <!--INIZIO Zona Gialla in fondo-->
+            <div class="uk-width-4-5 uk-card uk-card-default"
+                style="height:200px; background-color: rgb(255, 255,191);box-shadow: inset 0 4px 8px;">
+                <table id="table">
+
+
+                </table>
+            </div>
+            <!--Fine zona gialla in fondo-->
+
+
+            <!--INIZIO zona ARANCIONE laterale-->
+            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;">
+                <table>
+
+                </table>
+            </div>
+            <!--FINE Zona ARANCIONE laterale-->
+
 
 
 
