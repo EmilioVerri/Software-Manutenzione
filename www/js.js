@@ -83,6 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
         identificativo.value = viidentificativo;
 
 
+
+        //Zona sottostante
+        const infor = document.getElementById('informazione');
+        const visig = arrayValori[0];
+        const vinom = arrayValori[1];
+        infor.textContent = visig + " - " + vinom;
+
       }
     });
   } else {
@@ -121,6 +128,72 @@ if(subitCambiami){
 
 
 
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////
+// Al click sul campo input, inserisce la data di oggi
+function insertDate(inputFieldId) {
+  // Get the current date
+  const today = new Date();
+  const day = today.getDate().toString().padStart(2, '0');
+  const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Adjust for 0-based month indexing
+  const year = today.getFullYear();
+
+  // Format the date as dd/mm/yyyy
+  const formattedDate = `${day}/${month}/${year}`;
+
+  // Set the formatted date into the input field
+  const inputField = document.getElementById(inputFieldId);
+  if (inputField) {
+    inputField.value = formattedDate;
+  } else {
+    console.error(`Cannot find input field with ID: ${inputFieldId}`);
+  }
+}
+
+// Add an event listener for the click event on the input field
+const inputFieldId = 'yourInputFieldId'; // Replace with the actual ID of your input field
+const inputField = document.getElementById(inputFieldId);
+if (inputField) {
+  inputField.addEventListener('click', () => insertDate(inputFieldId));
+} else {
+  console.error(`Cannot find input field with ID: ${inputFieldId}`);
+}
+
+
+
+
+// Al secondo campo input , al click sul campo input, inserisce la data di oggi
+function insertDate(dateDue) {
+  // Get the current date
+  const today = new Date();
+  const day = today.getDate().toString().padStart(2, '0');
+  const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Adjust for 0-based month indexing
+  const year = today.getFullYear();
+
+  // Format the date as dd/mm/yyyy
+  const formattedDate = `${day}/${month}/${year}`;
+
+  // Set the formatted date into the input field
+  const dateDu = document.getElementById(dateDue);
+  if (dateDu) {
+    dateDu.value = formattedDate;
+  } else {
+    console.error(`Cannot find input field with ID: ${dateDue}`);
+  }
+}
+
+// Add an event listener for the click event on the input field
+const dateDue = 'date'; // Replace with the actual ID of your input field
+const dateDu = document.getElementById(dateDue);
+if (dateDu) {
+  dateDu.addEventListener('click', () => insertDate(dateDue));
+} else {
+  console.error(`Cannot find input field with ID: ${dateDue}`);
+}
 
 
 

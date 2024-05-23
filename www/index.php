@@ -426,7 +426,7 @@ if (isset($_POST['Elimina'])) {
                 style="height:450px; background-color: rgb(255, 255,191);box-shadow: inset 0 4px 8px;">
                 <div class="container">
                     <h1>
-                        <font size="4px"><strong><i>&nbsp;&nbsp;CNF011 - TEST DEL COMMENTO DA AGGIUNGERE</i></strong>
+                        <font size="4px"><strong>&nbsp;&nbsp;<i id="informazione"></i></strong>
                         </font>
                     </h1>
                     <table>
@@ -436,7 +436,7 @@ if (isset($_POST['Elimina'])) {
                             <td><label for="input3">Note</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="input1" style="height:20px;"></td>
+                            <td><input type="text" id="yourInputFieldId" style="height:20px;"></td>
                             <td><input type="text" id="input2" style="height:20px;"></td>
                             <td><input type="text" id="input3" style="width:300px;height:20px;"></td>
                         </tr>
@@ -581,7 +581,7 @@ if (isset($_POST['Elimina'])) {
                         </td>
                     </tr>
                     <tr>
-                        <td><input type="text"></td>
+                        <td><input type="text" id="date"></td>
                     </tr>
 
                     
