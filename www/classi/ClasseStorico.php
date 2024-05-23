@@ -1,5 +1,6 @@
 <?php
 
+
 class Storico
 {
 
@@ -33,9 +34,38 @@ class Storico
             $query = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$dataConv}','{$this->esito}','{$this->note}','{$manutConv}')");
             $query->execute();
 
+            //se dico al programma che la manutenzione è stata fatta in quella data, rimando la manutenzione della data che mi ha dato
+            //quindi devo fare una query che va a rimandare la data, faccio una query su manutenzioni, prima recupero i dati della manutenzione e poi successivamente 
+            //aggiorno i dati della stessa
+            $my_conn = new PDO('sqlite:manutentori.db');
 
+            $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE 'identificativo'='{$manutConv}'");
+            $secondquery->execute();
+            echo "ciao";
+            die;
 
+            foreach($secondquery as $row){
             
+
+                $ProxMan=$row['ProxMan'];
+                $GiorniManutenzione=$row['Manutenzione'];
+
+                $value=prossimaManutenzione($ProxMan,$GiorniManutenzione);
+
+
+
+                $my_conn = new PDO('sqlite:manutentori.db');
+                $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$dataConv}' WHERE identificativo='{$manutConv}'");
+                $query->execute();
+                echo "ok";
+
+                $my_conn = new PDO('sqlite:manutentori.db');
+                $query = $my_conn->prepare("UPDATE manutenzioni SET ProxMan='{$value}' WHERE identificativo='{$manutConv}'");
+                $query->execute();
+                echo "ok2";
+            }
+
+
         }
     }
 
