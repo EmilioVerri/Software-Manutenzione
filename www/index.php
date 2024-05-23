@@ -347,7 +347,8 @@ if (isset($_POST['Elimina'])) {
 
 
             <!--INIZIO zona rossa laterale-->
-            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; height: 700px;">
+            <div class="uk-width-1-5 uk-card uk-card-default"
+            style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; overflow: auto; height: 700px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
@@ -356,12 +357,13 @@ if (isset($_POST['Elimina'])) {
                             </label>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <input type="text" placeholder="Inserisci password">
-                                <img src=".\image\faccina.png" alt="Immagine" class="image" style="width:25%;margin: 0 auto;">
+                                <img src=".\image\faccina.png" alt="Immagine" class="image"
+                                    style="width:25%;margin: 0 auto;">
                             </span>
                         </td>
                     </tr>
                     <tr>
-                        
+
                     </tr>
 
                     <tr>
@@ -370,7 +372,8 @@ if (isset($_POST['Elimina'])) {
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
-                                    <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image" style="margin: 0; width:80%">
+                                    <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
+                                        style="margin: 0; width:80%">
                                 </button>
 
                             </span>
@@ -386,7 +389,7 @@ if (isset($_POST['Elimina'])) {
                         </td>
                     </tr>
                     <tr>
-                        
+
                     </tr>
                     <tr>
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
@@ -420,19 +423,173 @@ if (isset($_POST['Elimina'])) {
 
             <!--INIZIO Zona Gialla in fondo-->
             <div class="uk-width-4-5 uk-card uk-card-default"
-                style="height:200px; background-color: rgb(255, 255,191);box-shadow: inset 0 4px 8px;">
-                <table id="table">
+                style="height:450px; background-color: rgb(255, 255,191);box-shadow: inset 0 4px 8px;">
+                <div class="container">
+                    <h1>
+                        <font size="4px"><strong><i>&nbsp;&nbsp;CNF011 - TEST DEL COMMENTO DA AGGIUNGERE</i></strong>
+                        </font>
+                    </h1>
+                    <table>
+                        <tr>
+                            <td><label for="input1">Data</label></td>
+                            <td><label for="input2">Esito</label></td>
+                            <td><label for="input3">Note</label></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="input1" style="height:20px;"></td>
+                            <td><input type="text" id="input2" style="height:20px;"></td>
+                            <td><input type="text" id="input3" style="width:300px;height:20px;"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                            &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
 
 
-                </table>
+                            &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
+                            </td>
+                            <td colspan="4" style="padding-top: 10px;">
+                                <table class="table-ext">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3">
+                                                <div class="divinterno">
+                                                    <table class="table-int" id="scorribile">
+                                                        <thead>
+                                                            <tr>
+                                                                <th id="change">Data</th>
+                                                                <th id="change">Esito</th>
+                                                                <th id="change">Note</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                            <td id='stile'>prova</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                        </tr>
+                    </table>
+
+                    </tr>
+
+                    <tr>
+
+                    </tr>
+                    </tbody>
+
+                    </table>
+                </div>
             </div>
             <!--Fine zona gialla in fondo-->
 
 
             <!--INIZIO zona ARANCIONE laterale-->
-            <div class="uk-width-1-5 uk-card uk-card-default" style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;">
+            <div class="uk-width-1-5 uk-card uk-card-default"
+                style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
                 <table>
+                    <tr>
+                        <td><img src=".\image\RiepilogoMensile.png"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select>
+                                <option>cioa</option>
+                                <option>ciaone</option>
+                                <option>cioetto</option>
+                                <option>weila</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="text"></td>
+                    </tr>
 
+                    
+
+                        <td>
+                        <br>
+                    <br><img src=".\image\Chiudi.png"></td>
+                    
                 </table>
             </div>
             <!--FINE Zona ARANCIONE laterale-->

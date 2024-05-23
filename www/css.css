@@ -76,3 +76,7 @@ tr.selected {
   line-height: 10px;
 }
 
+.container {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack elements vertically */
+}
