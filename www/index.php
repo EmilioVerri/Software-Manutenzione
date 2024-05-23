@@ -1,6 +1,9 @@
 <?php
 include ('./classi/ClasseManutenzioni.php');
 include ('./classi/funzioneEstrazione.php');
+include ('./classi/ClasseStorico.php');
+
+
 
 
 
@@ -43,6 +46,8 @@ if (isset($_POST['Modifica'])) {
 }
 
 
+
+
 if (isset($_POST['Elimina'])) {
     if (isset($_POST['checkbox-group'])) {
         $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
@@ -51,6 +56,24 @@ if (isset($_POST['Elimina'])) {
         ?>
         <script>
             alert('Periodo non inserito');
+        </script>
+        <?php
+    }
+}
+
+
+
+if (isset($_POST['okStorico'])) {
+   
+    if (isset($_POST['identificativoPerStorico'])) {
+        
+        $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
+        $storico->aggiungiStorico();
+    } else {
+        
+        ?>
+        <script>
+            alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
         </script>
         <?php
     }
@@ -272,8 +295,7 @@ if (isset($_POST['Elimina'])) {
                                 if ($verifica == "ok") {
                                     ?>
                                     <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" id="submitButton" style="display:none;"
-                                        name="submitButton">
+                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
                                     <?php
                                 } else {
                                     ?>
@@ -348,7 +370,7 @@ if (isset($_POST['Elimina'])) {
 
             <!--INIZIO zona rossa laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
-            style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; overflow: auto; height: 700px;">
+                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; overflow: auto; height: 700px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
@@ -436,17 +458,22 @@ if (isset($_POST['Elimina'])) {
                             <td><label for="input3">Note</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="yourInputFieldId" style="height:20px;"></td>
-                            <td><input type="text" id="input2" style="height:20px;"></td>
-                            <td><input type="text" id="input3" style="width:300px;height:20px;"></td>
+                            <td><input type="text" name="data" id="yourInputFieldId" style="height:20px;"></td>
+                            <td><input type="text" name="esito" id="input2" style="height:20px;"></td>
+                            <td><input type="text" name="note" id="input3" style="width:300px;height:20px;"></td>
+                            <input type="hidden" name="identificativoPerStorico" id="identificativoPerStorico">
                         </tr>
-
                         <tr>
                             <td>
-                            &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
+                                <button type="submit" name="okStorico" value="okStorico"
+                                    style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
+                                </button>
 
-
-                            &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
+                                <button type="submit" name="eliminaStorico"
+                                    style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
+                                </button>
                             </td>
                             <td colspan="4" style="padding-top: 10px;">
                                 <table class="table-ext">
@@ -584,12 +611,13 @@ if (isset($_POST['Elimina'])) {
                         <td><input type="text" id="date"></td>
                     </tr>
 
-                    
 
-                        <td>
+
+                    <td>
                         <br>
-                    <br><img src=".\image\Chiudi.png"></td>
-                    
+                        <br><img src=".\image\Chiudi.png">
+                    </td>
+
                 </table>
             </div>
             <!--FINE Zona ARANCIONE laterale-->
@@ -602,6 +630,5 @@ if (isset($_POST['Elimina'])) {
         <script src="js.js"></script>
     </form>
 </body>
-
 
 </html>

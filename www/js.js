@@ -90,6 +90,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const vinom = arrayValori[1];
         infor.textContent = visig + " - " + vinom;
 
+
+
+        //identificativoPerStorico
+        const ide = document.getElementById('identificativoPerStorico');
+        const viide = arrayValori[7];
+        ide.value = viide;
+
+
+
+
+
+
       }
     });
   } else {
