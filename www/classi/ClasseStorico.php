@@ -22,13 +22,13 @@ class Storico
         $this->manutenzione = $manutenzione;
     }
 
-    
+
     public function aggiungiStorico()
     {
         if (isset($_POST['okStorico'])) {
 
-            $manutConv=(int)$this->manutenzione;
-            $dataConv=(string)$this->data;
+            $manutConv = (int) $this->manutenzione;
+            $dataConv = (string) $this->data;
             $my_conn = new PDO('sqlite:manutentori.db');
 
             $query = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$dataConv}','{$this->esito}','{$this->note}','{$manutConv}')");
@@ -44,13 +44,13 @@ class Storico
             echo "ciao";
             die;
 
-            foreach($secondquery as $row){
-            
+            foreach ($secondquery as $row) {
 
-                $ProxMan=$row['ProxMan'];
-                $GiorniManutenzione=$row['Manutenzione'];
 
-                $value=prossimaManutenzione($ProxMan,$GiorniManutenzione);
+                $ProxMan = $row['ProxMan'];
+                $GiorniManutenzione = $row['Manutenzione'];
+
+                $value = prossimaManutenzione($ProxMan, $GiorniManutenzione);
 
 
 

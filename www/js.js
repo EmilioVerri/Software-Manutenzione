@@ -118,7 +118,7 @@ const checkbox = document.getElementById('myCheckbox');
 const submitButton = document.getElementById('submitButton');
 
 if (submitButton) {
-  checkbox.addEventListener('click', function() {
+  checkbox.addEventListener('click', function () {
     submitButton.click(); // Trigger submit button click
   });
 } else {
@@ -129,12 +129,12 @@ if (submitButton) {
 const cambiami = document.getElementById('cambiami');
 const subitCambiami = document.getElementById('subitCambiami');
 
-if(subitCambiami){
-  cambiami.addEventListener('click', function() {
+if (subitCambiami) {
+  cambiami.addEventListener('click', function () {
     subitCambiami.click(); // Trigger submit button click
   });
-}else{
-  
+} else {
+
 }
 
 

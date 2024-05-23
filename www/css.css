@@ -77,6 +77,8 @@ tr.selected {
 }
 
 .container {
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Stack elements vertically */
+  display: flex;
+  /* Enable flexbox */
+  flex-direction: column;
+  /* Stack elements vertically */
 }

@@ -64,13 +64,13 @@ if (isset($_POST['Elimina'])) {
 
 
 if (isset($_POST['okStorico'])) {
-   
+
     if (isset($_POST['identificativoPerStorico'])) {
-        
+
         $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
         $storico->aggiungiStorico();
     } else {
-        
+
         ?>
         <script>
             alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
@@ -295,7 +295,8 @@ if (isset($_POST['okStorico'])) {
                                 if ($verifica == "ok") {
                                     ?>
                                     <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
+                                    <input type="submit" value="Submit" id="submitButton" style="display:none;"
+                                        name="submitButton">
                                     <?php
                                 } else {
                                     ?>

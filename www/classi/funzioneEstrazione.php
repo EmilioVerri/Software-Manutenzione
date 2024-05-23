@@ -106,10 +106,10 @@ function estraiScadenzaNonScadenza()
             if ($pastDate->format('Y') < $today->format('Y')) {
                 //nel passato
                 $my_conn = new PDO('sqlite:manutentori.db');
-            $query = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=1 WHERE id='{$estrazioni['id']}'");
-            $query->execute();
+                $query = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=1 WHERE id='{$estrazioni['id']}'");
+                $query->execute();
 
-            echo "<tr>
+                echo "<tr>
                 <td id='stile'>{$estrazioni['Sigla']}</td>
                 <td id='stile'>{$estrazioni['Nome']}</td>
                 <td id='stile'>{$estrazioni['Cat']}</td>

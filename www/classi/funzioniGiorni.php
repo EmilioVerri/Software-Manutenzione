@@ -111,7 +111,8 @@ function estraigiorni($giornoInLettere)
 
 
 //da rivedere le date, definire meglio
-function prossimaManutenzione($datoDaAggiornare,$giorniInStringa){
+function prossimaManutenzione($datoDaAggiornare, $giorniInStringa)
+{
     if ($giorniInStringa == "Giornaliero") {
         //Manutenzione Giornaliera
         $today = strtotime($datoDaAggiornare);

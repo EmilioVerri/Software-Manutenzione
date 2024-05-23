@@ -44,7 +44,7 @@ class Manutenzione
             $UltimaMan = date('d/m/Y', $today);
             $prossimaMan = estraigiorni($this->manutenzione);
             $indentificativoIntero = (int) $this->identificativo;
-            $InScadenz=0;
+            $InScadenz = 0;
             $my_conn = new PDO('sqlite:manutentori.db');
             $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo','InScadenza') 
            VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}','{$InScadenz}')");
@@ -61,7 +61,7 @@ class Manutenzione
     {
         if (isset($_POST["Modifica"])) {
             $today = strtotime('today');
-            $modificato=$_POST['proxManutenzione'];
+            $modificato = $_POST['proxManutenzione'];
             $UltimaMan = $_POST['ultimamanutenzione'];
             $prossimaMan = estraigiorni($this->manutenzione);
             $indentificativoIntero = (int) $this->identificativo;
@@ -84,15 +84,15 @@ class Manutenzione
     }
 
 
-    
-public function eliminaManutenzione()
-{
-    if (isset($_POST["Elimina"])) {
-        $my_conn = new PDO('sqlite:manutentori.db');
-        $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo='{$this->identificativo}'");
-        $query->execute();
+
+    public function eliminaManutenzione()
+    {
+        if (isset($_POST["Elimina"])) {
+            $my_conn = new PDO('sqlite:manutentori.db');
+            $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
+        }
     }
-}
 
 
 }
