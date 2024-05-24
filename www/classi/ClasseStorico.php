@@ -39,22 +39,19 @@ class Storico
             //aggiorno i dati della stessa
             $my_conn = new PDO('sqlite:manutentori.db');
 
-            $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE 'identificativo'='{$manutConv}'");
+            $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$manutConv}'");
             $secondquery->execute();
-            echo "ciao";
-            die;
 
             foreach ($secondquery as $row) {
-
 
                 $ProxMan = $row['ProxMan'];
                 $GiorniManutenzione = $row['Manutenzione'];
 
                 $value = prossimaManutenzione($ProxMan, $GiorniManutenzione);
+                echo $value;
+                die;
 
-
-
-                $my_conn = new PDO('sqlite:manutentori.db');
+         $my_conn = new PDO('sqlite:manutentori.db');
                 $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$dataConv}' WHERE identificativo='{$manutConv}'");
                 $query->execute();
                 echo "ok";
@@ -63,9 +60,8 @@ class Storico
                 $query = $my_conn->prepare("UPDATE manutenzioni SET ProxMan='{$value}' WHERE identificativo='{$manutConv}'");
                 $query->execute();
                 echo "ok2";
+
             }
-
-
         }
     }
 
