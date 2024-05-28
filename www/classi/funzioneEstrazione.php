@@ -93,7 +93,7 @@ function estraiScadenzaNonScadenza()
             $query = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=0 WHERE InScadenza=1");
             $query->execute();
         } else {//Capiamo dove si trova rispettivamente la data
-            $stringDate = $estrazioni['UltimaMan'];
+            $stringDate = $estrazioni['ProxMan'];
             $format = "d/m/Y";
 
 
