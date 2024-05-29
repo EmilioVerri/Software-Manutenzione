@@ -25,38 +25,65 @@ document.addEventListener('DOMContentLoaded', function () {
         // Log values of all td within the selected row
         const selectedRowTds = row.querySelectorAll('td');
         console.log('Valori riga selezionata: ', Array.from(selectedRowTds).map(td => td.textContent));
+
         const arrayValori = Array.from(selectedRowTds).map(td => td.textContent);
 
-        //ultimaManutenzione
+
+
+
+
+
+        //Creazione di un sotto array in cui mostra i valori estratti da php dei <td> che si trovano sotto al <tr> con id="storiciLista"
+// Get all 'tr' elements with the ID "storici"
+const storicoRows = document.querySelectorAll('tr[id="storiciLista"]');
+
+// Create an empty array to store all the 'td' arrays
+const storicoValuesArrays = [];
+
+// Iterate through each 'tr' element
+for (const storicoRow of storicoRows) {
+  // Create an array for the 'td' values of the current 'tr'
+  const storicoTds = Array.from(storicoRow.querySelectorAll('td'));
+  const storicoValues = storicoTds.map(td => td.textContent);
+
+  // Add the 'td' values array to the 'storicoValuesArrays'
+  storicoValuesArrays.push(storicoValues);
+}
+
+// Now you have an array called 'storicoValuesArrays' containing separate arrays of 'td' values for each 'tr' with id="storici"
+console.log('Valori "storici" per ogni riga:', storicoValuesArrays);
+
+// You can access individual arrays using their index in 'storicoValuesArrays'
+console.log('Valori "storici" prima riga:', storicoValuesArrays[0]); // Assuming there are multiple rows
+
+
+
+        // Ultima manutenzione
         const inputField = document.getElementById('ultimaManutenzione');
         const valoreInserire = arrayValori[5];
         inputField.value = valoreInserire;
 
-        //Prossima Manutenzione
+        // Prossima Manutenzione
         const pM = document.getElementById('proxManutenzione');
         const vipm = arrayValori[6];
         pM.value = vipm;
 
-
-        //Codice
+        // Codice
         const codice = document.getElementById('codice');
         const vicodice = arrayValori[0];
         codice.value = vicodice;
 
-
-        //Descrizione Attrezzatura
+        // Descrizione Attrezzatura
         const descattrz = document.getElementById('descattrz');
         const videscattrz = arrayValori[1];
         descattrz.value = videscattrz;
 
-        //Reparto
+        // Reparto
         const reparto = document.getElementById('reparto');
         const vireparto = arrayValori[3];
         reparto.value = vireparto;
 
-
-
-        //stessa cosa per il periodo
+        // Periodo (radio buttons)
         const radioButtons = document.getElementsByName('checkbox-group');
         const valoreRadio = arrayValori[4];
         for (const radioButton of radioButtons) {
@@ -65,11 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
 
-        //stessa cosa per la select
-
-
-
-        //stessa cosa però per la select
+        // Select (loop through options)
         const selectMenu = document.getElementById('idMenuSelect');
         const valoreSelezione = arrayValori[2];
         for (const option of selectMenu.options) {
@@ -82,24 +105,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const viidentificativo = arrayValori[7];
         identificativo.value = viidentificativo;
 
-
-
-        //Zona sottostante
+        // Zona sottostante
         const infor = document.getElementById('informazione');
         const visig = arrayValori[0];
         const vinom = arrayValori[1];
         infor.textContent = visig + " - " + vinom;
 
-
-
-        //identificativoPerStorico
+        // identificativoPerStorico
         const ide = document.getElementById('identificativoPerStorico');
         const viide = arrayValori[7];
         ide.value = viide;
-
-
-
-
 
 
       }
@@ -136,9 +151,6 @@ if (subitCambiami) {
 } else {
 
 }
-
-
-
 
 
 

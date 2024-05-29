@@ -85,6 +85,8 @@ if (isset($_POST['okStorico'])) {
 <!DOCTYPE html>
 <html>
 
+<h1></h1>
+
 
 <head>
     <!--Da finire l'implementazione-->
@@ -584,7 +586,6 @@ if (isset($_POST['okStorico'])) {
 
                     </tr>
                     </tbody>
-
                     </table>
                 </div>
             </div>

@@ -15,7 +15,27 @@ function estraiManutenzione()
                 <td id='stile'>{$estrazioni['UltimaMan']}</td>
                 <td id='stile'>{$estrazioni['ProxMan']}</td>
                 <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>
-            </tr>";
+                </tr>";
+                $identificativoEstratto=$estrazioni['identificativo'];
+
+                $queryDue = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$identificativoEstratto}'");
+                
+                $queryDue->execute();
+                
+                $risultato = $queryDue->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach($risultato as $estrazioneDue){
+
+                    echo "
+                    <tr id='storiciLista' style='display:none'>
+                    <td id='storici' >{$estrazioneDue['id']}</td>
+                    <td id='storici' >{$estrazioneDue['data']}</td>
+                    <td id='storici' >{$estrazioneDue['esito']}</td>
+                    <td id='storici' >{$estrazioneDue['note']}</td>
+                    <td id='storici' >{$estrazioneDue['manutenzione']}</td>
+                    </tr>
+                    ";
+                }
     }
 }
 
@@ -76,6 +96,9 @@ function estraiScadenzaNonScadenzaPrecedente()
         }
     }
 }
+
+
+
 
 
 
