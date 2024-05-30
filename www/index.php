@@ -25,6 +25,17 @@ if (isset($_POST['pdf'])) {
                 </script>
                 <?php
             }
+        }elseif(isset($_POST['macchineEffettuateInData'])){
+            if($_POST['dataPerPulsantiMacchine']!=""){
+                $dataInput=$_POST['dataPerPulsantiMacchine'];
+                macchineEffettuateInData($dataInput);
+            }else{
+                ?>
+        <script>
+            alert('Inserisci una data');
+        </script>
+        <?php
+            }
         }
     } else {
         ?>
@@ -454,7 +465,7 @@ if (isset($_POST['okStorico'])) {
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="macchineEffettuateInData"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
@@ -462,13 +473,13 @@ if (isset($_POST['okStorico'])) {
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="macchineInProgrammaPerData"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
                                 </button>
                                 <br>
-                                <input type="text" name="daConfigurare" style="width:80%; height:120%">
+                                <input type="text" name="dataPerPulsantiMacchine" style="width:80%; height:120%">
                             </span>
                             <br>
                         </td>
