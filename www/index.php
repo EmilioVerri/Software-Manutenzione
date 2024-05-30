@@ -2,9 +2,24 @@
 include ('./classi/ClasseManutenzioni.php');
 include ('./classi/funzioneEstrazione.php');
 include ('./classi/ClasseStorico.php');
+include ('./classi/funzioniPDF.php');
 
 
 
+
+//INIZIO GESTIONE BUTTON TUTTE LE MACCHINE
+if(isset($_POST['tutteLeMacchine'])){
+    if(isset($_POST['Password']) && $_POST['Password']=="9999"){
+        tutteLeMacchinePDF();
+    }else{
+        ?>
+        <script>
+            alert('Password sbagliata');
+        </script>
+        <?php
+    }
+}
+//FINE GESTIONE BUTTON TUTTE LE MACCHINE
 
 
 
@@ -381,7 +396,7 @@ if (isset($_POST['okStorico'])) {
                                 <font size="3px">Password</font>
                             </label>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <input type="text" placeholder="Inserisci password">
+                                <input type="password" placeholder="Inserisci password" name="Password">
                                 <img src=".\image\faccina.png" alt="Immagine" class="image"
                                     style="width:25%;margin: 0 auto;">
                             </span>
@@ -395,7 +410,7 @@ if (isset($_POST['okStorico'])) {
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="tutteLeMacchine"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">

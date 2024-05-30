@@ -91,11 +91,28 @@ class Manutenzione
             $my_conn = new PDO('sqlite:manutentori.db');
             $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo='{$this->identificativo}'");
             $query->execute();
+            $my_conn = new PDO('sqlite:manutentori.db');
+            $query = $my_conn->prepare("DELETE FROM storici WHERE identificativo='{$this->identificativo}'");
+            $query->execute();
         }
     }
 
 
+
+
+
+
+
+
+
+
+//chiusura della classe
 }
+
+
+
+
+
 
 
 
