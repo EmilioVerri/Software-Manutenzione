@@ -30,6 +30,7 @@ tr.selected {
 #change {
   border: 1px solid black;
   /* Add table borders */
+  height:5px;
   padding: 5px;
   /* Add cell padding */
 
