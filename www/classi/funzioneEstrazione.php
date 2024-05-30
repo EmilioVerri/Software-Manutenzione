@@ -6,7 +6,7 @@ function estraiManutenzione()
     $query->execute();
     $results = $query->fetchAll(PDO::FETCH_ASSOC);
     foreach ($results as $estrazioni) {
-        echo "<tr>
+        echo "<tr id='storiciLista'>
                 <td id='stile'>{$estrazioni['Sigla']}</td>
                 <td id='stile'>{$estrazioni['Nome']}</td>
                 <td id='stile'>{$estrazioni['Cat']}</td>
@@ -14,8 +14,7 @@ function estraiManutenzione()
                 <td id='stile'>{$estrazioni['Manutenzione']}</td>
                 <td id='stile'>{$estrazioni['UltimaMan']}</td>
                 <td id='stile'>{$estrazioni['ProxMan']}</td>
-                <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>
-                </tr>";
+                <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>";
                 $identificativoEstratto=$estrazioni['identificativo'];
 
                 $queryDue = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$identificativoEstratto}'");
@@ -27,15 +26,16 @@ function estraiManutenzione()
                 foreach($risultato as $estrazioneDue){
 
                     echo "
-                    <tr id='storiciLista' style='display:none'>
-                    <td id='storici' >{$estrazioneDue['id']}</td>
-                    <td id='storici' >{$estrazioneDue['data']}</td>
-                    <td id='storici' >{$estrazioneDue['esito']}</td>
-                    <td id='storici' >{$estrazioneDue['note']}</td>
-                    <td id='storici' >{$estrazioneDue['manutenzione']}</td>
-                    </tr>
+                    <td id='storici' style='display:none'>{$estrazioneDue['id']}</td>
+                    <td id='storici' style='display:none'>{$estrazioneDue['data']}</td>
+                    <td id='storici' style='display:none'>{$estrazioneDue['esito']}</td>
+                    <td id='storici' style='display:none'>{$estrazioneDue['note']}</td>
+                    <td id='storici' style='display:none'>{$estrazioneDue['manutenzione']}</td>
+                    
                     ";
                 }
+
+                echo "</tr>";
     }
 }
 

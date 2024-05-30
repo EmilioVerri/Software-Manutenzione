@@ -1,86 +1,3 @@
-<?php
-include ('./classi/ClasseManutenzioni.php');
-include ('./classi/funzioneEstrazione.php');
-include ('./classi/ClasseStorico.php');
-
-
-
-
-
-
-
-if (isset($_POST['Aggiungi'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $valore = estraiIdentificativo();
-        if ($valore == 0) {
-        } elseif ($valore !== 0) {
-            $info = $valore + 1;
-        } else {
-        }
-
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $info);
-        $manutenzione->aggiungiManutenzione();
-
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['Modifica'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->modificaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-
-if (isset($_POST['Elimina'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->eliminaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['okStorico'])) {
-
-    if (isset($_POST['identificativoPerStorico'])) {
-
-        $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
-        $storico->aggiungiStorico();
-    } else {
-
-        ?>
-        <script>
-            alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
-        </script>
-        <?php
-    }
-}
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -219,19 +136,7 @@ if (isset($_POST['okStorico'])) {
                         <tr>
 
                             <input type="hidden" name="identificativo" id="identificativo" value="
-                            <?php
-                            if (isset($_POST['Aggiungi'])) {
-                                $valore = estraiIdentificativo();
-                                if ($valore == 0) {
-                                } elseif ($valore !== 0) {
-                                    echo $info = $valore + 1;
-
-                                } else {
-                                }
-                            }
-
-                            ?>
-                            ">
+                                                        ">
 
 
 
@@ -283,34 +188,10 @@ if (isset($_POST['okStorico'])) {
 
 
 
-                                <?php
-                                if (isset($_POST['submitButton'])) {
-                                    estraiScadenzaNonScadenzaPrecedente();
-                                }
-
-
-
-
-
-                                //checkbox se ci sono scadenze o meno
-                                $verifica = estraiScadenzaManutenzioniCheckbox();
-                                if ($verifica == "ok") {
-                                    ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
+                                                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" id="submitButton" style="display:none;"
                                         name="submitButton">
-                                    <?php
-                                } else {
-                                    ?>
-                                    <input type="checkbox" id="cambiami" name="cambiami" checked>
-                                    <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
-                                        name="subitCambiami">
-                                    <?php
-                                }
-                                //fine checkbox se ci sono scadenze o meno
-                                ?>
-
+                                    
 
 
 
@@ -342,18 +223,149 @@ if (isset($_POST['okStorico'])) {
                                                             <th id="change">Prox Man.</th>
                                                         </tr>
                                                     </thead>
-                                                    <?php
-                                                    if (isset($_POST['submitButton'])) {
-                                                        estraiScadenzaNonScadenza();
-                                                    } elseif (isset($_POST['subitCambiami'])) {
-                                                        estraiManutenzione();
-                                                    } else {
-                                                        estraiManutenzione();
-                                                    }
-
-
-                                                    ?>
-                                                </table><!--Table-int-->
+                                                    <tr>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>4mesi</td>
+                <td id='stile'>29/05/2024</td>
+                <td id='stile'>14/08/2024</td>
+                <td id='stile' style='display:none;'>10</td>
+                </tr>
+                    <tr id='storiciLista' style='display:none'>
+                    <td id='storici' >62</td>
+                    <td id='storici' >29/05/2024</td>
+                    <td id='storici' >ok</td>
+                    <td id='storici' >ok</td>
+                    <td id='storici' >10</td>
+                    </tr>
+                    
+                    <tr id='storiciLista' style='display:none'>
+                    <td id='storici' >63</td>
+                    <td id='storici' >29/05/2024</td>
+                    <td id='storici' >ok</td>
+                    <td id='storici' >ok</td>
+                    <td id='storici' >10</td>
+                    </tr>
+                    <tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Giornaliero</td>
+                <td id='stile'>27/05/2024</td>
+                <td id='stile'>26/05/2024</td>
+                <td id='stile' style='display:none;'>11</td>
+                </tr><tr>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>27/05/2024</td>
+                <td id='stile'>20/11/2025</td>
+                <td id='stile' style='display:none;'>12</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>20/11/2024</td>
+                <td id='stile' style='display:none;'>13</td>
+                </tr><tr>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>20/02/2025</td>
+                <td id='stile' style='display:none;'>16</td>
+                </tr><tr>
+                <td id='stile'>DODO</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>nega</td>
+                <td id='stile'>Settennale</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>19/05/2031</td>
+                <td id='stile' style='display:none;'>17</td>
+                </tr><tr>
+                <td id='stile'>DODO</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>nega</td>
+                <td id='stile'>Settennale</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>19/05/2031</td>
+                <td id='stile' style='display:none;'>18</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>19</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>20</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>21</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>22</td>
+                </tr><tr>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>24/05/2024</td>
+                <td id='stile'>22/02/2025</td>
+                <td id='stile' style='display:none;'>23</td>
+                </tr><tr>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>24</td>
+                </tr><tr>
+                <td id='stile'>DODO</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>nega</td>
+                <td id='stile'>Settennale</td>
+                <td id='stile'>23/05/2024</td>
+                <td id='stile'>22/05/2031</td>
+                <td id='stile' style='display:none;'>25</td>
+                </tr>                                                </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
                                     </tr>
@@ -484,7 +496,7 @@ if (isset($_POST['okStorico'])) {
                                         <tr>
                                             <td colspan="3">
                                                 <div class="divinterno">
-                                                    <table  id="scorribile" class="daPopolare table-int">
+                                                    <table id="scorribile" class="daPopolare">
                                                         <thead>
                                                             <tr>
                                                                 <th id="change">Data</th>
@@ -492,9 +504,7 @@ if (isset($_POST['okStorico'])) {
                                                                 <th id="change">Note</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
-
-                                                        </tbody>
+                                                       
                                                     </table>
                                                 </div>
                                             </td>
