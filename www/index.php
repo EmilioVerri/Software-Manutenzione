@@ -7,11 +7,26 @@ include ('./classi/funzioniPDF.php');
 
 
 
-//INIZIO GESTIONE BUTTON TUTTE LE MACCHINE
-if(isset($_POST['tutteLeMacchine'])){
-    if(isset($_POST['Password']) && $_POST['Password']=="9999"){
-        tutteLeMacchinePDF();
-    }else{
+//INIZIO GESTIONE BUTTON PDF
+
+if (isset($_POST['pdf'])) {
+    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+        if (isset($_POST['tutteLeMacchine'])) {
+            tutteLeMacchinePDF();
+        } elseif (isset($_POST['storicoMacchina'])) {
+            if ($_POST['codice'] != "") {
+                $identificativo=$_POST['identificativoPerStorico'];
+                $codice=$_POST['codice'];
+                storicoMacchinaPDF($identificativo,$codice);
+            } else {
+                ?>
+                <script>
+                    alert('Seleziona una macchina');
+                </script>
+                <?php
+            }
+        }
+    } else {
         ?>
         <script>
             alert('Password sbagliata');
@@ -19,6 +34,7 @@ if(isset($_POST['tutteLeMacchine'])){
         <?php
     }
 }
+
 //FINE GESTIONE BUTTON TUTTE LE MACCHINE
 
 
@@ -122,6 +138,9 @@ if (isset($_POST['okStorico'])) {
 
 <body>
     <form method="post" id="myForm" name="ricerca">
+        <!--Utilizzato per l'esecuzione dei pdf, per il primo onload-->
+        <input type="text" value="pdf" name="pdf" style="display:none;">
+        <!--QUA FINIESCE-->
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
@@ -419,7 +438,7 @@ if (isset($_POST['okStorico'])) {
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="storicoMacchina"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image"
                                         style="margin: 0;width:80%">
