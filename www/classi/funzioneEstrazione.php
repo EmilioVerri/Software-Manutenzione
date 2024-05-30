@@ -15,17 +15,17 @@ function estraiManutenzione()
                 <td id='stile'>{$estrazioni['UltimaMan']}</td>
                 <td id='stile'>{$estrazioni['ProxMan']}</td>
                 <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>";
-                $identificativoEstratto=$estrazioni['identificativo'];
+        $identificativoEstratto = $estrazioni['identificativo'];
 
-                $queryDue = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$identificativoEstratto}'");
-                
-                $queryDue->execute();
-                
-                $risultato = $queryDue->fetchAll(PDO::FETCH_ASSOC);
+        $queryDue = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$identificativoEstratto}'");
 
-                foreach($risultato as $estrazioneDue){
+        $queryDue->execute();
 
-                    echo "
+        $risultato = $queryDue->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($risultato as $estrazioneDue) {
+
+            echo "
                     <td id='storici' style='display:none'>{$estrazioneDue['id']}</td>
                     <td id='storici' style='display:none'>{$estrazioneDue['data']}</td>
                     <td id='storici' style='display:none'>{$estrazioneDue['esito']}</td>
@@ -33,9 +33,9 @@ function estraiManutenzione()
                     <td id='storici' style='display:none'>{$estrazioneDue['manutenzione']}</td>
                     
                     ";
-                }
+        }
 
-                echo "</tr>";
+        echo "</tr>";
     }
 }
 

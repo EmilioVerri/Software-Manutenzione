@@ -33,78 +33,78 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         //Creazione di un sotto array in cui mostra i valori estratti da php dei <td> che si trovano sotto al <tr> con id="storiciLista"
-          //inizio AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 
-         // Get all 'tr' elements with the ID "storiciLista"
-const storicoRows = document.querySelectorAll('tr[id="storiciLista"]');
+        //inizio AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA 
+        // Get all 'tr' elements with the ID "storiciLista"
+        const storicoRows = document.querySelectorAll('tr[id="storiciLista"]');
 
-// Create an empty array to store all the 'td' value arrays
-const storicoValuesArrays = [];
+        // Create an empty array to store all the 'td' value arrays
+        const storicoValuesArrays = [];
 
-// Iterate through each 'tr' element
-for (const storicoRow of storicoRows) {
-  // Create an array for the 'td' values with ID "storici" of the current 'tr'
-  const storicoTds = Array.from(storicoRow.querySelectorAll('td[id="storici"]'));  // Target td with ID "storici"
-  
-  // Extract text content from each 'td' and create a new array
-  const storicoValues = storicoTds.map(td => td.textContent);  
-  
-  // Add the 'td' value array to the 'storicoValuesArrays'
-  storicoValuesArrays.push(storicoValues);
-}
+        // Iterate through each 'tr' element
+        for (const storicoRow of storicoRows) {
+          // Create an array for the 'td' values with ID "storici" of the current 'tr'
+          const storicoTds = Array.from(storicoRow.querySelectorAll('td[id="storici"]'));  // Target td with ID "storici"
 
-// Assuming you have the 'arrayValori' containing all elements
+          // Extract text content from each 'td' and create a new array
+          const storicoValues = storicoTds.map(td => td.textContent);
 
+          // Add the 'td' value array to the 'storicoValuesArrays'
+          storicoValuesArrays.push(storicoValues);
+        }
 
+        // Assuming you have the 'arrayValori' containing all elements
 
 
 
-const tableDaPopolare = document.querySelector('.daPopolare');
-tableDaPopolare.innerHTML = '';
-if (arrayValori.length > 8 && tableDaPopolare.children.length === 0) {
-
-// Ignore the first 8 elements
-const remainingData = arrayValori.slice(8);
-
-// Create subarrays of 5 elements each
-const subarrays = [];
-for (let i = 0; i < remainingData.length; i += 5) {
-  subarrays.push(remainingData.slice(i, i + 5));
-}
-
-// Get the table element with class "daPopolare"
-const tableDaPopolare = document.querySelector('.daPopolare');
-
-// Function to create and append a 'tr' with 'td' elements
-function createTableRow(subarray) {
-  // Skip the first and last element
-  const valuesToInsert = subarray.slice(1, -1);
-
-  // Create a new 'tr' element
-  const newRow = document.createElement('tr');
-
-  // Create and append 'td' elements for each value
-  for (const value of valuesToInsert) {
-    const newTd = document.createElement('td');
-    newTd.textContent = value;
-    newRow.appendChild(newTd);
-  }
-
-  // Append the new 'tr' to the 'tableDaPopolare'
-  tableDaPopolare.appendChild(newRow);
-}
-
-// Populate the table with rows from subarrays
-for (const subarray of subarrays) {
-  createTableRow(subarray);
-}
 
 
-}
-else{
-    tableDaPopolare.innerHTML = '';
-}
+        const tableDaPopolare = document.querySelector('.daPopolare');
+        tableDaPopolare.innerHTML = '';
+        if (arrayValori.length > 8 && tableDaPopolare.children.length === 0) {
 
-// FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+          // Ignore the first 8 elements
+          const remainingData = arrayValori.slice(8);
+
+          // Create subarrays of 5 elements each
+          const subarrays = [];
+          for (let i = 0; i < remainingData.length; i += 5) {
+            subarrays.push(remainingData.slice(i, i + 5));
+          }
+
+          // Get the table element with class "daPopolare"
+          const tableDaPopolare = document.querySelector('.daPopolare');
+
+          // Function to create and append a 'tr' with 'td' elements
+          function createTableRow(subarray) {
+            // Skip the first and last element
+            const valuesToInsert = subarray.slice(1, -1);
+
+            // Create a new 'tr' element
+            const newRow = document.createElement('tr');
+
+            // Create and append 'td' elements for each value
+            for (const value of valuesToInsert) {
+              const newTd = document.createElement('td');
+              newTd.textContent = value;
+              newRow.appendChild(newTd);
+            }
+
+            // Append the new 'tr' to the 'tableDaPopolare'
+            tableDaPopolare.appendChild(newRow);
+          }
+
+          // Populate the table with rows from subarrays
+          for (const subarray of subarrays) {
+            createTableRow(subarray);
+          }
+
+
+        }
+        else {
+          tableDaPopolare.innerHTML = '';
+        }
+
+        // FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
 
 

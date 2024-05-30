@@ -484,7 +484,7 @@ if (isset($_POST['okStorico'])) {
                                         <tr>
                                             <td colspan="3">
                                                 <div class="divinterno">
-                                                <table  id="scorribile" class="table-int">
+                                                    <table id="scorribile" class="table-int">
                                                         <thead>
                                                             <tr>
                                                                 <th id="change">Data</th>
@@ -494,8 +494,8 @@ if (isset($_POST['okStorico'])) {
                                                         </thead>
 
                                                     </table>
-                                                    <table  id="scorribile" class="daPopolare table-int">
-                                                        
+                                                    <table id="scorribile" class="daPopolare table-int">
+
 
                                                     </table>
                                                 </div>

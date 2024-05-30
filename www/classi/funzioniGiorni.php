@@ -114,62 +114,62 @@ function estraigiorni($giornoInLettere)
 function prossimaManutenzione($datoDaAggiornare, $giorniInStringa)
 {
     if ($giorniInStringa == "Giornaliero") {
-          //Manutenzione Giornaliera
-          date_default_timezone_set('Europe/Rome');
+        //Manutenzione Giornaliera
+        date_default_timezone_set('Europe/Rome');
 
 
-          $initialDate = $datoDaAggiornare;
-          $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
-  
-          // Check if DateTime object creation was successful
-          if ($dateTime) {
-              // Add four months to the DateTime object
-              $dateTime->modify('+1 day');
-  
-              // Format the resulting date in the desired format
-              $formatted = $dateTime->format('d/m/Y');
-          }
-  
-          return $formatted;
-          //Fine Manutenzione Giornaliera
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+1 day');
+
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
+
+        return $formatted;
+        //Fine Manutenzione Giornaliera
     } elseif ($giorniInStringa == "Settimanale") {
-      //Manutenzione Settimanale
-      date_default_timezone_set('Europe/Rome');
+        //Manutenzione Settimanale
+        date_default_timezone_set('Europe/Rome');
 
 
-      $initialDate = $datoDaAggiornare;
-      $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
 
-      // Check if DateTime object creation was successful
-      if ($dateTime) {
-          // Add four months to the DateTime object
-          $dateTime->modify('+7 day');
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+7 day');
 
-          // Format the resulting date in the desired format
-          $formatted = $dateTime->format('d/m/Y');
-      }
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
 
-      return $formatted;
-      //Fine Manutenzione Settimanale
+        return $formatted;
+        //Fine Manutenzione Settimanale
     } elseif ($giorniInStringa == "Quindicinale") {
-//Manutenzione Quindicinale
-date_default_timezone_set('Europe/Rome');
+        //Manutenzione Quindicinale
+        date_default_timezone_set('Europe/Rome');
 
 
-$initialDate = $datoDaAggiornare;
-$dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
 
-// Check if DateTime object creation was successful
-if ($dateTime) {
-    // Add four months to the DateTime object
-    $dateTime->modify('+15 day');
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+15 day');
 
-    // Format the resulting date in the desired format
-    $formatted = $dateTime->format('d/m/Y');
-}
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
 
-return $formatted;
-//Fine Manutenzione Quindicinale
+        return $formatted;
+        //Fine Manutenzione Quindicinale
     } elseif ($giorniInStringa == "4settimane") {
         //Manutenzione 28 Giorni
         date_default_timezone_set('Europe/Rome');
@@ -189,41 +189,25 @@ return $formatted;
 
         return $formatted;
         //Fine Manutenzione 28 Giorni
-    } 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    elseif ($giorniInStringa == "Mensile") {
- //Manutenzione 1mese
- date_default_timezone_set('Europe/Rome');
+    } elseif ($giorniInStringa == "Mensile") {
+        //Manutenzione 1mese
+        date_default_timezone_set('Europe/Rome');
 
 
- $initialDate = $datoDaAggiornare;
- $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
 
- // Check if DateTime object creation was successful
- if ($dateTime) {
-     // Add four months to the DateTime object
-     $dateTime->modify('+1 month');
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+1 month');
 
-     // Format the resulting date in the desired format
-     $formatted = $dateTime->format('d/m/Y');
- }
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
 
- return $formatted;
- //Fine Manutenzione 1mese
+        return $formatted;
+        //Fine Manutenzione 1mese
     } elseif ($giorniInStringa == "Bimestrale") {
         //Manutenzione 2mese
         date_default_timezone_set('Europe/Rome');
@@ -244,24 +228,24 @@ return $formatted;
         return $formatted;
         //Fine Manutenzione 2mese
     } elseif ($giorniInStringa == "Trimestrale") {
-       //Manutenzione 3mese
-       date_default_timezone_set('Europe/Rome');
+        //Manutenzione 3mese
+        date_default_timezone_set('Europe/Rome');
 
 
-       $initialDate = $datoDaAggiornare;
-       $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
 
-       // Check if DateTime object creation was successful
-       if ($dateTime) {
-           // Add four months to the DateTime object
-           $dateTime->modify('+3 month');
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+3 month');
 
-           // Format the resulting date in the desired format
-           $formatted = $dateTime->format('d/m/Y');
-       }
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
 
-       return $formatted;
-       //Fine Manutenzione 3mese
+        return $formatted;
+        //Fine Manutenzione 3mese
     } elseif ($giorniInStringa == "Semestrale") {
         //Manutenzione 6mese
         date_default_timezone_set('Europe/Rome');
@@ -319,42 +303,25 @@ return $formatted;
 
         return $formatted;
         //Fine Manutenzione 4mese
-    } 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    elseif ($giorniInStringa == "Annuale") {
-         //Manutenzione Annuale
-         date_default_timezone_set('Europe/Rome');
+    } elseif ($giorniInStringa == "Annuale") {
+        //Manutenzione Annuale
+        date_default_timezone_set('Europe/Rome');
 
 
-         $initialDate = $datoDaAggiornare;
-         $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
- 
-         // Check if DateTime object creation was successful
-         if ($dateTime) {
-             // Add four months to the DateTime object
-             $dateTime->modify('+1 year');
- 
-             // Format the resulting date in the desired format
-             $formatted = $dateTime->format('d/m/Y');
-         }
- 
-         return $formatted;
-         //Fine Manutenzione Annuale
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+1 year');
+
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
+
+        return $formatted;
+        //Fine Manutenzione Annuale
     } elseif ($giorniInStringa == "Quinquennale") {
         //Manutenzione 5 Anni
         date_default_timezone_set('Europe/Rome');
@@ -375,43 +342,43 @@ return $formatted;
         return $formatted;
         //Fine Manutenzione 5 Anni
     } elseif ($giorniInStringa == "Settennale") {
-               //Manutenzione 7 Anni
-               date_default_timezone_set('Europe/Rome');
+        //Manutenzione 7 Anni
+        date_default_timezone_set('Europe/Rome');
 
 
-               $initialDate = $datoDaAggiornare;
-               $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
-       
-               // Check if DateTime object creation was successful
-               if ($dateTime) {
-                   // Add four months to the DateTime object
-                   $dateTime->modify('+7 year');
-       
-                   // Format the resulting date in the desired format
-                   $formatted = $dateTime->format('d/m/Y');
-               }
-       
-               return $formatted;
-               //Fine Manutenzione 7 Anni
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+7 year');
+
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
+
+        return $formatted;
+        //Fine Manutenzione 7 Anni
     } elseif ($giorniInStringa == "Decennale") {
-              //Manutenzione 10 Anni
-              date_default_timezone_set('Europe/Rome');
+        //Manutenzione 10 Anni
+        date_default_timezone_set('Europe/Rome');
 
 
-              $initialDate = $datoDaAggiornare;
-              $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
-      
-              // Check if DateTime object creation was successful
-              if ($dateTime) {
-                  // Add four months to the DateTime object
-                  $dateTime->modify('+10 year');
-      
-                  // Format the resulting date in the desired format
-                  $formatted = $dateTime->format('d/m/Y');
-              }
-      
-              return $formatted;
-              //Fine Manutenzione 10 Anni
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+10 year');
+
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
+
+        return $formatted;
+        //Fine Manutenzione 10 Anni
     } else {
         echo "errore";
     }
