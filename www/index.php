@@ -36,6 +36,17 @@ if (isset($_POST['pdf'])) {
         </script>
         <?php
             }
+        }elseif(isset($_POST['macchineInProgrammaPerData'])){
+            if($_POST['dataPerPulsantiMacchine']!=""){
+                $dataInputProg=$_POST['dataPerPulsantiMacchine'];
+                macchineInProgrammaPerData($dataInputProg);
+            }else{
+                ?>
+        <script>
+            alert('Inserisci una data');
+        </script>
+        <?php
+            }
         }
     } else {
         ?>
