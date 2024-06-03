@@ -214,15 +214,16 @@ $pdf->SetAuthor('Emilio Verri'); // Set PDF author
 $pdf->AddPage(); // Add a new page to the PDF
 
 // Define table headers and data (replace with your actual data)
-$headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione','Data Manutenzione');
+$headers = array('Data', 'Sigla', 'Nome');
 
 
 
 
 
 $my_conn = new PDO('sqlite:manutentori.db');
-$secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
+$secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
 $secondquery->execute();
+
 
 
 
@@ -232,24 +233,34 @@ $data = array(
 foreach($secondquery as $row){
 
   $my_conn = new PDO('sqlite:manutentori.db');
-  $insidequery = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$row['identificativo']}'");
-  $insidequery->execute();
-  $info=array($row['Sigla'], $row['Nome'], $row['Cat'], $row['Reparto'], $row['Manutenzione']);
-  foreach($insidequery as $select){
-    if($dataInput==$select['data']){
-      $add=$select['data'];
-      print_r($add);
-      array_push($info,$add);
-    }else{
-    }
+  if($dataInput==$row['data']){
+    $insidequery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$row['manutenzione']}'");
+    $insidequery->execute();
+    $info=array($row['data']);
 
-    array_push($data,$info);
-    print_r($add);
+    //print_r($info);
+
+    $identificativo=$row['manutenzione'];
+//$info=array($row['Sigla'], $row['Nome'], $row['Cat'], $row['Reparto'], $row['Manutenzione']);
+    foreach($insidequery as $select){
+      if($identificativo==$select['identificativo']){
+        $Sigla=$select['Sigla'];
+        array_push($info,$Sigla);
+        $Nome=$select['Nome'];
+        array_push($info,$Nome);
+      }
+        //$add=$select['data'];
+        //print_r($add);
+        //array_push($info,$add);
+  
+      array_push($data,$info);
+      //print_r($add);
+    }
   }
-  die;
+
 
 }
-die;
+
 
 
 
@@ -276,10 +287,7 @@ $pdf->SetFont('Arial', '', 7); // Set regular Arial font size 7
 foreach ($data as $row) {
     $pdf->Cell($cellWidth, 7, $row[0], 1, 0); // Code
     $pdf->Cell($cellWidth, 7, $row[1], 1, 0); // Description (wrapping enabled)
-    $pdf->Cell($cellWidth, 7, $row[2], 1, 0); // Brand
-    $pdf->Cell($cellWidth, 7, $row[3], 1, 0); // Model
-    $pdf->Cell($cellWidth, 7, $row[4], 1, 0); // Year
-    $pdf->Cell($cellWidth, 7, $row[5], 1, 1, 'L'); // Notes (wrapping enabled)
+    $pdf->Cell($cellWidth, 7, $row[2], 1, 1, 'L'); // Notes (wrapping enabled)
 
     // Check if next row would overflow and add a new page if needed
     $currentY = $pdf->GetY();
