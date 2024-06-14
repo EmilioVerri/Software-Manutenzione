@@ -4,15 +4,16 @@ include ('./pdf/fpdf.php');
 
 
 ///////////////////////////////////////////////// INIZIO RIEPILOGO MENSILE //////////////////////////////////////////////
-function riepilogoMensile($periodoDaEstrarre){
+function riepilogoMensile($periodoDaEstrarre)
+{
 
   $pdf = new FPDF(); // Create a new FPDF instance
   $pdf->SetMargins(40, 30); // Set left, top margins (in mm)
-  $pdf->SetTitle('Tutte le Macchine'); // Set PDF title
+  $pdf->SetTitle('Riepilogo Mensile delle Manutenzioni'); // Set PDF title
   $pdf->SetAuthor('Emilio Verri'); // Set PDF author
   $pdf->AddPage(); // Add a new page to the PDF
   $pdf->SetFont('Arial', 'B', 14); // Set bold Arial font size 16
-  $pdf->Cell(0, 7, 'ELENCO ATTREZZATURE E IMPIANTI ', 1, 1, 'C'); // Add title cell
+  $pdf->Cell(0, 7, 'RIEPILOGO MENSILE ', 1, 1, 'C'); // Add title cell
   $pdf->SetFont('Arial', '', 12); // Set regular Arial font size 12
 
   $pdf = new FPDF(); // Create a new FPDF instance
@@ -29,7 +30,8 @@ function riepilogoMensile($periodoDaEstrarre){
   $headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione', 'Data');
 
 
-  function stessoMese($data, $meseInput) {
+  function stessoMese($data, $meseInput)
+  {
     $dateParts = explode("/", $data);
     // Extract the month from the array (second element)
     $mese = $dateParts[1];
@@ -53,39 +55,28 @@ function riepilogoMensile($periodoDaEstrarre){
 
   foreach ($secondquery as $row) {
 
-  $dataMese=$row['data'];
-  
-  $meseInput=$periodoDaEstrarre;
-  $stessoMese=stessoMese($dataMese,$meseInput);
-  if($stessoMese=="ok"){
+    $dataMese = $row['data'];
+
+    $meseInput = $periodoDaEstrarre;
+    $stessoMese = stessoMese($dataMese, $meseInput);
+    if ($stessoMese == "ok") {
 
 
-    $identificativo=$row['manutenzione'];
-    $my_conn = new PDO('sqlite:manutentori.db');
-    $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
-    $firstquery->execute();
-    foreach($firstquery as $raw){
-      $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese); 
-      array_push($data, $info);
+      $identificativo = $row['manutenzione'];
+      $my_conn = new PDO('sqlite:manutentori.db');
+      $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
+      $firstquery->execute();
+      foreach ($firstquery as $raw) {
+        $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese);
+        array_push($data, $info);
+      }
+
+
+    } else {
+
     }
 
-  
-  }else{
-
   }
-   
-  }
-
-
-
-
-
-
-
-
-
-
-
 
   // Set font and cell width for headers
   $pdf->SetFont('Arial', 'B', 12); // Set bold Arial font size 12
@@ -94,7 +85,7 @@ function riepilogoMensile($periodoDaEstrarre){
 
 
 
-  $pdf->Cell(0, 7, 'ELENCO ATTREZZATURE E IMPIANTI ', 1, 1, 'C'); // Add title cell
+  $pdf->Cell(0, 7, 'RIEPILOGO MENSILE ', 1, 1, 'C'); // Add title cell
 // Create table headers
   foreach ($headers as $header) {
     $pdf->Cell($cellWidth, 7, $header, 1, 0, 'C'); // Header cell with border, no line break, centered
@@ -121,11 +112,11 @@ function riepilogoMensile($periodoDaEstrarre){
     }
   }
 
-  $pdf->SetTitle('Tutte le Macchine'); // Set PDF title
+  $pdf->SetTitle('Riepilogo Mensile delle Manutenzioni'); // Set PDF title
 
 
-  $pdf->Output('tutteLeMacchine.pdf', 'F'); // Generate and save the PDF as 'my_pdf.pdf'
-  echo '<script>window.open("tutteLeMacchine.pdf", "_blank");</script>';
+  $pdf->Output('riepilogoMensile.pdf', 'F'); // Generate and save the PDF as 'my_pdf.pdf'
+  echo '<script>window.open("riepilogoMensile.pdf", "_blank");</script>';
 }
 
 /////////////////////////////////////////////// FINE RIEPILOGO MENSILE //////////////////////////////////////////////////
