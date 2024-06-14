@@ -8,12 +8,21 @@ include ('./classi/funzioniPDF.php');
 
 
 //INIZIO GESTIONE BUTTON PDF
-
-if (isset($_POST['pdf'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    
         if (isset($_POST['tutteLeMacchine'])) {
-            tutteLeMacchinePDF();
+            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+                tutteLeMacchinePDF();
+            } else {
+                ?>
+                <script>
+                    alert('Password sbagliata');
+                </script>
+                <?php
+            }
+            
         } elseif (isset($_POST['storicoMacchina'])) {
+            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+            
             if ($_POST['codice'] != "") {
                 $identificativo=$_POST['identificativoPerStorico'];
                 $codice=$_POST['codice'];
@@ -25,7 +34,16 @@ if (isset($_POST['pdf'])) {
                 </script>
                 <?php
             }
+        }else{
+            ?>
+            <script>
+                alert('Password sbagliata');
+            </script>
+            <?php
+        }
         }elseif(isset($_POST['macchineEffettuateInData'])){
+            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+            
             if($_POST['dataPerPulsantiMacchine']!=""){
                 $dataInput=$_POST['dataPerPulsantiMacchine'];
                 macchineEffettuateInData($dataInput);
@@ -36,7 +54,15 @@ if (isset($_POST['pdf'])) {
         </script>
         <?php
             }
+        }else{
+            ?>
+            <script>
+                alert('Password sbagliata');
+            </script>
+            <?php
+        }
         }elseif(isset($_POST['macchineInProgrammaPerData'])){
+            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
             if($_POST['dataPerPulsantiMacchine']!=""){
                 $dataInputProg=$_POST['dataPerPulsantiMacchine'];
                 macchineInProgrammaPerData($dataInputProg);
@@ -47,15 +73,16 @@ if (isset($_POST['pdf'])) {
         </script>
         <?php
             }
+        }else{
+            ?>
+            <script>
+                alert('Password sbagliata');
+            </script>
+            <?php 
         }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-}
+        }
+    
+
 
 //FINE GESTIONE BUTTON TUTTE LE MACCHINE
 
@@ -160,9 +187,6 @@ if (isset($_POST['okStorico'])) {
 
 <body>
     <form method="post" id="myForm" name="ricerca">
-        <!--Utilizzato per l'esecuzione dei pdf, per il primo onload-->
-        <input type="text" value="pdf" name="pdf" style="display:none;">
-        <!--QUA FINIESCE-->
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
@@ -540,18 +564,18 @@ if (isset($_POST['okStorico'])) {
                                         <tr>
                                             <td colspan="3">
                                                 <div class="divinterno">
-                                                    <table id="scorribile" class="table-int">
-                                                        <thead>
+
+                                                    <table id="scorribile" class="daPopolare table-int">
+                                                    <thead>
                                                             <tr>
-                                                                <th id="change">Data</th>
-                                                                <th id="change">Esito</th>
-                                                                <th id="change">Note</th>
+                                                                <th id="change" style="width:50%;">Data</th>
+                                                                <th id="change" style="width:50%;">Esito</th>
+                                                                <th id="change" style="width:50%;">Note</th>
                                                             </tr>
                                                         </thead>
+                                                        <tbody class="cancella">
 
-                                                    </table>
-                                                    <table id="scorribile" class="daPopolare table-int">
-
+                                                        </tbody>
 
                                                     </table>
                                                 </div>
