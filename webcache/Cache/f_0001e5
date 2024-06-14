@@ -1,186 +1,4 @@
-<?php
-include ('./classi/ClasseManutenzioni.php');
-include ('./classi/funzioneEstrazione.php');
-include ('./classi/ClasseStorico.php');
-include ('./classi/funzioniPDF.php');
-
-
-
-
-//INIZIO GESTIONE BUTTON PDF
-
-if (isset($_POST['tutteLeMacchine'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        tutteLeMacchinePDF();
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-
-} elseif (isset($_POST['storicoMacchina'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-
-        if ($_POST['codice'] != "") {
-            $identificativo = $_POST['identificativoPerStorico'];
-            $codice = $_POST['codice'];
-            storicoMacchinaPDF($identificativo, $codice);
-        } else {
-            ?>
-            <script>
-                alert('Seleziona una macchina');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-} elseif (isset($_POST['macchineEffettuateInData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-
-        if ($_POST['dataPerPulsantiMacchine'] != "") {
-            $dataInput = $_POST['dataPerPulsantiMacchine'];
-            macchineEffettuateInData($dataInput);
-        } else {
-            ?>
-            <script>
-                alert('Inserisci una data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-} elseif (isset($_POST['macchineInProgrammaPerData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        if ($_POST['dataPerPulsantiMacchine'] != "") {
-            $dataInputProg = $_POST['dataPerPulsantiMacchine'];
-            macchineInProgrammaPerData($dataInputProg);
-        } else {
-            ?>
-            <script>
-                alert('Inserisci una data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-    <?php
-    }
-}elseif (isset($_POST['riepilogoMensile'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        if ($_POST['periodo'] != "") {
-            $periodoDaEstrarre=$_POST['periodo'];
-            riepilogoMensile($periodoDaEstrarre);
-        } else {
-            ?>
-            <script>
-                alert('Problema pulsante data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-    <?php
-    }
-}
-
-
-
-//FINE GESTIONE BUTTON TUTTE LE MACCHINE
-
-
-
-
-if (isset($_POST['Aggiungi'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $valore = estraiIdentificativo();
-        if ($valore == 0) {
-        } elseif ($valore !== 0) {
-            $info = $valore + 1;
-        } else {
-        }
-
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $info);
-        $manutenzione->aggiungiManutenzione();
-
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['Modifica'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->modificaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-
-if (isset($_POST['Elimina'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->eliminaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['okStorico'])) {
-
-    if (isset($_POST['identificativoPerStorico'])) {
-
-        $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
-        $storico->aggiungiStorico();
-    } else {
-
-        ?>
-        <script>
-            alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
-        </script>
-        <?php
-    }
-}
-
-
-?>
-
+<script>window.open("tutteLeMacchine.pdf", "_blank");</script>
 <!DOCTYPE html>
 <html>
 
@@ -318,19 +136,7 @@ if (isset($_POST['okStorico'])) {
                         <tr>
 
                             <input type="hidden" name="identificativo" id="identificativo" value="
-                            <?php
-                            if (isset($_POST['Aggiungi'])) {
-                                $valore = estraiIdentificativo();
-                                if ($valore == 0) {
-                                } elseif ($valore !== 0) {
-                                    echo $info = $valore + 1;
-
-                                } else {
-                                }
-                            }
-
-                            ?>
-                            ">
+                                                        ">
 
 
 
@@ -382,34 +188,10 @@ if (isset($_POST['okStorico'])) {
 
 
 
-                                <?php
-                                if (isset($_POST['submitButton'])) {
-                                    estraiScadenzaNonScadenzaPrecedente();
-                                }
-
-
-
-
-
-                                //checkbox se ci sono scadenze o meno
-                                $verifica = estraiScadenzaManutenzioniCheckbox();
-                                if ($verifica == "ok") {
-                                    ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
+                                                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" id="submitButton" style="display:none;"
                                         name="submitButton">
-                                    <?php
-                                } else {
-                                    ?>
-                                    <input type="checkbox" id="cambiami" name="cambiami" checked>
-                                    <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
-                                        name="subitCambiami">
-                                    <?php
-                                }
-                                //fine checkbox se ci sono scadenze o meno
-                                ?>
-
+                                    
 
 
 
@@ -441,18 +223,164 @@ if (isset($_POST['okStorico'])) {
                                                             <th id="change">Prox Man.</th>
                                                         </tr>
                                                     </thead>
-                                                    <?php
-                                                    if (isset($_POST['submitButton'])) {
-                                                        estraiScadenzaNonScadenza();
-                                                    } elseif (isset($_POST['subitCambiami'])) {
-                                                        estraiManutenzione();
-                                                    } else {
-                                                        estraiManutenzione();
-                                                    }
-
-
-                                                    ?>
-                                                </table><!--Table-int-->
+                                                    <tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>31/05/2024</td>
+                <td id='stile'>14/03/2025</td>
+                <td id='stile' style='display:none;'>10</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>31/05/2024</td>
+                <td id='stile'>20/11/2025</td>
+                <td id='stile' style='display:none;'>13</td>
+                    <td id='storici' style='display:none'>73</td>
+                    <td id='storici' style='display:none'>30/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>75</td>
+                    <td id='storici' style='display:none'>31/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>14/06/2024</td>
+                <td id='stile'>20/11/2025</td>
+                <td id='stile' style='display:none;'>16</td>
+                    <td id='storici' style='display:none'>76</td>
+                    <td id='storici' style='display:none'>14/06/2024</td>
+                    <td id='storici' style='display:none'>OK</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>16</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>DODO</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>nega</td>
+                <td id='stile'>Settennale</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>19/05/2031</td>
+                <td id='stile' style='display:none;'>17</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>19</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>24/05/2024</td>
+                <td id='stile'>22/02/2025</td>
+                <td id='stile' style='display:none;'>23</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>24</td></tr><tr id='storiciLista'>
+                <td id='stile'>prova1</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>SoloPianoManutenzione</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>4mesi</td>
+                <td id='stile'>14/04/2024</td>
+                <td id='stile'>29/05/2024</td>
+                <td id='stile' style='display:none;'>25</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>30/05/2024</td>
+                <td id='stile'>02/03/2025</td>
+                <td id='stile' style='display:none;'>26</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>27</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>28</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/03/2025</td>
+                <td id='stile' style='display:none;'>29</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/03/2025</td>
+                <td id='stile' style='display:none;'>30</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>31</td></tr><tr id='storiciLista'>
+                <td id='stile'>acaciaMattutina</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>32</td></tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>33</td></tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>34</td></tr>                                                </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
                                     </tr>
