@@ -8,80 +8,80 @@ include ('./classi/funzioniPDF.php');
 
 
 //INIZIO GESTIONE BUTTON PDF
-    
-        if (isset($_POST['tutteLeMacchine'])) {
-            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-                tutteLeMacchinePDF();
-            } else {
-                ?>
-                <script>
-                    alert('Password sbagliata');
-                </script>
-                <?php
-            }
-            
-        } elseif (isset($_POST['storicoMacchina'])) {
-            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-            
-            if ($_POST['codice'] != "") {
-                $identificativo=$_POST['identificativoPerStorico'];
-                $codice=$_POST['codice'];
-                storicoMacchinaPDF($identificativo,$codice);
-            } else {
-                ?>
-                <script>
-                    alert('Seleziona una macchina');
-                </script>
-                <?php
-            }
-        }else{
+
+if (isset($_POST['tutteLeMacchine'])) {
+    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+        tutteLeMacchinePDF();
+    } else {
+        ?>
+        <script>
+            alert('Password sbagliata');
+        </script>
+        <?php
+    }
+
+} elseif (isset($_POST['storicoMacchina'])) {
+    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+
+        if ($_POST['codice'] != "") {
+            $identificativo = $_POST['identificativoPerStorico'];
+            $codice = $_POST['codice'];
+            storicoMacchinaPDF($identificativo, $codice);
+        } else {
             ?>
             <script>
-                alert('Password sbagliata');
+                alert('Seleziona una macchina');
             </script>
             <?php
         }
-        }elseif(isset($_POST['macchineEffettuateInData'])){
-            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-            
-            if($_POST['dataPerPulsantiMacchine']!=""){
-                $dataInput=$_POST['dataPerPulsantiMacchine'];
-                macchineEffettuateInData($dataInput);
-            }else{
-                ?>
+    } else {
+        ?>
         <script>
-            alert('Inserisci una data');
+            alert('Password sbagliata');
         </script>
         <?php
-            }
-        }else{
+    }
+} elseif (isset($_POST['macchineEffettuateInData'])) {
+    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+
+        if ($_POST['dataPerPulsantiMacchine'] != "") {
+            $dataInput = $_POST['dataPerPulsantiMacchine'];
+            macchineEffettuateInData($dataInput);
+        } else {
             ?>
             <script>
-                alert('Password sbagliata');
+                alert('Inserisci una data');
             </script>
             <?php
         }
-        }elseif(isset($_POST['macchineInProgrammaPerData'])){
-            if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-            if($_POST['dataPerPulsantiMacchine']!=""){
-                $dataInputProg=$_POST['dataPerPulsantiMacchine'];
-                macchineInProgrammaPerData($dataInputProg);
-            }else{
-                ?>
+    } else {
+        ?>
         <script>
-            alert('Inserisci una data');
+            alert('Password sbagliata');
         </script>
         <?php
-            }
-        }else{
+    }
+} elseif (isset($_POST['macchineInProgrammaPerData'])) {
+    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+        if ($_POST['dataPerPulsantiMacchine'] != "") {
+            $dataInputProg = $_POST['dataPerPulsantiMacchine'];
+            macchineInProgrammaPerData($dataInputProg);
+        } else {
             ?>
             <script>
-                alert('Password sbagliata');
+                alert('Inserisci una data');
             </script>
-            <?php 
+            <?php
         }
-        }
-    
+    } else {
+        ?>
+        <script>
+            alert('Password sbagliata');
+        </script>
+    <?php
+    }
+}
+
 
 
 //FINE GESTIONE BUTTON TUTTE LE MACCHINE
@@ -566,7 +566,7 @@ if (isset($_POST['okStorico'])) {
                                                 <div class="divinterno">
 
                                                     <table id="scorribile" class="daPopolare table-int">
-                                                    <thead>
+                                                        <thead>
                                                             <tr>
                                                                 <th id="change" style="width:50%;">Data</th>
                                                                 <th id="change" style="width:50%;">Esito</th>
@@ -607,7 +607,10 @@ if (isset($_POST['okStorico'])) {
                 style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
                 <table>
                     <tr>
-                        <td><img src=".\image\RiepilogoMensile.png"></td>
+
+                        <td><button type="submit" name="riepilogoMensile"
+                                style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%"><img
+                                    src=".\image\RiepilogoMensile.png"></button></td>
                     </tr>
                     <tr>
                         <td>
@@ -627,7 +630,10 @@ if (isset($_POST['okStorico'])) {
 
                     <td>
                         <br>
-                        <br><img src=".\image\Chiudi.png">
+                        <br>
+                        <button type="submit" onclick="window.close()"
+                            style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%"><img
+                                src=".\image\Chiudi.png"></button>
                     </td>
 
                 </table>
