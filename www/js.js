@@ -57,51 +57,82 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
         const tableDaPopolare = document.querySelector('.daPopolare');
-        tableDaPopolare.innerHTML = '';
+        tableDaPopolare.innerHTML = ''; // Clear the table content
+        
         if (arrayValori.length > 8 && tableDaPopolare.children.length === 0) {
-
           // Ignore the first 8 elements
           const remainingData = arrayValori.slice(8);
-
+        
           // Create subarrays of 5 elements each
           const subarrays = [];
           for (let i = 0; i < remainingData.length; i += 5) {
             subarrays.push(remainingData.slice(i, i + 5));
           }
-
-          // Get the table element with class "daPopolare"
-          const tableDaPopolare = document.querySelector('.daPopolare');
-
+        
+          const hasHeaders = tableDaPopolare.querySelector('thead') !== null; // Check for existing <thead>
+        
+          if (!hasHeaders) {
+            // Create and append thead with headers (only on first iteration)
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            thead.appendChild(headerRow);
+        
+            const headerCells = ['Data', 'Esito', 'Note'];
+            for (const headerCell of headerCells) {
+              const th = document.createElement('th');
+              th.textContent = headerCell;
+              th.id = 'change'; // Add the desired ID for styling (optional)
+              th.style.width = '50%'; // Set width (optional)
+              headerRow.appendChild(th);
+            }
+        
+            tableDaPopolare.insertBefore(thead, tableDaPopolare.firstChild); // Insert at the beginning
+          }
+        
           // Function to create and append a 'tr' with 'td' elements
           function createTableRow(subarray) {
             // Skip the first and last element
             const valuesToInsert = subarray.slice(1, -1);
-
+        
             // Create a new 'tr' element
             const newRow = document.createElement('tr');
-
+        
             // Create and append 'td' elements for each value
             for (const value of valuesToInsert) {
               const newTd = document.createElement('td');
               newTd.textContent = value;
               newRow.appendChild(newTd);
             }
-
+        
             // Append the new 'tr' to the 'tableDaPopolare'
             tableDaPopolare.appendChild(newRow);
           }
-
+        
           // Populate the table with rows from subarrays
           for (const subarray of subarrays) {
             createTableRow(subarray);
           }
-
-
-        }
-        else {
-          tableDaPopolare.innerHTML = '';
+        } else {
+          tableDaPopolare.innerHTML = ''; // Clear the table if not first iteration
+          const hasHeaders = tableDaPopolare.querySelector('thead') !== null; // Check for existing <thead>
+          if (!hasHeaders) {
+            // Create and append thead with headers (only on first iteration)
+            const thead = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            thead.appendChild(headerRow);
+        
+            const headerCells = ['Data', 'Esito', 'Note'];
+            for (const headerCell of headerCells) {
+              const th = document.createElement('th');
+              th.textContent = headerCell;
+              th.id = 'change'; // Add the desired ID for styling (optional)
+              th.style.width = '50%'; // Set width (optional)
+              headerRow.appendChild(th);
+            }
+        
+            tableDaPopolare.insertBefore(thead, tableDaPopolare.firstChild); // Insert at the beginning
+          }
         }
 
         // FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE

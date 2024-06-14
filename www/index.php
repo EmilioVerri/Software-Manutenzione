@@ -646,7 +646,7 @@ if (isset($_POST['okStorico'])) {
                     <tr>
                         <td>
                             <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO--> 
-                            <input type="text">
+                            <input type="text"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
                         </td>
                     </tr>
 
