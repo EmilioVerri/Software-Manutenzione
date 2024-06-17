@@ -78,12 +78,12 @@ if (isset($_POST['tutteLeMacchine'])) {
         <script>
             alert('Password sbagliata');
         </script>
-    <?php
+        <?php
     }
-}elseif (isset($_POST['riepilogoMensile'])) {
+} elseif (isset($_POST['riepilogoMensile'])) {
     if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
         if ($_POST['periodo'] != "") {
-            $periodoDaEstrarre=$_POST['periodo'];
+            $periodoDaEstrarre = $_POST['periodo'];
             riepilogoMensile($periodoDaEstrarre);
         } else {
             ?>
@@ -97,7 +97,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         <script>
             alert('Password sbagliata');
         </script>
-    <?php
+        <?php
     }
 }
 
@@ -204,12 +204,12 @@ if (isset($_POST['okStorico'])) {
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body>
-    <form method="post" id="myForm" name="ricerca">
+<body style="background-color: rgb(223,223,223);">
+    <form method="post" id="myForm" name="ricerca" style="background-color: rgb(223,223,223);">
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
-                style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
+                style="height:800px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px; overflow:auto">
                 <table id="table">
                     <thead>
                         <tr>
@@ -472,7 +472,7 @@ if (isset($_POST['okStorico'])) {
 
             <!--INIZIO zona rossa laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
-                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; overflow: auto; height: 700px;">
+                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; height: 800px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
@@ -533,7 +533,8 @@ if (isset($_POST['okStorico'])) {
                                         style="margin: 0; width:80%">
                                 </button>
                                 <br>
-                                <input type="text" name="dataPerPulsantiMacchine" id="date" style="width:80%; height:120%">
+                                <input type="text" name="dataPerPulsantiMacchine" id="date"
+                                    style="width:80%; height:120%">
                             </span>
                             <br>
                         </td>
@@ -623,19 +624,26 @@ if (isset($_POST['okStorico'])) {
 
             <!--INIZIO zona ARANCIONE laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
-                style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
-                <table>
+                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
+                <table style="background-color: rgb(255,223,193);">
                     <tr>
 
-                        <td><button type="submit" name="riepilogoMensile"
-                                style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%"><img
-                                    src=".\image\RiepilogoMensile.png"></button></td>
+                        <td><br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <button type="submit" name="riepilogoMensile"
+                                    style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\RiepilogoMensile.png" alt="Immagine" class="image"
+                                        style="margin: 0; width:80%">
+                                </button>
+                            </span>
+                            <br></td>
                     </tr>
 
 
 
                     <tr>
                         <td>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
                             <select name="periodo" id="mySelect">
                                 <option value="01">Gennaio</option>
                                 <option value="02">Febbraio</option>
@@ -650,37 +658,34 @@ if (isset($_POST['okStorico'])) {
                                 <option value="11">Novembre</option>
                                 <option value="12">Dicembre</option>
                             </select>
+                            </span>
                         </td>
                     </tr>
                     <script>
-                         const selectElement = document.getElementById('mySelect'); // Sostituisci 'mySelect' con l'ID del tuo elemento select
-  const currentYear = new Date().getFullYear(); // Ottiene l'anno corrente
+                        const selectElement = document.getElementById('mySelect'); // Sostituisci 'mySelect' con l'ID del tuo elemento select
+                        const currentYear = new Date().getFullYear(); // Ottiene l'anno corrente
 
-  for (let option of selectElement.options) {
-    const optionText = option.textContent; // Ottiene il testo dell'opzione
-    const newOptionText = optionText + ' - ' + currentYear; // Aggiunge l'anno corrente al testo dell'opzione
-    option.textContent = newOptionText; // Aggiorna il testo dell'opzione
-  }
+                        for (let option of selectElement.options) {
+                            const optionText = option.textContent; // Ottiene il testo dell'opzione
+                            const newOptionText = optionText + ' - ' + currentYear; // Aggiunge l'anno corrente al testo dell'opzione
+                            option.textContent = newOptionText; // Aggiorna il testo dell'opzione
+                        }
                     </script>
                     <tr>
                         <td>
-                            <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO--> 
-                            <input type="text"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
+                            <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO-->
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                            <input type="text" style="width:150px"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
+                            </span>
+                            <br>
                         </td>
                     </tr>
-
-
-
-                    <td>
-                        <br>
-                        <br>
-                        <button type="submit" onclick="window.close()"
-                            style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%"><img
-                                src=".\image\Chiudi.png"></button>
-                    </td>
-
                 </table>
+                <button type="submit" onclick="window.close()"
+                            style="background-color: rgb(223,223,223); border: 0; padding: 0; display: inline-block;"><img
+                                src=".\image\Chiudi.png"></button>
             </div>
+            
             <!--FINE Zona ARANCIONE laterale-->
 
 
@@ -689,6 +694,7 @@ if (isset($_POST['okStorico'])) {
         </div>
 
         <script src="js.js"></script>
+        
     </form>
 </body>
 
