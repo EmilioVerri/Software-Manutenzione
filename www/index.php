@@ -70,7 +70,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         </script>
         <?php
     }
-
+    $_SESSION['show'] = 0;
 } elseif (isset($_POST['storicoMacchina'])) {
     if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
 
@@ -92,6 +92,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 } elseif (isset($_POST['macchineEffettuateInData'])) {
     if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
 
@@ -112,6 +113,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 } elseif (isset($_POST['macchineInProgrammaPerData'])) {
     if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
         if ($_POST['dataPerPulsantiMacchine'] != "") {
@@ -131,6 +133,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 } elseif (isset($_POST['riepilogoMensile'])) {
     if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
         if ($_POST['periodo'] != "") {
@@ -150,6 +153,7 @@ if (isset($_POST['tutteLeMacchine'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 }
 
 
@@ -178,6 +182,7 @@ if (isset($_POST['Aggiungi'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 }
 
 
@@ -193,6 +198,7 @@ if (isset($_POST['Modifica'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 }
 
 
@@ -209,6 +215,7 @@ if (isset($_POST['Elimina'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 }
 
 
@@ -227,6 +234,7 @@ if (isset($_POST['okStorico'])) {
         </script>
         <?php
     }
+    $_SESSION['show'] = 0;
 }
 
 
@@ -436,20 +444,24 @@ if (isset($_POST['okStorico'])) {
                                 <?php
 
 
-                                if ($_SESSION['show'] == 0) {
+                                if ($_SESSION['show'] == 1) {
+                                    $_SESSION['show'] = 0;
                                     ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
+                                    <input type="checkbox" id="myCheckbox" name="myCheckbox" checked> <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
                                     <?php
+                                    
 
                                 } else {
-
+                                    $_SESSION['show'] = 1;
+                                    
                                     ?>
-                                    <input type="checkbox" id="cambiami" name="cambiami" checked>
+                                    <input type="checkbox" id="cambiami" name="cambiami">
                                     <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
                                         name="subitCambiami">
                                     <?php
+                                    
                                 }
                                 ?>
 
@@ -486,13 +498,14 @@ if (isset($_POST['okStorico'])) {
                                                     </thead>
                                                     <?php
                                                      
-                                                        if($_SESSION['show'] == 0){
+                                                        if($_SESSION['show'] == 1){
                                                             //echo "sono dentro";
-
-                                                          estraiManutenzione();
+                                                            
+                                                            estraiManutenzione();
+                                                          
                                                             
                                                             
-                                                        }else{
+                                                        }else{  
                                                             estraiManutenzioneScadute();
                                                         }
                                                         

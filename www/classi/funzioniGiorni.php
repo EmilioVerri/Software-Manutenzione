@@ -1,107 +1,109 @@
 <?php
 //da rivedere le date, definire meglio
-function estraigiorni($giornoInLettere)
-{
-    if ($giornoInLettere == "Giornaliero") {
-        //Manutenzione Giornaliera
-        $today = strtotime('today');
-        $tomorrow = $today + 86400;
-        $formatted = date('d/m/Y', $tomorrow);
-        return $formatted;
-        //Fine Manutenzione Giornaliera
-    } elseif ($giornoInLettere == "Settimanale") {
-        //Manutenzione Settimanale
-        $today = strtotime('today');
-        $sevenDays = $today + (7 * 86400);
-        $formatted = date('d/m/Y', $sevenDays);
-        return $formatted;
-        //Fine Manutenzione Settimanale
-    } elseif ($giornoInLettere == "Quindicinale") {
-        //Manutenzione Quindicinale
-        $today = strtotime('today');
-        $fitheendays = $today + (15 * 86400);
-        $formatted = date('d/m/Y', $fitheendays);
-        return $formatted;
-        //Fine Manutenzione Quindicinale
-    } elseif ($giornoInLettere == "4settimane") {
-        //Manutenzione 4 Settimane, 28 giorni
-        $today = strtotime('today');
-        $fourweeks = $today + (28 * 86400);
-        $formatted = date('d/m/Y', $fourweeks);
-        return $formatted;
-        //Fine Manutenzione 4 Settimane, 28 giorni
-    } elseif ($giornoInLettere == "Mensile") {
-        //Manutenzione 1mese
-        $today = strtotime('today');
-        $nextMonthTimestamp = strtotime('+1 month', $today);
-        $formatted = date('d/m/Y', $nextMonthTimestamp);
-        return $formatted;
-        //Fine Manutenzione 1mese
-    } elseif ($giornoInLettere == "Bimestrale") {
-        //Manutenzione 2mese
-        $today = strtotime('today');
-        $next2MonthTimestamp = strtotime('+2 month', $today);
-        $formatted = date('d/m/Y', $next2MonthTimestamp);
-        return $formatted;
-        //Fine Manutenzione 2mese
-    } elseif ($giornoInLettere == "Trimestrale") {
-        //Manutenzione 3mese
-        $today = strtotime('today');
-        $next = strtotime('+3 month', $today);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 3mese
-    } elseif ($giornoInLettere == "Semestrale") {
-        //Manutenzione 6mese
-        $today = strtotime('today');
-        $next = strtotime('+6 month', $today);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 6mese
-    } elseif ($giornoInLettere == "9mesi") {
-        //Manutenzione 9mese
-        $today = strtotime('today');
-        $next = strtotime('+9 month', $today);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 9mese
-    } elseif ($giornoInLettere == "4mesi") {
-        //Manutenzione 4mese
-        $today = strtotime('today');
-        $next = strtotime('+4 month', $today);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 4mese
-    } elseif ($giornoInLettere == "Annuale") {
-        //Manutenzione 1anno
-        $today = strtotime('today');
-        $next = $today + (365 * 24 * 60 * 60);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 1anno
-    } elseif ($giornoInLettere == "Quinquennale") {
-        //Manutenzione 5anni
-        $today = strtotime('today');
-        $next = $today + (5 * 365 * 24 * 60 * 60);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 5anni
-    } elseif ($giornoInLettere == "Settennale") {
-        //Manutenzione 7anni
-        $today = strtotime('today');
-        $next = $today + (7 * 365 * 24 * 60 * 60);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 7anni
-    } elseif ($giornoInLettere == "Decennale") {
-        //Manutenzione 10anni
-        $today = strtotime('today');
-        $next = $today + (10 * 365 * 24 * 60 * 60);
-        $formatted = date('d/m/Y', $next);
-        return $formatted;
-        //Fine Manutenzione 10anni
+function estraigiorni($giornoInLettere) {
+    switch ($giornoInLettere) {
+        case "Giornaliero":
+            // Manutenzione Giornaliera
+            $giorni = 1;
+            break;
+        case "Settimanale":
+            // Manutenzione Settimanale
+            $giorni = 7;
+            break;
+        case "Quindicinale":
+            // Manutenzione Quindicinale
+            $giorni = 15;
+            break;
+        case "4settimane":
+            // Manutenzione 4 Settimane, 28 giorni
+            $giorni = 28;
+            break;
+        case "Mensile":
+            // Manutenzione 1mese
+            $giorni = 31; // Set default to 31 days
+            break;
+        case "Bimestrale":
+            // Manutenzione 2mese
+            $giorni = 60;
+            break;
+        case "Trimestrale":
+            // Manutenzione 3mese
+            $giorni = 90;
+            break;
+        case "Semestrale":
+            // Manutenzione 6mese
+            $giorni = 180;
+            break;
+        case "9mesi":
+            // Manutenzione 9mese
+            $giorni = 270;
+            break;
+        case "4mesi":
+            // Manutenzione 4mese
+            $giorni = 120;
+            break;
+        case "Annuale":
+            // Manutenzione 1anno
+            $giorni = 365;
+            break;
+        case "Quinquennale":
+            // Manutenzione 5anni
+            $giorni = 1825;
+            break;
+        case "Settennale":
+            // Manutenzione 7anni
+            $giorni = 2555;
+            break;
+        case "Decennale":
+            // Manutenzione 10anni
+            $giorni = 3650;
+            break;
+        default:
+            echo "Frequenza non valida: " . $giornoInLettere;
+            return null;
+    }
+
+    $oggi = strtotime('today');
+    $dataProssima = $oggi + $giorni * 24 * 60 * 60;
+
+    // Adjust days for months with 30 or 31 days
+    $meseProssimo = date('m', $dataProssima);
+    $giorniMeseProssimo = 31; // Default to 31 days
+
+    if ($meseProssimo === 2) {
+        $isLeapYearNextYear = is_leap_year(date('Y', $dataProssima));
+        $isLeapYearCurrentYear = is_leap_year(date('Y', $oggi));
+
+        if ($isLeapYearNextYear && !$isLeapYearCurrentYear) {
+            $giorniMeseProssimo = 29; // Set days to 29 for leap year February
+        } else {
+            $giorniMeseProssimo = 28; // Set days to 28 for non-leap year February
+        }
+    } else if (in_array($meseProssimo, [4, 6, 9, 11])) {
+        $giorniMeseProssimo = 30; // Set days to 30 for April, June, September, November
+    }
+
+    // Check if the next day is beyond the end of the next month
+    $giornoProssimo = date('d', $dataProssima);
+    if ($giornoProssimo > $giorniMeseProssimo) {
+        // If so, add days to reach the next month's first day
+        $dataProssima += ($giorniMeseProssimo - $giornoProssimo + 1) * 24 * 60 * 60;
+    }
+
+    $dataFormattata = date('d/m/Y', $dataProssima);
+    return $dataFormattata;
+}
+
+
+
+
+function is_leap_year($year) {
+    if ($year % 4 != 0) {
+        return false;
+    } elseif ($year % 100 == 0 && $year % 400 != 0) {
+        return false;
     } else {
-        echo "errore";
+        return true;
     }
 }
 

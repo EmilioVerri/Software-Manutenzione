@@ -88,14 +88,16 @@ class Manutenzione
     public function eliminaManutenzione()
     {
         if (isset($_POST["Elimina"])) {
+
             $my_conn = new PDO('sqlite:manutentori.db');
-            $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo='{$this->identificativo}'");
+            $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo={$this->identificativo}");
             $query->execute();
 
+            
 
             //gestire la non presenza di storico 
-            $query = $my_conn->prepare("DELETE FROM storici WHERE identificativo='{$this->identificativo}'");
-            $query->execute();
+            $queryDue = $my_conn->prepare("DELETE FROM storici WHERE manutenzione='{$this->identificativo}'");
+            $queryDue->execute();
         }
     }
 
