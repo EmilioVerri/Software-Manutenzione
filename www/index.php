@@ -487,7 +487,7 @@ if (isset($_POST['okStorico'])) {
                                                     <?php
                                                      
                                                         if($_SESSION['show'] == 0){
-                                                            echo "sono dentro";
+                                                            //echo "sono dentro";
 
                                                             $my_conn = new PDO('sqlite:manutentori.db');
                                                             $query = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
@@ -509,7 +509,7 @@ if (isset($_POST['okStorico'])) {
                                                             
                                                         }else{
 
-                                                            echo "sono dentro qua";
+                                                            //echo "sono dentro qua";
                                                             $my_conn = new PDO('sqlite:manutentori.db');
                                                             $query = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE InScadenza=1");
                                                             $query->execute();
