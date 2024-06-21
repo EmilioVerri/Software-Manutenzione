@@ -222,18 +222,23 @@ if (isset($_POST['Elimina'])) {
 
 if (isset($_POST['okStorico'])) {
 
-    if (isset($_POST['identificativoPerStorico'])) {
-
+    if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico']!=false) {
         $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
         $storico->aggiungiStorico();
+        $_SESSION['show'] = 0;
     } else {
-
         ?>
         <script>
             alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
         </script>
         <?php
+        $_SESSION['show'] = 0;
     }
+    
+}
+
+
+if(isset($_POST['Clear'])){
     $_SESSION['show'] = 0;
 }
 
