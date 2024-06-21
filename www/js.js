@@ -53,10 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         // Assuming you have the 'arrayValori' containing all elements
-
-
-
-
         const tableDaPopolare = document.querySelector('.daPopolare');
         tableDaPopolare.innerHTML = ''; // Clear the table content
         
@@ -93,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
           // Function to create and append a 'tr' with 'td' elements
           function createTableRow(subarray) {
             // Skip the first and last element
-            const valuesToInsert = subarray.slice(1, -1);
+            const valuesToInsert = subarray.slice(0,-1);
         
             // Create a new 'tr' element
             const newRow = document.createElement('tr');
@@ -102,6 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
             for (const value of valuesToInsert) {
               const newTd = document.createElement('td');
               newTd.textContent = value;
+            
+              // Hide the first <td> element only
+              if (newRow.children.length === 0) {
+                newTd.style.display = 'none';
+              }
+            
               newRow.appendChild(newTd);
             }
         
@@ -319,6 +321,79 @@ if (dateDu) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+//RENDERE CLICCABILE LA TABELLA DA POPOLARE PER GLI STORICI INIZIO
+document.addEventListener('DOMContentLoaded', function () {
+  const table = document.getElementById('daPopolare');
+  let selectedRow = null; // Keep track of the currently selected row
+
+  if (table) {
+    table.addEventListener('click', function (event) {
+      if (event.target.tagName === 'TD') {
+        // Select the entire row (TR) containing the clicked TD
+        const row = event.target.parentNode;
+
+        // Deselect the previously selected row (if any)
+        if (selectedRow) {
+          selectedRow.classList.remove('sel');
+        }
+
+        // Select the clicked row
+        row.classList.add('sel');
+        selectedRow = row;
+
+        // Scroll to the selected row if it's below the visible area
+        if (row.offsetTop > window.innerHeight) {
+          row.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Log values of all td within the selected row
+        const selectedRowTds = row.querySelectorAll('td');
+        console.log('Valori riga selezionata: ', Array.from(selectedRowTds).map(td => td.textContent));
+
+        const arrayValori = Array.from(selectedRowTds).map(td => td.textContent);
+
+
+
+
+
+        const inputField = document.getElementById('idElimaStorico');
+        const valoreInserire = arrayValori[0];
+        inputField.value = valoreInserire;
+
+
+        const inputFieldData = document.getElementById('idDataStorico');
+        const valoreInserireData = arrayValori[1];
+        inputFieldData.value = valoreInserireData;
+
+        const inputFieldEsito = document.getElementById('idEsitoStorico');
+        const valoreInserireEsito = arrayValori[2];
+        inputFieldEsito.value = valoreInserireEsito;
+
+        const inputFieldNote = document.getElementById('idNoteStorico');
+        const valoreInserireNote = arrayValori[3];
+        inputFieldNote.value = valoreInserireNote;
+      }
+    });
+  } else {
+    console.error('Table element with ID "scorribile" not found!');
+  }
+});
+
+
+
+//FINE RENDERE CLICCABILE LA TABELLA DA POPOLARE PER GLI STORICI
 
 
 

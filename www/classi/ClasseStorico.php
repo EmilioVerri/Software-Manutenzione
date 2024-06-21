@@ -66,6 +66,12 @@ class Storico
         }
     }
 
+    public function eliminaStorico(){
+        $my_conn = new PDO('sqlite:manutentori.db');
+        $query = $my_conn->prepare("DELETE FROM storici WHERE id={$this->manutenzione}");
+        $query->execute();
+    }
+
 
 
 

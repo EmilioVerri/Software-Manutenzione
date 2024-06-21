@@ -20,6 +20,11 @@ tr.selected {
   /* Or any desired color */
 }
 
+tr.sel {
+  background-color: green;
+  /* Or any desired color */
+}
+
 /* Show scrollbar after 5 tr elements in table with id="scorribile" */
 #scorribile tbody tr:nth-child(6) {
   display: table-row;

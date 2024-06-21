@@ -52,6 +52,24 @@ foreach ($manScadute as $row) {
 }
 
 
+if(isset($_POST['eliminaStorico']) && isset($_POST['idElimaStorico'])){
+    if(empty($_POST['idElimaStorico'])){
+        ?>
+        <script>
+            alert('Seleziona uno Storico');
+        </script>
+        <?php
+        $_SESSION['show'] = 0;
+      
+    }else{
+          //come identificativo a sto giro gli passo ID dello storico
+    $storico = new Storico($_POST['idDataStorico'], $_POST['idEsitoStorico'], $_POST['idNoteStorico'], $_POST['idElimaStorico']);
+    $storico->eliminaStorico();
+    $_SESSION['show'] = 0;
+    }
+    
+}
+
 
 
 
@@ -229,7 +247,7 @@ if (isset($_POST['okStorico'])) {
     } else {
         ?>
         <script>
-            alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
+            alert('Seleziona uno Storico');
         </script>
         <?php
         $_SESSION['show'] = 0;
@@ -643,6 +661,10 @@ if(isset($_POST['Clear'])){
                                     style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
                                 </button>
+                                <input type="text" name="idElimaStorico" id="idElimaStorico" style="display:none">
+                                <input type="text" name="idDataStorico" id="idDataStorico" style="display:none">
+                                <input type="text" name="idEsitoStorico" id="idEsitoStorico" style="display:none">
+                                <input type="text" name="idNoteStorico" id="idNoteStorico" style="display:none">
                             </td>
                             <td colspan="4" style="padding-top: 10px;">
                                 <table class="table-ext">
@@ -651,7 +673,7 @@ if(isset($_POST['Clear'])){
                                             <td colspan="3">
                                                 <div class="divinterno">
 
-                                                    <table id="scorribile" class="daPopolare table-int">
+                                                    <table id="daPopolare" class="daPopolare table-int">
                                                         <thead>
                                                             <tr>
                                                                 <th id="change" style="width:50%;">Data</th>
