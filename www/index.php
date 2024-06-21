@@ -8,9 +8,9 @@ include ('./classi/funzioniPDF.php');
 session_start();
 
 
-if(isset($_SESSION['show'])){
+if (isset($_SESSION['show'])) {
 
-}else{
+} else {
     $_SESSION['show'] = 0;
 }
 
@@ -52,22 +52,22 @@ foreach ($manScadute as $row) {
 }
 
 
-if(isset($_POST['eliminaStorico']) && isset($_POST['idElimaStorico'])){
-    if(empty($_POST['idElimaStorico'])){
+if (isset($_POST['eliminaStorico']) && isset($_POST['idElimaStorico'])) {
+    if (empty($_POST['idElimaStorico'])) {
         ?>
         <script>
             alert('Seleziona uno Storico');
         </script>
         <?php
         $_SESSION['show'] = 0;
-      
-    }else{
-          //come identificativo a sto giro gli passo ID dello storico
-    $storico = new Storico($_POST['idDataStorico'], $_POST['idEsitoStorico'], $_POST['idNoteStorico'], $_POST['idElimaStorico']);
-    $storico->eliminaStorico();
-    $_SESSION['show'] = 0;
+
+    } else {
+        //come identificativo a sto giro gli passo ID dello storico
+        $storico = new Storico($_POST['idDataStorico'], $_POST['idEsitoStorico'], $_POST['idNoteStorico'], $_POST['idElimaStorico']);
+        $storico->eliminaStorico();
+        $_SESSION['show'] = 0;
     }
-    
+
 }
 
 
@@ -238,25 +238,9 @@ if (isset($_POST['Elimina'])) {
 
 
 
-if (isset($_POST['okStorico'])) {
-
-    if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico']!=false) {
-        $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
-        $storico->aggiungiStorico();
-        $_SESSION['show'] = 0;
-    } else {
-        ?>
-        <script>
-            alert('Seleziona uno Storico');
-        </script>
-        <?php
-        $_SESSION['show'] = 0;
-    }
-    
-}
 
 
-if(isset($_POST['Clear'])){
+if (isset($_POST['Clear'])) {
     $_SESSION['show'] = 0;
 }
 
@@ -265,9 +249,6 @@ if(isset($_POST['Clear'])){
 
 <!DOCTYPE html>
 <html>
-
-<h1></h1>
-
 
 <head>
     <!--Da finire l'implementazione-->
@@ -288,6 +269,75 @@ if(isset($_POST['Clear'])){
 
 <body style="background-color: rgb(223,223,223);">
     <form method="post" id="myForm" name="ricerca" style="background-color: rgb(223,223,223);">
+
+
+
+        <?php
+        if (isset($_POST['okStorico'])) {
+
+            if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico'] != false) {
+                $my_conn = new PDO('sqlite:manutentori.db');
+
+                $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
+                $query->execute();
+                foreach ($query as $row) {
+                    $dataItaliana = $row['ProxMan'];
+                    $dataItalianaArray = explode("/", $dataItaliana);
+                    $temp = $dataItalianaArray[0];
+                    $dataItalianaArray[0] = $dataItalianaArray[1];
+                    $dataItalianaArray[1] = $temp;
+
+                    $dataItalianaReversed = implode("/", $dataItalianaArray);
+
+                    // Convertire la data italiana in timestamp UNIX
+                    $timestamp = strtotime($dataItalianaReversed);
+
+                    $today = strtotime('today');
+
+                    if ($today <= $timestamp) {
+                        echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php'}else{document.location.href='./index.php'};</script>";
+                        $_SESSION['show'] = 0;
+                    }
+
+
+
+                }
+
+
+
+
+               
+            } else {
+                ?>
+                <script>
+                    alert('Seleziona uno Storico');
+                </script>
+                <?php
+                $_SESSION['show'] = 0;
+            }
+
+        }
+
+
+
+
+        ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
@@ -470,21 +520,23 @@ if(isset($_POST['Clear'])){
                                 if ($_SESSION['show'] == 1) {
                                     $_SESSION['show'] = 0;
                                     ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox" checked> <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
+                                    <input type="checkbox" id="myCheckbox" name="myCheckbox" checked>
+                                    <!--scadenza manutenzione-->
+                                    <input type="submit" value="Submit" id="submitButton" style="display:none;"
+                                        name="submitButton">
                                     <?php
-                                    
+
 
                                 } else {
                                     $_SESSION['show'] = 1;
-                                    
+
                                     ?>
                                     <input type="checkbox" id="cambiami" name="cambiami">
                                     <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
                                         name="subitCambiami">
                                     <?php
-                                    
+
                                 }
                                 ?>
 
@@ -520,20 +572,20 @@ if(isset($_POST['Clear'])){
                                                         </tr>
                                                     </thead>
                                                     <?php
-                                                     
-                                                        if($_SESSION['show'] == 1){
-                                                            //echo "sono dentro";
-                                                            
-                                                            estraiManutenzione();
-                                                          
-                                                            
-                                                            
-                                                        }else{  
-                                                            estraiManutenzioneScadute();
-                                                        }
-                                                        
+
+                                                    if ($_SESSION['show'] == 1) {
+                                                        //echo "sono dentro";
                                                     
-                                                   
+                                                        estraiManutenzione();
+
+
+
+                                                    } else {
+                                                        estraiManutenzioneScadute();
+                                                    }
+
+
+
 
                                                     ?>
                                                 </table><!--Table-int-->
@@ -682,7 +734,7 @@ if(isset($_POST['Clear'])){
                                                             </tr>
                                                         </thead>
                                                         <tbody class="cancella">
-                                                           
+
                                                         </tbody>
 
                                                     </table>
@@ -782,6 +834,15 @@ if(isset($_POST['Clear'])){
 
 
         </div>
+
+
+
+
+
+
+
+
+
 
         <script src="js.js"></script>
 
