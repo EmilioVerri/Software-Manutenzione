@@ -1,236 +1,3 @@
-<?php
-include ('./classi/ClasseManutenzioni.php');
-include ('./classi/funzioneEstrazione.php');
-include ('./classi/ClasseStorico.php');
-include ('./classi/funzioniPDF.php');
-
-
-session_start();
-
-
-if(isset($_SESSION['show'])){
-
-}else{
-    $_SESSION['show'] = 0;
-}
-
-
-
-$my_conn = new PDO('sqlite:manutentori.db');
-$manScadute = $my_conn->prepare("SELECT * FROM manutenzioni");
-$manScadute->execute();
-
-
-foreach ($manScadute as $row) {
-    $dataItaliana = $row['ProxMan'];
-    $dataItalianaArray = explode("/", $dataItaliana);
-    $temp = $dataItalianaArray[0];
-    $dataItalianaArray[0] = $dataItalianaArray[1];
-    $dataItalianaArray[1] = $temp;
-
-    $dataItalianaReversed = implode("/", $dataItalianaArray);
-
-    // Convertire la data italiana in timestamp UNIX
-    $timestamp = strtotime($dataItalianaReversed);
-
-    $today = strtotime('today');
-
-    $info = 1;
-
-
-
-
-    if ($timestamp <= $today) {
-        if ($row['InScadenza'] == 1) {
-
-        } else {
-
-            $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info WHERE identificativo={$row['identificativo']}");
-            $queryUpdate->execute();
-        }
-    }
-}
-
-
-
-
-
-
-
-
-//INIZIO GESTIONE BUTTON PDF
-
-if (isset($_POST['tutteLeMacchine'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        tutteLeMacchinePDF();
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-
-} elseif (isset($_POST['storicoMacchina'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-
-        if ($_POST['codice'] != "") {
-            $identificativo = $_POST['identificativoPerStorico'];
-            $codice = $_POST['codice'];
-            storicoMacchinaPDF($identificativo, $codice);
-        } else {
-            ?>
-            <script>
-                alert('Seleziona una macchina');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-} elseif (isset($_POST['macchineEffettuateInData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-
-        if ($_POST['dataPerPulsantiMacchine'] != "") {
-            $dataInput = $_POST['dataPerPulsantiMacchine'];
-            macchineEffettuateInData($dataInput);
-        } else {
-            ?>
-            <script>
-                alert('Inserisci una data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-} elseif (isset($_POST['macchineInProgrammaPerData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        if ($_POST['dataPerPulsantiMacchine'] != "") {
-            $dataInputProg = $_POST['dataPerPulsantiMacchine'];
-            macchineInProgrammaPerData($dataInputProg);
-        } else {
-            ?>
-            <script>
-                alert('Inserisci una data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-} elseif (isset($_POST['riepilogoMensile'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
-        if ($_POST['periodo'] != "") {
-            $periodoDaEstrarre = $_POST['periodo'];
-            riepilogoMensile($periodoDaEstrarre);
-        } else {
-            ?>
-            <script>
-                alert('Problema pulsante data');
-            </script>
-            <?php
-        }
-    } else {
-        ?>
-        <script>
-            alert('Password sbagliata');
-        </script>
-        <?php
-    }
-}
-
-
-
-//FINE GESTIONE BUTTON TUTTE LE MACCHINE
-
-
-
-
-if (isset($_POST['Aggiungi'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $valore = estraiIdentificativo();
-        if ($valore == 0) {
-        } elseif ($valore !== 0) {
-            $info = $valore + 1;
-        } else {
-        }
-
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $info);
-        $manutenzione->aggiungiManutenzione();
-
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['Modifica'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->modificaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-
-if (isset($_POST['Elimina'])) {
-    if (isset($_POST['checkbox-group'])) {
-        $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
-        $manutenzione->eliminaManutenzione();
-    } else {
-        ?>
-        <script>
-            alert('Periodo non inserito');
-        </script>
-        <?php
-    }
-}
-
-
-
-if (isset($_POST['okStorico'])) {
-
-    if (isset($_POST['identificativoPerStorico'])) {
-
-        $storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
-        $storico->aggiungiStorico();
-    } else {
-
-        ?>
-        <script>
-            alert('Seleziona una manutenzione in scadenza, nella tabella sopra');
-        </script>
-        <?php
-    }
-}
-
-
-?>
 
 <!DOCTYPE html>
 <html>
@@ -369,19 +136,7 @@ if (isset($_POST['okStorico'])) {
                         <tr>
 
                             <input type="hidden" name="identificativo" id="identificativo" value="
-                            <?php
-                            if (isset($_POST['Aggiungi'])) {
-                                $valore = estraiIdentificativo();
-                                if ($valore == 0) {
-                                } elseif ($valore !== 0) {
-                                    echo $info = $valore + 1;
-
-                                } else {
-                                }
-                            }
-
-                            ?>
-                            ">
+                                                        ">
 
 
 
@@ -433,26 +188,12 @@ if (isset($_POST['okStorico'])) {
 
 
 
-                                <?php
-
-
-                                if ($_SESSION['show'] == 0) {
-                                    ?>
-                                    <input type="checkbox" id="myCheckbox" name="myCheckbox"> <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" id="submitButton" style="display:none;" name="submitButton">
-                                    <?php
-
-                                } else {
-
-                                    ?>
-                                    <input type="checkbox" id="cambiami" name="cambiami" checked>
+                                <br />
+<b>Notice</b>:  Undefined variable: counter in <b>C:\Manutentori\www\index.php</b> on line <b>441</b><br />
+                                    <input type="checkbox" id="cambiami" name="cambiami">
                                     <!--scadenza manutenzione-->
-                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
-                                        name="subitCambiami">
-                                    <?php
-                                }
-                                ?>
-
+                                    <input type="submit" value="Submit" style="display:none;" id="subitCambiami">
+                                    
 
 
 
@@ -484,55 +225,304 @@ if (isset($_POST['okStorico'])) {
                                                             <th id="change">Prox Man.</th>
                                                         </tr>
                                                     </thead>
-                                                    <?php
-                                                     
-                                                        if($_SESSION['show'] == 0){
-                                                            echo "sono dentro";
-
-                                                            $my_conn = new PDO('sqlite:manutentori.db');
-                                                            $query = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
-                                                            $query->execute();
-                                                            $_SESSION['show'] = 1;
-                                                            foreach($query as $estrazioni){
-                                                                echo "<tr>
-                                                                <td id='stile'>{$estrazioni['Sigla']}</td>
-                                                                <td id='stile'>{$estrazioni['Nome']}</td>
-                                                                <td id='stile'>{$estrazioni['Cat']}</td>
-                                                                <td id='stile'>{$estrazioni['Reparto']}</td>
-                                                                <td id='stile'>{$estrazioni['Manutenzione']}</td>
-                                                                <td id='stile'>{$estrazioni['UltimaMan']}</td>
-                                                                <td id='stile'>{$estrazioni['ProxMan']}</td>
-                                                                <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>
-                                                                </tr>";
-                                                            }
-                                                            
-                                                            
-                                                        }else{
-
-                                                            echo "sono dentro qua";
-                                                            $my_conn = new PDO('sqlite:manutentori.db');
-                                                            $query = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE InScadenza=1");
-                                                            $query->execute();
-                                                            $_SESSION['show'] = 0;
-                                                            foreach($query as $estrazioni){
-                                                                echo "<tr>
-                                                                <td id='stile'>{$estrazioni['Sigla']}</td>
-                                                                <td id='stile'>{$estrazioni['Nome']}</td>
-                                                                <td id='stile'>{$estrazioni['Cat']}</td>
-                                                                <td id='stile'>{$estrazioni['Reparto']}</td>
-                                                                <td id='stile'>{$estrazioni['Manutenzione']}</td>
-                                                                <td id='stile'>{$estrazioni['UltimaMan']}</td>
-                                                                <td id='stile'>{$estrazioni['ProxMan']}</td>
-                                                                <td id='stile' style='display:none;'>{$estrazioni['identificativo']}</td>
-                                                                </tr>";
-                                                            }
-                                                        }
-                                                        
-                                                    
-                                                   
-
-                                                    ?>
-                                                </table><!--Table-int-->
+                                                    <tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>27/06/2024</td>
+                <td id='stile'>18/03/2025</td>
+                <td id='stile' style='display:none;'>10</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Settimanale</td>
+                <td id='stile'>03/07/2024</td>
+                <td id='stile'>16/07/2024</td>
+                <td id='stile' style='display:none;'>13</td>
+                    <td id='storici' style='display:none'>73</td>
+                    <td id='storici' style='display:none'>30/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>75</td>
+                    <td id='storici' style='display:none'>31/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>79</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>80</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>81</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>82</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>83</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>84</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>85</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>86</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>87</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>oko</td>
+                    <td id='storici' style='display:none'>k</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>88</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>89</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>90</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>91</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>92</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>93</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>94</td>
+                    <td id='storici' style='display:none'>18/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>95</td>
+                    <td id='storici' style='display:none'>02/07/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>96</td>
+                    <td id='storici' style='display:none'>03/07/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>14/02/2023</td>
+                <td id='stile'>20/09/2024</td>
+                <td id='stile' style='display:none;'>16</td>
+                    <td id='storici' style='display:none'>76</td>
+                    <td id='storici' style='display:none'>14/06/2024</td>
+                    <td id='storici' style='display:none'>OK</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>16</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>DODO</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>nega</td>
+                <td id='stile'>Settennale</td>
+                <td id='stile'>20/05/2024</td>
+                <td id='stile'>19/05/2031</td>
+                <td id='stile' style='display:none;'>17</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>19</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>24/05/2024</td>
+                <td id='stile'>22/02/2025</td>
+                <td id='stile' style='display:none;'>23</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>22/05/2024</td>
+                <td id='stile'>22/11/2024</td>
+                <td id='stile' style='display:none;'>24</td></tr><tr id='storiciLista'>
+                <td id='stile'>prova1</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>4mesi</td>
+                <td id='stile'>14/04/2024</td>
+                <td id='stile'>18/10/2024</td>
+                <td id='stile' style='display:none;'>25</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>30/05/2024</td>
+                <td id='stile'>02/03/2025</td>
+                <td id='stile' style='display:none;'>26</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>27</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>28</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/03/2025</td>
+                <td id='stile' style='display:none;'>29</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>14/05/2024</td>
+                <td id='stile'>03/12/2025</td>
+                <td id='stile' style='display:none;'>30</td>
+                    <td id='storici' style='display:none'>77</td>
+                    <td id='storici' style='display:none'>14/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>30</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>31</td></tr><tr id='storiciLista'>
+                <td id='stile'>acaciaMattutina</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>09/05/2024</td>
+                <td id='stile'>03/06/2025</td>
+                <td id='stile' style='display:none;'>32</td>
+                    <td id='storici' style='display:none'>78</td>
+                    <td id='storici' style='display:none'>09/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>32</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>33</td></tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>34</td></tr>                                                </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
                                     </tr>
@@ -716,8 +706,7 @@ if (isset($_POST['okStorico'])) {
                                         style="margin: 0; width:80%">
                                 </button>
                             </span>
-                            <br>
-                        </td>
+                            <br></td>
                     </tr>
 
 
@@ -725,20 +714,20 @@ if (isset($_POST['okStorico'])) {
                     <tr>
                         <td>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <select name="periodo" id="mySelect">
-                                    <option value="01">Gennaio</option>
-                                    <option value="02">Febbraio</option>
-                                    <option value="03">Marzo</option>
-                                    <option value="04">Aprile</option>
-                                    <option value="05">Maggio</option>
-                                    <option value="06">Giugno</option>
-                                    <option value="07">Luglio</option>
-                                    <option value="08">Agosto</option>
-                                    <option value="09">Settembre</option>
-                                    <option value="10">Ottobre</option>
-                                    <option value="11">Novembre</option>
-                                    <option value="12">Dicembre</option>
-                                </select>
+                            <select name="periodo" id="mySelect">
+                                <option value="01">Gennaio</option>
+                                <option value="02">Febbraio</option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Aprile</option>
+                                <option value="05">Maggio</option>
+                                <option value="06">Giugno</option>
+                                <option value="07">Luglio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Settembre</option>
+                                <option value="10">Ottobre</option>
+                                <option value="11">Novembre</option>
+                                <option value="12">Dicembre</option>
+                            </select>
                             </span>
                         </td>
                     </tr>
@@ -756,18 +745,17 @@ if (isset($_POST['okStorico'])) {
                         <td>
                             <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO-->
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <input type="text"
-                                    style="width:150px"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
+                            <input type="text" style="width:150px"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
                             </span>
                             <br>
                         </td>
                     </tr>
                 </table>
                 <button type="submit" onclick="window.close()"
-                    style="background-color: rgb(223,223,223); border: 0; padding: 0; display: inline-block;"><img
-                        src=".\image\Chiudi.png"></button>
+                            style="background-color: rgb(223,223,223); border: 0; padding: 0; display: inline-block;"><img
+                                src=".\image\Chiudi.png"></button>
             </div>
-
+            
             <!--FINE Zona ARANCIONE laterale-->
 
 
@@ -776,10 +764,8 @@ if (isset($_POST['okStorico'])) {
         </div>
 
         <script src="js.js"></script>
-
+        
     </form>
 </body>
-
-
 
 </html>

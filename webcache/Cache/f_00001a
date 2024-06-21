@@ -22,12 +22,12 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
 </head>
 
-<body>
-    <form method="post" id="myForm" name="ricerca">
+<body style="background-color: rgb(223,223,223);">
+    <form method="post" id="myForm" name="ricerca" style="background-color: rgb(223,223,223);">
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
-                style="height:700px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px;">
+                style="height:800px; background-color: rgb(255, 224,192);box-shadow: inset 0 4px 8px; overflow:auto">
                 <table id="table">
                     <thead>
                         <tr>
@@ -229,69 +229,173 @@
                 <td id='stile'>cane</td>
                 <td id='stile'>L.B.Produzione</td>
                 <td id='stile'>prova2</td>
-                <td id='stile'>4mesi</td>
-                <td id='stile'>30/05/2024</td>
-                <td id='stile'>14/12/2024</td>
-                <td id='stile' style='display:none;'>10</td>
-                    <td id='storici' style='display:none'>62</td>
-                    <td id='storici' style='display:none'>29/05/2024</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>10</td>
-                    
-                    
-                    <td id='storici' style='display:none'>63</td>
-                    <td id='storici' style='display:none'>29/05/2024</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>10</td>
-                    
-                    
-                    <td id='storici' style='display:none'>64</td>
-                    <td id='storici' style='display:none'>29/05/2024</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>10</td>
-                    
-                    
-                    <td id='storici' style='display:none'>66</td>
-                    <td id='storici' style='display:none'>30/05/2024</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>10</td>
-                    
-                    </tr><tr id='storiciLista'>
-                <td id='stile'>didi</td>
-                <td id='stile'>cane</td>
-                <td id='stile'>L.B.Produzione</td>
-                <td id='stile'>prova2</td>
                 <td id='stile'>9mesi</td>
-                <td id='stile'>30/05/2024</td>
-                <td id='stile'>20/08/2026</td>
-                <td id='stile' style='display:none;'>12</td>
-                    <td id='storici' style='display:none'>72</td>
-                    <td id='storici' style='display:none'>30/05/2024</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>ok</td>
-                    <td id='storici' style='display:none'>12</td>
-                    
-                    </tr><tr id='storiciLista'>
+                <td id='stile'>27/06/2024</td>
+                <td id='stile'>18/03/2025</td>
+                <td id='stile' style='display:none;'>10</td></tr><tr id='storiciLista'>
                 <td id='stile'>provaManut</td>
                 <td id='stile'>provaManut</td>
                 <td id='stile'>L.B.Manutenzione</td>
                 <td id='stile'>provaManut</td>
-                <td id='stile'>Semestrale</td>
-                <td id='stile'>20/05/2024</td>
-                <td id='stile'>20/11/2024</td>
-                <td id='stile' style='display:none;'>13</td></tr><tr id='storiciLista'>
+                <td id='stile'>Settimanale</td>
+                <td id='stile'>03/07/2024</td>
+                <td id='stile'>16/07/2024</td>
+                <td id='stile' style='display:none;'>13</td>
+                    <td id='storici' style='display:none'>73</td>
+                    <td id='storici' style='display:none'>30/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>75</td>
+                    <td id='storici' style='display:none'>31/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>79</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>80</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>81</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>82</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>83</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>84</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>85</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>86</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>87</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>oko</td>
+                    <td id='storici' style='display:none'>k</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>88</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>89</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>90</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>91</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>92</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>93</td>
+                    <td id='storici' style='display:none'>17/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>94</td>
+                    <td id='storici' style='display:none'>18/06/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>95</td>
+                    <td id='storici' style='display:none'>02/07/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    
+                    <td id='storici' style='display:none'>96</td>
+                    <td id='storici' style='display:none'>03/07/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>13</td>
+                    
+                    </tr><tr id='storiciLista'>
                 <td id='stile'>didi</td>
                 <td id='stile'>cane</td>
                 <td id='stile'>L.B.Produzione</td>
                 <td id='stile'>prova2</td>
                 <td id='stile'>9mesi</td>
-                <td id='stile'>20/05/2024</td>
-                <td id='stile'>20/02/2025</td>
-                <td id='stile' style='display:none;'>16</td></tr><tr id='storiciLista'>
+                <td id='stile'>14/02/2023</td>
+                <td id='stile'>20/09/2024</td>
+                <td id='stile' style='display:none;'>16</td>
+                    <td id='storici' style='display:none'>76</td>
+                    <td id='storici' style='display:none'>14/06/2024</td>
+                    <td id='storici' style='display:none'>OK</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>16</td>
+                    
+                    </tr><tr id='storiciLista'>
                 <td id='stile'>DODO</td>
                 <td id='stile'>prova2</td>
                 <td id='stile'>L.B.Manutenzione</td>
@@ -300,14 +404,6 @@
                 <td id='stile'>20/05/2024</td>
                 <td id='stile'>19/05/2031</td>
                 <td id='stile' style='display:none;'>17</td></tr><tr id='storiciLista'>
-                <td id='stile'>DODO</td>
-                <td id='stile'>prova2</td>
-                <td id='stile'>L.B.Manutenzione</td>
-                <td id='stile'>nega</td>
-                <td id='stile'>Settennale</td>
-                <td id='stile'>20/05/2024</td>
-                <td id='stile'>19/05/2031</td>
-                <td id='stile' style='display:none;'>18</td></tr><tr id='storiciLista'>
                 <td id='stile'>provaManut</td>
                 <td id='stile'>provaManut</td>
                 <td id='stile'>L.B.Manutenzione</td>
@@ -316,22 +412,6 @@
                 <td id='stile'>22/05/2024</td>
                 <td id='stile'>22/11/2024</td>
                 <td id='stile' style='display:none;'>19</td></tr><tr id='storiciLista'>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>L.B.Manutenzione</td>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>Semestrale</td>
-                <td id='stile'>22/05/2024</td>
-                <td id='stile'>22/11/2024</td>
-                <td id='stile' style='display:none;'>20</td></tr><tr id='storiciLista'>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>L.B.Manutenzione</td>
-                <td id='stile'>provaManut</td>
-                <td id='stile'>Semestrale</td>
-                <td id='stile'>22/05/2024</td>
-                <td id='stile'>22/11/2024</td>
-                <td id='stile' style='display:none;'>21</td></tr><tr id='storiciLista'>
                 <td id='stile'>didi</td>
                 <td id='stile'>cane</td>
                 <td id='stile'>L.B.Produzione</td>
@@ -347,7 +427,101 @@
                 <td id='stile'>Semestrale</td>
                 <td id='stile'>22/05/2024</td>
                 <td id='stile'>22/11/2024</td>
-                <td id='stile' style='display:none;'>24</td></tr>                                                </table><!--Table-int-->
+                <td id='stile' style='display:none;'>24</td></tr><tr id='storiciLista'>
+                <td id='stile'>prova1</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova1</td>
+                <td id='stile'>4mesi</td>
+                <td id='stile'>14/04/2024</td>
+                <td id='stile'>18/10/2024</td>
+                <td id='stile' style='display:none;'>25</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>30/05/2024</td>
+                <td id='stile'>02/03/2025</td>
+                <td id='stile' style='display:none;'>26</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>27</td></tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>28</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/03/2025</td>
+                <td id='stile' style='display:none;'>29</td></tr><tr id='storiciLista'>
+                <td id='stile'>didi</td>
+                <td id='stile'>cane</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>prova2</td>
+                <td id='stile'>9mesi</td>
+                <td id='stile'>14/05/2024</td>
+                <td id='stile'>03/12/2025</td>
+                <td id='stile' style='display:none;'>30</td>
+                    <td id='storici' style='display:none'>77</td>
+                    <td id='storici' style='display:none'>14/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>30</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>03/12/2024</td>
+                <td id='stile' style='display:none;'>31</td></tr><tr id='storiciLista'>
+                <td id='stile'>acaciaMattutina</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>L.B.Manutenzione</td>
+                <td id='stile'>provaManut</td>
+                <td id='stile'>Semestrale</td>
+                <td id='stile'>09/05/2024</td>
+                <td id='stile'>03/06/2025</td>
+                <td id='stile' style='display:none;'>32</td>
+                    <td id='storici' style='display:none'>78</td>
+                    <td id='storici' style='display:none'>09/05/2024</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>ok</td>
+                    <td id='storici' style='display:none'>32</td>
+                    
+                    </tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>33</td></tr><tr id='storiciLista'>
+                <td id='stile'>mllmlml</td>
+                <td id='stile'>sfsfdds</td>
+                <td id='stile'>L.B.Produzione</td>
+                <td id='stile'>ffsdfdsds</td>
+                <td id='stile'>4settimane</td>
+                <td id='stile'>03/06/2024</td>
+                <td id='stile'>01/07/2024</td>
+                <td id='stile' style='display:none;'>34</td></tr>                                                </table><!--Table-int-->
                                             </div>
                                         </td><!--/colspan tabella ext-->
                                     </tr>
@@ -367,7 +541,7 @@
 
             <!--INIZIO zona rossa laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
-                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; overflow: auto; height: 700px;">
+                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; height: 800px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
@@ -375,7 +549,7 @@
                                 <font size="3px">Password</font>
                             </label>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <input type="password" placeholder="Inserisci password">
+                                <input type="password" placeholder="Inserisci password" name="Password">
                                 <img src=".\image\faccina.png" alt="Immagine" class="image"
                                     style="width:25%;margin: 0 auto;">
                             </span>
@@ -389,7 +563,7 @@
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="tutteLeMacchine"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
@@ -398,7 +572,7 @@
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="storicoMacchina"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image"
                                         style="margin: 0;width:80%">
@@ -414,7 +588,7 @@
                         <td style="background-color: rgb(255,193,194);box-shadow: inset 0 2px 3px;">
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="macchineEffettuateInData"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
@@ -422,13 +596,14 @@
                             </span>
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <button type="submit"
+                                <button type="submit" name="macchineInProgrammaPerData"
                                     style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
                                     <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
                                 </button>
                                 <br>
-                                <input type="text" name="daConfigurare" style="width:80%; height:120%">
+                                <input type="text" name="dataPerPulsantiMacchine" id="date"
+                                    style="width:80%; height:120%">
                             </span>
                             <br>
                         </td>
@@ -478,18 +653,18 @@
                                         <tr>
                                             <td colspan="3">
                                                 <div class="divinterno">
-                                                    <table id="scorribile" class="table-int">
+
+                                                    <table id="scorribile" class="daPopolare table-int">
                                                         <thead>
                                                             <tr>
-                                                                <th id="change">Data</th>
-                                                                <th id="change">Esito</th>
-                                                                <th id="change">Note</th>
+                                                                <th id="change" style="width:50%;">Data</th>
+                                                                <th id="change" style="width:50%;">Esito</th>
+                                                                <th id="change" style="width:50%;">Note</th>
                                                             </tr>
                                                         </thead>
+                                                        <tbody class="cancella">
 
-                                                    </table>
-                                                    <table id="scorribile" class="daPopolare table-int">
-
+                                                        </tbody>
 
                                                     </table>
                                                 </div>
@@ -518,34 +693,68 @@
 
             <!--INIZIO zona ARANCIONE laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
-                style="background-color: rgb(255,223,193); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
-                <table>
+                style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px;height:450px;display: flex; justify-content: center; align-items: center;">
+                <table style="background-color: rgb(255,223,193);">
                     <tr>
-                        <td><img src=".\image\RiepilogoMensile.png"></td>
+
+                        <td><br>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                                <button type="submit" name="riepilogoMensile"
+                                    style="background-color: rgb(255,223,193); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    <img src=".\image\RiepilogoMensile.png" alt="Immagine" class="image"
+                                        style="margin: 0; width:80%">
+                                </button>
+                            </span>
+                            <br></td>
                     </tr>
+
+
+
                     <tr>
                         <td>
-                            <select>
-                                <option>cioa</option>
-                                <option>ciaone</option>
-                                <option>cioetto</option>
-                                <option>weila</option>
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                            <select name="periodo" id="mySelect">
+                                <option value="01">Gennaio</option>
+                                <option value="02">Febbraio</option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Aprile</option>
+                                <option value="05">Maggio</option>
+                                <option value="06">Giugno</option>
+                                <option value="07">Luglio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Settembre</option>
+                                <option value="10">Ottobre</option>
+                                <option value="11">Novembre</option>
+                                <option value="12">Dicembre</option>
                             </select>
+                            </span>
                         </td>
                     </tr>
+                    <script>
+                        const selectElement = document.getElementById('mySelect'); // Sostituisci 'mySelect' con l'ID del tuo elemento select
+                        const currentYear = new Date().getFullYear(); // Ottiene l'anno corrente
+
+                        for (let option of selectElement.options) {
+                            const optionText = option.textContent; // Ottiene il testo dell'opzione
+                            const newOptionText = optionText + ' - ' + currentYear; // Aggiunge l'anno corrente al testo dell'opzione
+                            option.textContent = newOptionText; // Aggiorna il testo dell'opzione
+                        }
+                    </script>
                     <tr>
-                        <td><input type="text" id="date"></td>
+                        <td>
+                            <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO-->
+                            <span style="display: flex;flex-direction: column;align-items: center;">
+                            <input type="text" style="width:150px"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
+                            </span>
+                            <br>
+                        </td>
                     </tr>
-
-
-
-                    <td>
-                        <br>
-                        <br><img src=".\image\Chiudi.png">
-                    </td>
-
                 </table>
+                <button type="submit" onclick="window.close()"
+                            style="background-color: rgb(223,223,223); border: 0; padding: 0; display: inline-block;"><img
+                                src=".\image\Chiudi.png"></button>
             </div>
+            
             <!--FINE Zona ARANCIONE laterale-->
 
 
@@ -554,6 +763,7 @@
         </div>
 
         <script src="js.js"></script>
+        
     </form>
 </body>
 
