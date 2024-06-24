@@ -25,14 +25,17 @@ class Storico
 
     public function aggiungiStorico()
     {
-        if (isset($_POST['okStorico'])) {
+      /*  if (isset($_POST['okStorico'])) {  //rimossa perchè faceva crashare sqlite
 
             $manutConv = (int) $this->manutenzione;
             $dataConv = (string) $this->data;
             $my_conn = new PDO('sqlite:manutentori.db');
 
-            $query = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$dataConv}','{$this->esito}','{$this->note}','{$manutConv}')");
-            $query->execute();
+
+          //tolgo la query e la metto prima perchè crasha sqlite
+           // $queryInfo = $my_conn->prepare("INSERT INTO 'storici' ('id','data','esito','note','manutenzione') VALUES ('{$dataConv}','{$esito}','{$note}','{$manutConv}')");
+           // $queryInfo->execute();
+
 
             //se dico al programma che la manutenzione è stata fatta in quella data, rimando la manutenzione della data che mi ha dato
             //quindi devo fare una query che va a rimandare la data, faccio una query su manutenzioni, prima recupero i dati della manutenzione e poi successivamente 
@@ -63,7 +66,7 @@ class Storico
 
 
             }
-        }
+        }*/
     }
 
     public function eliminaStorico(){

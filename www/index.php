@@ -6,7 +6,7 @@ include ('./classi/funzioniPDF.php');
 
 
 session_start();
-
+$my_conn = new PDO('sqlite:manutentori.db');
 
 if (isset($_SESSION['show'])) {
 
@@ -15,8 +15,114 @@ if (isset($_SESSION['show'])) {
 }
 
 
+/*echo "fatto";
+die;*/
 
-$my_conn = new PDO('sqlite:manutentori.db');
+
+
+
+
+if (isset($_POST['okStorico'])) {
+
+    if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico'] != false) {
+       
+
+        $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
+        $query->execute();
+        foreach ($query as $row) {
+            $dataItalianaDue = $row['ProxMan'];
+            $dataItalianaArrayDue = explode("/", $dataItalianaDue);
+            $tempDue = $dataItalianaArrayDue[0];
+            $dataItalianaArrayDue[0] = $dataItalianaArrayDue[1];
+            $dataItalianaArrayDue[1] = $tempDue;
+
+            $dataItalianaReversedDue = implode("/", $dataItalianaArrayDue);
+
+            // Convertire la data italiana in timestamp UNIX
+            $timestampDue = strtotime($dataItalianaReversedDue);
+
+
+            $dataItalianaTre=$_POST['data'];
+            $dataItalianaArrayTre = explode("/", $dataItalianaTre);
+            $tempTre = $dataItalianaArrayTre[0];
+            $dataItalianaArrayTre[0] = $dataItalianaArrayTre[1];
+            $dataItalianaArrayTre[1] = $tempTre;
+
+            $dataItalianaReversedTre = implode("/", $dataItalianaArrayTre);
+
+            // Convertire la data italiana in timestamp UNIX
+            $timestampTre = strtotime($dataItalianaReversedTre);
+            $data=$_POST['data'];
+            $esito=$_POST['esito'];
+            $note=$_POST['note'];
+            $identificativoPerStorico=$_POST['identificativoPerStorico'];
+
+            if ($timestampTre <= $timestampDue) {
+                echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php?data=".$data."&esito=".$esito."&note=".$note."&identificativo=".$identificativoPerStorico."'}else{document.location.href='./index.php'};</script>";
+                $_SESSION['show'] = 0;
+            }else{
+
+
+                //inserita qua dentro le info della classe aggiungiStorico()
+                
+                $queryInfo = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$data}','{$esito}','{$note}','{$identificativoPerStorico}')");
+                $queryInfo->execute();
+
+                $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativoPerStorico}'");
+                $secondquery->execute();
+    
+                foreach ($secondquery as $row) {
+    
+                    $ProxMan = $row['ProxMan'];
+                    $GiorniManutenzione = $row['Manutenzione'];
+    
+                    $value = prossimaManutenzione($data, $GiorniManutenzione);
+    
+                    $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$data}' WHERE identificativo='{$identificativoPerStorico}'");
+                    $query->execute();
+    
+    
+                    $query = $my_conn->prepare("UPDATE 'manutenzioni' SET ProxMan='{$value}' WHERE identificativo='{$identificativoPerStorico}'");
+                    $query->execute();
+    
+    
+                }
+
+                //$storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
+                //$storico->aggiungiStorico();
+                $_SESSION['show'] = 0;
+
+
+                
+
+
+
+            }
+
+
+            $_SESSION['show'] = 0;
+        }
+
+
+
+
+       
+    } else {
+        ?>
+        <script>
+            alert('Seleziona uno Storico');
+        </script>
+        <?php
+        $_SESSION['show'] = 0;
+    }
+
+}
+
+
+
+
+
+
 $manScadute = $my_conn->prepare("SELECT * FROM manutenzioni");
 $manScadute->execute();
 
@@ -245,6 +351,15 @@ if (isset($_POST['Clear'])) {
 }
 
 
+
+
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -269,75 +384,6 @@ if (isset($_POST['Clear'])) {
 
 <body style="background-color: rgb(223,223,223);">
     <form method="post" id="myForm" name="ricerca" style="background-color: rgb(223,223,223);">
-
-
-
-        <?php
-        if (isset($_POST['okStorico'])) {
-
-            if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico'] != false) {
-                $my_conn = new PDO('sqlite:manutentori.db');
-
-                $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
-                $query->execute();
-                foreach ($query as $row) {
-                    $dataItaliana = $row['ProxMan'];
-                    $dataItalianaArray = explode("/", $dataItaliana);
-                    $temp = $dataItalianaArray[0];
-                    $dataItalianaArray[0] = $dataItalianaArray[1];
-                    $dataItalianaArray[1] = $temp;
-
-                    $dataItalianaReversed = implode("/", $dataItalianaArray);
-
-                    // Convertire la data italiana in timestamp UNIX
-                    $timestamp = strtotime($dataItalianaReversed);
-
-                    $today = strtotime('today');
-
-                    if ($today <= $timestamp) {
-                        echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php'}else{document.location.href='./index.php'};</script>";
-                        $_SESSION['show'] = 0;
-                    }
-
-
-
-                }
-
-
-
-
-               
-            } else {
-                ?>
-                <script>
-                    alert('Seleziona uno Storico');
-                </script>
-                <?php
-                $_SESSION['show'] = 0;
-            }
-
-        }
-
-
-
-
-        ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <div class="uk-grid uk-grid-match">
             <!--INIZIO zona grigia centrale-->
             <div class="uk-width-4-5 uk-card uk-card-default"
