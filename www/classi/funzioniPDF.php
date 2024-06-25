@@ -52,7 +52,7 @@ function riepilogoMensile($periodoDaEstrarre)
 
   $data = array(
   );
-
+  $countManutenzioni=0;
   foreach ($secondquery as $row) {
 
     $dataMese = $row['data'];
@@ -66,9 +66,11 @@ function riepilogoMensile($periodoDaEstrarre)
       $my_conn = new PDO('sqlite:manutentori.db');
       $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
       $firstquery->execute();
+      
       foreach ($firstquery as $raw) {
         $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese);
         array_push($data, $info);
+        $countManutenzioni++;
       }
 
 
@@ -111,6 +113,16 @@ function riepilogoMensile($periodoDaEstrarre)
       $pdf->AddPage();
     }
   }
+
+
+
+  // Set footer position (adjust Y coordinate as needed)
+  $footerY = $pdf->GetPageHeight() - 20;
+  $pdf->SetY($footerY);
+  $stampa="Totale manutenzioni:"." ".$countManutenzioni;
+  // Set font and alignment for footer text
+  $pdf->SetFont('Arial', 'B', 10); // Bold Arial font size 10
+  $pdf->Cell(0, 7,$stampa, 0, 1, 'C'); // Footer cell with centered alignment
 
   $pdf->SetTitle('Riepilogo Mensile delle Manutenzioni'); // Set PDF title
 

@@ -31,6 +31,10 @@ tr.sel {
   /* Show scrollbar after 5th row */
 }
 
+#manutTOTEST {
+  text-align: center;
+  width:150px;
+}
 
 #change {
   border: 1px solid black;

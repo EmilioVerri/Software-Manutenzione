@@ -25,7 +25,7 @@ die;*/
 if (isset($_POST['okStorico'])) {
 
     if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico'] != false) {
-       
+
 
         $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
         $query->execute();
@@ -42,7 +42,7 @@ if (isset($_POST['okStorico'])) {
             $timestampDue = strtotime($dataItalianaReversedDue);
 
 
-            $dataItalianaTre=$_POST['data'];
+            $dataItalianaTre = $_POST['data'];
             $dataItalianaArrayTre = explode("/", $dataItalianaTre);
             $tempTre = $dataItalianaArrayTre[0];
             $dataItalianaArrayTre[0] = $dataItalianaArrayTre[1];
@@ -52,40 +52,40 @@ if (isset($_POST['okStorico'])) {
 
             // Convertire la data italiana in timestamp UNIX
             $timestampTre = strtotime($dataItalianaReversedTre);
-            $data=$_POST['data'];
-            $esito=$_POST['esito'];
-            $note=$_POST['note'];
-            $identificativoPerStorico=$_POST['identificativoPerStorico'];
+            $data = $_POST['data'];
+            $esito = $_POST['esito'];
+            $note = $_POST['note'];
+            $identificativoPerStorico = $_POST['identificativoPerStorico'];
 
             if ($timestampTre <= $timestampDue) {
-                echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php?data=".$data."&esito=".$esito."&note=".$note."&identificativo=".$identificativoPerStorico."'}else{document.location.href='./index.php'};</script>";
+                echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php?data=" . $data . "&esito=" . $esito . "&note=" . $note . "&identificativo=" . $identificativoPerStorico . "'}else{document.location.href='./index.php'};</script>";
                 $_SESSION['show'] = 0;
-            }else{
+            } else {
 
 
                 //inserita qua dentro le info della classe aggiungiStorico()
-                
+
                 $queryInfo = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$data}','{$esito}','{$note}','{$identificativoPerStorico}')");
                 $queryInfo->execute();
 
                 $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativoPerStorico}'");
                 $secondquery->execute();
-    
+
                 foreach ($secondquery as $row) {
-    
+
                     $ProxMan = $row['ProxMan'];
                     $GiorniManutenzione = $row['Manutenzione'];
-    
+
                     $value = prossimaManutenzione($data, $GiorniManutenzione);
-    
+
                     $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$data}' WHERE identificativo='{$identificativoPerStorico}'");
                     $query->execute();
-    
-    
+
+
                     $query = $my_conn->prepare("UPDATE 'manutenzioni' SET ProxMan='{$value}' WHERE identificativo='{$identificativoPerStorico}'");
                     $query->execute();
-    
-    
+
+
                 }
 
                 //$storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
@@ -93,7 +93,7 @@ if (isset($_POST['okStorico'])) {
                 $_SESSION['show'] = 0;
 
 
-                
+
 
 
 
@@ -106,7 +106,7 @@ if (isset($_POST['okStorico'])) {
 
 
 
-       
+
     } else {
         ?>
         <script>
@@ -860,11 +860,88 @@ if (isset($_POST['Clear'])) {
                     </script>
                     <tr>
                         <td>
+
+
+
+
+
+
+
+                            <?php
+                            $data = date('d-m-Y');
+
+                            $meseInput = date('m', strtotime($data)); // Esempio di utilizzo di date() e strtotime()
+                            
+
+
+                            function stessoMese($data, $meseInput)
+                            {
+                                $dateParts = explode("/", $data);
+                                // Extract the month from the array (second element)
+                                $mese = $dateParts[1];
+                                if ($mese == $meseInput) {
+                                    $value = "ok";
+                                    return $value;
+                                } else {
+                                    $value = "nonok";
+                                    return $value;
+                                }
+                            }
+
+
+                            $my_conn = new PDO('sqlite:manutentori.db');
+                            $secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
+                            $secondquery->execute();
+                            $data = array(
+                            );
+                            $countManutenzioni = 0;
+                            foreach ($secondquery as $row) {
+
+                                $dataMese = $row['data'];
+
+                                $stessoMese = stessoMese($dataMese, $meseInput);
+                                if ($stessoMese == "ok") {
+
+
+                                    $identificativo = $row['manutenzione'];
+                                    $my_conn = new PDO('sqlite:manutentori.db');
+                                    $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
+                                    $firstquery->execute();
+
+                                    foreach ($firstquery as $raw) {
+                                        $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese);
+                                        array_push($data, $info);
+                                        $countManutenzioni++;
+                                    }
+                                } else {
+
+                                }
+
+                            }
+
+
+                            ?>
+
                             <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO-->
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <input type="text"
-                                    style="width:150px"><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
+                                <input type="text" style="" id="manutTOTEST" value="<?php echo $countManutenzioni; ?> Manutenzioni"
+                                    readonly><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
                             </span>
+                            <script>
+                                const inputField = document.getElementById('manutTOTEST');
+                                const currentMonthItalian = new Date().toLocaleDateString('it-IT', { month: 'long' });
+
+
+                                const inputValue = inputField.value || "";
+
+
+                                const formattedText = inputValue ? `${inputValue} - ${currentMonthItalian}` : currentMonthItalian;
+
+
+                                inputField.value = formattedText;
+
+
+                            </script>
                             <br>
                         </td>
                     </tr>
