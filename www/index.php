@@ -57,11 +57,16 @@ if (isset($_POST['okStorico'])) {
             $note = $_POST['note'];
             $identificativoPerStorico = $_POST['identificativoPerStorico'];
 
-            if ($timestampTre <= $timestampDue) {
+            if ($timestampTre < $timestampDue) {
+                $_SESSION['show'] = 0;
                 echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php?data=" . $data . "&esito=" . $esito . "&note=" . $note . "&identificativo=" . $identificativoPerStorico . "'}else{document.location.href='./index.php'};</script>";
                 $_SESSION['show'] = 0;
-            } else {
-
+            }elseif($timestampTre == $timestampDue){
+                $_SESSION['show'] = 0;
+                echo "<script>document.location.href='./script.php?data=" . $data . "&esito=" . $esito . "&note=" . $note . "&identificativo=" . $identificativoPerStorico . "';</script>";
+            }
+             else {
+                $_SESSION['show'] = 0;
 
                 //inserita qua dentro le info della classe aggiungiStorico()
 
@@ -90,13 +95,6 @@ if (isset($_POST['okStorico'])) {
 
                 //$storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
                 //$storico->aggiungiStorico();
-                $_SESSION['show'] = 0;
-
-
-
-
-
-
             }
 
 
@@ -142,18 +140,18 @@ foreach ($manScadute as $row) {
     $today = strtotime('today');
 
     $info = 1;
-
+    $info2 = 0;
 
 
 
     if ($timestamp <= $today) {
-        if ($row['InScadenza'] == 1) {
 
-        } else {
 
             $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info WHERE identificativo={$row['identificativo']}");
             $queryUpdate->execute();
-        }
+    }else{
+        $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info2 WHERE identificativo={$row['identificativo']}");
+        $queryUpdate->execute();
     }
 }
 
@@ -477,13 +475,13 @@ if (isset($_POST['Clear'])) {
                                         <td>
                                             <font size="2">Ultima <br>Manutenzione</font>
                                         </td>
-                                        <td><input type="text" id="ultimaManutenzione" name="ultimamanutenzione"></td>
+                                        <td><input type="text" id="ultimaManutenzione" name="ultimamanutenzione" readonly></td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <font size="2">Prossima <br>manutenzione</font>
                                         </td>
-                                        <td><input type="text" id="proxManutenzione" name="proxManutenzione"></td>
+                                        <td><input type="text" id="proxManutenzione" name="proxManutenzione" readonly></td>
                                     </tr>
                                 </table>
                                 <!--FINE tabella che identifica Ultima manutenzione e prossima manutenzione-->
@@ -927,21 +925,6 @@ if (isset($_POST['Clear'])) {
                                 <input type="text" style="" id="manutTOTEST" value="<?php echo $countManutenzioni; ?> Manutenzioni"
                                     readonly><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
                             </span>
-                            <script>
-                                const inputField = document.getElementById('manutTOTEST');
-                                const currentMonthItalian = new Date().toLocaleDateString('it-IT', { month: 'long' });
-
-
-                                const inputValue = inputField.value || "";
-
-
-                                const formattedText = inputValue ? `${inputValue} - ${currentMonthItalian}` : currentMonthItalian;
-
-
-                                inputField.value = formattedText;
-
-
-                            </script>
                             <br>
                         </td>
                     </tr>

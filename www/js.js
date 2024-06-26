@@ -395,7 +395,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //FINE RENDERE CLICCABILE LA TABELLA DA POPOLARE PER GLI STORICI
 
+const inputt = document.getElementById('manutTOTEST');
+const currentMonthItalian = new Date().toLocaleDateString('it-IT', { month: 'long' });
 
+
+const inputValue = inputt.value || "";
+
+
+const formattedText = inputValue ? `${inputValue} - ${currentMonthItalian}` : currentMonthItalian;
+
+
+inputt.value = formattedText;
 
 
 
