@@ -30,19 +30,6 @@ function riepilogoMensile($periodoDaEstrarre)
   $headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione', 'Data');
 
 
-  function stessoMese($data, $meseInput)
-  {
-    $dateParts = explode("/", $data);
-    // Extract the month from the array (second element)
-    $mese = $dateParts[1];
-    if ($mese == $meseInput) {
-      $value = "ok";
-      return $value;
-    } else {
-      $value = "nonok";
-      return $value;
-    }
-  }
 
 
   $my_conn = new PDO('sqlite:manutentori.db');

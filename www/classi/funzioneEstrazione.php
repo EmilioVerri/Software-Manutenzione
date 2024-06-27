@@ -110,7 +110,12 @@ function estraiIdentificativo()
 }
 
 
-
+function is_data_formato_valido($data) {
+    // Espressione regolare per il formato dd/mm/YYYY
+    $regex = '/^(0[1-9]|[1-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/(19[0-9][0-9]|20[0-2][0-4])$/';
+    // Controlla se la data corrisponde al formato regex
+    return preg_match($regex, $data);
+  }
 
 
 function estraiScadenzaManutenzioniCheckbox()

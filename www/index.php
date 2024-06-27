@@ -5,6 +5,42 @@ include ('./classi/ClasseStorico.php');
 include ('./classi/funzioniPDF.php');
 
 
+
+
+
+
+// Funzione per controllare il formato della data
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 session_start();
 $my_conn = new PDO('sqlite:manutentori.db');
 
@@ -18,8 +54,19 @@ if (isset($_SESSION['show'])) {
 /*echo "fatto";
 die;*/
 
-
-
+function stessoMese($data, $meseInput)
+{
+  $dateParts = explode("/", $data);
+  // Extract the month from the array (second element)
+  $mese = $dateParts[1];
+  if ($mese == $meseInput) {
+    $value = "ok";
+    return $value;
+  } else {
+    $value = "nonok";
+    return $value;
+  }
+}
 
 
 if (isset($_POST['okStorico'])) {
@@ -40,6 +87,38 @@ if (isset($_POST['okStorico'])) {
 
             // Convertire la data italiana in timestamp UNIX
             $timestampDue = strtotime($dataItalianaReversedDue);
+
+              
+              if(isset($_POST['data'])){
+                // Recupera la data dalla POST
+              $data_ricevuta = $_POST['data'];
+                // Controlla se la data è nel formato corretto
+                if (!is_data_formato_valido($data_ricevuta)) {
+                   echo "<script>
+                   alert('Formato data non valido');
+                   document.location.href='./index.php';
+                   </script>";
+                   exit;
+                  }
+            
+                    // Controlla se la data è valida (esiste realmente)
+              $giorno = substr($data_ricevuta, 0, 2);
+              $mese = substr($data_ricevuta, 3, 2);
+              $anno = substr($data_ricevuta, 6, 4);
+              
+              if (!checkdate($mese, $giorno, $anno)) {
+                // Se la data non è valida, ricarica la pagina
+                //header('Location: ' . $_SERVER['HTTP_REFERER']);
+                echo "<script>
+                alert('Formato data non valido');
+                document.location.href='./index.php';
+                </script>";
+                exit;
+              }
+              }
+
+
+
 
 
             $dataItalianaTre = $_POST['data'];
@@ -173,6 +252,41 @@ if (isset($_POST['eliminaStorico']) && isset($_POST['idElimaStorico'])) {
     }
 
 }
+
+
+
+
+if(isset($_POST['macchineEffettuateInData'])||isset($_POST['macchineInProgrammaPerData'])){
+    // Recupera la data dalla POST
+  $data_ricevuta = $_POST['dataPerPulsantiMacchine'];
+    // Controlla se la data è nel formato corretto
+    if (!is_data_formato_valido($data_ricevuta)) {
+        $_SESSION['show'] = 0;
+       echo "<script>
+       alert('Formato data non valido');
+       document.location.href='./index.php';
+       </script>";
+       exit;
+      }
+
+        // Controlla se la data è valida (esiste realmente)
+  $giorno = substr($data_ricevuta, 0, 2);
+  $mese = substr($data_ricevuta, 3, 2);
+  $anno = substr($data_ricevuta, 6, 4);
+  
+  if (!checkdate($mese, $giorno, $anno)) {
+    // Se la data non è valida, ricarica la pagina
+    //header('Location: ' . $_SERVER['HTTP_REFERER']);
+    $_SESSION['show'] = 0;
+    echo "<script>
+    alert('Formato data non valido');
+    document.location.href='./index.php';
+    </script>";
+    exit;
+  }
+  }
+
+
 
 
 
@@ -872,19 +986,7 @@ if (isset($_POST['Clear'])) {
                             
 
 
-                            function stessoMese($data, $meseInput)
-                            {
-                                $dateParts = explode("/", $data);
-                                // Extract the month from the array (second element)
-                                $mese = $dateParts[1];
-                                if ($mese == $meseInput) {
-                                    $value = "ok";
-                                    return $value;
-                                } else {
-                                    $value = "nonok";
-                                    return $value;
-                                }
-                            }
+                            
 
 
                             $my_conn = new PDO('sqlite:manutentori.db');

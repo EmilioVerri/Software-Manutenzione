@@ -21,7 +21,7 @@ tr.selected {
 }
 
 tr.sel {
-  background-color: green;
+  background-color: #ddd;
   /* Or any desired color */
 }
 
