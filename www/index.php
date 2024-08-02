@@ -4,42 +4,7 @@ include ('./classi/funzioneEstrazione.php');
 include ('./classi/ClasseStorico.php');
 include ('./classi/funzioniPDF.php');
 
-
-
-
-
-
 // Funzione per controllare il formato della data
-
-
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 session_start();
 $my_conn = new PDO('sqlite:manutentori.db');

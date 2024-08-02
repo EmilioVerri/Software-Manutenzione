@@ -1,62 +1,47 @@
 <?php
-//da rivedere le date, definire meglio
 function estraigiorni($giornoInLettere) {
     switch ($giornoInLettere) {
         case "Giornaliero":
-            // Manutenzione Giornaliera
             $giorni = 1;
             break;
         case "Settimanale":
-            // Manutenzione Settimanale
             $giorni = 7;
             break;
         case "Quindicinale":
-            // Manutenzione Quindicinale
             $giorni = 15;
             break;
         case "4settimane":
-            // Manutenzione 4 Settimane, 28 giorni
             $giorni = 28;
             break;
         case "Mensile":
-            // Manutenzione 1mese
-            $giorni = 31; // Set default to 31 days
+            $giorni = 1; //1 mese
             break;
         case "Bimestrale":
-            // Manutenzione 2mese
-            $giorni = 60;
+            $giorni = 2; //2 mesi
             break;
         case "Trimestrale":
-            // Manutenzione 3mese
-            $giorni = 90;
+            $giorni = 3; //3 mesi
             break;
         case "Semestrale":
-            // Manutenzione 6mese
-            $giorni = 180;
+            $giorni = 6; //6 mesi
             break;
         case "9mesi":
-            // Manutenzione 9mese
-            $giorni = 270;
+            $giorni = 9; //9 mesi
             break;
         case "4mesi":
-            // Manutenzione 4mese
-            $giorni = 120;
+            $giorni = 4; //4 mesi
             break;
         case "Annuale":
-            // Manutenzione 1anno
-            $giorni = 365;
+            $giorni = 12; //1 anno
             break;
         case "Quinquennale":
-            // Manutenzione 5anni
-            $giorni = 1825;
+            $giorni = 60; //5 anni
             break;
         case "Settennale":
-            // Manutenzione 7anni
-            $giorni = 2555;
+            $giorni = 84; //7 anni
             break;
         case "Decennale":
-            // Manutenzione 10anni
-            $giorni = 3650;
+            $giorni = 120; //10 anni
             break;
         default:
             echo "Frequenza non valida: " . $giornoInLettere;
@@ -64,38 +49,39 @@ function estraigiorni($giornoInLettere) {
     }
 
     $oggi = strtotime('today');
-    $dataProssima = $oggi + $giorni * 24 * 60 * 60;
+    $dataProssima = strtotime('+' . $giorni . ' days', $oggi);
 
-    // Adjust days for months with 30 or 31 days
-    $meseProssimo = date('m', $dataProssima);
-    $giorniMeseProssimo = 31; // Default to 31 days
-
-    if ($meseProssimo === 2) {
-        $isLeapYearNextYear = is_leap_year(date('Y', $dataProssima));
-        $isLeapYearCurrentYear = is_leap_year(date('Y', $oggi));
-
-        if ($isLeapYearNextYear && !$isLeapYearCurrentYear) {
-            $giorniMeseProssimo = 29; // Set days to 29 for leap year February
-        } else {
-            $giorniMeseProssimo = 28; // Set days to 28 for non-leap year February
-        }
-    } else if (in_array($meseProssimo, [4, 6, 9, 11])) {
-        $giorniMeseProssimo = 30; // Set days to 30 for April, June, September, November
-    }
-
-    // Check if the next day is beyond the end of the next month
-    $giornoProssimo = date('d', $dataProssima);
-    if ($giornoProssimo > $giorniMeseProssimo) {
-        // If so, add days to reach the next month's first day
-        $dataProssima += ($giorniMeseProssimo - $giornoProssimo + 1) * 24 * 60 * 60;
+    if (in_array($giornoInLettere, ["Mensile", "Bimestrale", "Trimestrale", "Semestrale", "9mesi", "4mesi", "Annuale", "Quinquennale", "Settennale", "Decennale"])) {
+        $dataProssima = calcolaProssimaData($oggi, $giorni);
+    } else {
+        $dataProssima = strtotime('+' . $giorni . ' days', $oggi);
     }
 
     $dataFormattata = date('d/m/Y', $dataProssima);
     return $dataFormattata;
 }
 
+function calcolaProssimaData($dataIniziale, $mesi) {
+    $annoIniziale = date('Y', $dataIniziale);
+    $meseIniziale = date('m', $dataIniziale);
+    $giornoIniziale = date('d', $dataIniziale);
 
+    $nuovoMese = $meseIniziale + $mesi;
+    $nuovoAnno = $annoIniziale + floor($nuovoMese / 12);
+    $nuovoMese = $nuovoMese % 12;
+    if ($nuovoMese == 0) {
+        $nuovoMese = 12;
+        $nuovoAnno--;
+    }
 
+    $giorniNelNuovoMese = cal_days_in_month(CAL_GREGORIAN, $nuovoMese, $nuovoAnno);
+
+    if ($giornoIniziale > $giorniNelNuovoMese) {
+        $giornoIniziale = $giorniNelNuovoMese;
+    }
+
+    return mktime(0, 0, 0, $nuovoMese, $giornoIniziale, $nuovoAnno);
+}
 
 function is_leap_year($year) {
     if ($year % 4 != 0) {
@@ -106,6 +92,8 @@ function is_leap_year($year) {
         return true;
     }
 }
+
+
 
 
 
