@@ -29,7 +29,7 @@ class Storico
 
             $manutConv = (int) $this->manutenzione;
             $dataConv = (string) $this->data;
-            $my_conn = new PDO('sqlite:manutentori.db');
+            $my_conn = new PDO('sqlite:manutentoriCopy.db');
 
 
           //tolgo la query e la metto prima perchè crasha sqlite
@@ -40,7 +40,7 @@ class Storico
             //se dico al programma che la manutenzione è stata fatta in quella data, rimando la manutenzione della data che mi ha dato
             //quindi devo fare una query che va a rimandare la data, faccio una query su manutenzioni, prima recupero i dati della manutenzione e poi successivamente 
             //aggiorno i dati della stessa
-            $my_conn = new PDO('sqlite:manutentori.db');
+            $my_conn = new PDO('sqlite:manutentoriCopy.db');
 
             $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$manutConv}'");
             $secondquery->execute();
@@ -70,9 +70,88 @@ class Storico
     }
 
     public function eliminaStorico(){
-        $my_conn = new PDO('sqlite:manutentori.db');
+
+        $conn = new PDO('sqlite:manutentoriCopy.db');
+        $queryTre = $conn->prepare("SELECT manutenzione FROM storici WHERE id={$this->manutenzione}");
+        $queryTre->execute();
+
+        $results = $queryTre->fetchAll(PDO::FETCH_ASSOC);
+        $i=0;
+
+        foreach ($results as $est) {
+           if($i==0){
+            $numeroManutenzione=$est['manutenzione'];
+
+            echo $numeroManutenzione;
+           }
+            $i++;
+        }
+
+
+
+        $my_conn = new PDO('sqlite:manutentoriCopy.db');
         $query = $my_conn->prepare("DELETE FROM storici WHERE id={$this->manutenzione}");
         $query->execute();
+
+        $my_conn = new PDO('sqlite:manutentoriCopy.db');
+        $queryDue = $my_conn->prepare("SELECT MAX(id),data FROM storici WHERE manutenzione={$numeroManutenzione}");
+        $queryDue->execute();
+
+        $results = $queryDue->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($results as $estrazioni) {
+          $ultimoId=$estrazioni['MAX(id)'];
+          $data=$estrazioni['data'];
+        }
+
+
+
+
+
+
+
+
+
+        $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$numeroManutenzione}'");
+        $secondquery->execute();
+
+        foreach ($secondquery as $row) {
+
+            
+            $GiorniManutenzione = $row['Manutenzione'];
+
+            $value = prossimaManutenzione($data, $GiorniManutenzione);
+
+            $query = $my_conn->prepare("UPDATE manutenzioni SET UltimaMan='{$data}' WHERE identificativo='{$numeroManutenzione}'");
+            $query->execute();
+
+
+            $query = $my_conn->prepare("UPDATE 'manutenzioni' SET ProxMan='{$value}' WHERE identificativo='{$numeroManutenzione}'");
+            $query->execute();
+        }
+
+
+        /*
+        $my_conn = new PDO('sqlite:manutentoriCopy.db');
+        $query = $my_conn->prepare("UPDATE");
+        $query->execute();*/
+        
+
+
+
+
+
+        
+
+  
+
+
+
+
+
+
+
+
+
     }
 
 

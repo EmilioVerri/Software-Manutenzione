@@ -15,8 +15,8 @@
         "log_file": "debug.log"
     },
     "main_window": {
-        "title": "Manutenzione Apparecchiature/Impiani - Gambro Dasco",
-        "icon": "Baxter.ico",
+        "title": "Manutenzione Apparecchiature/Impiani",
+        "icon": "icona da inserire",
         "default_size": [1000, 600],
         "minimum_size": [640, 480],
         "maximum_size": [0, 0],

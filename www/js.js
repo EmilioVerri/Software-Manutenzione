@@ -1,4 +1,41 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+
+
+  document.querySelectorAll(".storiciLista").forEach(row => {
+    row.addEventListener("click", function () {
+        let identificativo = this.getAttribute("data-identificativo");
+
+        // Se gli storici sono già stati caricati, non fare nulla
+        if (this.getAttribute("data-loaded") === "true") {
+            return;
+        }
+
+        // Carica dinamicamente gli storici
+        fetch("ottieniStorici.php?identificativo=" + identificativo)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Errore nella risposta del server");
+                }
+                return response.text();
+            })
+            .then(data => {
+                if (data.trim() !== "") {
+                    this.insertAdjacentHTML("beforeend", data);
+                    this.setAttribute("data-loaded", "true"); // Imposta il flag per evitare ricaricamenti
+                }
+            })
+            .catch(error => console.error("Errore nel recupero degli storici:", error));
+    });
+});
+
+
+
+
+
+
+
+
   const table = document.getElementById('scorribile');
   let selectedRow = null; // Keep track of the currently selected row
 
@@ -139,8 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // FINEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
 
-
-
+        
 
 
 
@@ -209,6 +245,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const viide = arrayValori[7];
         ide.value = viide;
 
+
+
+
+
+
+
+        
 
       }
     });

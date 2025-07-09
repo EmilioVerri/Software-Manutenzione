@@ -34,6 +34,9 @@ function estraigiorni($giornoInLettere) {
         case "Annuale":
             $giorni = 12; //1 anno
             break;
+        case "Triennale":
+            $giorni = 36; //3 anni
+            break;
         case "Quinquennale":
             $giorni = 60; //5 anni
             break;
@@ -51,7 +54,7 @@ function estraigiorni($giornoInLettere) {
     $oggi = strtotime('today');
     $dataProssima = strtotime('+' . $giorni . ' days', $oggi);
 
-    if (in_array($giornoInLettere, ["Mensile", "Bimestrale", "Trimestrale", "Semestrale", "9mesi", "4mesi", "Annuale", "Quinquennale", "Settennale", "Decennale"])) {
+    if (in_array($giornoInLettere, ["Mensile", "Bimestrale", "Trimestrale", "Semestrale", "9mesi", "4mesi", "Annuale","Triennale", "Quinquennale", "Settennale", "Decennale"])) {
         $dataProssima = calcolaProssimaData($oggi, $giorni);
     } else {
         $dataProssima = strtotime('+' . $giorni . ' days', $oggi);
@@ -312,7 +315,27 @@ function prossimaManutenzione($datoDaAggiornare, $giorniInStringa)
 
         return $formatted;
         //Fine Manutenzione Annuale
-    } elseif ($giorniInStringa == "Quinquennale") {
+    } 
+    elseif ($giorniInStringa == "Triennale") {
+        //Manutenzione Annuale
+        date_default_timezone_set('Europe/Rome');
+
+
+        $initialDate = $datoDaAggiornare;
+        $dateTime = DateTime::createFromFormat('d/m/Y', $initialDate);
+
+        // Check if DateTime object creation was successful
+        if ($dateTime) {
+            // Add four months to the DateTime object
+            $dateTime->modify('+3 year');
+
+            // Format the resulting date in the desired format
+            $formatted = $dateTime->format('d/m/Y');
+        }
+
+        return $formatted;
+        //Fine Manutenzione Annuale
+    }elseif ($giorniInStringa == "Quinquennale") {
         //Manutenzione 5 Anni
         date_default_timezone_set('Europe/Rome');
 

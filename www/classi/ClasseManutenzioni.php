@@ -42,10 +42,11 @@ class Manutenzione
         if (isset($_POST['Aggiungi'])) {
             $today = strtotime('today');
             $UltimaMan = date('d/m/Y', $today);
-            $prossimaMan = estraigiorni($this->manutenzione);
+            //$prossimaMan = estraigiorni($this->manutenzione); QUESTA PER TORNARE ALLA SITUAZIONE DI PRIMA CHE FA LA MANUTENZIONE SUBITO
+            $prossimaMan = date('d/m/Y', $today);
             $indentificativoIntero = (int) $this->identificativo;
             $InScadenz = 0;
-            $my_conn = new PDO('sqlite:manutentori.db');
+            $my_conn = new PDO('sqlite:manutentoriCopy.db');
             $query = $my_conn->prepare("INSERT INTO 'manutenzioni' ('Sigla','Nome','Cat','Reparto','Manutenzione','UltimaMan','ProxMan','identificativo','InScadenza') 
            VALUES ('{$this->sigla}','{$this->nome}','{$this->cat}','{$this->reparto}','{$this->manutenzione}','{$UltimaMan}','{$prossimaMan}','{$indentificativoIntero}','{$InScadenz}')");
             $query->execute();
@@ -65,7 +66,7 @@ class Manutenzione
             $UltimaMan = $_POST['ultimamanutenzione'];
             $prossimaMan = estraigiorni($this->manutenzione);
             $indentificativoIntero = (int) $this->identificativo;
-            $my_conn = new PDO('sqlite:manutentori.db');
+            $my_conn = new PDO('sqlite:manutentoriCopy.db');
             $query = $my_conn->prepare("UPDATE manutenzioni SET Sigla='{$this->sigla}' WHERE identificativo='{$this->identificativo}'");
             $query->execute();
             $query = $my_conn->prepare("UPDATE manutenzioni SET Nome='{$this->nome}' WHERE identificativo='{$this->identificativo}'");
@@ -89,7 +90,7 @@ class Manutenzione
     {
         if (isset($_POST["Elimina"])) {
 
-            $my_conn = new PDO('sqlite:manutentori.db');
+            $my_conn = new PDO('sqlite:manutentoriCopy.db');
             $query = $my_conn->prepare("DELETE FROM manutenzioni WHERE identificativo={$this->identificativo}");
             $query->execute();
 

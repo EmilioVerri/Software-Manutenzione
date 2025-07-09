@@ -27,12 +27,12 @@ function riepilogoMensile($periodoDaEstrarre)
   $pdf->AddPage(); // Add a new page to the PDF
 
   // Define table headers and data (replace with your actual data)
-  $headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione', 'Data');
+  $headers = array('Sigla', 'Cat.', 'Reparto', 'Manutenzione', 'Data');
 
 
 
 
-  $my_conn = new PDO('sqlite:manutentori.db');
+  $my_conn = new PDO('sqlite:manutentoriCopy.db');
   $secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
   $secondquery->execute();
 
@@ -44,28 +44,43 @@ function riepilogoMensile($periodoDaEstrarre)
 
     $dataMese = $row['data'];
 
+
+
     $meseInput = $periodoDaEstrarre;
     $stessoMese = stessoMese($dataMese, $meseInput);
-    if ($stessoMese == "ok") {
 
+    if ($stessoMese == "ok") { 
 
-      $identificativo = $row['manutenzione'];
-      $my_conn = new PDO('sqlite:manutentori.db');
-      $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
-      $firstquery->execute();
+      // Estrai l'anno dalla data
+      $annoCorrente = date("Y");
+      $annoDataMese = date("Y", strtotime(str_replace("/", "-", $dataMese)));
       
-      foreach ($firstquery as $raw) {
-        $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese);
-        array_push($data, $info);
-        $countManutenzioni++;
+      if ($annoDataMese == $annoCorrente) {
+          $identificativo = $row['manutenzione'];
+      
+          $my_conn = new PDO('sqlite:manutentoriCopy.db');
+          $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo=?");
+          $firstquery->execute([$identificativo]);
+      
+          foreach ($firstquery as $raw) {
+              $info = array($raw['Sigla'], $raw['Nome'], $raw['Cat'], $raw['Reparto'], $raw['Manutenzione'], $dataMese);
+              array_push($data, $info);
+              $countManutenzioni++;
+          }
       }
-
-
-    } else {
+      
+      }else {
 
     }
 
   }
+
+
+
+
+  usort($data, function($a, $b) {
+    return strcmp($a[0], $b[0]); // confronto sulla posizione 0 = 'Sigla'
+});
 
   // Set font and cell width for headers
   $pdf->SetFont('Arial', 'B', 12); // Set bold Arial font size 12
@@ -88,7 +103,6 @@ function riepilogoMensile($periodoDaEstrarre)
   // Print data rows with automatic page breaks and cell wrapping
   foreach ($data as $row) {
     $pdf->Cell($cellWidth, 7, $row[0], 1, 0); // Code
-    $pdf->Cell($cellWidth, 7, $row[1], 1, 0); // Description (wrapping enabled)
     $pdf->Cell($cellWidth, 7, $row[2], 1, 0); // Brand
     $pdf->Cell($cellWidth, 7, $row[3], 1, 0); // Model
     $pdf->Cell($cellWidth, 7, $row[4], 1, 0); // Year
@@ -158,13 +172,13 @@ function tutteLeMacchinePDF()
   $pdf->AddPage(); // Add a new page to the PDF
 
   // Define table headers and data (replace with your actual data)
-  $headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione', 'Ultima Man.', 'Prox Man.');
+  $headers = array('Sigla', 'Cat.', 'Reparto', 'Manutenzione', 'Ultima Man.', 'Prox Man.');
 
 
 
 
 
-  $my_conn = new PDO('sqlite:manutentori.db');
+  $my_conn = new PDO('sqlite:manutentoriCopy.db');
   $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
   $secondquery->execute();
 
@@ -178,7 +192,9 @@ function tutteLeMacchinePDF()
   }
 
 
-
+  usort($data, function($a, $b) {
+    return strcmp($a[0], $b[0]); // confronto sulla posizione 0 = 'Sigla'
+});
 
   // Set font and cell width for headers
   $pdf->SetFont('Arial', 'B', 12); // Set bold Arial font size 12
@@ -201,7 +217,6 @@ function tutteLeMacchinePDF()
   // Print data rows with automatic page breaks and cell wrapping
   foreach ($data as $row) {
     $pdf->Cell($cellWidth, 7, $row[0], 1, 0); // Code
-    $pdf->Cell($cellWidth, 7, $row[1], 1, 0); // Description (wrapping enabled)
     $pdf->Cell($cellWidth, 7, $row[2], 1, 0); // Brand
     $pdf->Cell($cellWidth, 7, $row[3], 1, 0); // Model
     $pdf->Cell($cellWidth, 7, $row[4], 1, 0); // Year
@@ -261,7 +276,7 @@ function storicoMacchinaPDF($identificativo, $codice)
 
 
 
-  $my_conn = new PDO('sqlite:manutentori.db');
+  $my_conn = new PDO('sqlite:manutentoriCopy.db');
   $secondquery = $my_conn->prepare("SELECT * FROM 'storici' WHERE manutenzione='{$identificativo}'");
   $secondquery->execute();
 
@@ -353,7 +368,7 @@ function macchineEffettuateInData($dataInput)
 
 
 
-  $my_conn = new PDO('sqlite:manutentori.db');
+  $my_conn = new PDO('sqlite:manutentoriCopy.db');
   $secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
   $secondquery->execute();
 
@@ -365,7 +380,7 @@ function macchineEffettuateInData($dataInput)
 
   foreach ($secondquery as $row) {
 
-    $my_conn = new PDO('sqlite:manutentori.db');
+    $my_conn = new PDO('sqlite:manutentoriCopy.db');
     if ($dataInput == $row['data']) {
       $insidequery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$row['manutenzione']}'");
       $insidequery->execute();
@@ -396,10 +411,12 @@ function macchineEffettuateInData($dataInput)
 
 
 
-
+  usort($data, function($a, $b) {
+    return strcmp($a[0], $b[0]); // confronto sulla posizione 0 = 'Sigla'
+});
 
   // Set font and cell width for headers
-  $pdf->SetFont('Arial', 'B', 12); // Set bold Arial font size 12
+  $pdf->SetFont('Arial', 'B', 6); // Set bold Arial font size 12
   $cellWidth = $pdf->GetPageWidth() - 22; // Adjust margin as needed
   $cellWidth = $cellWidth / count($headers);
 
@@ -484,13 +501,13 @@ function macchineInProgrammaPerData($dataInputProg)
   $pdf->AddPage(); // Add a new page to the PDF
 
   // Define table headers and data (replace with your actual data)
-  $headers = array('Sigla', 'Nome', 'Cat.', 'Reparto', 'Manutenzione', 'Ultima Man.', 'Prox Man.');
+  $headers = array('Sigla', 'Cat.', 'Reparto', 'Manutenzione', 'Ultima Man.', 'Prox Man.');
 
 
 
 
 
-  $my_conn = new PDO('sqlite:manutentori.db');
+  $my_conn = new PDO('sqlite:manutentoriCopy.db');
   $secondquery = $my_conn->prepare("SELECT * FROM 'manutenzioni'");
   $secondquery->execute();
 
@@ -506,7 +523,9 @@ function macchineInProgrammaPerData($dataInputProg)
   }
 
 
-
+  usort($data, function($a, $b) {
+    return strcmp($a[0], $b[0]); // confronto sulla posizione 0 = 'Sigla'
+});
 
   // Set font and cell width for headers
   $pdf->SetFont('Arial', 'B', 12); // Set bold Arial font size 12
@@ -529,7 +548,6 @@ function macchineInProgrammaPerData($dataInputProg)
   // Print data rows with automatic page breaks and cell wrapping
   foreach ($data as $row) {
     $pdf->Cell($cellWidth, 7, $row[0], 1, 0); // Code
-    $pdf->Cell($cellWidth, 7, $row[1], 1, 0); // Description (wrapping enabled)
     $pdf->Cell($cellWidth, 7, $row[2], 1, 0); // Brand
     $pdf->Cell($cellWidth, 7, $row[3], 1, 0); // Model
     $pdf->Cell($cellWidth, 7, $row[4], 1, 0); // Year

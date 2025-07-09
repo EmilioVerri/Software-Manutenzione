@@ -7,6 +7,13 @@
 
 
 
+#daPopolare th, 
+#daPopolare td {
+    font-size: 12px; /* Riduce il testo per adattarlo meglio */
+    padding: 5px; /* Rende le celle più compatte */
+}
+
+
 #stile {
   border: 1px solid black;
   /* Add table borders */

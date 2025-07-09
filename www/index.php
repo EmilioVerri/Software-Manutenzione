@@ -1,36 +1,46 @@
 <?php
-include ('./classi/ClasseManutenzioni.php');
-include ('./classi/funzioneEstrazione.php');
-include ('./classi/ClasseStorico.php');
-include ('./classi/funzioniPDF.php');
+include('./classi/ClasseManutenzioni.php');
+include('./classi/funzioneEstrazione.php');
+include('./classi/ClasseStorico.php');
+include('./classi/funzioniPDF.php');
 
 // Funzione per controllare il formato della data
 
 session_start();
-$my_conn = new PDO('sqlite:manutentori.db');
+$my_conn = new PDO('sqlite:manutentoriCopy.db');
 
 if (isset($_SESSION['show'])) {
-
 } else {
     $_SESSION['show'] = 0;
 }
 
+
+if ($_SERVER["REQUEST_METHOD"] === "POST" && !empty($_POST["Password"]) != "") {
+    $_SESSION["password"] = $_POST["Password"];
+    $savePassword = $_SESSION["password"];
+}
+
+
+$savePassword = "0";
+if (isset($_SESSION['password'])) {
+    $savePassword = $_SESSION['password'];
+}
 
 /*echo "fatto";
 die;*/
 
 function stessoMese($data, $meseInput)
 {
-  $dateParts = explode("/", $data);
-  // Extract the month from the array (second element)
-  $mese = $dateParts[1];
-  if ($mese == $meseInput) {
-    $value = "ok";
-    return $value;
-  } else {
-    $value = "nonok";
-    return $value;
-  }
+    $dateParts = explode("/", $data);
+    // Extract the month from the array (second element)
+    $mese = $dateParts[1];
+    if ($mese == $meseInput) {
+        $value = "ok";
+        return $value;
+    } else {
+        $value = "nonok";
+        return $value;
+    }
 }
 
 
@@ -39,80 +49,105 @@ if (isset($_POST['okStorico'])) {
     if (isset($_POST['identificativoPerStorico']) && $_POST['identificativoPerStorico'] != false) {
 
 
-        $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
-        $query->execute();
-        foreach ($query as $row) {
-            $dataItalianaDue = $row['ProxMan'];
-            $dataItalianaArrayDue = explode("/", $dataItalianaDue);
-            $tempDue = $dataItalianaArrayDue[0];
-            $dataItalianaArrayDue[0] = $dataItalianaArrayDue[1];
-            $dataItalianaArrayDue[1] = $tempDue;
 
-            $dataItalianaReversedDue = implode("/", $dataItalianaArrayDue);
+        //controllo se c'è data uguale
 
-            // Convertire la data italiana in timestamp UNIX
-            $timestampDue = strtotime($dataItalianaReversedDue);
 
-              
-              if(isset($_POST['data'])){
-                // Recupera la data dalla POST
-              $data_ricevuta = $_POST['data'];
-                // Controlla se la data è nel formato corretto
-                if (!is_data_formato_valido($data_ricevuta)) {
-                   echo "<script>
+        $countDateUguali = 0;
+        $config = $my_conn->prepare("SELECT * FROM storici WHERE manutenzione={$_POST['identificativoPerStorico']}");
+        $config->execute();
+
+        foreach ($config as $check) {
+            $data = $check['data'];
+            if ($data == $_POST['data']) {
+                $countDateUguali++;
+            }
+        }
+        //fine controllo
+        if ($countDateUguali == 0) {
+
+            $query = $my_conn->prepare("SELECT * FROM manutenzioni WHERE identificativo={$_POST['identificativoPerStorico']}");
+            $query->execute();
+            foreach ($query as $row) {
+                $dataItalianaDue = $row['ProxMan'];
+                $dataItalianaArrayDue = explode("/", $dataItalianaDue);
+                $tempDue = $dataItalianaArrayDue[0];
+                $dataItalianaArrayDue[0] = $dataItalianaArrayDue[1];
+                $dataItalianaArrayDue[1] = $tempDue;
+
+
+
+
+                $dataItalianaReversedDue = implode("/", $dataItalianaArrayDue);
+
+                // Convertire la data italiana in timestamp UNIX
+                $timestampDue = strtotime($dataItalianaReversedDue);
+
+
+                if (isset($_POST['data'])) {
+                    // Recupera la data dalla POST
+                    $data_ricevuta = $_POST['data'];
+
+
+                    // Controlla se la data è nel formato corretto
+                    if (!is_data_formato_valido($data_ricevuta)) {
+                        echo "<script>
                    alert('Formato data non valido');
                    document.location.href='./index.php';
                    </script>";
-                   exit;
-                  }
-            
+                        exit;
+                    }
+
                     // Controlla se la data è valida (esiste realmente)
-              $giorno = substr($data_ricevuta, 0, 2);
-              $mese = substr($data_ricevuta, 3, 2);
-              $anno = substr($data_ricevuta, 6, 4);
-              
-              if (!checkdate($mese, $giorno, $anno)) {
-                // Se la data non è valida, ricarica la pagina
-                //header('Location: ' . $_SERVER['HTTP_REFERER']);
-                echo "<script>
+                    $giorno = substr($data_ricevuta, 0, 2);
+                    $mese = substr($data_ricevuta, 3, 2);
+                    $anno = substr($data_ricevuta, 6, 4);
+
+                    if (!checkdate($mese, $giorno, $anno)) {
+                        // Se la data non è valida, ricarica la pagina
+                        //header('Location: ' . $_SERVER['HTTP_REFERER']);
+                        echo "<script>
                 alert('Formato data non valido');
                 document.location.href='./index.php';
                 </script>";
-                exit;
-              }
-              }
+                        exit;
+                    }
+                }
 
 
 
 
 
-            $dataItalianaTre = $_POST['data'];
-            $dataItalianaArrayTre = explode("/", $dataItalianaTre);
-            $tempTre = $dataItalianaArrayTre[0];
-            $dataItalianaArrayTre[0] = $dataItalianaArrayTre[1];
-            $dataItalianaArrayTre[1] = $tempTre;
+                $dataItalianaTre = $_POST['data'];
+                $dataItalianaArrayTre = explode("/", $dataItalianaTre);
+                $tempTre = $dataItalianaArrayTre[0];
+                $dataItalianaArrayTre[0] = $dataItalianaArrayTre[1];
+                $dataItalianaArrayTre[1] = $tempTre;
 
-            $dataItalianaReversedTre = implode("/", $dataItalianaArrayTre);
+                $dataItalianaReversedTre = implode("/", $dataItalianaArrayTre);
 
-            // Convertire la data italiana in timestamp UNIX
-            $timestampTre = strtotime($dataItalianaReversedTre);
-            $data = $_POST['data'];
-            $esito = $_POST['esito'];
-            $note = $_POST['note'];
-            $identificativoPerStorico = $_POST['identificativoPerStorico'];
+                // Convertire la data italiana in timestamp UNIX
+                $timestampTre = strtotime($dataItalianaReversedTre);
+                $data = $_POST['data'];
+                $esito = $_POST['esito'];
+                $note = $_POST['note'];
+                $_SESSION['esito'] = $esito;
+                $_SESSION['note'] = $note;
+                $_SESSION['data'] = $data;
 
-            if ($timestampTre < $timestampDue) {
+                $identificativoPerStorico = $_POST['identificativoPerStorico'];
+
+                /* if ($timestampTre < $timestampDue) {
                 $_SESSION['show'] = 0;
-                echo "<script>if(confirm('Stai Facendo una manutenzione prima della sua Scadenza, Vuoi Procedere?')){document.location.href='./script.php?data=" . $data . "&esito=" . $esito . "&note=" . $note . "&identificativo=" . $identificativoPerStorico . "'}else{document.location.href='./index.php'};</script>";
+                eseguiManutenzioneDopo($data,$esito,$note,$identificativo);
                 $_SESSION['show'] = 0;
-            }elseif($timestampTre == $timestampDue){
-                $_SESSION['show'] = 0;
-                echo "<script>document.location.href='./script.php?data=" . $data . "&esito=" . $esito . "&note=" . $note . "&identificativo=" . $identificativoPerStorico . "';</script>";
-            }
-             else {
-                $_SESSION['show'] = 0;
+            } else {
+                $_SESSION['show'] = 0;*/
 
                 //inserita qua dentro le info della classe aggiungiStorico()
+
+
+
 
                 $queryInfo = $my_conn->prepare("INSERT INTO 'storici' ('data','esito','note','manutenzione') VALUES ('{$data}','{$esito}','{$note}','{$identificativoPerStorico}')");
                 $queryInfo->execute();
@@ -133,31 +168,31 @@ if (isset($_POST['okStorico'])) {
 
                     $query = $my_conn->prepare("UPDATE 'manutenzioni' SET ProxMan='{$value}' WHERE identificativo='{$identificativoPerStorico}'");
                     $query->execute();
-
-
                 }
 
                 //$storico = new Storico($_POST['data'], $_POST['esito'], $_POST['note'], $_POST['identificativoPerStorico']);
                 //$storico->aggiungiStorico();
+
+
+
+                $_SESSION['show'] = 1;
             }
-
-
-            $_SESSION['show'] = 0;
+        } else {
+?>
+            <script>
+                alert('Data già inserita a sistema');
+            </script>
+        <?php
+            $_SESSION['show'] = 1;
         }
-
-
-
-
-
     } else {
         ?>
         <script>
             alert('Seleziona uno Storico');
         </script>
-        <?php
+    <?php
         $_SESSION['show'] = 0;
     }
-
 }
 
 
@@ -191,65 +226,64 @@ foreach ($manScadute as $row) {
     if ($timestamp <= $today) {
 
 
-            $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info WHERE identificativo={$row['identificativo']}");
-            $queryUpdate->execute();
-    }else{
+        $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info WHERE identificativo={$row['identificativo']}");
+        $queryUpdate->execute();
+    } else {
         $queryUpdate = $my_conn->prepare("UPDATE manutenzioni SET InScadenza=$info2 WHERE identificativo={$row['identificativo']}");
         $queryUpdate->execute();
     }
 }
 
 
+
 if (isset($_POST['eliminaStorico']) && isset($_POST['idElimaStorico'])) {
     if (empty($_POST['idElimaStorico'])) {
-        ?>
+    ?>
         <script>
             alert('Seleziona uno Storico');
         </script>
-        <?php
+    <?php
         $_SESSION['show'] = 0;
-
     } else {
         //come identificativo a sto giro gli passo ID dello storico
         $storico = new Storico($_POST['idDataStorico'], $_POST['idEsitoStorico'], $_POST['idNoteStorico'], $_POST['idElimaStorico']);
         $storico->eliminaStorico();
         $_SESSION['show'] = 0;
     }
-
 }
 
 
 
 
-if(isset($_POST['macchineEffettuateInData'])||isset($_POST['macchineInProgrammaPerData'])){
+if (isset($_POST['macchineEffettuateInData']) || isset($_POST['macchineInProgrammaPerData'])) {
     // Recupera la data dalla POST
-  $data_ricevuta = $_POST['dataPerPulsantiMacchine'];
+    $data_ricevuta = $_POST['dataPerPulsantiMacchine'];
     // Controlla se la data è nel formato corretto
     if (!is_data_formato_valido($data_ricevuta)) {
         $_SESSION['show'] = 0;
-       echo "<script>
+        echo "<script>
        alert('Formato data non valido');
        document.location.href='./index.php';
        </script>";
-       exit;
-      }
+        exit;
+    }
 
-        // Controlla se la data è valida (esiste realmente)
-  $giorno = substr($data_ricevuta, 0, 2);
-  $mese = substr($data_ricevuta, 3, 2);
-  $anno = substr($data_ricevuta, 6, 4);
-  
-  if (!checkdate($mese, $giorno, $anno)) {
-    // Se la data non è valida, ricarica la pagina
-    //header('Location: ' . $_SERVER['HTTP_REFERER']);
-    $_SESSION['show'] = 0;
-    echo "<script>
+    // Controlla se la data è valida (esiste realmente)
+    $giorno = substr($data_ricevuta, 0, 2);
+    $mese = substr($data_ricevuta, 3, 2);
+    $anno = substr($data_ricevuta, 6, 4);
+
+    if (!checkdate($mese, $giorno, $anno)) {
+        // Se la data non è valida, ricarica la pagina
+        //header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $_SESSION['show'] = 0;
+        echo "<script>
     alert('Formato data non valido');
     document.location.href='./index.php';
     </script>";
-    exit;
-  }
-  }
+        exit;
+    }
+}
 
 
 
@@ -262,10 +296,10 @@ if(isset($_POST['macchineEffettuateInData'])||isset($_POST['macchineInProgrammaP
 //INIZIO GESTIONE BUTTON PDF
 
 if (isset($_POST['tutteLeMacchine'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
         tutteLeMacchinePDF();
     } else {
-        ?>
+    ?>
         <script>
             alert('Password sbagliata');
         </script>
@@ -273,18 +307,18 @@ if (isset($_POST['tutteLeMacchine'])) {
     }
     $_SESSION['show'] = 0;
 } elseif (isset($_POST['storicoMacchina'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
 
         if ($_POST['codice'] != "") {
             $identificativo = $_POST['identificativoPerStorico'];
             $codice = $_POST['codice'];
             storicoMacchinaPDF($identificativo, $codice);
         } else {
-            ?>
+        ?>
             <script>
                 alert('Seleziona una macchina');
             </script>
-            <?php
+        <?php
         }
     } else {
         ?>
@@ -295,17 +329,17 @@ if (isset($_POST['tutteLeMacchine'])) {
     }
     $_SESSION['show'] = 0;
 } elseif (isset($_POST['macchineEffettuateInData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
 
         if ($_POST['dataPerPulsantiMacchine'] != "") {
             $dataInput = $_POST['dataPerPulsantiMacchine'];
             macchineEffettuateInData($dataInput);
         } else {
-            ?>
+        ?>
             <script>
                 alert('Inserisci una data');
             </script>
-            <?php
+        <?php
         }
     } else {
         ?>
@@ -316,16 +350,16 @@ if (isset($_POST['tutteLeMacchine'])) {
     }
     $_SESSION['show'] = 0;
 } elseif (isset($_POST['macchineInProgrammaPerData'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
         if ($_POST['dataPerPulsantiMacchine'] != "") {
             $dataInputProg = $_POST['dataPerPulsantiMacchine'];
             macchineInProgrammaPerData($dataInputProg);
         } else {
-            ?>
+        ?>
             <script>
                 alert('Inserisci una data');
             </script>
-            <?php
+        <?php
         }
     } else {
         ?>
@@ -336,23 +370,23 @@ if (isset($_POST['tutteLeMacchine'])) {
     }
     $_SESSION['show'] = 0;
 } elseif (isset($_POST['riepilogoMensile'])) {
-    if (isset($_POST['Password']) && $_POST['Password'] == "9999") {
+    if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
         if ($_POST['periodo'] != "") {
             $periodoDaEstrarre = $_POST['periodo'];
             riepilogoMensile($periodoDaEstrarre);
         } else {
-            ?>
+        ?>
             <script>
                 alert('Problema pulsante data');
             </script>
-            <?php
+        <?php
         }
     } else {
         ?>
         <script>
             alert('Password sbagliata');
         </script>
-        <?php
+    <?php
     }
     $_SESSION['show'] = 0;
 }
@@ -375,13 +409,12 @@ if (isset($_POST['Aggiungi'])) {
 
         $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $info);
         $manutenzione->aggiungiManutenzione();
-
     } else {
-        ?>
+    ?>
         <script>
             alert('Periodo non inserito');
         </script>
-        <?php
+    <?php
     }
     $_SESSION['show'] = 0;
 }
@@ -393,11 +426,11 @@ if (isset($_POST['Modifica'])) {
         $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
         $manutenzione->modificaManutenzione();
     } else {
-        ?>
+    ?>
         <script>
             alert('Periodo non inserito');
         </script>
-        <?php
+    <?php
     }
     $_SESSION['show'] = 0;
 }
@@ -410,11 +443,11 @@ if (isset($_POST['Elimina'])) {
         $manutenzione = new Manutenzione($_POST['codice'], $_POST['descrizioneAttrezzatura'], $_POST['categoria'], $_POST['reparto'], $_POST['checkbox-group'], $_POST['identificativo2']);
         $manutenzione->eliminaManutenzione();
     } else {
-        ?>
+    ?>
         <script>
             alert('Periodo non inserito');
         </script>
-        <?php
+<?php
     }
     $_SESSION['show'] = 0;
 }
@@ -437,15 +470,19 @@ if (isset($_POST['Clear'])) {
 
 
 
+
 ?>
 
 <!DOCTYPE html>
 <html>
 
+
+
+
 <head>
     <!--Da finire l'implementazione-->
     <script src=''></script>
-    <title>Baxter Application</title>
+    <title>APplicazione Manutenzioni</title>
 
     <link rel="stylesheet" href="css.css">
 
@@ -457,6 +494,22 @@ if (isset($_POST['Clear'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/css/uikit.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.9/dist/js/uikit-icons.min.js"></script>
+    <style>
+        body {
+            transform: scale(0.8);
+            transform-origin: top left;
+            width: 125vw;
+            /* Compensa il ridimensionamento per evitare tagli */
+            height: 100vh;
+            /* Assicura che il body occupi l'intera altezza */
+            overflow-x: hidden;
+            /* Abilita lo scorrimento orizzontale se necessario */
+            overflow-y: hidden;
+            /* Evita spazio bianco sotto */
+        }
+    </style>
+
+
 </head>
 
 <body style="background-color: rgb(223,223,223);">
@@ -529,6 +582,9 @@ if (isset($_POST['Clear'])) {
                                         <td><input type="radio" name="checkbox-group" value="Annuale" id="checkbox">
                                             <font size="2">Annuale</font>
                                         </td>
+                                        <td><input type="radio" name="checkbox-group" value="Triennale" id="checkbox">
+                                            <font size="2">Triennale</font>
+                                        </td>
                                         <td><input type="radio" name="checkbox-group" value="Quinquennale"
                                                 id="checkbox">
                                             <font size="2">Quinquennale</font>
@@ -579,7 +635,6 @@ if (isset($_POST['Clear'])) {
                                 if ($valore == 0) {
                                 } elseif ($valore !== 0) {
                                     echo $info = $valore + 1;
-
                                 } else {
                                 }
                             }
@@ -592,30 +647,72 @@ if (isset($_POST['Clear'])) {
                             <input type="hidden" name="identificativo2" id="identificativo2" value="">
 
 
-                            <td colspan=2><button value="Aggiungi" type="submit" name="Aggiungi"
-                                    style="background-color: rgb(223,223,223)">
-                                    <span
-                                        style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
-                                        <img src=".\image\Aggiungi.png" alt="Aggiungi">
-                                        Aggiungi
-                                    </span>
-                                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit"
-                                    name="Modifica">
-                                    <span
-                                        style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
-                                        <img src=".\image\Modifica.png" alt="Modifica">
-                                        Modifica
-                                    </span>
-                                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <button value="Elimina" style="background-color: rgb(223,223,223)" type="submit"
-                                    name="Elimina">
-                                    <span
-                                        style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
-                                        <img src=".\image\Elimina.png" alt="Elimina">
-                                        Elimina
-                                    </span>
-                                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <td colspan=2>
+                                <?php
+                                if (isset($_SESSION['password']) && $_SESSION['password'] == "1357") {
+                                ?>
+                                    <button value="Aggiungi" type="submit" name="Aggiungi"
+                                        style="background-color: rgb(223,223,223)">
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Aggiungi.png" alt="Aggiungi">
+                                            Aggiungi
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button value="Modifica" style="background-color: rgb(223,223,223)" type="submit"
+                                        name="Modifica">
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Modifica.png" alt="Modifica">
+                                            Modifica
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button value="Elimina" style="background-color: rgb(223,223,223)" type="submit"
+                                        name="Elimina">
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Elimina.png" alt="Elimina">
+                                            Elimina
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+                                <?php
+
+
+                                } else {
+                                ?>
+                                    <button disabled
+                                        style="background-color: rgb(223,223,223)">
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Aggiungi.png" alt="Aggiungi">
+                                            Aggiungi
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button disabled>
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Modifica.png" alt="Modifica">
+                                            Modifica
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <button disabled>
+                                        <span
+                                            style="display: flex;flex-direction: column;align-items: center; background-color: rgb(223,223,223)">
+                                            <img src=".\image\Elimina.png" alt="Elimina">
+                                            Elimina
+                                        </span>
+                                    </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                                <?php
+                                }
+                                ?>
+
                                 <button value="Clear" style="background-color: rgb(223,223,223)" type="submit"
                                     name="Clear"> <!-- chiedere a cosa servirà -->
                                     <span
@@ -624,6 +721,11 @@ if (isset($_POST['Clear'])) {
                                         Clear
                                     </span>
                                 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
 
                             </td>
                             <td>
@@ -642,23 +744,23 @@ if (isset($_POST['Clear'])) {
 
                                 if ($_SESSION['show'] == 1) {
                                     $_SESSION['show'] = 0;
-                                    ?>
+                                ?>
                                     <input type="checkbox" id="myCheckbox" name="myCheckbox" checked>
                                     <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" id="submitButton" style="display:none;"
                                         name="submitButton">
-                                    <?php
+                                <?php
 
 
                                 } else {
                                     $_SESSION['show'] = 1;
 
-                                    ?>
+                                ?>
                                     <input type="checkbox" id="cambiami" name="cambiami">
                                     <!--scadenza manutenzione-->
                                     <input type="submit" value="Submit" style="display:none;" id="subitCambiami"
                                         name="subitCambiami">
-                                    <?php
+                                <?php
 
                                 }
                                 ?>
@@ -698,11 +800,8 @@ if (isset($_POST['Clear'])) {
 
                                                     if ($_SESSION['show'] == 1) {
                                                         //echo "sono dentro";
-                                                    
+
                                                         estraiManutenzione();
-
-
-
                                                     } else {
                                                         estraiManutenzioneScadute();
                                                     }
@@ -728,21 +827,52 @@ if (isset($_POST['Clear'])) {
             </div>
             <!--FINE zona grigia centrale-->
 
+            <?php
 
+
+
+
+
+
+            ?>
             <!--INIZIO zona rossa laterale-->
             <div class="uk-width-1-5 uk-card uk-card-default"
                 style="background-color: rgb(223,223,223); box-shadow: inset 0 4px 8px; height: 800px;">
                 <table>
                     <tr>
                         <td style="background-color: rgb(223,223,223);box-shadow: inset 0 2px 3px;">
-                            <label>
-                                <font size="3px">Password</font>
+                            <label><?php
+                                    if ($savePassword == "9999") {
+                                    ?>
+                                    <font size="3px">Manutentore</font>
+                                <?php
+                                    } elseif ($savePassword == "1357") {
+                                ?>
+                                    <font size="3px">Amministratore</font>
+                                <?php
+                                    } else {
+                                ?>
+                                    <font size="3px">Inserisci password corretta</font>
+                                <?php
+                                    }
+                                ?>
+
+
+                                <?php
+                                ?>
                             </label>
-                            <span style="display: flex;flex-direction: column;align-items: center;">
+
+
+
+                            <span style="display: flex; flex-direction: column; align-items: center;">
                                 <input type="password" placeholder="Inserisci password" name="Password">
-                                <img src=".\image\faccina.png" alt="Immagine" class="image"
-                                    style="width:25%;margin: 0 auto;">
+                                <button type="submit" style="background: none; border: none; padding: 0; cursor: pointer;">
+                                    <img src="./image/faccina.png" alt="Immagine" class="image" style="width: 70%; margin: 0 auto;">
+                                </button>
                             </span>
+                            <!--prova-->
+
+
                         </td>
                     </tr>
                     <tr>
@@ -754,7 +884,7 @@ if (isset($_POST['Clear'])) {
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit" name="tutteLeMacchine"
-                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:50%;height:50%">
                                     <img src=".\image\TutteLeMacchine.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
                                 </button>
@@ -763,7 +893,7 @@ if (isset($_POST['Clear'])) {
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit" name="storicoMacchina"
-                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:50%;height:50%">
                                     <img src=".\image\StoricoMacchina.png" alt="Immagine" class="image"
                                         style="margin: 0;width:80%">
                                 </button>
@@ -779,7 +909,7 @@ if (isset($_POST['Clear'])) {
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit" name="macchineEffettuateInData"
-                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:50%;height:50%">
                                     <img src=".\image\MacchineEffettuateInData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
                                 </button>
@@ -787,7 +917,7 @@ if (isset($_POST['Clear'])) {
                             <br>
                             <span style="display: flex;flex-direction: column;align-items: center;">
                                 <button type="submit" name="macchineInProgrammaPerData"
-                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                    style="background-color: rgb(255,193,194); border: none; padding: 0; display: inline-block; width:50%;height:50%">
                                     <img src=".\image\MacchineInProgrammaPerData.png" alt="Immagine" class="image"
                                         style="margin: 0; width:80%">
                                 </button>
@@ -810,8 +940,7 @@ if (isset($_POST['Clear'])) {
                 style="height:450px; background-color: rgb(255, 255,191);box-shadow: inset 0 4px 8px;">
                 <div class="container">
                     <h1>
-                        <font size="4px"><strong>&nbsp;&nbsp;<i id="informazione"></i></strong>
-                        </font>
+                        <font size="4px"><strong>&nbsp;&nbsp;<i id="informazione"></i></strong></font>
                     </h1>
                     <table>
                         <tr>
@@ -820,22 +949,59 @@ if (isset($_POST['Clear'])) {
                             <td><label for="input3">Note</label></td>
                         </tr>
                         <tr>
-                            <td><input type="text" name="data" id="yourInputFieldId" style="height:20px;"></td>
-                            <td><input type="text" name="esito" id="input2" style="height:20px;"></td>
-                            <td><input type="text" name="note" id="input3" style="width:300px;height:20px;"></td>
+                            <td><input type="text" name="data" id="yourInputFieldId"
+                                    style="height:20px;" <?php
+                                                            if (isset($_SESSION['data'])) {
+                                                            ?>
+                                    value="<?php echo $_SESSION['data']; ?>" <?php } ?>></td>
+                            <td><input type="text" name="esito" id="input2" style="height:20px;"
+                                    <?php
+                                    if (isset($_SESSION['esito'])) {
+                                    ?>
+                                    value="<?php echo $_SESSION['esito']; ?>" <?php } ?>>
+                            </td>
+                            <td><input type="text" name="note" id="input3" style="width:300px;height:20px;"
+                                    <?php
+                                    if (isset($_SESSION['note'])) {
+                                    ?>
+                                    value="<?php echo $_SESSION['note']; ?>" <?php } ?>></td>
                             <input type="hidden" name="identificativoPerStorico" id="identificativoPerStorico">
                         </tr>
                         <tr>
                             <td>
-                                <button type="submit" name="okStorico" value="okStorico"
-                                    style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
-                                    &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
-                                </button>
+                                <?php
+                                if (isset($_SESSION['password']) && ($_SESSION['password'] == "1357" || $_SESSION['password'] == "9999")) {
+                                ?>
+                                    <button type="submit" name="okStorico" value="okStorico"
+                                        style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                        &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
+                                    </button>
+                                <?php
+                                } else { ?>
+                                    <button disabled
+                                        style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                        &nbsp;&nbsp;<img src=".\image\OK.png" alt="Image 1" style="width: 100px;"><br><br>
+                                    </button>
+                                <?php
+                                }
+                                ?>
+                                <?php
+                                if (isset($_SESSION['password']) && ($_SESSION['password'] == "1357" || $_SESSION['password'] == "9999")) {
+                                ?>
+                                    <button type="submit" name="eliminaStorico"
+                                        style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                        &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
+                                    </button>
+                                <?php
+                                } else { ?>
+                                    <button disabled
+                                        style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
+                                        &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
+                                    </button>
+                                <?php
+                                }
+                                ?>
 
-                                <button type="submit" name="eliminaStorico"
-                                    style="background-color: rgb(255, 255,191); border: none; padding: 0; display: inline-block; width:70%;height:70%">
-                                    &nbsp;&nbsp;<img src=".\image\ELIMINA2.png" alt="Image 1" style="width: 100px;">
-                                </button>
                                 <input type="text" name="idElimaStorico" id="idElimaStorico" style="display:none">
                                 <input type="text" name="idDataStorico" id="idDataStorico" style="display:none">
                                 <input type="text" name="idEsitoStorico" id="idEsitoStorico" style="display:none">
@@ -948,17 +1114,16 @@ if (isset($_POST['Clear'])) {
                             $data = date('d-m-Y');
 
                             $meseInput = date('m', strtotime($data)); // Esempio di utilizzo di date() e strtotime()
-                            
 
 
-                            
 
 
-                            $my_conn = new PDO('sqlite:manutentori.db');
+
+
+                            $my_conn = new PDO('sqlite:manutentoriCopy.db');
                             $secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
                             $secondquery->execute();
-                            $data = array(
-                            );
+                            $data = array();
                             $countManutenzioni = 0;
                             foreach ($secondquery as $row) {
 
@@ -969,7 +1134,7 @@ if (isset($_POST['Clear'])) {
 
 
                                     $identificativo = $row['manutenzione'];
-                                    $my_conn = new PDO('sqlite:manutentori.db');
+                                    $my_conn = new PDO('sqlite:manutentoriCopy.db');
                                     $firstquery = $my_conn->prepare("SELECT * FROM 'manutenzioni' WHERE identificativo='{$identificativo}'");
                                     $firstquery->execute();
 
@@ -979,17 +1144,37 @@ if (isset($_POST['Clear'])) {
                                         $countManutenzioni++;
                                     }
                                 } else {
-
                                 }
-
                             }
 
+
+                            /*  function stessoAnno($data)
+                            {
+                                $annoData = date('Y', strtotime($data)); // Estrae l'anno dalla data
+                                $annoCorrente = date('Y'); // Ottiene l'anno corrente
+                                return ($annoData == $annoCorrente) ? "ok" : "no";
+                            }*/
+
+                            $contamiManutenzioniStessoAnno = 0;
+                            $my_conn = new PDO('sqlite:manutentoriCopy.db');
+                            $secondquery = $my_conn->prepare("SELECT * FROM 'storici'");
+                            $secondquery->execute();
+                            foreach ($secondquery as $row) {
+                                $dataMese = $row['data'];
+                                $stessoMese = stessoMese($dataMese, $meseInput);
+
+                                if ($stessoMese == "ok") {
+                                    if (strpos($dataMese, '2025') !== false) {
+                                        $contamiManutenzioniStessoAnno++;
+                                    }
+                                }
+                            }
 
                             ?>
 
                             <!--<input type="text" id="date">  SE METTO ID =DATE MI STAMPA LA DATA DI OGGI IN AUTOMATICO-->
                             <span style="display: flex;flex-direction: column;align-items: center;">
-                                <input type="text" style="" id="manutTOTEST" value="<?php echo $countManutenzioni; ?> Manutenzioni"
+                                <input type="text" style="" id="manutTOTEST" value="<?php echo $contamiManutenzioniStessoAnno; ?> Manutenzioni"
                                     readonly><!--CHIEDERE A COSA SERVE PERCHE' HO UN PO' DI DUBBI-->
                             </span>
                             <br>
@@ -1007,15 +1192,6 @@ if (isset($_POST['Clear'])) {
 
 
         </div>
-
-
-
-
-
-
-
-
-
 
         <script src="js.js"></script>
 
